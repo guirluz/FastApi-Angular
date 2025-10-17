@@ -27,6 +27,8 @@ import datetime
 import redis
 import json
 
+# ====================
+
 # ============================
 # Configuración de entorno
 # ============================
