@@ -1,0 +1,26 @@
+# Entornos virtuales
+venv/
+.env
+
+# Archivos de cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de logs
+*.log
+logs/
+
+# Archivos de Docker
+Dockerfile
+.dockerignore
+
+# Node (si usas Angular en el mismo repo)
+node_modules/
+dist/
+
+# Otros
+.git
+.gitignore
+

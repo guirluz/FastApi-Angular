@@ -1,0 +1,31 @@
+# Framework principal
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+
+# Base de datos
+SQLAlchemy==2.0.36
+pymysql==1.1.1
+
+# Variables de entorno
+python-dotenv==1.0.1
+
+# Seguridad y autenticación
+python-jose[cryptography]==3.3.0
+bcrypt==4.2.0
+
+# Redis y Celery
+redis==5.0.8
+celery==5.4.0
+
+# Logs estructurados
+loguru==0.7.2
+
+# Validación de correos
+email-validator==2.2.0
+
+# Procesamiento de Excel
+pandas==2.2.3
+openpyxl==3.1.5
+
+# Subida de archivos
+python-multipart==0.0.9

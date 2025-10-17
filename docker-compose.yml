@@ -1,0 +1,99 @@
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    expose:               # solo visible dentro de la red interna
+      - "3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./docker/mysql:/docker-entrypoint-initdb.d
+    healthcheck:          # healthcheck para MySQL
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+    networks:
+      - internal_net
+
+  backend:
+    build: ./backend
+    container_name: fastapi_backend
+    restart: always
+    env_file:
+      - ./backend/.env
+    ports:                # este sí lo expones porque lo usas desde Postman/Angular
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - ./backend/app/uploads:/app/uploads
+    networks:
+      - internal_net
+      - default
+
+  redis:
+    image: redis:7.2
+    container_name: redis_cache
+    restart: always
+    expose:               # solo visible dentro de la red interna
+      - "6379"
+    healthcheck:          # healthcheck para Redis
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - internal_net
+
+  celery_worker:
+    build: ./backend
+    container_name: celery_worker
+    command: celery -A app.tasks worker --loglevel=info
+    depends_on:
+      backend:
+        condition: service_started
+      redis:
+        condition: service_healthy
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+      - ./backend/app/uploads:/app/uploads
+    networks:
+      - internal_net
+  
+  frontend:
+    build: ./frontend/user-management
+    container_name: angular_frontend
+    restart: always
+    ports:
+      - "4200:80"   # Puerto externo 4200 -> interno 80 de Nginx
+    depends_on:
+      backend:
+        condition: service_started
+    healthcheck:          # healthcheck para Nginx
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - default
+
+volumes:
+  db_data:
+
+networks:
+  internal_net:
+    internal: true        # red privada, solo entre contenedores
+
+

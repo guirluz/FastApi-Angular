@@ -1,0 +1,576 @@
+2025-10-14 19:25:18.749 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-14 19:25:19.020 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-14 19:26:09.248 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-14 19:26:09.449 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-14 20:00:41.224 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-14 20:00:41.355 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-14 20:00:43.139 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-14 20:00:43.241 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-14 20:18:03.602 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-14 20:18:03.710 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-14 20:18:04.633 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-14 20:18:04.729 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-14 20:22:19.058 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-14 20:22:19.238 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-14 20:38:36.287 | INFO     | app.main:reporte_usuarios:180 - Tarea de reporte enviada a Celery, id=bdca7c15-9963-4c32-9827-6c40a360e9f1
+2025-10-14 20:38:36.292 | INFO     | app.tasks:generar_reporte_usuarios:34 - Iniciando generación de reporte de usuarios...
+2025-10-14 20:38:41.294 | SUCCESS  | app.tasks:generar_reporte_usuarios:37 - Reporte de usuarios generado correctamente
+2025-10-15 03:49:25.445 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-15 04:15:21.195 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-15 04:15:21.299 | ERROR    | app.main:<module>:36 - Error al crear/verificar tablas: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-15 04:26:17.747 | SUCCESS  | app.database.connection:<module>:9 - Engine de SQLAlchemy creado correctamente
+2025-10-15 04:26:17.837 | ERROR    | app.main:<module>:36 - Error al crear/verificar tablas: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-15 04:43:44.511 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 04:43:44.678 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 04:47:45.835 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-15 04:47:50.851 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 04:47:50.935 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 04:48:45.753 | INFO     | app.main:saludo:59 - Se llamó al endpoint /saludo
+2025-10-15 04:52:32.550 | INFO     | app.main:saludo:59 - Se llamó al endpoint /saludo
+2025-10-15 04:57:40.976 | SUCCESS  | app.main:register:85 - Usuario registrado: eduacolb@gmail.com
+2025-10-15 04:58:42.916 | INFO     | app.main:login:107 - Usuario eduacolb@gmail.com inició sesión
+2025-10-15 05:00:47.800 | INFO     | app.main:get_current_user:153 - Usuario autenticado correctamente: eduacolb@gmail.com
+2025-10-15 05:00:47.801 | INFO     | app.main:read_users_me:160 - Acceso al endpoint /users/me por eduacolb@gmail.com
+2025-10-15 05:17:59.713 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:18:12.594 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:18:20.715 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:18:23.082 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:18:28.174 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:18:30.954 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:22:30.052 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-15 05:22:35.056 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 2/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-15 05:22:40.085 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:26:43.094 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:27:24.624 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:27:40.807 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:27:44.331 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:27:46.677 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:27:46.777 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 05:30:21.293 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:30:21.380 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 05:33:52.316 | SUCCESS  | app.main:register:85 - Usuario registrado: eduacolb@gmail.com
+2025-10-15 05:34:26.733 | INFO     | app.main:login:107 - Usuario eduacolb@gmail.com inició sesión
+2025-10-15 05:35:24.871 | INFO     | app.main:get_current_user:153 - Usuario autenticado correctamente: eduacolb@gmail.com
+2025-10-15 05:35:24.871 | INFO     | app.main:read_users_me:160 - Acceso al endpoint /users/me por eduacolb@gmail.com
+2025-10-15 05:46:23.765 | SUCCESS  | app.main:register:85 - Usuario registrado: ramiro@example.com
+2025-10-15 05:53:42.332 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:53:42.485 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 05:53:46.112 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:53:46.195 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 05:56:06.418 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-15 05:56:11.434 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 05:56:11.517 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 05:56:58.482 | SUCCESS  | app.main:register:85 - Usuario registrado: eduacolb@gmail.com
+2025-10-15 05:57:31.617 | INFO     | app.main:login:107 - Usuario eduacolb@gmail.com inició sesión
+2025-10-15 05:57:59.691 | INFO     | app.main:get_current_user:153 - Usuario autenticado correctamente: eduacolb@gmail.com
+2025-10-15 05:57:59.693 | INFO     | app.main:read_users_me:160 - Acceso al endpoint /users/me por eduacolb@gmail.com
+2025-10-15 11:30:29.072 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 11:30:29.183 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 12:04:30.248 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 12:04:30.765 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 12:04:32.366 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 12:04:32.571 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 14:21:26.181 | SUCCESS  | app.main:register:85 - Usuario registrado: eduar@example.com
+2025-10-15 14:23:35.317 | SUCCESS  | app.main:register:85 - Usuario registrado: nametest@example.com
+2025-10-15 15:14:05.900 | INFO     | app.main:login:107 - Usuario nametest@example.com inició sesión
+2025-10-15 15:45:44.603 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 15:45:44.796 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 15:47:35.282 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 15:47:35.529 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 15:48:37.078 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 15:48:40.047 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 15:48:40.240 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 15:52:32.762 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 15:52:32.855 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 15:56:53.956 | INFO     | app.main:login:107 - Usuario nametest@example.com inició sesión
+2025-10-15 16:47:16.152 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 16:47:16.246 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 16:53:48.174 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 16:53:48.270 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 18:09:10.444 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 18:09:10.533 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 19:14:36.521 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 19:14:36.610 | SUCCESS  | app.main:<module>:34 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-15 19:22:28.882 | INFO     | app.main:login:107 - Usuario nametest@example.com inició sesión
+2025-10-15 21:18:13.995 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:39:13.510 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:43:05.907 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:43:07.790 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:43:13.446 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:43:32.058 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:43:34.321 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:56:41.118 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:56:44.459 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:56:51.246 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:56:53.324 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-15 21:57:03.792 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 00:21:50.173 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 10:56:05.983 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-16 10:56:11.035 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:01:19.627 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:01:41.227 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:01:43.248 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:01:49.847 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:22:45.831 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:22:46.411 | SUCCESS  | app.main:<module>:35 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 11:22:47.104 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:34:16.631 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:34:16.942 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:34:17.118 | SUCCESS  | app.main:<module>:35 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 11:41:48.624 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:41:48.879 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 11:41:49.102 | SUCCESS  | app.main:<module>:35 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 11:44:58.609 | INFO     | app.main:login:108 - Usuario eduar@example.com inició sesión
+2025-10-16 11:47:52.027 | INFO     | app.main:login:108 - Usuario eduar@example.com inició sesión
+2025-10-16 12:18:10.428 | INFO     | app.main:login:108 - Usuario eduar@example.com inició sesión
+2025-10-16 12:18:31.949 | INFO     | app.main:get_current_user:154 - Usuario autenticado correctamente: eduar@example.com
+2025-10-16 12:18:31.950 | INFO     | app.main:read_users_me:161 - Acceso al endpoint /users/me por eduar@example.com
+2025-10-16 12:18:46.580 | INFO     | app.main:get_current_user:154 - Usuario autenticado correctamente: eduar@example.com
+2025-10-16 12:18:46.841 | INFO     | app.main:upload_excel:296 - Tarea de importación enviada a Celery, id=5cc21765-3941-4a5c-bf42-29366b4055d4
+2025-10-16 12:18:46.888 | ERROR    | app.tasks:process_excel_task:97 - Error procesando Excel: [Errno 2] No such file or directory: '/tmp/usuarios.xls'
+2025-10-16 12:21:09.107 | INFO     | app.main:get_current_user:154 - Usuario autenticado correctamente: eduar@example.com
+2025-10-16 12:21:09.111 | ERROR    | app.main:get_task_status:328 - Tarea 5cc21765-3941-4a5c-bf42-29366b4055d4 fallida: [Errno 2] No such file or directory
+2025-10-16 12:40:36.271 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 12:40:36.666 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 12:40:36.791 | SUCCESS  | app.main:<module>:35 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 12:46:13.725 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 12:46:14.231 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 12:53:32.352 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 12:53:33.264 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 12:53:39.465 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 12:53:39.937 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 12:53:40.894 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 12:53:41.384 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 12:55:56.007 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 12:55:56.983 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 12:55:58.016 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 12:55:58.508 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 13:00:59.745 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 13:01:00.082 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 13:01:00.259 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 13:01:24.767 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-16 13:01:57.131 | INFO     | app.main:get_current_user:155 - Usuario autenticado correctamente: eduar@example.com
+2025-10-16 13:01:57.132 | INFO     | app.main:read_users_me:162 - Acceso al endpoint /users/me por eduar@example.com
+2025-10-16 13:03:18.023 | INFO     | app.main:get_current_user:155 - Usuario autenticado correctamente: eduar@example.com
+2025-10-16 13:03:18.107 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=a2f64f70-e547-4f04-8efe-88e723f89a68
+2025-10-16 13:03:18.111 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios.xls
+2025-10-16 13:03:19.093 | SUCCESS  | app.tasks:process_excel_task:110 - Importación completada: 3 usuarios insertados, 0 omitidos
+2025-10-16 13:03:33.978 | INFO     | app.main:get_current_user:155 - Usuario autenticado correctamente: eduar@example.com
+2025-10-16 13:03:33.981 | SUCCESS  | app.main:get_task_status:331 - Tarea a2f64f70-e547-4f04-8efe-88e723f89a68 completada
+2025-10-16 14:42:11.041 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 14:42:11.071 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 14:42:12.272 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 14:43:19.617 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-16 14:46:39.074 | SUCCESS  | app.main:register:87 - Usuario registrado: pruueba3@gmail.com
+2025-10-16 14:46:55.530 | WARNING  | app.main:login:99 - Usuario no encontrado: prueba3@example.com
+2025-10-16 14:47:17.051 | WARNING  | app.main:login:99 - Usuario no encontrado: pruueba3@example.com
+2025-10-16 14:47:30.318 | INFO     | app.main:login:109 - Usuario pruueba3@gmail.com inició sesión
+2025-10-16 15:41:55.905 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 15:41:56.354 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 15:41:56.440 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 15:42:40.002 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-16 15:58:15.578 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 15:58:16.561 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 15:58:44.831 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 15:58:45.277 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 15:59:17.697 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 15:59:18.153 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 15:59:20.286 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 15:59:34.242 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=10def81b-6026-4ed6-ba00-96d2936094bb
+2025-10-16 15:59:34.245 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-16 15:59:34.864 | WARNING  | app.tasks:process_excel_task:92 - Fila 2: email duplicado maria@mail.com, se omite
+2025-10-16 15:59:34.870 | WARNING  | app.tasks:process_excel_task:92 - Fila 3: email duplicado pedro@mail.com, se omite
+2025-10-16 15:59:36.737 | SUCCESS  | app.tasks:process_excel_task:110 - Importación completada: 8 usuarios insertados, 2 omitidos
+2025-10-16 15:59:37.261 | SUCCESS  | app.main:get_task_status:331 - Tarea 10def81b-6026-4ed6-ba00-96d2936094bb completada
+2025-10-16 16:10:09.509 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 16:10:10.338 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 16:13:56.135 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 16:13:56.501 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 16:13:56.703 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 16:14:15.730 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-16 16:14:24.943 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=8b1cefd8-e3e8-4681-80d9-1a6541545b2b
+2025-10-16 16:14:24.947 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-16 16:14:25.378 | WARNING  | app.tasks:process_excel_task:92 - Fila 2: email duplicado maria@mail.com, se omite
+2025-10-16 16:14:25.381 | WARNING  | app.tasks:process_excel_task:92 - Fila 3: email duplicado pedro@mail.com, se omite
+2025-10-16 16:14:27.278 | SUCCESS  | app.tasks:process_excel_task:110 - Importación completada: 8 usuarios insertados, 2 omitidos
+2025-10-16 16:14:27.958 | SUCCESS  | app.main:get_task_status:340 - Tarea 8b1cefd8-e3e8-4681-80d9-1a6541545b2b completada
+2025-10-16 17:37:54.576 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 17:37:55.839 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:05:20.603 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-16 18:06:36.224 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=1388f2a6-7da9-444b-bd3b-a8ad940d571f
+2025-10-16 18:06:36.307 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-16 18:06:39.237 | SUCCESS  | app.tasks:process_excel_task:110 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-16 18:06:39.247 | SUCCESS  | app.main:get_task_status:340 - Tarea 1388f2a6-7da9-444b-bd3b-a8ad940d571f completada
+2025-10-16 18:25:08.907 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=c890a1a8-847c-414e-a8b8-ec9a38201bd0
+2025-10-16 18:25:08.911 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-16 18:25:09.199 | WARNING  | app.tasks:process_excel_task:92 - Fila 2: email duplicado maria@mail.com, se omite
+2025-10-16 18:25:09.201 | WARNING  | app.tasks:process_excel_task:92 - Fila 3: email duplicado pedro@mail.com, se omite
+2025-10-16 18:25:09.203 | WARNING  | app.tasks:process_excel_task:92 - Fila 4: email duplicado ana@mail.com, se omite
+2025-10-16 18:25:09.205 | WARNING  | app.tasks:process_excel_task:92 - Fila 5: email duplicado carlos@mail.com, se omite
+2025-10-16 18:25:09.207 | WARNING  | app.tasks:process_excel_task:92 - Fila 6: email duplicado luisa@mail.com, se omite
+2025-10-16 18:25:09.209 | WARNING  | app.tasks:process_excel_task:92 - Fila 7: email duplicado sofia@mail.com, se omite
+2025-10-16 18:25:09.211 | WARNING  | app.tasks:process_excel_task:92 - Fila 8: email duplicado diego@mail.com, se omite
+2025-10-16 18:25:09.213 | WARNING  | app.tasks:process_excel_task:92 - Fila 9: email duplicado valentina@mail.com, se omite
+2025-10-16 18:25:09.215 | WARNING  | app.tasks:process_excel_task:92 - Fila 10: email duplicado andres@mail.com, se omite
+2025-10-16 18:25:09.222 | SUCCESS  | app.tasks:process_excel_task:110 - Importación completada: 1 usuarios insertados, 9 omitidos
+2025-10-16 18:25:11.932 | SUCCESS  | app.main:get_task_status:340 - Tarea c890a1a8-847c-414e-a8b8-ec9a38201bd0 completada
+2025-10-16 18:38:51.604 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:38:52.956 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:38:53.906 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:38:54.327 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:38:55.191 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:38:55.578 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:43:44.264 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:43:45.191 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:43:46.778 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:43:47.197 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:43:51.704 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:43:52.131 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:43:53.791 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:43:54.218 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:54:54.609 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:54:54.999 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 18:54:55.120 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 18:55:45.199 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-16 18:55:55.486 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=2fa512d4-f495-4e0b-86e3-61d5b21f6dbc
+2025-10-16 18:55:55.490 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios_100.xls
+2025-10-16 18:55:58.514 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 2/100
+2025-10-16 18:56:01.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 4/100
+2025-10-16 18:56:04.509 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 7/100
+2025-10-16 18:56:07.511 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 9/100
+2025-10-16 18:56:10.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 11/100
+2025-10-16 18:56:13.515 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 14/100
+2025-10-16 18:56:16.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 16/100
+2025-10-16 18:56:19.512 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 18/100
+2025-10-16 18:56:22.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 21/100
+2025-10-16 18:56:25.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 23/100
+2025-10-16 18:56:28.511 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 25/100
+2025-10-16 18:56:31.511 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 28/100
+2025-10-16 18:56:34.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 30/100
+2025-10-16 18:56:37.507 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 32/100
+2025-10-16 18:56:40.511 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 35/100
+2025-10-16 18:56:43.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 37/100
+2025-10-16 18:56:46.503 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 40/100
+2025-10-16 18:56:49.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 42/100
+2025-10-16 18:56:52.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 44/100
+2025-10-16 18:56:55.506 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 47/100
+2025-10-16 18:56:58.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 49/100
+2025-10-16 18:57:01.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 51/100
+2025-10-16 18:57:04.516 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 54/100
+2025-10-16 18:57:07.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 56/100
+2025-10-16 18:57:10.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 58/100
+2025-10-16 18:57:13.513 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 61/100
+2025-10-16 18:57:16.511 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 63/100
+2025-10-16 18:57:19.507 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 65/100
+2025-10-16 18:57:22.511 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 68/100
+2025-10-16 18:57:25.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 70/100
+2025-10-16 18:57:28.498 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 73/100
+2025-10-16 18:57:31.503 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 75/100
+2025-10-16 18:57:34.525 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 77/100
+2025-10-16 18:57:37.501 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 80/100
+2025-10-16 18:57:40.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 82/100
+2025-10-16 18:57:43.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 84/100
+2025-10-16 18:57:46.505 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 87/100
+2025-10-16 18:57:49.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 89/100
+2025-10-16 18:57:52.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 91/100
+2025-10-16 18:57:55.497 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 94/100
+2025-10-16 18:57:58.511 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 96/100
+2025-10-16 18:58:01.510 | INFO     | app.main:get_task_status:337 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc en progreso: 98/100
+2025-10-16 18:58:03.170 | SUCCESS  | app.tasks:process_excel_task:113 - Importación completada: 100 usuarios insertados, 0 omitidos
+2025-10-16 18:58:04.510 | SUCCESS  | app.main:get_task_status:351 - Tarea 2fa512d4-f495-4e0b-86e3-61d5b21f6dbc completada: 100 insertados, 0 omitidos
+2025-10-16 19:01:17.796 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=e97c7cda-1b78-4592-890a-d0be83159881
+2025-10-16 19:01:17.800 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-16 19:01:20.821 | INFO     | app.main:get_task_status:337 - Tarea e97c7cda-1b78-4592-890a-d0be83159881 en progreso: 2/10
+2025-10-16 19:01:23.821 | INFO     | app.main:get_task_status:337 - Tarea e97c7cda-1b78-4592-890a-d0be83159881 en progreso: 4/10
+2025-10-16 19:01:26.817 | INFO     | app.main:get_task_status:337 - Tarea e97c7cda-1b78-4592-890a-d0be83159881 en progreso: 7/10
+2025-10-16 19:01:29.821 | INFO     | app.main:get_task_status:337 - Tarea e97c7cda-1b78-4592-890a-d0be83159881 en progreso: 9/10
+2025-10-16 19:01:30.610 | SUCCESS  | app.tasks:process_excel_task:113 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-16 19:01:32.809 | SUCCESS  | app.main:get_task_status:351 - Tarea e97c7cda-1b78-4592-890a-d0be83159881 completada: 10 insertados, 0 omitidos
+2025-10-16 19:05:37.237 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=a56f13c5-dd40-4421-9347-2f0a0dfcd926
+2025-10-16 19:05:37.240 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-16 19:05:40.260 | INFO     | app.main:get_task_status:337 - Tarea a56f13c5-dd40-4421-9347-2f0a0dfcd926 en progreso: 2/10
+2025-10-16 19:05:43.260 | INFO     | app.main:get_task_status:337 - Tarea a56f13c5-dd40-4421-9347-2f0a0dfcd926 en progreso: 4/10
+2025-10-16 19:05:46.249 | INFO     | app.main:get_task_status:337 - Tarea a56f13c5-dd40-4421-9347-2f0a0dfcd926 en progreso: 7/10
+2025-10-16 19:05:49.259 | INFO     | app.main:get_task_status:337 - Tarea a56f13c5-dd40-4421-9347-2f0a0dfcd926 en progreso: 9/10
+2025-10-16 19:05:50.031 | SUCCESS  | app.tasks:process_excel_task:113 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-16 19:05:52.259 | SUCCESS  | app.main:get_task_status:351 - Tarea a56f13c5-dd40-4421-9347-2f0a0dfcd926 completada: 10 insertados, 0 omitidos
+2025-10-16 19:09:14.549 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 19:09:15.488 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 19:14:04.991 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 19:14:05.860 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 19:14:05.988 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 19:18:16.553 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 19:18:16.957 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-16 19:18:17.097 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-16 19:19:07.623 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-16 19:21:10.335 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=e6f9d639-6400-4d35-91d1-b611d409b3d7
+2025-10-16 19:21:10.338 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-16 19:21:13.359 | INFO     | app.main:get_task_status:337 - Tarea e6f9d639-6400-4d35-91d1-b611d409b3d7 en progreso: 4/10
+2025-10-16 19:21:16.355 | INFO     | app.main:get_task_status:337 - Tarea e6f9d639-6400-4d35-91d1-b611d409b3d7 en progreso: 7/10
+2025-10-16 19:21:18.281 | SUCCESS  | app.tasks:process_excel_task:113 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-16 19:21:19.369 | SUCCESS  | app.main:get_task_status:351 - Tarea e6f9d639-6400-4d35-91d1-b611d409b3d7 completada: 10 insertados, 0 omitidos
+2025-10-17 01:52:34.959 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 01:52:35.252 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 01:52:35.518 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 02:26:50.524 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-17 02:28:01.007 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=27db417e-7ca7-47db-9877-d3948a651b44
+2025-10-17 02:28:01.013 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 02:28:01.842 | WARNING  | app.tasks:process_excel_task:95 - Fila 1: email duplicado usuario1@mail.com, se omite
+2025-10-17 02:28:02.345 | WARNING  | app.tasks:process_excel_task:95 - Fila 2: email duplicado usuario2@mail.com, se omite
+2025-10-17 02:28:02.849 | WARNING  | app.tasks:process_excel_task:95 - Fila 3: email duplicado usuario3@mail.com, se omite
+2025-10-17 02:28:03.352 | WARNING  | app.tasks:process_excel_task:95 - Fila 4: email duplicado usuario4@mail.com, se omite
+2025-10-17 02:28:03.856 | WARNING  | app.tasks:process_excel_task:95 - Fila 5: email duplicado usuario5@mail.com, se omite
+2025-10-17 02:28:04.023 | INFO     | app.main:get_task_status:337 - Tarea 27db417e-7ca7-47db-9877-d3948a651b44 en progreso: 5/10
+2025-10-17 02:28:04.359 | WARNING  | app.tasks:process_excel_task:95 - Fila 6: email duplicado usuario6@mail.com, se omite
+2025-10-17 02:28:04.863 | WARNING  | app.tasks:process_excel_task:95 - Fila 7: email duplicado usuario7@mail.com, se omite
+2025-10-17 02:28:05.366 | WARNING  | app.tasks:process_excel_task:95 - Fila 8: email duplicado usuario8@mail.com, se omite
+2025-10-17 02:28:05.870 | WARNING  | app.tasks:process_excel_task:95 - Fila 9: email duplicado usuario9@mail.com, se omite
+2025-10-17 02:28:06.373 | WARNING  | app.tasks:process_excel_task:95 - Fila 10: email duplicado usuario10@mail.com, se omite
+2025-10-17 02:28:06.374 | SUCCESS  | app.tasks:process_excel_task:113 - Importación completada: 0 usuarios insertados, 10 omitidos
+2025-10-17 02:28:07.028 | SUCCESS  | app.main:get_task_status:351 - Tarea 27db417e-7ca7-47db-9877-d3948a651b44 completada: 0 insertados, 10 omitidos
+2025-10-17 02:34:53.510 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 02:34:53.755 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 02:34:54.169 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 02:35:14.654 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=fd659baf-f6e9-4832-9bcf-1bd5839e8c49
+2025-10-17 02:35:14.658 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-17 02:35:17.673 | INFO     | app.main:get_task_status:337 - Tarea fd659baf-f6e9-4832-9bcf-1bd5839e8c49 en progreso: 4/10
+2025-10-17 02:35:20.668 | INFO     | app.main:get_task_status:337 - Tarea fd659baf-f6e9-4832-9bcf-1bd5839e8c49 en progreso: 7/10
+2025-10-17 02:35:22.530 | SUCCESS  | app.tasks:process_excel_task:113 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 02:35:23.674 | SUCCESS  | app.main:get_task_status:351 - Tarea fd659baf-f6e9-4832-9bcf-1bd5839e8c49 completada: 10 insertados, 0 omitidos
+2025-10-17 03:20:00.904 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 03:20:01.137 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 03:20:01.548 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 03:20:56.977 | WARNING  | app.main:login:103 - Contraseña incorrecta para eduar@example.com
+2025-10-17 03:21:00.974 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-17 03:22:30.361 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-17 03:23:06.848 | INFO     | app.main:upload_excel:302 - Tarea de importación enviada a Celery, id=a9e22187-010a-4833-b263-4bf49e787ed6
+2025-10-17 03:23:06.852 | INFO     | app.tasks:process_excel_task:63 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 03:23:07.541 | WARNING  | app.tasks:process_excel_task:95 - Fila 1: email duplicado usuario1@mail.com, se omite
+2025-10-17 03:23:08.045 | WARNING  | app.tasks:process_excel_task:95 - Fila 2: email duplicado usuario2@mail.com, se omite
+2025-10-17 03:23:08.549 | WARNING  | app.tasks:process_excel_task:95 - Fila 3: email duplicado usuario3@mail.com, se omite
+2025-10-17 03:23:09.054 | WARNING  | app.tasks:process_excel_task:95 - Fila 4: email duplicado usuario4@mail.com, se omite
+2025-10-17 03:23:09.558 | WARNING  | app.tasks:process_excel_task:95 - Fila 5: email duplicado usuario5@mail.com, se omite
+2025-10-17 03:23:09.867 | INFO     | app.main:get_task_status:337 - Tarea a9e22187-010a-4833-b263-4bf49e787ed6 en progreso: 5/10
+2025-10-17 03:23:10.064 | WARNING  | app.tasks:process_excel_task:95 - Fila 6: email duplicado usuario6@mail.com, se omite
+2025-10-17 03:23:10.568 | WARNING  | app.tasks:process_excel_task:95 - Fila 7: email duplicado usuario7@mail.com, se omite
+2025-10-17 03:23:11.072 | WARNING  | app.tasks:process_excel_task:95 - Fila 8: email duplicado usuario8@mail.com, se omite
+2025-10-17 03:23:11.578 | WARNING  | app.tasks:process_excel_task:95 - Fila 9: email duplicado usuario9@mail.com, se omite
+2025-10-17 03:23:12.082 | WARNING  | app.tasks:process_excel_task:95 - Fila 10: email duplicado usuario10@mail.com, se omite
+2025-10-17 03:23:12.084 | SUCCESS  | app.tasks:process_excel_task:113 - Importación completada: 0 usuarios insertados, 10 omitidos
+2025-10-17 03:23:12.857 | SUCCESS  | app.main:get_task_status:351 - Tarea a9e22187-010a-4833-b263-4bf49e787ed6 completada: 0 insertados, 10 omitidos
+2025-10-17 04:11:04.903 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 04:11:05.171 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 04:11:05.479 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 04:12:16.746 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-17 04:44:00.869 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 04:44:01.143 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 04:44:01.367 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 12:57:18.494 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 12:57:18.763 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 12:57:19.003 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 13:44:34.041 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 13:44:34.292 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 13:44:34.569 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 13:56:13.094 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 13:56:13.357 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 13:56:13.615 | SUCCESS  | app.main:<module>:36 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 14:00:10.138 | INFO     | app.main:login:109 - Usuario eduar@example.com inició sesión
+2025-10-17 15:26:40.651 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 15:26:40.664 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 15:26:41.903 | SUCCESS  | app.main:<module>:46 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 15:27:13.588 | INFO     | app.main:login:119 - Usuario eduar@example.com inició sesión
+2025-10-17 16:08:14.464 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:08:15.685 | SUCCESS  | app.main:<module>:46 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:08:16.633 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:08:17.023 | SUCCESS  | app.main:<module>:46 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:11:09.781 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:11:10.723 | SUCCESS  | app.main:<module>:46 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:24:14.870 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:24:15.768 | SUCCESS  | app.main:<module>:46 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:30:51.457 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:30:52.652 | SUCCESS  | app.main:<module>:55 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:30:59.873 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:31:00.389 | SUCCESS  | app.main:<module>:54 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:35:48.967 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:35:49.815 | SUCCESS  | app.main:<module>:54 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:35:49.824 | ERROR    | app.main:redis_listener:152 - Listener Redis falló: name 'aioredis' is not defined
+2025-10-17 16:36:29.220 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:36:30.350 | SUCCESS  | app.main:<module>:54 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:36:30.360 | ERROR    | app.main:redis_listener:152 - Listener Redis falló: name 'aioredis' is not defined
+2025-10-17 16:36:31.346 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:36:31.828 | SUCCESS  | app.main:<module>:54 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:36:44.634 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:36:45.085 | SUCCESS  | app.main:<module>:54 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:36:45.093 | ERROR    | app.main:redis_listener:152 - Listener Redis falló: name 'aioredis' is not defined
+2025-10-17 16:36:46.015 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:36:46.482 | SUCCESS  | app.main:<module>:54 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:36:46.491 | ERROR    | app.main:redis_listener:152 - Listener Redis falló: name 'aioredis' is not defined
+2025-10-17 16:36:56.371 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:36:56.813 | SUCCESS  | app.main:<module>:57 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:36:56.821 | ERROR    | app.main:redis_listener:155 - Listener Redis falló: name 'REDIS_URL' is not defined
+2025-10-17 16:36:57.734 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:36:58.136 | SUCCESS  | app.main:<module>:56 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:36:58.145 | ERROR    | app.main:redis_listener:154 - Listener Redis falló: name 'REDIS_URL' is not defined
+2025-10-17 16:44:11.084 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:44:11.550 | SUCCESS  | app.main:<module>:57 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:44:11.563 | INFO     | app.main:redis_listener:144 - Suscrito a canal Redis: progress_channel
+2025-10-17 16:44:39.872 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:44:40.375 | SUCCESS  | app.main:<module>:57 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:44:40.390 | INFO     | app.main:redis_listener:144 - Suscrito a canal Redis: progress_channel
+2025-10-17 16:44:44.322 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:44:44.784 | SUCCESS  | app.main:<module>:56 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:44:44.794 | ERROR    | app.main:redis_listener:154 - Listener Redis falló: name 'REDIS_URL' is not defined
+2025-10-17 16:44:47.025 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:44:47.487 | SUCCESS  | app.main:<module>:56 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:44:47.497 | ERROR    | app.main:redis_listener:154 - Listener Redis falló: name 'REDIS_URL' is not defined
+2025-10-17 16:44:50.330 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 16:44:50.741 | SUCCESS  | app.main:<module>:57 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 16:44:50.753 | INFO     | app.main:redis_listener:144 - Suscrito a canal Redis: progress_channel
+2025-10-17 18:50:19.547 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 18:50:19.756 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 18:50:20.141 | SUCCESS  | app.main:<module>:57 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 18:50:20.153 | INFO     | app.main:redis_listener:144 - Suscrito a canal Redis: progress_channel
+2025-10-17 18:51:13.175 | INFO     | app.main:login:254 - Usuario eduar@example.com inició sesión
+2025-10-17 18:51:13.242 | INFO     | app.main:connect:78 - Cliente WebSocket conectado. Total: 1
+2025-10-17 18:51:24.360 | INFO     | app.main:upload_excel:456 - Tarea de importación enviada a Celery, id=9a45fe25-a74e-4d52-94b1-f2d6ad06a1e8
+2025-10-17 18:51:24.363 | INFO     | app.tasks:process_excel_task:99 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 18:51:25.801 | WARNING  | app.tasks:process_excel_task:140 - Fila 2: email duplicado usuario2@mail.com, se omite
+2025-10-17 18:51:27.867 | WARNING  | app.tasks:process_excel_task:140 - Fila 5: email duplicado usuario5@mail.com, se omite
+2025-10-17 18:51:28.374 | WARNING  | app.tasks:process_excel_task:140 - Fila 6: email duplicado usuario6@mail.com, se omite
+2025-10-17 18:51:28.880 | WARNING  | app.tasks:process_excel_task:140 - Fila 7: email duplicado usuario7@mail.com, se omite
+2025-10-17 18:51:29.383 | WARNING  | app.tasks:process_excel_task:140 - Fila 8: email duplicado usuario8@mail.com, se omite
+2025-10-17 18:51:29.889 | WARNING  | app.tasks:process_excel_task:140 - Fila 9: email duplicado usuario9@mail.com, se omite
+2025-10-17 18:51:30.394 | WARNING  | app.tasks:process_excel_task:140 - Fila 10: email duplicado usuario10@mail.com, se omite
+2025-10-17 18:51:30.407 | SUCCESS  | app.tasks:process_excel_task:158 - Importación completada: 3 usuarios insertados, 7 omitidos
+2025-10-17 18:52:57.152 | INFO     | app.main:disconnect:85 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 18:52:57.240 | INFO     | app.main:connect:78 - Cliente WebSocket conectado. Total: 1
+2025-10-17 18:53:02.352 | INFO     | app.main:upload_excel:456 - Tarea de importación enviada a Celery, id=c79063d2-f10e-4e46-8ac4-c1c056062cc9
+2025-10-17 18:53:02.355 | INFO     | app.tasks:process_excel_task:99 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 18:53:09.823 | WARNING  | app.tasks:process_excel_task:140 - Fila 10: email duplicado usuario10@mail.com, se omite
+2025-10-17 18:53:09.835 | SUCCESS  | app.tasks:process_excel_task:158 - Importación completada: 9 usuarios insertados, 1 omitidos
+2025-10-17 18:55:41.948 | INFO     | app.main:upload_excel:456 - Tarea de importación enviada a Celery, id=ec6542ac-0db3-49aa-b0b1-edd316a21384
+2025-10-17 18:55:41.951 | INFO     | app.tasks:process_excel_task:99 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 18:55:49.727 | SUCCESS  | app.tasks:process_excel_task:158 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 18:59:14.053 | INFO     | app.main:disconnect:85 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 18:59:14.143 | INFO     | app.main:connect:78 - Cliente WebSocket conectado. Total: 1
+2025-10-17 19:13:49.460 | INFO     | app.main:disconnect:85 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 19:13:51.116 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:13:52.037 | SUCCESS  | app.main:<module>:57 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 19:13:52.046 | ERROR    | app.main:redis_listener:155 - Listener Redis falló: name 'REDIS_URL' is not defined
+2025-10-17 19:13:55.023 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:13:55.456 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 19:13:55.467 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-17 19:19:43.023 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:19:43.868 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 19:19:43.879 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-17 19:23:35.101 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:23:35.339 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:23:35.615 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 19:23:35.627 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-17 19:23:57.462 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-17 19:23:57.521 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 19:24:23.578 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=847ff256-8823-44b7-8ccd-2e949fd53cbf
+2025-10-17 19:24:23.582 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 19:24:26.345 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 19:24:36.047 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 19:24:36.140 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 19:33:15.501 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 19:39:13.741 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:39:13.904 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:39:15.047 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 19:39:15.061 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-17 19:42:55.889 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 19:43:01.289 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 19:43:33.316 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-17 19:43:33.385 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 19:43:58.508 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=2640948f-ee8e-467c-b4e4-19bb473d1234
+2025-10-17 19:43:58.514 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-17 19:44:01.437 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 19:44:30.631 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 19:44:30.720 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 19:45:54.879 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 19:49:24.862 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-17 19:49:24.929 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 19:49:32.776 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=0c54421b-054c-483d-86e4-00cd60620fd6
+2025-10-17 19:49:32.779 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-17 19:49:35.420 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 19:52:56.007 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 19:56:57.021 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:56:57.312 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 19:56:57.603 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 19:56:57.614 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-17 19:57:17.850 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-17 19:57:17.902 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 19:57:27.197 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=64c83cb2-8382-4047-be05-4a310a218c24
+2025-10-17 19:57:27.200 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 19:57:29.934 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 19:57:32.988 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 19:59:08.619 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-17 19:59:08.681 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 20:01:10.851 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=d886cf03-a718-4977-9e27-b2938d3700cd
+2025-10-17 20:01:10.854 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-17 20:01:13.479 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 20:01:47.539 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 20:06:29.714 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 20:06:30.055 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 20:06:30.267 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 20:06:30.277 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-17 20:06:57.432 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-17 20:06:57.503 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 20:07:17.992 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=73534fce-5226-4413-8a27-dfd74e8e9513
+2025-10-17 20:07:17.995 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-17 20:07:20.742 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 20:19:57.548 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 20:23:31.316 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 20:23:31.593 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 20:23:31.884 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 20:23:31.895 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-17 20:24:05.044 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-17 20:24:05.105 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 20:24:16.464 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=83abb51e-7780-44b0-9b57-3806ce312deb
+2025-10-17 20:24:16.468 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 20:24:19.277 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 20:25:51.871 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-17 20:36:43.916 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 20:36:44.164 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-17 20:36:44.434 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-17 20:36:44.448 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-17 20:37:09.349 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-17 20:37:09.414 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-17 20:37:34.634 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=c98b98e6-e9cc-451e-9bb2-269f59cfbe00
+2025-10-17 20:37:34.637 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 20:37:37.449 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-17 20:56:27.272 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=e46c0759-a34b-417f-8e8f-db1d47694c87
+2025-10-17 20:56:27.276 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 20:56:27.301 | WARNING  | app.tasks:process_excel_task:124 - Fila 1: email duplicado usuario1@mail.com, se omite
+2025-10-17 20:56:27.304 | WARNING  | app.tasks:process_excel_task:124 - Fila 2: email duplicado usuario2@mail.com, se omite
+2025-10-17 20:56:27.307 | WARNING  | app.tasks:process_excel_task:124 - Fila 3: email duplicado usuario3@mail.com, se omite
+2025-10-17 20:56:27.311 | WARNING  | app.tasks:process_excel_task:124 - Fila 4: email duplicado usuario4@mail.com, se omite
+2025-10-17 20:56:27.316 | WARNING  | app.tasks:process_excel_task:124 - Fila 5: email duplicado usuario5@mail.com, se omite
+2025-10-17 20:56:27.319 | WARNING  | app.tasks:process_excel_task:124 - Fila 6: email duplicado usuario6@mail.com, se omite
+2025-10-17 20:56:27.321 | WARNING  | app.tasks:process_excel_task:124 - Fila 7: email duplicado usuario7@mail.com, se omite
+2025-10-17 20:56:27.324 | WARNING  | app.tasks:process_excel_task:124 - Fila 8: email duplicado usuario8@mail.com, se omite
+2025-10-17 20:56:27.326 | WARNING  | app.tasks:process_excel_task:124 - Fila 9: email duplicado usuario9@mail.com, se omite
+2025-10-17 20:56:27.328 | WARNING  | app.tasks:process_excel_task:124 - Fila 10: email duplicado usuario10@mail.com, se omite
+2025-10-17 20:56:27.330 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 0 usuarios insertados, 10 omitidos
+2025-10-17 20:56:31.236 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=07f76a76-06f8-478d-8283-c9ff2c49bb7a
+2025-10-17 20:56:31.238 | INFO     | app.tasks:process_excel_task:83 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-17 20:56:31.250 | WARNING  | app.tasks:process_excel_task:124 - Fila 1: email duplicado usuario1@mail.com, se omite
+2025-10-17 20:56:31.253 | WARNING  | app.tasks:process_excel_task:124 - Fila 2: email duplicado usuario2@mail.com, se omite
+2025-10-17 20:56:31.256 | WARNING  | app.tasks:process_excel_task:124 - Fila 3: email duplicado usuario3@mail.com, se omite
+2025-10-17 20:56:31.260 | WARNING  | app.tasks:process_excel_task:124 - Fila 4: email duplicado usuario4@mail.com, se omite
+2025-10-17 20:56:31.263 | WARNING  | app.tasks:process_excel_task:124 - Fila 5: email duplicado usuario5@mail.com, se omite
+2025-10-17 20:56:31.267 | WARNING  | app.tasks:process_excel_task:124 - Fila 6: email duplicado usuario6@mail.com, se omite
+2025-10-17 20:56:31.269 | WARNING  | app.tasks:process_excel_task:124 - Fila 7: email duplicado usuario7@mail.com, se omite
+2025-10-17 20:56:31.271 | WARNING  | app.tasks:process_excel_task:124 - Fila 8: email duplicado usuario8@mail.com, se omite
+2025-10-17 20:56:31.273 | WARNING  | app.tasks:process_excel_task:124 - Fila 9: email duplicado usuario9@mail.com, se omite
+2025-10-17 20:56:31.275 | WARNING  | app.tasks:process_excel_task:124 - Fila 10: email duplicado usuario10@mail.com, se omite
+2025-10-17 20:56:31.276 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 0 usuarios insertados, 10 omitidos
+2025-10-17 22:12:25.761 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
