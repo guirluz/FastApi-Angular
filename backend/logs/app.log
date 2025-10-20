@@ -862,3 +862,26 @@
 2025-10-20 12:25:42.365 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
 2025-10-20 12:25:42.366 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
 2025-10-20 12:25:42.618 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 13:04:37.964 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 13:04:39.614 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 13:04:40.496 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 13:04:40.506 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 13:04:43.729 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 13:08:23.733 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 13:08:25.513 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 13:08:26.489 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 13:08:26.502 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 13:08:29.712 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 13:08:52.388 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 13:08:53.482 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 13:08:53.962 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 13:08:53.972 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 13:08:58.250 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 13:08:58.679 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 13:08:58.691 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 13:08:58.692 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 13:14:09.905 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 13:14:10.999 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 13:14:11.456 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 13:14:11.467 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 13:14:15.712 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1

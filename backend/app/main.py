@@ -465,43 +465,93 @@ def upload_excel(file: UploadFile):
 def get_task_status(task_id: str):
     """
     Consulta el estado de la tarea de importación de Excel en Celery.
-    Devuelve:
-    - 202 si la tarea sigue en proceso (PENDING/PROGRESS)
-    - 200 si la tarea terminó correctamente (SUCCESS)
-    - 500 si la tarea falló (FAILURE)
     """
     try:
-        task = celery_app.AsyncResult(task_id)
-
+        task = AsyncResult(task_id, app=celery_app)
+        
+        log.info(f"📊 Consultando tarea {task_id}, estado: {task.state}")
+        
         if task.state == "PENDING":
-            log.info(f"Tarea {task_id} pendiente")
-            return build_response(202, "Tarea pendiente", {"state": task.state, "progress": {"current": 0, "total": 1}})
-
+            return build_response(202, "Tarea pendiente", {
+                "state": task.state,
+                "current": 0,
+                "total": 1,
+                "percent": 0,
+                "status": "Esperando..."
+            })
+        
         elif task.state == "PROGRESS":
             info = task.info or {}
             current = info.get("current", 0)
             total = info.get("total", 1)
-            log.info(f"Tarea {task_id} en progreso: {current}/{total}")
-            return build_response(202, "Tarea en progreso", {"state": task.state, "progress": {"current": current, "total": total}})
-
+            percent = int((current / total) * 100) if total > 0 else 0
+            
+            log.info(f"🔄 Progreso: {current}/{total} ({percent}%)")
+            
+            return build_response(202, "Tarea en progreso", {
+                "state": task.state,
+                "current": current,
+                "total": total,
+                "percent": percent,
+                "status": f"Procesando {current}/{total}..."
+            })
+        
         elif task.state == "SUCCESS":
             result = task.result or {}
-            rows = result.get("rows", 0)
-            skipped = result.get("skipped", [])
-            log.success(f"Tarea {task_id} completada: {rows} insertados, {len(skipped)} omitidos")
-            return build_response(200, "Tarea completada", {"state": task.state, "result": result, "progress": {"current": 1, "total": 1}})
-
+            return build_response(200, "Tarea completada", {
+                "state": task.state,
+                "current": result.get("rows", 0),
+                "total": result.get("rows", 0),
+                "percent": 100,
+                "status": "Completado!",
+                "result": result
+            })
+        
         elif task.state == "FAILURE":
-            log.error(f"Tarea {task_id} fallida: {task.info}")
-            return build_response(500, "Tarea fallida", {"state": task.state, "error": str(task.info), "progress": {"current": 0, "total": 1}})
-
+            return build_response(500, "Tarea fallida", {
+                "state": task.state,
+                "current": 0,
+                "total": 1,
+                "percent": 0,
+                "status": "Error",
+                "error": str(task.info)
+            })
+        
         else:
-            log.warning(f"Tarea {task_id} en estado {task.state}")
-            return build_response(202, f"Tarea en estado {task.state}", {"state": task.state, "progress": {"current": 0, "total": 1}})
-
+            return build_response(202, f"Estado: {task.state}", {
+                "state": task.state,
+                "current": 0,
+                "total": 1,
+                "percent": 0,
+                "status": task.state
+            })
+    
     except Exception as e:
-        log.error(f"Error al consultar estado de tarea {task_id}: {e}")
-        return build_response(500, "Error interno al consultar estado", {"state": "ERROR", "progress": {"current": 0, "total": 1}})
+        log.error(f"❌ Error al consultar tarea {task_id}: {e}")
+        return build_response(500, "Error interno", {
+            "state": "ERROR",
+            "error": str(e)
+        })
+    
+
+@app.get("/test-redis")
+def test_redis():
+    """Prueba conexión a Redis y lectura de tasks"""
+    try:
+        import redis
+        r = redis.Redis.from_url(REDIS_URL)
+        r.ping()
+        
+        # Lista todas las keys de celery
+        keys = r.keys("celery-task-meta-*")
+        
+        return build_response(200, "Redis OK", {
+            "connected": True,
+            "tasks_in_redis": len(keys),
+            "sample_keys": [k.decode() for k in keys[:5]]
+        })
+    except Exception as e:
+        return build_response(500, "Redis Error", {"error": str(e)})
 
 # =========================
 # Ejemplo de Celery simple

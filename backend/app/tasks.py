@@ -44,6 +44,17 @@ celery_app = Celery(
     backend=REDIS_URL
 )
 
+# ⚠️ AGREGAR ESTA CONFIGURACIÓN
+celery_app.conf.update(
+    task_track_started=True,      # Habilita tracking desde el inicio
+    task_serializer='json',
+    result_serializer='json',
+    accept_content=['json'],
+    result_expires=3600,           # Resultados expiran en 1 hora
+    worker_send_task_events=True,
+    task_send_sent_event=True,
+)
+
 # Cliente Redis para Pub/Sub (para notificaciones WebSocket)
 redis_client = redis.Redis.from_url(REDIS_URL)
 
@@ -100,19 +111,32 @@ def process_excel_task(self, file_path: str):
 
         for i, row in df.iterrows():
             # ⚠️ El sleep es solo para pruebas visuales, puedes quitarlo en producción
-            # sleep(0.5)
+            sleep(0.5)  # 👈 DEJALO ACTIVADO para que veas el progreso más lento
+
+            current = i + 1
+            percent = int((current / total) * 100)  # 👈 CALCULA PORCENTAJE
 
             # Actualiza estado en Celery (visible vía /task-status)
-            self.update_state(state="PROGRESS", meta={"current": i + 1, "total": total})
+            self.update_state(
+                state="PROGRESS", 
+                meta={
+                    "current": current, 
+                    "total": total,
+                    "percent": percent  # 👈 AGREGADO
+                }
+            )
 
             # Publica progreso en Redis (para WebSocket en FastAPI)
             redis_client.publish("progress_channel", json.dumps({
                 "type": "progress",
                 "task_id": self.request.id,
-                "current": i + 1,
-                "total": total
+                "current": current,
+                "total": total,
+                "percent": percent,      # 👈 AGREGADO
+                "status": "processing"   # 👈 AGREGADO
             }))
-            log.info(f"📢 Progreso publicado: {i+1}/{total} (task_id={self.request.id})")
+            log.info(f"📢 Progreso publicado: {current}/{total} ({percent}%) task_id={self.request.id}")
+            
             username = str(row["username"]).strip()
             email = str(row["email"]).strip()
             password = str(row["password"]).strip()
@@ -149,6 +173,7 @@ def process_excel_task(self, file_path: str):
             "task_id": self.request.id,
             "current": total,
             "total": total,
+            "percent": 100,           # 👈 AGREGADO
             "status": "completed"
         }))
         log.info(f"✅ Importación completada, task_id={self.request.id}")
@@ -162,8 +187,11 @@ def process_excel_task(self, file_path: str):
         redis_client.publish("progress_channel", json.dumps({
             "type": "progress",
             "task_id": self.request.id,
-            "error": str(e),
-            "status": "failed"
+            "current": 0,              # 👈 AGREGADO
+            "total": total if 'total' in locals() else 0,  # 👈 AGREGADO
+            "percent": 0,              # 👈 AGREGADO
+            "status": "failed",
+            "error": str(e)
         }))
         raise e
     finally:
