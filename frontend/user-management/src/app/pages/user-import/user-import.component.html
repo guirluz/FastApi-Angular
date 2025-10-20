@@ -1,0 +1,32 @@
+<mat-card>
+  <h3>📂 Importar Usuarios desde Excel</h3>
+
+  <!-- Selector de archivo -->
+  <input type="file" (change)="onFileSelected($event)" />
+
+  <!-- Botón de subida -->
+  <button mat-raised-button color="primary"
+          (click)="uploadFile()"
+          [disabled]="!selectedFile || isUploading">
+    {{ isUploading ? 'Procesando...' : 'Subir archivo' }}
+  </button>
+
+  <!-- Barra de progreso -->
+  <div *ngIf="taskId">
+    <p *ngIf="progress < 100">Progreso: {{ progress }}%</p>
+    <p *ngIf="progress === 100">✅ Importación completada</p>
+
+    <mat-progress-bar
+      mode="determinate"
+      [value]="progress"
+      color="accent">
+    </mat-progress-bar>
+
+    <!-- Spinner mientras sube -->
+    <div class="spinner-container" *ngIf="isUploading && progress < 100">
+      <mat-spinner diameter="30"></mat-spinner>
+    </div>
+  </div>
+</mat-card>
+
+

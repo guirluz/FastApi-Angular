@@ -1,0 +1,18 @@
+.page-title {
+  margin: 16px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.page-subtitle {
+  margin: 24px 0 8px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+

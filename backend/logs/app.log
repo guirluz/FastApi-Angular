@@ -574,3 +574,291 @@
 2025-10-17 20:56:31.275 | WARNING  | app.tasks:process_excel_task:124 - Fila 10: email duplicado usuario10@mail.com, se omite
 2025-10-17 20:56:31.276 | SUCCESS  | app.tasks:process_excel_task:142 - Importación completada: 0 usuarios insertados, 10 omitidos
 2025-10-17 22:12:25.761 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-19 23:36:15.629 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-19 23:36:15.873 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-19 23:36:16.187 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-19 23:36:16.198 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-19 23:37:26.805 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=5ed40fe0-2ba2-41d1-a3d1-6b0bcf0a282c
+2025-10-19 23:37:26.807 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/INSCRIPCIÓN.xlsx
+2025-10-19 23:37:26.813 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-19 23:37:26.954 | ERROR    | app.tasks:process_excel_task:159 - Error procesando Excel: El archivo Excel debe contener las columnas: {'username', 'email', 'password'}
+2025-10-19 23:40:32.464 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-19 23:40:47.496 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=00d6ab9d-0574-420b-9e1d-e2ecaf84081b
+2025-10-19 23:40:47.499 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-19 23:40:47.514 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-19 23:40:50.189 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 00:55:30.319 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 00:55:32.254 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 00:55:33.351 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 00:55:34.555 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 00:55:35.029 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 00:55:36.019 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 00:55:36.478 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 00:55:36.491 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 02:21:59.205 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 02:21:59.218 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 02:21:59.891 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 02:21:59.904 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 02:22:29.576 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:22:50.964 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 02:23:03.811 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=7407b13e-f517-4f2d-b212-3b8838283868
+2025-10-20 02:23:03.815 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-20 02:23:03.827 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 02:23:03.979 | WARNING  | app.tasks:process_excel_task:126 - Fila 1: email duplicado juan@mail.com, se omite
+2025-10-20 02:23:03.982 | WARNING  | app.tasks:process_excel_task:126 - Fila 2: email duplicado maria@mail.com, se omite
+2025-10-20 02:23:03.984 | WARNING  | app.tasks:process_excel_task:126 - Fila 3: email duplicado pedro@mail.com, se omite
+2025-10-20 02:23:03.987 | WARNING  | app.tasks:process_excel_task:126 - Fila 4: email duplicado ana@mail.com, se omite
+2025-10-20 02:23:03.989 | WARNING  | app.tasks:process_excel_task:126 - Fila 5: email duplicado carlos@mail.com, se omite
+2025-10-20 02:23:03.992 | WARNING  | app.tasks:process_excel_task:126 - Fila 6: email duplicado luisa@mail.com, se omite
+2025-10-20 02:23:03.995 | WARNING  | app.tasks:process_excel_task:126 - Fila 7: email duplicado sofia@mail.com, se omite
+2025-10-20 02:23:03.998 | WARNING  | app.tasks:process_excel_task:126 - Fila 8: email duplicado diego@mail.com, se omite
+2025-10-20 02:23:04.000 | WARNING  | app.tasks:process_excel_task:126 - Fila 9: email duplicado valentina@mail.com, se omite
+2025-10-20 02:23:04.002 | WARNING  | app.tasks:process_excel_task:126 - Fila 10: email duplicado andres@mail.com, se omite
+2025-10-20 02:23:04.003 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 0 usuarios insertados, 10 omitidos
+2025-10-20 02:23:42.997 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 02:23:42.998 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:23:43.070 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:23:47.040 | WARNING  | app.main:get_current_user:314 - Token válido pero usuario no encontrado en DB: eduar@example.com
+2025-10-20 02:23:47.041 | ERROR    | app.database.connection:get_db:44 - Error durante el uso de la sesión de base de datos: 401: Token inválido o expirado
+2025-10-20 02:23:52.966 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:23:53.088 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:24:37.845 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:24:37.930 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:29:14.215 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:29:14.363 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:29:15.007 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:29:15.067 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:29:15.519 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:29:15.580 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:29:28.276 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:29:28.351 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:29:39.466 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:29:39.525 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:29:52.975 | SUCCESS  | app.main:register:221 - Usuario registrado: eduar@example.com
+2025-10-20 02:30:05.902 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 02:30:14.207 | INFO     | app.main:get_current_user:317 - Usuario autenticado correctamente: eduar@example.com
+2025-10-20 02:30:14.208 | INFO     | app.main:read_users_me:324 - Acceso al endpoint /users/me por eduar@example.com
+2025-10-20 02:30:47.138 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 02:40:10.570 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 02:40:10.784 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 02:40:11.140 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 02:40:11.151 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 02:40:17.478 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 02:40:20.563 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 02:40:20.608 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 02:53:35.582 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 03:41:55.525 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 03:41:55.728 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 03:41:56.114 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 03:41:56.126 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 03:42:17.749 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 03:42:29.461 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 03:42:38.481 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=15fdfc71-c2bb-4d4a-9dbf-571a1ac637af
+2025-10-20 03:42:38.486 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-20 03:42:38.492 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 03:42:41.255 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 03:43:20.143 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 03:43:20.145 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 03:43:20.214 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 03:44:18.224 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 03:44:18.293 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 03:44:36.064 | SUCCESS  | app.main:register:221 - Usuario registrado: eduar@example.com
+2025-10-20 03:44:48.821 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 03:48:07.052 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 04:02:07.103 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 04:02:07.331 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 04:02:07.636 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 04:02:07.647 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 04:02:52.903 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 04:03:06.907 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 04:03:16.042 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=347e2066-d367-4e92-b284-c994ee74b87b
+2025-10-20 04:03:16.046 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-20 04:03:16.050 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 04:03:18.793 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 04:03:54.634 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 04:03:54.635 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 04:03:54.851 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 04:04:24.296 | SUCCESS  | app.main:register:221 - Usuario registrado: eduar@example.com
+2025-10-20 04:04:26.349 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 04:04:26.471 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 04:04:28.515 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 04:04:28.625 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 04:04:48.125 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=f2bde215-7e5c-4ba6-b96d-488b87cec0f0
+2025-10-20 04:04:48.127 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-20 04:04:48.141 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 04:04:50.795 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 04:06:45.779 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 04:06:45.781 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 05:42:36.014 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 05:42:36.219 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 05:42:36.580 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 05:42:36.591 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 05:43:58.291 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 05:44:10.805 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 05:44:46.153 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=c3a8f937-8166-484c-8432-d5023b211de8
+2025-10-20 05:44:46.157 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-20 05:44:46.162 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 05:44:48.975 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 05:45:38.366 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 05:45:38.367 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 05:45:38.559 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 05:45:47.455 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 05:45:47.575 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 05:45:49.197 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 05:45:49.310 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 05:45:57.859 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=59329ae3-a44e-4825-a844-777f794bdb16
+2025-10-20 05:45:57.862 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-20 05:45:57.874 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 05:45:59.721 | WARNING  | app.tasks:process_excel_task:126 - Fila 8: email duplicado usuario8@mail.com, se omite
+2025-10-20 05:46:00.252 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 9 usuarios insertados, 1 omitidos
+2025-10-20 05:54:19.347 | SUCCESS  | app.main:register:221 - Usuario registrado: eduar@example.com
+2025-10-20 05:54:32.583 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 05:54:48.248 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 05:54:48.249 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 05:54:48.396 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 05:57:27.468 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 06:01:26.426 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 06:01:26.588 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 06:01:27.055 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 06:01:27.069 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 06:01:45.848 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 06:01:56.028 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 06:02:06.405 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=67129052-6393-419c-8935-23e803dcb28c
+2025-10-20 06:02:06.408 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-20 06:02:06.414 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 06:02:09.155 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 06:13:03.533 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 06:13:03.540 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 06:13:03.747 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 06:13:30.733 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=80cf5312-332e-4a8b-878d-ee182480c221
+2025-10-20 06:13:30.737 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-20 06:13:30.742 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 06:13:33.354 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 06:15:14.844 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 06:15:14.850 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 06:15:15.043 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 06:16:36.152 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=f1246cef-7500-46a5-ab87-6d29a7a0027f
+2025-10-20 06:16:36.155 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-20 06:16:36.169 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 06:16:38.807 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 06:19:36.916 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 06:19:36.923 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 06:19:53.660 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 06:20:03.775 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 06:21:12.094 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 06:21:12.318 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 06:21:28.498 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 06:21:31.435 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 06:21:31.519 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 06:21:41.463 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=d310da0f-8ee6-44d3-a87f-fda9f7cd067b
+2025-10-20 06:21:41.466 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-20 06:21:41.472 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 06:21:44.070 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 06:28:55.447 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 06:28:55.451 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 06:39:31.226 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 06:39:31.468 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 06:39:31.800 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 06:39:31.811 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 06:41:05.556 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 06:41:16.765 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 06:43:11.219 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=7233bf11-3464-4cb4-87be-8d4ee07c8f72
+2025-10-20 06:43:11.224 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-20 06:43:11.233 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 06:43:11.374 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 1/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:11.651 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 2/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:11.918 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 3/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:12.176 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 4/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:12.434 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 5/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:12.709 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 6/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:12.966 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 7/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:13.224 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 8/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:13.480 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 9/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:13.737 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 10/10 (task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72)
+2025-10-20 06:43:14.002 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 06:43:14.003 | INFO     | app.tasks:process_excel_task:154 - ✅ Importación completada, task_id=7233bf11-3464-4cb4-87be-8d4ee07c8f72
+2025-10-20 06:49:06.539 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 06:49:06.541 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 11:58:47.989 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:58:53.046 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 2/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:58:58.051 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 3/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:58:59.871 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:03.057 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 4/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:06.917 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 2/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:08.062 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 5/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:13.066 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 6/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:14.111 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 3/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:18.071 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 7/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:21.170 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 4/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:23.076 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 8/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:28.081 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 9/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:28.325 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 5/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:33.085 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 10/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:35.434 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 6/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:38.086 | ERROR    | app.database.connection:<module>:24 - ❌ No se pudo conectar a MySQL después de varios intentos
+2025-10-20 11:59:42.651 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 7/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:49.715 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 8/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 11:59:56.774 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 9/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 12:00:03.902 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 10/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'db' ([Errno -2] Name or service not known)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 12:00:08.903 | ERROR    | app.database.connection:<module>:24 - ❌ No se pudo conectar a MySQL después de varios intentos
+2025-10-20 12:10:31.099 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-20 12:10:36.118 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 12:10:40.596 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 12:10:41.052 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 12:10:43.268 | ERROR    | app.main:redis_listener:156 - Listener Redis falló: Error -2 connecting to redis:6379. Name or service not known.
+2025-10-20 12:22:04.740 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 12:22:14.478 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 12:22:15.110 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 12:22:15.121 | INFO     | app.main:redis_listener:145 - Suscrito a canal Redis: progress_channel
+2025-10-20 12:23:26.185 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 12:23:40.560 | WARNING  | app.main:login:245 - Usuario no encontrado: eduar@example.com
+2025-10-20 12:23:49.935 | WARNING  | app.main:login:245 - Usuario no encontrado: eduar@example.com
+2025-10-20 12:23:51.472 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 12:23:51.543 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 12:24:01.625 | WARNING  | app.main:login:245 - Usuario no encontrado: eduar@example.com
+2025-10-20 12:24:16.773 | SUCCESS  | app.main:register:221 - Usuario registrado: eduar@example.com
+2025-10-20 12:24:30.993 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 12:24:56.403 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 12:24:56.631 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 12:25:06.246 | INFO     | app.main:login:255 - Usuario eduar@example.com inició sesión
+2025-10-20 12:25:18.925 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 12:25:19.003 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 12:25:26.754 | INFO     | app.main:upload_excel:457 - Tarea de importación enviada a Celery, id=9d6da420-30e0-4b4f-be07-e5c546671098
+2025-10-20 12:25:26.757 | INFO     | app.tasks:process_excel_task:85 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-20 12:25:26.772 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 12:25:26.898 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 1/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:27.162 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 2/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:27.422 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 3/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:27.677 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 4/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:27.939 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 5/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:28.207 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 6/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:28.475 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 7/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:28.741 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 8/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:29.004 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 9/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:29.259 | INFO     | app.tasks:process_excel_task:115 - 📢 Progreso publicado: 10/10 (task_id=9d6da420-30e0-4b4f-be07-e5c546671098)
+2025-10-20 12:25:29.520 | SUCCESS  | app.tasks:process_excel_task:144 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 12:25:29.521 | INFO     | app.tasks:process_excel_task:154 - ✅ Importación completada, task_id=9d6da420-30e0-4b4f-be07-e5c546671098
+2025-10-20 12:25:42.365 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 12:25:42.366 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 12:25:42.618 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1

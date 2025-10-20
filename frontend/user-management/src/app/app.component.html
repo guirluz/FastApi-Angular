@@ -1,0 +1,18 @@
+
+
+<mat-toolbar color="primary">
+  <span>Gestión de Usuarios</span>
+  <span class="spacer"></span>
+
+  <!-- Solo se muestran si el usuario está logueado -->
+  <!-- <a mat-button routerLink="/import" *ngIf="isLoggedIn()">Importar</a>
+  <a mat-button routerLink="/users" *ngIf="isLoggedIn()">Usuarios</a>
+  <a mat-button routerLink="/profile" *ngIf="isLoggedIn()">Perfil</a> -->
+
+  <!-- Botón de logout -->
+  <button mat-button (click)="logout()" *ngIf="isLoggedIn()">Salir</button>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

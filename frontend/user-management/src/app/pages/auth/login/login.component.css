@@ -1,0 +1,31 @@
+mat-card {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 32px;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #3f51b5; /* color primario del tema */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

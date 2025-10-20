@@ -1,9 +1,9 @@
 
 services:
-  db:
+  usuarios_db:
     image: mysql:8.0
-    container_name: mysql_db
-    restart: always
+    container_name: usuarios_db
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
@@ -21,8 +21,10 @@ services:
     networks:
       - internal_net
 
-  backend:
-    build: ./backend
+  fastapi_backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: fastapi_backend
     restart: always
     env_file:
@@ -30,20 +32,32 @@ services:
     ports:                # este sí lo expones porque lo usas desde Postman/Angular
       - "8000:8000"
     depends_on:
-      db:
+      usuarios_db:
         condition: service_healthy
-      redis:
+      redis_usuarios:
         condition: service_healthy
     volumes:
       - ./backend:/app
       - ./backend/app/uploads:/app/uploads
+    command: >
+      sh -c "
+        echo 'Esperando 10 segundos para que la base de datos y Redis estén listos...' &&
+        sleep 10 &&
+        uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+      "
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8000/docs\")'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     networks:
       - internal_net
       - default
 
-  redis:
+  redis_usuarios:
     image: redis:7.2
-    container_name: redis_cache
+    container_name: redis_usuarios
     restart: always
     expose:               # solo visible dentro de la red interna
       - "6379"
@@ -56,13 +70,15 @@ services:
       - internal_net
 
   celery_worker:
-    build: ./backend
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: celery_worker
     command: celery -A app.tasks worker --loglevel=info
     depends_on:
-      backend:
+      fastapi_backend:
         condition: service_started
-      redis:
+      redis_usuarios:
         condition: service_healthy
     env_file:
       - ./backend/.env
@@ -72,14 +88,16 @@ services:
     networks:
       - internal_net
   
-  frontend:
-    build: ./frontend/user-management
+  angular_frontend:
+    build:
+      context: ./frontend/user-management
+      dockerfile: Dockerfile
     container_name: angular_frontend
     restart: always
     ports:
       - "4200:80"   # Puerto externo 4200 -> interno 80 de Nginx
     depends_on:
-      backend:
+      fastapi_backend:
         condition: service_started
     healthcheck:          # healthcheck para Nginx
       test: ["CMD", "curl", "-f", "http://localhost"]

@@ -1,16 +1,53 @@
-# Ignorar entornos virtuales
-venv/
-.env
-backend/.env
-
-# Archivos de configuración sensibles
-*.env
-
-# Archivos de caché de Python
+# =====================
+#  Python / FastAPI
+# =====================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.pid
+venv/
+env/
+backend/.env
+.env
+*.env
 
-# Archivos de Angular
+# Logs
+logs/
+backend/logs/
+*.log
+
+# Archivos subidos (uploads)
+backend/app/uploads/
+
+# =====================
+#  Node / Angular
+# =====================
 node_modules/
 dist/
+.angular/
+*.log
 
+# =====================
+#  Docker
+# =====================
+db_data/
+docker/mysql/
+*.pid
+
+# =====================
+#  Sistema / IDE
+# =====================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =====================
+#  Otros
+# =====================
+*.bak
+*.tmp

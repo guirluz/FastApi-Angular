@@ -112,7 +112,7 @@ def process_excel_task(self, file_path: str):
                 "current": i + 1,
                 "total": total
             }))
-
+            log.info(f"📢 Progreso publicado: {i+1}/{total} (task_id={self.request.id})")
             username = str(row["username"]).strip()
             email = str(row["email"]).strip()
             password = str(row["password"]).strip()
@@ -151,7 +151,7 @@ def process_excel_task(self, file_path: str):
             "total": total,
             "status": "completed"
         }))
-
+        log.info(f"✅ Importación completada, task_id={self.request.id}")
         return {"status": "completed", "rows": inserted, "skipped": skipped}
 
     except Exception as e:
