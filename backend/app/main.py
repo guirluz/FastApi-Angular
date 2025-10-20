@@ -20,6 +20,7 @@ import asyncio  # Operaciones async para WebSocket
 import json
 import redis.asyncio as aioredis
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+background_tasks = set()
 
 from app.database.connection import engine, Base, get_db
 from app.models.user import User
@@ -31,7 +32,6 @@ from app.config import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES, REFRE
 # Celery (tareas pesadas)
 from app.tasks import generar_reporte_usuarios, celery_app, process_excel_task
 from celery.result import AsyncResult
-
 
 # =========================
 # Inicialización de la app
@@ -127,6 +127,7 @@ async def websocket_notify(websocket: WebSocket):
         log.error(f"Error en WebSocket /ws/notify: {e}")
         ws_manager.disconnect(websocket)
 
+
 # =========================
 # Suscripción a Redis Pub/Sub y reenvío a WebSocket
 # =========================
@@ -137,26 +138,71 @@ async def startup_event():
     y reenvía cada mensaje a los clientes WebSocket conectados.
     """
     async def redis_listener():
+        redis = None
+        pubsub = None
         try:
-            redis = aioredis.from_url(REDIS_URL, decode_responses=True)
+            log.info("🔄 Iniciando listener de Redis...")
+            redis = await aioredis.from_url(REDIS_URL, decode_responses=True)
             pubsub = redis.pubsub()
             await pubsub.subscribe("progress_channel")
-
-            log.info("Suscrito a canal Redis: progress_channel")
-
+            
+            log.success("✅ Suscrito a canal Redis: progress_channel")
+            
             async for message in pubsub.listen():
-                if message.get("type") == "message":
+                if message and message.get("type") == "message":
                     try:
                         data = json.loads(message.get("data", "{}"))
+                        log.info(f"📨 Mensaje recibido de Redis: {data}")
+                        
                         # Reenvía al WebSocket
                         await ws_manager.broadcast(data)
+                        log.info(f"📤 Mensaje reenviado a {len(ws_manager.active_connections)} clientes WebSocket")
+                    except json.JSONDecodeError as e:
+                        log.error(f"Error al parsear JSON de Redis: {e}")
                     except Exception as e:
                         log.error(f"Error procesando mensaje Redis: {e}")
+                        
+        except asyncio.CancelledError:
+            log.warning("⚠️ Listener Redis cancelado (shutdown)")
+            raise  # Re-raise para limpieza correcta
         except Exception as e:
-            log.error(f"Listener Redis falló: {e}")
+            log.error(f"❌ Listener Redis falló: {e}")
+            import traceback
+            log.error(traceback.format_exc())
+        finally:
+            log.info("🧹 Limpiando conexiones de Redis...")
+            if pubsub:
+                try:
+                    await pubsub.unsubscribe("progress_channel")
+                    await pubsub.close()
+                    log.info("✅ Pubsub cerrado")
+                except Exception as e:
+                    log.warning(f"Error cerrando pubsub: {e}")
+            if redis:
+                try:
+                    await redis.close()
+                    log.info("✅ Redis cerrado")
+                except Exception as e:
+                    log.warning(f"Error cerrando redis: {e}")
 
-    # Levanta el listener en segundo plano
-    asyncio.create_task(redis_listener())
+    # 👇 CRÍTICO: Guardar referencia para evitar garbage collection
+    task = asyncio.create_task(redis_listener())
+    background_tasks.add(task)
+    task.add_done_callback(background_tasks.discard)
+    
+    log.info("🚀 Tarea de Redis listener iniciada en background")
+
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    """Cancela todas las tareas en background al cerrar FastAPI"""
+    log.info("🛑 Cancelando tareas en background...")
+    for task in background_tasks:
+        task.cancel()
+    
+    # Espera a que terminen
+    await asyncio.gather(*background_tasks, return_exceptions=True)
+    log.info("✅ Todas las tareas canceladas correctamente")
 
 # =========================
 # Utilidades JWT
