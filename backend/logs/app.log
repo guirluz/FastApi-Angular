@@ -1768,3 +1768,366 @@ redis.exceptions.ConnectionError: Connection closed by server.
 2025-10-21 14:56:20.861 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
 2025-10-21 14:56:20.861 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
 2025-10-21 14:56:20.867 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 15:23:26.355 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 18:54:30.617 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 18:54:43.420 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 18:54:46.658 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 18:54:46.672 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 18:54:46.673 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 18:54:47.946 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 18:54:48.508 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 18:54:48.520 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 18:54:48.520 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 18:54:49.709 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 18:54:50.310 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 18:54:50.321 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 18:54:50.322 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 18:54:50.326 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 18:54:51.128 | INFO     | app.main:shutdown_event:199 - 🛑 Cancelando tareas en background...
+2025-10-21 18:54:51.128 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 18:54:51.128 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 18:54:51.129 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 18:54:51.130 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 18:54:51.131 | INFO     | app.main:shutdown_event:205 - ✅ Todas las tareas canceladas correctamente
+2025-10-21 18:54:56.855 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 18:54:57.591 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 18:54:57.599 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 18:54:57.599 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 18:55:08.337 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 18:55:09.113 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 18:55:09.125 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 18:55:09.125 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 18:55:09.130 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 18:55:22.663 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 18:55:22.664 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 18:55:22.664 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 18:55:22.665 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 18:55:22.666 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 18:55:22.667 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 18:55:24.088 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 18:55:24.845 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 18:55:24.855 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 18:55:24.855 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 18:55:24.859 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 18:55:26.564 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 18:55:26.564 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 18:55:26.564 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 18:55:26.565 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 18:55:26.565 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 18:55:26.566 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 18:55:28.075 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 18:55:28.750 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 18:55:28.764 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 18:55:28.764 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 18:55:28.768 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:01:05.650 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:01:13.278 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 19:01:23.722 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:23.730 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 19:01:23.737 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-21 19:01:24.095 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:24.096 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 19:01:24.097 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:24.623 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:24.624 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 19:01:24.624 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:25.107 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:25.107 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 19:01:25.108 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:25.594 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:25.595 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 19:01:25.596 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:26.084 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:26.085 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 19:01:26.086 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:26.565 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:26.565 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 19:01:26.566 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:27.043 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:27.043 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 19:01:27.044 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:27.530 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:27.531 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 19:01:27.532 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:28.007 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:28.008 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 19:01:28.009 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:28.489 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:28.489 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 19:01:28.490 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:28.781 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 19:01:28.782 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=bef0f5d4-4756-4203-8d83-691801cd724b
+2025-10-21 19:01:28.782 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'bef0f5d4-4756-4203-8d83-691801cd724b', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 19:01:28.782 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 19:01:28.788 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 19:02:19.828 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:02:19.928 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:02:19.928 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:02:19.929 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:02:19.930 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:02:19.930 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:02:19.931 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:02:21.196 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:02:21.654 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:02:21.662 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:02:21.662 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:02:21.665 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:02:21.988 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:02:22.168 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:02:22.269 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:02:22.270 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:02:22.270 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:02:22.271 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:02:22.272 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:02:22.272 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:02:23.367 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:02:23.765 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:02:23.773 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:02:23.774 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:02:23.777 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:02:24.987 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:02:36.618 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:02:36.719 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:02:36.720 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:02:36.720 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:02:36.722 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:02:36.722 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:02:36.723 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:02:37.862 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:02:38.284 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:02:38.294 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:02:38.294 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:02:38.297 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:02:38.988 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:01.072 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:03:01.172 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:01.173 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:01.173 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:01.173 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:01.174 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:01.174 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:02.252 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:02.888 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:02.898 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:02.899 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:04.078 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:04.567 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:04.580 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:04.581 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:04.585 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:04.588 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:03:19.030 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:03:19.130 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:19.131 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:19.131 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:19.132 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:19.133 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:19.134 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:20.277 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:20.799 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:20.809 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:20.809 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:20.812 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:03:21.987 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:22.015 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:03:22.115 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:22.116 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:22.116 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:22.117 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:22.118 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:22.118 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:23.204 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:23.707 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:23.715 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:23.715 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:23.718 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:03:24.992 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:27.833 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:03:27.933 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:27.934 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:27.934 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:27.935 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:27.935 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:27.935 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:29.098 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:29.558 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:29.566 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:29.566 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:29.569 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:03:29.993 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:31.976 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:03:32.077 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:32.078 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:32.078 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:32.079 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:32.080 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:32.080 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:33.353 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:33.899 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:33.910 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:33.910 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:35.090 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:35.563 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:35.573 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:35.573 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:35.576 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:35.578 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:03:38.687 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:03:38.787 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:38.788 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:38.788 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:38.789 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:38.790 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:38.790 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:39.925 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:40.368 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:40.376 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:40.377 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:40.380 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:03:40.982 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:44.596 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:03:44.696 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:44.697 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:44.697 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:44.698 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:44.698 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:44.699 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:45.947 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:46.530 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:46.543 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:46.544 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:47.957 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:48.448 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:48.463 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:48.463 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:48.467 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:48.469 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:03:48.666 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:03:48.767 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:48.767 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:48.768 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:48.768 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:48.769 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:48.769 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:50.000 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:50.501 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:50.512 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:50.512 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:50.516 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:03:51.016 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:03:51.016 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:03:51.017 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:03:51.017 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:03:51.018 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:03:51.018 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:03:52.063 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:03:52.502 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:03:52.511 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:03:52.511 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:03:52.516 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:03:52.518 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:04:04.150 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:04:04.249 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:04:04.250 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:04:04.250 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:04:04.251 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:04:04.251 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:04:04.252 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:04:05.494 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:04:05.914 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:04:05.922 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:04:05.922 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:04:05.925 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:04:06.982 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:04:08.732 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:04:08.833 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:04:08.834 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:04:08.834 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:04:08.835 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:04:08.835 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:04:08.836 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:04:09.938 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:04:10.373 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:04:10.381 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:04:10.381 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:04:10.384 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:04:10.979 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:04:12.289 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:04:12.388 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 19:04:12.389 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 19:04:12.389 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 19:04:12.390 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 19:04:12.390 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 19:04:12.391 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 19:04:13.498 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 19:04:13.956 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 19:04:13.966 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 19:04:13.966 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 19:04:13.969 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-21 19:04:14.986 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:01.429 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:01.689 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:08.854 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:38.100 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:38.778 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:38.947 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:40.787 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:40.965 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:44.833 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:44.941 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:48.854 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:48.991 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:50.858 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:50.988 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:52.811 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:52.957 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:54.753 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:54.870 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:05:58.919 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:05:59.018 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:00.767 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:00.879 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:02.803 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:02.963 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:04.885 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:05.014 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:06.738 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:06.847 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:08.790 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:08.922 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:12.709 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:12.882 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:16.842 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:16.956 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:18.787 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:18.912 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:20.852 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:20.974 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:22.690 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:22.863 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:24.896 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:25.014 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:27.033 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:27.163 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:34.812 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:34.975 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:36.823 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:36.952 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:42.865 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:42.984 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:06:59.040 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:06:59.240 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:07:00.989 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:07:01.095 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:07:09.082 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:07:09.251 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:07:11.016 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:07:11.119 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:07:12.903 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:07:13.008 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:07:14.961 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:07:15.147 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:07:16.908 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:07:17.061 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 19:07:20.936 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 19:07:21.036 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1

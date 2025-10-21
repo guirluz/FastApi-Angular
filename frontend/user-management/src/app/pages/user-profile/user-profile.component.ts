@@ -18,7 +18,7 @@ export class UserProfileComponent implements OnInit {
         this.user = res.data;
       },
       error: (err) => {
-        console.error('❌ Error cargando perfil', err);
+        console.error('Error cargando perfil', err);
       }
     });
   }

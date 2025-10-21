@@ -95,12 +95,15 @@ services:
     container_name: angular_frontend
     restart: always
     ports:
-      - "4200:80"   # Puerto externo 4200 -> interno 80 de Nginx
+      - "4200:4200"   # 👈 CAMBIADO: ahora mapea 4200:4200
     depends_on:
       fastapi_backend:
         condition: service_started
-    healthcheck:          # healthcheck para Nginx
-      test: ["CMD", "curl", "-f", "http://localhost"]
+    volumes:
+      - ./frontend/user-management:/app   # 👈 AGREGADO: para hot-reload
+      - /app/node_modules                  # 👈 AGREGADO: evita sobrescribir node_modules
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4200"]  # 👈 CAMBIADO
       interval: 10s
       timeout: 5s
       retries: 5

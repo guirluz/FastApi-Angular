@@ -22,7 +22,7 @@ export class LoginComponent {
         this.router.navigate(['/users']);
       },
       error: () => {
-        this.errorMessage = '❌ Credenciales inválidas';
+        this.errorMessage = 'Credenciales inválidas';
       }
     });
   }

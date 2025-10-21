@@ -141,32 +141,32 @@ async def startup_event():
         redis = None
         pubsub = None
         try:
-            log.info("🔄 Iniciando listener de Redis...")
+            log.info("Iniciando listener de Redis...")
             redis = await aioredis.from_url(REDIS_URL, decode_responses=True)
             pubsub = redis.pubsub()
             await pubsub.subscribe("progress_channel")
             
-            log.success("✅ Suscrito a canal Redis: progress_channel")
+            log.success("Suscrito a canal Redis: progress_channel")
             
             async for message in pubsub.listen():
                 if message and message.get("type") == "message":
                     try:
                         data = json.loads(message.get("data", "{}"))
-                        log.info(f"📨 Mensaje recibido de Redis: {data}")
+                        log.info(f"Mensaje recibido de Redis: {data}")
                         
                         # Reenvía al WebSocket
                         await ws_manager.broadcast(data)
-                        log.info(f"📤 Mensaje reenviado a {len(ws_manager.active_connections)} clientes WebSocket")
+                        log.info(f"Mensaje reenviado a {len(ws_manager.active_connections)} clientes WebSocket")
                     except json.JSONDecodeError as e:
                         log.error(f"Error al parsear JSON de Redis: {e}")
                     except Exception as e:
                         log.error(f"Error procesando mensaje Redis: {e}")
                         
         except asyncio.CancelledError:
-            log.warning("⚠️ Listener Redis cancelado (shutdown)")
+            log.warning("Listener Redis cancelado (shutdown)")
             raise  # Re-raise para limpieza correcta
         except Exception as e:
-            log.error(f"❌ Listener Redis falló: {e}")
+            log.error(f"Listener Redis falló: {e}")
             import traceback
             log.error(traceback.format_exc())
         finally:
@@ -175,34 +175,34 @@ async def startup_event():
                 try:
                     await pubsub.unsubscribe("progress_channel")
                     await pubsub.close()
-                    log.info("✅ Pubsub cerrado")
+                    log.info("Pubsub cerrado")
                 except Exception as e:
                     log.warning(f"Error cerrando pubsub: {e}")
             if redis:
                 try:
                     await redis.close()
-                    log.info("✅ Redis cerrado")
+                    log.info("Redis cerrado")
                 except Exception as e:
                     log.warning(f"Error cerrando redis: {e}")
 
-    # 👇 CRÍTICO: Guardar referencia para evitar garbage collection
+    # CRÍTICO: Guardar referencia para evitar garbage collection
     task = asyncio.create_task(redis_listener())
     background_tasks.add(task)
     task.add_done_callback(background_tasks.discard)
     
-    log.info("🚀 Tarea de Redis listener iniciada en background")
+    log.info("Tarea de Redis listener iniciada en background")
 
 
 @app.on_event("shutdown")
 async def shutdown_event():
     """Cancela todas las tareas en background al cerrar FastAPI"""
-    log.info("🛑 Cancelando tareas en background...")
+    log.info("Cancelando tareas en background...")
     for task in background_tasks:
         task.cancel()
     
     # Espera a que terminen
     await asyncio.gather(*background_tasks, return_exceptions=True)
-    log.info("✅ Todas las tareas canceladas correctamente")
+    log.info("Todas las tareas canceladas correctamente")
 
 # =========================
 # Utilidades JWT
@@ -515,7 +515,7 @@ def get_task_status(task_id: str):
     try:
         task = AsyncResult(task_id, app=celery_app)
         
-        log.info(f"📊 Consultando tarea {task_id}, estado: {task.state}")
+        log.info(f"Consultando tarea {task_id}, estado: {task.state}")
         
         if task.state == "PENDING":
             return build_response(202, "Tarea pendiente", {
@@ -573,7 +573,7 @@ def get_task_status(task_id: str):
             })
     
     except Exception as e:
-        log.error(f"❌ Error al consultar tarea {task_id}: {e}")
+        log.error(f"Error al consultar tarea {task_id}: {e}")
         return build_response(500, "Error interno", {
             "state": "ERROR",
             "error": str(e)

@@ -34,7 +34,7 @@ export class UserListComponent implements OnInit {
         this.dataSource.paginator = this.paginator;
       },
       error: (err) => {
-        console.error('❌ Error cargando usuarios', err);
+        console.error('Error cargando usuarios', err);
       }
     });
   }
@@ -46,7 +46,7 @@ export class UserListComponent implements OnInit {
           this.loadUsers();
         },
         error: () => {
-          console.error('❌ Error al eliminar usuario');
+          console.error('Error al eliminar usuario');
         }
       });
     }

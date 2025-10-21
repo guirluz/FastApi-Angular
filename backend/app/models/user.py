@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, TIMESTAMP, func
 from app.database.connection import Base
-from app.logger import log  # 👈 Importamos logger solo si queremos depuración
+from app.logger import log  # Importamos logger solo si queremos depuración
 
 class User(Base):
     """

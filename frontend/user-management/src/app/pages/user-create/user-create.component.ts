@@ -23,7 +23,7 @@ export class UserCreateComponent {
         this.dialogRef.close('success');
       },
       error: (err: any) => {
-        console.error('❌ Error al crear usuario', err);
+        console.error('Error al crear usuario', err);
         // Aquí puedes agregar lógica para mostrar un mensaje de error al usuario
       }
     });

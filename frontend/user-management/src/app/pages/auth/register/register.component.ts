@@ -19,12 +19,12 @@ export class RegisterComponent {
   register(): void {
     this.api.register({ username: this.username, email: this.email, password: this.password }).subscribe({
       next: () => {
-        this.message = '✅ Usuario registrado correctamente';
+        this.message = 'Usuario registrado correctamente';
         this.isError = false;
         setTimeout(() => this.router.navigate(['/login']), 1500);
       },
       error: () => {
-        this.message = '❌ Error al registrar usuario';
+        this.message = 'Error al registrar usuario';
         this.isError = true;
       }
     });

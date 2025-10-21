@@ -15,13 +15,13 @@ for attempt in range(1, max_retries + 1):
         engine = create_engine(DATABASE_URL)
         # Probar conexión inmediata
         with engine.connect() as conn:
-            log.success("✅ Conexión a MySQL exitosa")
+            log.success("Conexión a MySQL exitosa")
         break
     except OperationalError as e:
         log.warning(f"⏳ Intento {attempt}/{max_retries}: MySQL no está listo ({e})")
         time.sleep(wait_seconds)
 else:
-    log.error("❌ No se pudo conectar a MySQL después de varios intentos")
+    log.error("No se pudo conectar a MySQL después de varios intentos")
     raise
 
 # Sesión de SQLAlchemy

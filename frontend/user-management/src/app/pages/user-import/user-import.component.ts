@@ -31,22 +31,22 @@ export class UserImportComponent implements OnDestroy {
     const ext = file.name.substring(file.name.lastIndexOf('.')).toLowerCase();
 
     if (!validExtensions.includes(ext)) {
-      this.snackBar.open('❌ Solo se permiten archivos Excel (.xls, .xlsx)', 'Cerrar', { duration: 4000 });
+      this.snackBar.open('Solo se permiten archivos Excel (.xls, .xlsx)', 'Cerrar', { duration: 4000 });
       return;
     }
 
     if (file.size > maxSize) {
-      this.snackBar.open('❌ El archivo excede el tamaño máximo de 5MB', 'Cerrar', { duration: 4000 });
+      this.snackBar.open('El archivo excede el tamaño máximo de 5MB', 'Cerrar', { duration: 4000 });
       return;
     }
 
     this.selectedFile = file;
-    console.log('✅ Archivo seleccionado:', file.name);
+    console.log('Archivo seleccionado:', file.name);
   }
 
   uploadFile(): void {
     if (!this.selectedFile) {
-      this.snackBar.open('⚠️ Selecciona un archivo primero', 'Cerrar', { duration: 3000 });
+      this.snackBar.open('Selecciona un archivo primero', 'Cerrar', { duration: 3000 });
       return;
     }
 
@@ -57,29 +57,29 @@ export class UserImportComponent implements OnDestroy {
     const formData = new FormData();
     formData.append('file', this.selectedFile);
 
-    console.log('📤 Subiendo archivo:', this.selectedFile.name);
+    console.log('Subiendo archivo:', this.selectedFile.name);
 
     this.api.uploadExcel(formData).subscribe({
       next: (response: any) => {
-        console.log('📨 Respuesta del backend:', response);
+        console.log('Respuesta del backend:', response);
         
-        // 🔑 CORREGIDO: El backend devuelve { code, message, data: { task_id } }
+        // CORREGIDO: El backend devuelve { code, message, data: { task_id } }
         this.taskId = response.data?.task_id || response.task_id;
         
         if (!this.taskId) {
-          console.error('❌ No se recibió task_id en la respuesta:', response);
-          this.snackBar.open('❌ Error: No se recibió ID de tarea', 'Cerrar', { duration: 4000 });
+          console.error('No se recibió task_id en la respuesta:', response);
+          this.snackBar.open('Error: No se recibió ID de tarea', 'Cerrar', { duration: 4000 });
           this.isUploading = false;
           return;
         }
 
-        console.log('✅ Task ID recibido:', this.taskId);
+        console.log('Task ID recibido:', this.taskId);
         this.statusMessage = 'Procesando archivo...';
         this.connectWebSocket();
       },
       error: (err) => {
-        console.error('❌ Error subiendo archivo:', err);
-        this.snackBar.open('❌ Error al subir el archivo', 'Cerrar', { duration: 4000 });
+        console.error('Error subiendo archivo:', err);
+        this.snackBar.open('Error al subir el archivo', 'Cerrar', { duration: 4000 });
         this.isUploading = false;
         this.statusMessage = '';
       }
@@ -91,29 +91,29 @@ export class UserImportComponent implements OnDestroy {
     this.ws = new WebSocket('ws://localhost:8000/ws/notify');
 
     this.ws.onopen = () => {
-      console.log('✅ WebSocket conectado, esperando mensajes...');
+      console.log('WebSocket conectado, esperando mensajes...');
     };
 
     this.ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      console.log('📨 Mensaje WebSocket recibido:', data);
+      console.log('Mensaje WebSocket recibido:', data);
 
-      // 🔑 CORREGIDO: Verifica que sea del tipo 'progress' y de nuestra tarea
+      // CORREGIDO: Verifica que sea del tipo 'progress' y de nuestra tarea
       if (data.type === 'progress' && data.task_id === this.taskId) {
-        console.log(`📊 Progreso: ${data.current}/${data.total} (${data.percent}%)`);
+        console.log(`Progreso: ${data.current}/${data.total} (${data.percent}%)`);
 
         this.progress = data.percent || 0;
         this.statusMessage = `Procesando: ${data.current}/${data.total} registros`;
 
         if (data.status === 'completed') {
-          console.log('✅ Importación completada');
+          console.log('Importación completada');
           this.progress = 100;
           this.statusMessage = '¡Importación completada!';
-          this.snackBar.open('✅ Importación completada con éxito', 'Cerrar', { duration: 4000 });
+          this.snackBar.open('Importación completada con éxito', 'Cerrar', { duration: 4000 });
           this.isUploading = false;
           this.ws.close();
           
-          // 🔑 Avisamos al padre que debe refrescar la tabla
+          // Avisamos al padre que debe refrescar la tabla
           this.importCompleted.emit();
           
           // Resetear después de 2 segundos
@@ -121,9 +121,9 @@ export class UserImportComponent implements OnDestroy {
             this.resetForm();
           }, 2000);
         } else if (data.status === 'failed') {
-          console.error('❌ Error en la tarea:', data.error);
+          console.error('Error en la tarea:', data.error);
           this.statusMessage = 'Error en la importación';
-          this.snackBar.open(`❌ Error: ${data.error}`, 'Cerrar', { duration: 5000 });
+          this.snackBar.open(`Error: ${data.error}`, 'Cerrar', { duration: 5000 });
           this.isUploading = false;
           this.ws.close();
         }
@@ -131,8 +131,8 @@ export class UserImportComponent implements OnDestroy {
     };
 
     this.ws.onerror = (error) => {
-      console.error('❌ Error en WebSocket:', error);
-      this.snackBar.open('❌ Error de conexión WebSocket', 'Cerrar', { duration: 4000 });
+      console.error('Error en WebSocket:', error);
+      this.snackBar.open('Error de conexión WebSocket', 'Cerrar', { duration: 4000 });
     };
 
     this.ws.onclose = () => {

@@ -1,10 +1,18 @@
-FROM node:18 AS build
-WORKDIR /app
-COPY package*.json ./
-RUN npm install -g @angular/cli@16 && npm install
-COPY . .
-RUN ng build --configuration production
+FROM node:18
 
-FROM nginx:alpine
-COPY --from=build /app/dist/user-management /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
+
+# Copia archivos de dependencias
+COPY package*.json ./
+
+# Instala Angular CLI y dependencias
+RUN npm install -g @angular/cli@16 && npm install
+
+# Copia todo el código fuente
+COPY . .
+
+# Expone el puerto 4200
+EXPOSE 4200
+
+# Comando para ejecutar Angular en modo desarrollo
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4200", "--poll", "2000"]

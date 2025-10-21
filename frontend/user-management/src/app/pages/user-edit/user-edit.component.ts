@@ -35,12 +35,12 @@ export class UserEditComponent {
 
     this.api.updateUser(this.user.id, payload).subscribe({
       next: () => {
-        this.message = '✅ Usuario actualizado';
+        this.message = 'Usuario actualizado';
         setTimeout(() => this.dialogRef.close('success'), 1000);
       },
       error: (err) => {
-        console.error('❌ Error al actualizar usuario', err);
-        this.message = '❌ Error al actualizar usuario';
+        console.error('Error al actualizar usuario', err);
+        this.message = 'Error al actualizar usuario';
       }
     });
   }

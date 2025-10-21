@@ -13,12 +13,12 @@ import os
 from dotenv import load_dotenv
 from time import sleep
 
-# 👇 Imports de tu proyecto
+# Imports de tu proyecto
 from app.logger import log
 from app.database.connection import engine
 from app.models.user import User
 
-# 👇 Librerías externas necesarias
+# Librerías externas necesarias
 import pandas as pd
 import bcrypt
 from sqlalchemy.orm import sessionmaker
@@ -44,7 +44,7 @@ celery_app = Celery(
     backend=REDIS_URL
 )
 
-# ⚠️ AGREGAR ESTA CONFIGURACIÓN
+# AGREGAR ESTA CONFIGURACIÓN
 celery_app.conf.update(
     task_track_started=True,      # Habilita tracking desde el inicio
     task_serializer='json',
@@ -110,11 +110,11 @@ def process_excel_task(self, file_path: str):
         skipped = []
 
         for i, row in df.iterrows():
-            # ⚠️ El sleep es solo para pruebas visuales, puedes quitarlo en producción
-            sleep(0.2)  # 👈 DEJALO ACTIVADO para que veas el progreso más lento
+            # El sleep es solo para pruebas visuales, puedes quitarlo en producción
+            sleep(0.2)  # DEJALO ACTIVADO para que veas el progreso más lento
 
             current = i + 1
-            percent = int((current / total) * 100)  # 👈 CALCULA PORCENTAJE
+            percent = int((current / total) * 100)  # CALCULA PORCENTAJE
 
             # Actualiza estado en Celery (visible vía /task-status)
             self.update_state(
@@ -122,7 +122,7 @@ def process_excel_task(self, file_path: str):
                 meta={
                     "current": current, 
                     "total": total,
-                    "percent": percent  # 👈 AGREGADO
+                    "percent": percent  # AGREGADO
                 }
             )
 
@@ -132,10 +132,10 @@ def process_excel_task(self, file_path: str):
                 "task_id": self.request.id,
                 "current": current,
                 "total": total,
-                "percent": percent,      # 👈 AGREGADO
-                "status": "processing"   # 👈 AGREGADO
+                "percent": percent,      # AGREGADO
+                "status": "processing"   # AGREGADO
             }))
-            log.info(f"📢 Progreso publicado: {current}/{total} ({percent}%) task_id={self.request.id}")
+            log.info(f"Progreso publicado: {current}/{total} ({percent}%) task_id={self.request.id}")
             
             username = str(row["username"]).strip()
             email = str(row["email"]).strip()
@@ -173,10 +173,10 @@ def process_excel_task(self, file_path: str):
             "task_id": self.request.id,
             "current": total,
             "total": total,
-            "percent": 100,           # 👈 AGREGADO
+            "percent": 100,           # AGREGADO
             "status": "completed"
         }))
-        log.info(f"✅ Importación completada, task_id={self.request.id}")
+        log.info(f"Importación completada, task_id={self.request.id}")
         return {"status": "completed", "rows": inserted, "skipped": skipped}
 
     except Exception as e:
@@ -187,9 +187,9 @@ def process_excel_task(self, file_path: str):
         redis_client.publish("progress_channel", json.dumps({
             "type": "progress",
             "task_id": self.request.id,
-            "current": 0,              # 👈 AGREGADO
-            "total": total if 'total' in locals() else 0,  # 👈 AGREGADO
-            "percent": 0,              # 👈 AGREGADO
+            "current": 0,              # AGREGADO
+            "total": total if 'total' in locals() else 0,  # AGREGADO
+            "percent": 0,              # AGREGADO
             "status": "failed",
             "error": str(e)
         }))

@@ -8,14 +8,14 @@ export class ProgressService implements OnDestroy {
   connect(onMessage: (data: any) => void): void {
     this.socket = new WebSocket(environment.wsUrl);
 
-    this.socket.onopen = () => console.log('✅ WS conectado:', environment.wsUrl);
+    this.socket.onopen = () => console.log('WS conectado:', environment.wsUrl);
 
     this.socket.onmessage = (event) => {
       try {
         const data = JSON.parse(event.data);
         if (data.type === 'progress') onMessage(data);
       } catch (e) {
-        console.error('❌ Error WS', e);
+        console.error('Error WS', e);
       }
     };
   }
