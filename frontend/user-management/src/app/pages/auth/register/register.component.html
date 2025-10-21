@@ -2,22 +2,22 @@
   <h2>Registro</h2>
 
   <form (ngSubmit)="register()">
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="outline">
       <mat-label>Usuario</mat-label>
       <input matInput [(ngModel)]="username" name="username" required />
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
       <input matInput [(ngModel)]="email" name="email" type="email" required />
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="outline">
       <mat-label>Contraseña</mat-label>
       <input matInput [(ngModel)]="password" name="password" type="password" required />
     </mat-form-field>
 
-    <button mat-raised-button color="primary" class="full-width">
+    <button mat-raised-button type="submit" class="custom-button">
       Registrarse
     </button>
   </form>
@@ -27,6 +27,6 @@
     <a routerLink="/login">Inicia sesión aquí</a>
   </p>
 
-  <p class="message">{{ message }}</p>
+  <p class="message" [ngClass]="{'error': isError}">{{ message }}</p>
 </mat-card>
 

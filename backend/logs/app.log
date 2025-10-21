@@ -1070,3 +1070,247 @@
 2025-10-20 14:10:27.180 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
 2025-10-20 14:10:27.182 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
 2025-10-20 14:10:27.252 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 14:14:12.411 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 14:14:12.488 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 14:26:26.894 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 14:26:26.994 | INFO     | app.main:shutdown_event:199 - 🛑 Cancelando tareas en background...
+2025-10-20 14:26:26.995 | WARNING  | app.main:redis_listener:166 - ⚠️ Listener Redis cancelado (shutdown)
+2025-10-20 14:26:26.995 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-20 14:26:26.996 | INFO     | app.main:redis_listener:178 - ✅ Pubsub cerrado
+2025-10-20 14:26:26.997 | INFO     | app.main:redis_listener:184 - ✅ Redis cerrado
+2025-10-20 14:26:26.997 | INFO     | app.main:shutdown_event:205 - ✅ Todas las tareas canceladas correctamente
+2025-10-20 14:26:28.483 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 14:26:29.451 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 14:26:29.460 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-20 14:26:29.461 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-20 14:26:29.464 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-20 14:26:29.764 | INFO     | app.main:shutdown_event:199 - 🛑 Cancelando tareas en background...
+2025-10-20 14:26:29.765 | WARNING  | app.main:redis_listener:166 - ⚠️ Listener Redis cancelado (shutdown)
+2025-10-20 14:26:29.765 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-20 14:26:29.765 | INFO     | app.main:redis_listener:178 - ✅ Pubsub cerrado
+2025-10-20 14:26:29.766 | INFO     | app.main:redis_listener:184 - ✅ Redis cerrado
+2025-10-20 14:26:29.766 | INFO     | app.main:shutdown_event:205 - ✅ Todas las tareas canceladas correctamente
+2025-10-20 14:26:30.750 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 14:26:31.200 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 14:26:31.208 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-20 14:26:31.209 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-20 14:26:31.212 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-20 14:26:32.707 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 14:26:44.956 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 14:26:45.057 | INFO     | app.main:shutdown_event:199 - 🛑 Cancelando tareas en background...
+2025-10-20 14:26:45.057 | WARNING  | app.main:redis_listener:166 - ⚠️ Listener Redis cancelado (shutdown)
+2025-10-20 14:26:45.057 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-20 14:26:45.058 | INFO     | app.main:redis_listener:178 - ✅ Pubsub cerrado
+2025-10-20 14:26:45.058 | INFO     | app.main:redis_listener:184 - ✅ Redis cerrado
+2025-10-20 14:26:45.059 | INFO     | app.main:shutdown_event:205 - ✅ Todas las tareas canceladas correctamente
+2025-10-20 14:26:46.014 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 14:26:46.495 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 14:26:46.505 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-20 14:26:46.506 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-20 14:26:46.509 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-20 14:26:50.718 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 14:49:07.437 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 14:49:17.113 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 14:49:17.596 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 14:49:17.605 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-20 14:49:17.605 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-20 14:49:17.608 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-20 14:49:23.041 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 14:51:09.772 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-20 14:51:46.880 | SUCCESS  | app.main:register:267 - Usuario registrado: prueba@example.com
+2025-10-20 14:52:40.837 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:40.847 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 14:52:40.847 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-20 14:52:41.196 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:41.196 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-20 14:52:41.197 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:41.697 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:41.697 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-20 14:52:41.698 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:42.179 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:42.179 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-20 14:52:42.179 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:42.673 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:42.673 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-20 14:52:42.674 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:43.147 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:43.147 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-20 14:52:43.147 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:43.623 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:43.624 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-20 14:52:43.625 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:44.114 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:44.114 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-20 14:52:44.115 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:44.586 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:44.586 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-20 14:52:44.587 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:45.063 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:45.063 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-20 14:52:45.064 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:45.536 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:45.536 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-20 14:52:45.537 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:45.840 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 14:52:45.841 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=8c304aef-27c3-467e-9759-3e08403fd7ec
+2025-10-20 14:52:45.841 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '8c304aef-27c3-467e-9759-3e08403fd7ec', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-20 14:52:45.842 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 14:52:46.025 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-20 14:52:46.026 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-20 14:52:46.100 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 15:32:19.976 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 15:32:29.649 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 15:32:30.088 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 15:32:30.096 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-20 15:32:30.096 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-20 15:32:30.099 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-20 21:57:03.261 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 21:57:12.915 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 21:57:13.970 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 21:57:13.981 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-20 21:57:13.982 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-20 21:57:13.985 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-20 23:12:17.712 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 23:12:27.396 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-20 23:12:28.465 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-20 23:12:28.475 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-20 23:12:28.475 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-20 23:12:28.479 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-20 23:18:21.482 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-20 23:18:32.553 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-20 23:18:50.833 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:50.843 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-20 23:18:50.846 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-20 23:18:51.335 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:51.335 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-20 23:18:51.337 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:51.855 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:51.856 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-20 23:18:51.859 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:52.351 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:52.352 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-20 23:18:52.353 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:52.830 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:52.830 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-20 23:18:52.831 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:53.296 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:53.296 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-20 23:18:53.298 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:53.786 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:53.786 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-20 23:18:53.787 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:54.281 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:54.281 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-20 23:18:54.281 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:54.744 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:54.744 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-20 23:18:54.745 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:55.229 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:55.229 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-20 23:18:55.230 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:55.713 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:55.713 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-20 23:18:55.713 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:55.986 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-20 23:18:55.987 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=6a14e221-9a5e-421e-aa64-9e5138063e2d
+2025-10-20 23:18:55.987 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6a14e221-9a5e-421e-aa64-9e5138063e2d', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-20 23:18:55.988 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-20 23:18:55.993 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 10:07:26.573 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 10:07:36.262 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 10:07:36.698 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 10:07:36.706 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 10:07:36.706 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 10:07:36.709 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 10:08:49.304 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 10:18:01.668 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 10:18:01.834 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 10:31:59.003 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 10:32:08.744 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 10:32:09.186 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 10:32:09.194 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 10:32:09.195 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 10:32:09.197 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 10:32:12.701 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 10:41:45.448 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 10:56:49.409 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 10:56:59.212 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 10:56:59.669 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 10:56:59.677 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 10:56:59.677 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 10:56:59.680 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 10:57:07.194 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 11:10:50.283 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 11:11:18.002 | ERROR    | app.main:redis_listener:169 - ❌ Listener Redis falló: Connection closed by server.
+2025-10-21 11:11:18.012 | ERROR    | app.main:redis_listener:171 - Traceback (most recent call last):
+  File "/app/app/main.py", line 151, in redis_listener
+    async for message in pubsub.listen():
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 1031, in listen
+    response = await self.handle_message(await self.parse_response(block=True))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 918, in parse_response
+    response = await self._execute(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 898, in _execute
+    return await conn.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 62, in call_with_retry
+    await fail(error)
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 887, in _disconnect_raise_connect
+    raise error
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/connection.py", line 542, in read_response
+    response = await self._parser.read_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 82, in read_response
+    response = await self._read_response(disable_decoding=disable_decoding)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 90, in _read_response
+    raw = await self._readline()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/base.py", line 221, in _readline
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+2025-10-21 11:11:18.013 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 11:11:18.016 | WARNING  | app.main:redis_listener:180 - Error cerrando pubsub: Error 111 connecting to redis_usuarios:6379. Connection refused.
+2025-10-21 11:11:18.016 | INFO     | app.main:redis_listener:184 - ✅ Redis cerrado
+2025-10-21 11:11:21.536 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-21 11:11:26.583 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 11:11:40.240 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 11:11:41.057 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 11:11:41.065 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 11:11:41.065 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 11:11:41.068 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 11:12:01.015 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 11:13:20.558 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 11:13:20.643 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 11:13:24.143 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 11:13:26.692 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 11:19:38.439 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 11:19:48.075 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 11:19:48.517 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 11:19:48.525 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 11:19:48.526 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 11:19:48.528 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 11:20:02.888 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 11:20:21.305 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 11:37:48.298 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 11:37:58.179 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 11:37:58.905 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 11:37:58.914 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 11:37:58.915 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 11:37:58.918 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 11:38:03.839 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 11:38:15.245 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 11:48:36.296 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 11:48:46.073 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 11:48:46.971 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 11:48:46.979 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 11:48:46.980 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 11:48:46.983 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 11:49:02.661 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 11:49:14.651 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión

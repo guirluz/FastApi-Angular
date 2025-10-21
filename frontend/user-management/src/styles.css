@@ -1,4 +1,74 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f0f3f5; /* Gris claro para el fondo */
+  color: #333333; /* Color de texto oscuro para mejor contraste */
+}
+
+.mat-toolbar {
+  background-color: #6b8e9f !important; /* Azul suave y opaco */
+  color: white !important;
+}
+
+.mat-raised-button.mat-primary {
+  background-color: #6b8e9f !important;
+  color: white !important;
+}
+
+.mat-raised-button.mat-primary:hover {
+  background-color: #5a7d8c !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #6b8e9f !important;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: #5a7d8c !important;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+  color: #f44336 !important;
+}
+
+.mat-input-element {
+  caret-color: #6b8e9f !important;
+}
+
+.mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+  caret-color: #f44336 !important;
+}
+
+.mat-form-field-label {
+  color: rgba(0,0,0,.6) !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: #6b8e9f !important;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #f44336 !important;
+}
+
+/* Estilos para los modales */
+.custom-dialog-container .mat-dialog-container {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.mat-dialog-content {
+  margin: 0;
+  padding: 24px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Asegúrate de que estos estilos estén al final del archivo */
+

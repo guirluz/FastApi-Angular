@@ -12,6 +12,7 @@ export class RegisterComponent {
   email = '';
   password = '';
   message = '';
+  isError = false;
 
   constructor(private api: ApiService, private router: Router) {}
 
@@ -19,11 +20,14 @@ export class RegisterComponent {
     this.api.register({ username: this.username, email: this.email, password: this.password }).subscribe({
       next: () => {
         this.message = '✅ Usuario registrado correctamente';
+        this.isError = false;
         setTimeout(() => this.router.navigate(['/login']), 1500);
       },
       error: () => {
         this.message = '❌ Error al registrar usuario';
+        this.isError = true;
       }
     });
   }
 }
+

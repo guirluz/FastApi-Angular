@@ -1,16 +1,16 @@
 <mat-card>
   <h2>Iniciar Sesión</h2>
-  <mat-form-field appearance="outline" class="full-width">
+  <mat-form-field appearance="outline">
     <mat-label>Email</mat-label>
-    <input matInput [(ngModel)]="email" type="email" />
+    <input matInput [(ngModel)]="email" type="email" required />
   </mat-form-field>
 
-  <mat-form-field appearance="outline" class="full-width">
+  <mat-form-field appearance="outline">
     <mat-label>Contraseña</mat-label>
-    <input matInput [(ngModel)]="password" type="password" />
+    <input matInput [(ngModel)]="password" type="password" required />
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="login()">Ingresar</button>
+  <button mat-raised-button class="custom-button" (click)="login()">Ingresar</button>
 
   <p class="register-link">
     ¿No tienes cuenta?
@@ -19,3 +19,4 @@
 
   <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
 </mat-card>
+

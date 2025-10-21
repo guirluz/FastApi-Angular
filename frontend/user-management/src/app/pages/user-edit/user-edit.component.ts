@@ -8,10 +8,8 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./user-edit.component.css']
 })
 export class UserEditComponent {
-  id!: number;
-  username = '';
-  email = '';
-  password = '';
+  user: { id: number; username: string; email: string } = { id: 0, username: '', email: '' };
+  newPassword = '';
   message = '';
 
   constructor(
@@ -21,23 +19,21 @@ export class UserEditComponent {
   ) {
     // Precargar datos del usuario recibido
     if (data) {
-      this.id = data.id;
-      this.username = data.username;
-      this.email = data.email;
+      this.user = { ...data };
     }
   }
 
   updateUser(): void {
     const payload: any = {
-      username: this.username,
-      email: this.email
+      username: this.user.username,
+      email: this.user.email
     };
 
-    if (this.password.trim() !== '') {
-      payload.password = this.password;
+    if (this.newPassword.trim() !== '') {
+      payload.password = this.newPassword;
     }
 
-    this.api.updateUser(this.id, payload).subscribe({
+    this.api.updateUser(this.user.id, payload).subscribe({
       next: () => {
         this.message = '✅ Usuario actualizado';
         setTimeout(() => this.dialogRef.close('success'), 1000);
@@ -49,10 +45,8 @@ export class UserEditComponent {
     });
   }
 
-  close(): void {
+  cancel(): void {
     this.dialogRef.close();
   }
 }
-
-
 

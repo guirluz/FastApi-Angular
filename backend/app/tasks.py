@@ -111,7 +111,7 @@ def process_excel_task(self, file_path: str):
 
         for i, row in df.iterrows():
             # ⚠️ El sleep es solo para pruebas visuales, puedes quitarlo en producción
-            sleep(0.5)  # 👈 DEJALO ACTIVADO para que veas el progreso más lento
+            sleep(0.2)  # 👈 DEJALO ACTIVADO para que veas el progreso más lento
 
             current = i + 1
             percent = int((current / total) * 100)  # 👈 CALCULA PORCENTAJE

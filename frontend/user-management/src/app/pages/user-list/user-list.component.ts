@@ -4,7 +4,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../../services/api.service';
 
-// Importamos los componentes que se abrirán en modal
 import { UserCreateComponent } from '../user-create/user-create.component';
 import { UserEditComponent } from '../user-edit/user-edit.component';
 
@@ -28,7 +27,6 @@ export class UserListComponent implements OnInit {
     this.loadUsers();
   }
 
-  // Cargar usuarios en la tabla
   loadUsers(): void {
     this.api.getUsers().subscribe({
       next: (res) => {
@@ -41,12 +39,11 @@ export class UserListComponent implements OnInit {
     });
   }
 
-  // Eliminar usuario
   deleteUser(userId: number): void {
     if (confirm('¿Seguro que deseas eliminar este usuario?')) {
       this.api.deleteUser(userId).subscribe({
         next: () => {
-          this.loadUsers(); // recargar lista
+          this.loadUsers();
         },
         error: () => {
           console.error('❌ Error al eliminar usuario');
@@ -55,37 +52,36 @@ export class UserListComponent implements OnInit {
     }
   }
 
-  // Abrir modal para crear usuario
   openCreateUserModal(): void {
     const dialogRef = this.dialog.open(UserCreateComponent, {
-      width: '400px'
+      width: '450px',
+      maxHeight: '90vh',
+      panelClass: 'custom-dialog-container'
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'success') {
-        this.loadUsers(); // refrescar tabla si se creó un usuario
+        this.loadUsers();
       }
     });
   }
 
-  // Abrir modal para editar usuario
   openEditUserModal(user: any): void {
     const dialogRef = this.dialog.open(UserEditComponent, {
-      width: '400px',
-      data: user // pasamos el usuario seleccionado al modal
+      width: '450px',
+      maxHeight: '90vh',
+      panelClass: 'custom-dialog-container',
+      data: user
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'success') {
-        this.loadUsers(); // refrescar tabla si se editó un usuario
+        this.loadUsers();
       }
     });
   }
 
-  // 🔑 Método que se ejecuta cuando el importador emite el evento
   onImportCompleted(): void {
-    this.loadUsers(); // refrescar tabla después de importar Excel
+    this.loadUsers();
   }
 }
-
-

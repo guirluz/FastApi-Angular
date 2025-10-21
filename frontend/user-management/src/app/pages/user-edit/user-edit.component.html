@@ -1,26 +1,25 @@
-<mat-card>
+<div class="user-edit-container">
   <h2>Editar Usuario</h2>
-
-  <mat-form-field appearance="outline" class="full-width">
+  <form (ngSubmit)="updateUser()">
+    <mat-form-field appearance="outline">
     <mat-label>Usuario</mat-label>
-    <input matInput [(ngModel)]="username" />
+      <input matInput [(ngModel)]="user.username" name="username" required>
   </mat-form-field>
 
-  <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="outline">
     <mat-label>Email</mat-label>
-    <input matInput [(ngModel)]="email" type="email" />
+      <input matInput [(ngModel)]="user.email" name="email" type="email" required>
   </mat-form-field>
 
-  <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="outline">
     <mat-label>Nueva Contraseña</mat-label>
-    <input matInput [(ngModel)]="password" type="password" />
+      <input matInput [(ngModel)]="newPassword" name="newPassword" type="password">
   </mat-form-field>
 
-  <div class="actions">
-    <button mat-raised-button color="accent" (click)="updateUser()">Actualizar</button>
-    <button mat-button (click)="close()">Cancelar</button>
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit">Actualizar</button>
+      <button mat-raised-button type="button" (click)="cancel()">Cancelar</button>
   </div>
-
-  <p>{{ message }}</p>
-</mat-card>
+  </form>
+</div>
 
