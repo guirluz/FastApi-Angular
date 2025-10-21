@@ -532,7 +532,7 @@ def get_task_status(task_id: str):
             total = info.get("total", 1)
             percent = int((current / total) * 100) if total > 0 else 0
             
-            log.info(f"🔄 Progreso: {current}/{total} ({percent}%)")
+            log.info(f"Progreso: {current}/{total} ({percent}%)")
             
             return build_response(202, "Tarea en progreso", {
                 "state": task.state,

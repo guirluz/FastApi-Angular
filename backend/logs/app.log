@@ -2216,3 +2216,16 @@ redis.exceptions.ConnectionError: Connection closed by server.
 2025-10-21 20:16:03.711 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b44a6435-88aa-4e51-b65f-864c2f4e8cdd', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
 2025-10-21 20:16:03.712 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
 2025-10-21 20:16:03.725 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 21:08:06.487 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 21:08:06.587 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-21 21:08:06.588 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-21 21:08:06.588 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 21:08:06.590 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-21 21:08:06.591 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-21 21:08:06.592 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-21 21:08:08.755 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-21 21:08:10.197 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 21:08:10.207 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-21 21:08:10.208 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-21 21:08:10.212 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 21:08:10.214 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
