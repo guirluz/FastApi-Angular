@@ -54,9 +54,9 @@ export class UserListComponent implements OnInit {
 
   openCreateUserModal(): void {
     const dialogRef = this.dialog.open(UserCreateComponent, {
-      width: '450px',
-      maxHeight: '90vh',
-      panelClass: 'custom-dialog-container'
+      width: '400px',
+      panelClass: 'custom-dialog-container',
+      disableClose: true
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -68,9 +68,9 @@ export class UserListComponent implements OnInit {
 
   openEditUserModal(user: any): void {
     const dialogRef = this.dialog.open(UserEditComponent, {
-      width: '450px',
-      maxHeight: '90vh',
+      width: '400px',
       panelClass: 'custom-dialog-container',
+      disableClose: true,
       data: user
     });
 

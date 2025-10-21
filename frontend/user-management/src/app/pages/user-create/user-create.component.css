@@ -1,19 +1,11 @@
 :host {
   display: block;
-  padding: 24px;
-  background-color: #f0f3f5; /* Gris claro para el fondo */
-  min-height: 100vh;
-  box-sizing: border-box;
 }
 
 .user-create-container {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
   padding: 24px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 mat-form-field {
@@ -45,14 +37,5 @@ h2 {
   color: #6b8e9f;
   margin-bottom: 24px;
   text-align: center;
-}
-
-.form-row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-row mat-form-field {
-  width: 48%;
 }
 

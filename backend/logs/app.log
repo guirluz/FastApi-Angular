@@ -1314,3 +1314,457 @@ redis.exceptions.ConnectionError: Connection closed by server.
 2025-10-21 11:48:46.983 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
 2025-10-21 11:49:02.661 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
 2025-10-21 11:49:14.651 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 12:04:14.998 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:04:24.818 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:04:25.363 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 12:04:25.371 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 12:04:25.371 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 12:04:25.374 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 12:04:40.678 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 12:04:49.733 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 12:06:21.998 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:22.006 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 12:06:22.005 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-21 12:06:22.349 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:22.350 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 12:06:22.350 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:22.825 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:22.825 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 12:06:22.826 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:23.294 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:23.294 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 12:06:23.295 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:23.781 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:23.781 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 12:06:23.782 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:24.267 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:24.267 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 12:06:24.268 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:24.734 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:24.735 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 12:06:24.736 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:25.233 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:25.233 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 12:06:25.234 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:25.724 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:25.725 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 12:06:25.725 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:26.192 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:26.193 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 12:06:26.194 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:26.681 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:26.681 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 12:06:26.682 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:26.982 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 12:06:26.983 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=802b9fa0-f432-4c75-a4c7-3345ce99cf73
+2025-10-21 12:06:26.983 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '802b9fa0-f432-4c75-a4c7-3345ce99cf73', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 12:06:26.983 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 12:06:26.988 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 12:07:33.108 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 12:16:14.302 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:16:24.092 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:16:24.597 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 12:16:24.605 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 12:16:24.606 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 12:16:24.609 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 12:16:26.405 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 12:16:37.415 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 12:33:50.229 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:34:00.242 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:34:00.940 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 12:34:00.948 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 12:34:00.948 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 12:34:00.952 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 12:34:02.129 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 12:34:08.150 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 12:43:50.068 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:43:59.969 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:44:00.897 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 12:44:00.905 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 12:44:00.905 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 12:44:00.908 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 12:44:06.674 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 12:44:14.761 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 12:53:58.372 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:54:08.177 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 12:54:08.854 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 12:54:08.861 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 12:54:08.862 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 12:54:08.865 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 12:54:11.783 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 12:54:16.504 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 12:55:59.871 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 13:06:21.216 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:06:31.214 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:06:31.942 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 13:06:31.951 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 13:06:31.951 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 13:06:31.954 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 13:06:36.561 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 13:06:37.220 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 13:07:56.006 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 13:07:56.085 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 13:08:05.152 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 13:08:28.482 | ERROR    | app.main:redis_listener:169 - ❌ Listener Redis falló: Connection closed by server.
+2025-10-21 13:08:28.489 | ERROR    | app.main:redis_listener:171 - Traceback (most recent call last):
+  File "/app/app/main.py", line 151, in redis_listener
+    async for message in pubsub.listen():
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 1031, in listen
+    response = await self.handle_message(await self.parse_response(block=True))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 918, in parse_response
+    response = await self._execute(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 898, in _execute
+    return await conn.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 62, in call_with_retry
+    await fail(error)
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 887, in _disconnect_raise_connect
+    raise error
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/connection.py", line 542, in read_response
+    response = await self._parser.read_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 82, in read_response
+    response = await self._read_response(disable_decoding=disable_decoding)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 90, in _read_response
+    raw = await self._readline()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/base.py", line 221, in _readline
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+2025-10-21 13:08:28.489 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-21 13:08:28.491 | WARNING  | app.main:redis_listener:180 - Error cerrando pubsub: Error 111 connecting to redis_usuarios:6379. Connection refused.
+2025-10-21 13:08:28.491 | INFO     | app.main:redis_listener:184 - ✅ Redis cerrado
+2025-10-21 13:08:31.256 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-21 13:08:36.292 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:08:50.193 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:08:50.661 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 13:08:50.670 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 13:08:50.670 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 13:08:50.673 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 13:09:01.829 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 13:09:11.178 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 13:09:51.818 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 13:15:31.595 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:15:41.524 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:15:42.233 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 13:15:42.243 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 13:15:42.243 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 13:15:42.247 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 13:15:44.585 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 13:15:47.230 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 13:15:57.788 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:15:57.796 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 13:15:57.796 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-21 13:15:58.212 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:15:58.213 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 13:15:58.214 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:15:58.732 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:15:58.732 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 13:15:58.733 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:15:59.202 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:15:59.202 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 13:15:59.204 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:15:59.703 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:15:59.704 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 13:15:59.704 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:00.169 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:16:00.170 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 13:16:00.171 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:00.657 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:16:00.657 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 13:16:00.658 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:01.129 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:16:01.130 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 13:16:01.131 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:01.618 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:16:01.619 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 13:16:01.620 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:02.098 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:16:02.098 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 13:16:02.099 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:02.576 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:16:02.576 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 13:16:02.577 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:02.847 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 13:16:02.848 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=c0166887-49d2-4792-bd9c-55483ec5fd6c
+2025-10-21 13:16:02.848 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c0166887-49d2-4792-bd9c-55483ec5fd6c', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 13:16:02.849 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:02.858 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 13:16:21.021 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:21.025 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-21 13:16:21.030 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 13:16:21.237 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:21.238 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 13:16:21.238 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:21.702 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:21.703 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 13:16:21.703 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:22.176 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:22.177 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 13:16:22.178 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:22.677 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:22.677 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 13:16:22.678 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:23.150 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:23.150 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 13:16:23.150 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:23.615 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:23.616 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 13:16:23.617 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:24.129 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:24.129 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 13:16:24.130 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:24.596 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:24.596 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 13:16:24.597 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:25.088 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:25.089 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 13:16:25.090 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:25.564 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:25.564 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 13:16:25.564 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:25.865 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 13:16:25.866 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=1944f422-f32e-480d-aed4-9c6f65324f05
+2025-10-21 13:16:25.866 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1944f422-f32e-480d-aed4-9c6f65324f05', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 13:16:25.867 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:16:25.871 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 13:18:51.053 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 13:30:09.976 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:30:19.723 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:30:20.199 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 13:30:20.207 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 13:30:20.207 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 13:30:20.210 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 13:30:21.296 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 13:30:30.175 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 13:30:50.657 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:50.664 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 13:30:50.664 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios2.xls
+2025-10-21 13:30:51.009 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:51.009 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 13:30:51.010 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:51.500 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:51.500 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 13:30:51.501 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:51.988 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:51.989 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 13:30:51.990 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:52.468 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:52.468 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 13:30:52.469 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:52.939 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:52.940 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 13:30:52.941 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:53.460 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:53.460 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 13:30:53.461 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:53.942 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:53.942 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 13:30:53.943 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:54.443 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:54.443 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 13:30:54.444 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:54.910 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:54.910 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 13:30:54.911 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:55.376 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:55.376 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 13:30:55.376 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:55.650 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 13:30:55.651 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=aa0c47db-7621-4058-9b42-9778fc1a84df
+2025-10-21 13:30:55.651 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'aa0c47db-7621-4058-9b42-9778fc1a84df', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 13:30:55.651 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:30:55.657 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 13:42:58.398 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:43:08.242 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 13:43:08.789 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 13:43:08.797 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 13:43:08.797 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 13:43:08.801 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 13:43:10.481 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 13:43:14.996 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 13:43:21.282 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:21.290 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 13:43:21.289 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-21 13:43:21.637 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:21.638 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 13:43:21.638 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:22.108 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:22.108 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 13:43:22.109 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:22.597 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:22.598 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 13:43:22.599 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:23.081 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:23.081 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 13:43:23.083 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:23.558 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:23.559 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 13:43:23.560 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:24.031 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:24.032 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 13:43:24.033 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:24.526 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:24.526 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 13:43:24.528 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:25.025 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:25.025 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 13:43:25.026 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:25.489 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:25.489 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 13:43:25.489 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:25.977 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:25.978 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 13:43:25.979 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:26.290 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 13:43:26.291 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=af50cdf4-fc24-4d2e-8725-01b324fc409f
+2025-10-21 13:43:26.291 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'af50cdf4-fc24-4d2e-8725-01b324fc409f', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 13:43:26.292 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 13:43:26.301 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 14:00:13.547 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 14:00:23.267 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 14:00:23.762 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 14:00:23.771 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 14:00:23.772 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 14:00:23.775 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 14:00:58.476 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 14:01:08.421 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 14:01:30.086 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:30.095 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 14:01:30.095 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-21 14:01:30.434 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:30.434 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 14:01:30.435 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:30.904 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:30.904 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 14:01:30.905 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:31.374 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:31.374 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 14:01:31.375 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:31.842 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:31.842 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 14:01:31.843 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:32.320 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:32.320 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 14:01:32.321 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:32.784 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:32.784 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 14:01:32.785 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:33.270 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:33.270 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 14:01:33.271 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:33.743 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:33.743 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 14:01:33.745 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:34.219 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:34.219 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 14:01:34.221 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:34.711 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:34.712 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 14:01:34.713 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:35.012 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 14:01:35.012 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=dcb596f3-4b09-4eeb-8786-2a0c9b0820bf
+2025-10-21 14:01:35.013 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'dcb596f3-4b09-4eeb-8786-2a0c9b0820bf', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 14:01:35.013 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:01:35.018 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 14:31:13.716 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 14:31:23.526 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 14:31:23.982 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 14:31:23.991 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 14:31:23.991 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 14:31:23.994 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 14:31:25.200 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 14:31:35.936 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 14:31:56.375 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:31:56.383 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 14:31:56.383 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-21 14:31:57.168 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 14:31:57.168 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:31:57.170 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:31:57.665 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:31:57.665 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 14:31:57.666 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:31:58.195 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:31:58.195 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 14:31:58.197 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:31:58.693 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:31:58.693 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 14:31:58.694 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:31:59.186 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:31:59.186 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 14:31:59.187 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:31:59.682 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:31:59.682 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 14:31:59.684 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:32:00.248 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:32:00.248 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 14:32:00.249 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:32:00.731 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:32:00.731 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 14:32:00.731 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:32:01.202 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:32:01.203 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 14:32:01.203 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:32:01.681 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:32:01.682 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 14:32:01.683 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:32:01.981 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 14:32:01.981 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=268ae81d-ef38-4841-bac2-37e8c9b0da21
+2025-10-21 14:32:01.982 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': '268ae81d-ef38-4841-bac2-37e8c9b0da21', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 14:32:01.982 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:32:01.989 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-21 14:45:30.578 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-21 14:54:22.064 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 14:54:31.794 | SUCCESS  | app.database.connection:<module>:18 - ✅ Conexión a MySQL exitosa
+2025-10-21 14:54:32.258 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-21 14:54:32.266 | INFO     | app.main:startup_event:193 - 🚀 Tarea de Redis listener iniciada en background
+2025-10-21 14:54:32.267 | INFO     | app.main:redis_listener:144 - 🔄 Iniciando listener de Redis...
+2025-10-21 14:54:32.270 | SUCCESS  | app.main:redis_listener:149 - ✅ Suscrito a canal Redis: progress_channel
+2025-10-21 14:55:06.904 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-21 14:55:53.648 | INFO     | app.main:login:301 - Usuario eduar@example.com inició sesión
+2025-10-21 14:56:15.776 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:15.784 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-21 14:56:15.785 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/usuarios_10.xls
+2025-10-21 14:56:16.134 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 1/10 (10%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:16.134 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 1, 'total': 10, 'percent': 10, 'status': 'processing'}
+2025-10-21 14:56:16.136 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:16.634 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 2/10 (20%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:16.634 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 2, 'total': 10, 'percent': 20, 'status': 'processing'}
+2025-10-21 14:56:16.635 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:17.138 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 3/10 (30%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:17.138 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 3, 'total': 10, 'percent': 30, 'status': 'processing'}
+2025-10-21 14:56:17.139 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:17.623 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 4/10 (40%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:17.623 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 4, 'total': 10, 'percent': 40, 'status': 'processing'}
+2025-10-21 14:56:17.624 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:18.114 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 5/10 (50%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:18.114 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 5, 'total': 10, 'percent': 50, 'status': 'processing'}
+2025-10-21 14:56:18.116 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:18.607 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 6/10 (60%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:18.607 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 6, 'total': 10, 'percent': 60, 'status': 'processing'}
+2025-10-21 14:56:18.608 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:19.093 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 7/10 (70%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:19.093 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 7, 'total': 10, 'percent': 70, 'status': 'processing'}
+2025-10-21 14:56:19.094 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:19.583 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 8/10 (80%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:19.584 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 8, 'total': 10, 'percent': 80, 'status': 'processing'}
+2025-10-21 14:56:19.585 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:20.084 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 9/10 (90%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:20.084 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 9, 'total': 10, 'percent': 90, 'status': 'processing'}
+2025-10-21 14:56:20.085 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:20.568 | INFO     | app.tasks:process_excel_task:138 - 📢 Progreso publicado: 10/10 (100%) task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:20.568 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 10, 'total': 10, 'percent': 100, 'status': 'processing'}
+2025-10-21 14:56:20.569 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:20.860 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 10 usuarios insertados, 0 omitidos
+2025-10-21 14:56:20.861 | INFO     | app.tasks:process_excel_task:179 - ✅ Importación completada, task_id=b5d8fa28-a0b3-4b56-b311-1a74fcdee52d
+2025-10-21 14:56:20.861 | INFO     | app.main:redis_listener:155 - 📨 Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5d8fa28-a0b3-4b56-b311-1a74fcdee52d', 'current': 10, 'total': 10, 'percent': 100, 'status': 'completed'}
+2025-10-21 14:56:20.861 | INFO     | app.main:redis_listener:159 - 📤 Mensaje reenviado a 2 clientes WebSocket
+2025-10-21 14:56:20.867 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1

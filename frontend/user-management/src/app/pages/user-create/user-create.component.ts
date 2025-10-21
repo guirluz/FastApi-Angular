@@ -11,7 +11,6 @@ export class UserCreateComponent {
   username = '';
   email = '';
   password = '';
-  message = '';
 
   constructor(
     private api: ApiService,
@@ -19,18 +18,18 @@ export class UserCreateComponent {
   ) {}
 
   createUser(): void {
-    this.api.register({ username: this.username, email: this.email, password: this.password }).subscribe({
+    this.api.createUser({ username: this.username, email: this.email, password: this.password }).subscribe({
       next: () => {
-        this.message = '✅ Usuario creado correctamente';
-        setTimeout(() => this.dialogRef.close('success'), 1000);
+        this.dialogRef.close('success');
       },
-      error: () => {
-        this.message = '❌ Error al crear usuario';
+      error: (err: any) => {
+        console.error('❌ Error al crear usuario', err);
+        // Aquí puedes agregar lógica para mostrar un mensaje de error al usuario
       }
     });
   }
 
-  close(): void {
+  cancel(): void {
     this.dialogRef.close();
   }
 }

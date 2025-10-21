@@ -1,21 +1,36 @@
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
 .page-title {
-  margin: 16px 0;
+  margin: 24px 0 16px;
   font-size: 24px;
   font-weight: bold;
-  color: #6b8e9f; /* Azul suave y opaco */
+  color: #6b8e9f;
 }
 
 .page-subtitle {
   margin: 24px 0 8px;
   font-size: 20px;
   font-weight: 500;
-  color: #5a7d8c; /* Un tono más oscuro del azul suave */
+  color: #5a7d8c;
 }
 
 .actions {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 16px;
+}
+
+  .table-container {
+  width: 100%;
+  overflow-x: auto;
+  }
+
+table {
+  width: 100%;
 }
 
 .mat-table {
@@ -25,7 +40,7 @@
 }
 
 .mat-header-cell {
-  background-color: #f0f3f5; /* Gris claro */
+  background-color: #f0f3f5;
   color: #333333;
   font-weight: bold;
 }
@@ -39,7 +54,23 @@
 }
 
 .mat-row:hover {
-  background-color: #e6f2f7; /* Un tono más claro del azul suave */
+  background-color: #e6f2f7;
+}
+
+.mat-column-id {
+  width: 10%;
+}
+
+.mat-column-username {
+  width: 25%;
+}
+
+.mat-column-email {
+  width: 35%;
+}
+
+.mat-column-actions {
+  width: 30%;
 }
 
 button.mat-raised-button {
@@ -50,3 +81,43 @@ button.mat-raised-button {
 button.mat-raised-button:hover {
   background-color: #5a7d8c;
 }
+
+mat-paginator {
+  margin-top: 16px;
+}
+
+.import-container {
+  max-width: 600px;
+  margin: 24px auto;
+}
+
+/* Estilos específicos para la barra de progreso en el componente de importación */
+::ng-deep .import-container .mat-progress-bar {
+  height: 20px !important;
+  border-radius: 10px;
+}
+
+::ng-deep .import-container .mat-progress-bar-fill::after {
+  background-color: #6b8e9f !important;
+}
+
+::ng-deep .import-container .mat-progress-bar-buffer {
+  background-color: #e0e0e0 !important;
+  }
+
+/* Ocultar el círculo de carga específicamente en el contenedor de importación */
+::ng-deep .import-container .mat-progress-spinner,
+::ng-deep .import-container .mat-spinner {
+  display: none !important;
+  }
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 0 8px;
+}
+
+  .import-container {
+    max-width: 100%;
+}
+}
+

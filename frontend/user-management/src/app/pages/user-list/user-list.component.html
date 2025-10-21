@@ -1,25 +1,14 @@
-<!-- 🔑 Título principal fuera del card -->
-<h2 class="page-title">Gestión de Usuarios</h2>
+<div class="page-container">
+  <h2 class="page-title">Gestión de Usuarios</h2>
 
-<mat-card>
-  <!-- Acciones principales -->
-  <div class="actions">
-    <button mat-raised-button color="primary" (click)="openCreateUserModal()">
-      + Nuevo Usuario
-    </button>
+<div class="actions">
+  <button mat-raised-button color="primary" (click)="openCreateUserModal()">
+    + Nuevo Usuario
+  </button>
+</div>
 
-    <!-- Opcional: buscador -->
-    <!--
-    <mat-form-field appearance="outline">
-      <mat-label>Buscar</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Filtrar usuarios" />
-    </mat-form-field>
-    -->
-  </div>
-
-  <!-- Tabla de usuarios -->
+<mat-card class="table-container">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
     <!-- ID -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -56,13 +45,11 @@
   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </mat-card>
 
-<!-- 🔑 Subtítulo fuera del card -->
-<h3 class="page-subtitle">📂 Importar Usuarios desde Excel</h3>
+  <div class="import-container">
+<!-- <h3 class="page-subtitle">📂 Importar Usuarios desde Excel</h3> -->
 
 <!-- Componente de importación -->
 <app-user-import (importCompleted)="onImportCompleted()"></app-user-import>
-
-
-
-
+</div>
+</div>
 

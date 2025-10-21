@@ -1,0 +1,40 @@
+/* Estilos para la barra de progreso */
+::ng-deep .mat-progress-bar {
+  height: 20px !important;
+  border-radius: 10px;
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: #2196F3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background-color: #E0E0E0;
+}
+
+/* Ocultar el spinner */
+.spinner-container {
+  display: none !important;
+}
+
+/* Estilo para el contenedor de la barra de progreso */
+.progress-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el mensaje de progreso */
+.progress-message {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Estilos para el input de archivo y el botón */
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+button[mat-raised-button] {
+  margin-bottom: 15px;
+}

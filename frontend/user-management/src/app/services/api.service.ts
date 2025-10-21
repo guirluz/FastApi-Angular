@@ -13,11 +13,9 @@ export class ApiService {
     return this.http.post(`${this.baseUrl}/upload-excel`, formData);
   }
 
-
   getTaskStatus(taskId: string) {
     return this.http.get(`${this.baseUrl}/task-status/${taskId}`);
   }
-
 
   getUsers(): Observable<any> {
     return this.http.get(`${this.baseUrl}/users`);
@@ -45,5 +43,7 @@ export class ApiService {
     });
   }
 
+  createUser(user: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/users`, user);
+  }
 }
-

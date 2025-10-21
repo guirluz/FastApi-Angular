@@ -12,21 +12,18 @@
   </button>
 
   <!-- Barra de progreso -->
-  <div *ngIf="taskId">
-    <p *ngIf="progress < 100">Progreso: {{ progress }}%</p>
-    <p *ngIf="progress === 100">✅ Importación completada</p>
+  <div class="progress-container" *ngIf="taskId">
+    <p class="progress-message" *ngIf="progress < 100">Progreso: {{ progress }}%</p>
+    <p class="progress-message" *ngIf="progress === 100">✅ Importación completada</p>
 
     <mat-progress-bar
       mode="determinate"
-      [value]="progress"
-      color="accent">
+      [value]="progress">
     </mat-progress-bar>
 
-    <!-- Spinner mientras sube -->
+    <!-- Spinner mientras sube (ahora oculto por CSS) -->
     <div class="spinner-container" *ngIf="isUploading && progress < 100">
       <mat-spinner diameter="30"></mat-spinner>
     </div>
   </div>
 </mat-card>
-
-
