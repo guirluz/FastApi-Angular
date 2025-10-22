@@ -30,3 +30,17 @@ class User(Base):
         """
         log.debug(f"Instancia de User creada: id={self.id}, email={self.email}")
         return f"<User(id={self.id}, username='{self.username}', email='{self.email}')>"
+    
+    
+    # app/models/user.py
+from sqlalchemy import Column, Integer, String, Enum
+from app.database.connection import Base
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, unique=True, index=True)
+    email = Column(String, unique=True, index=True)
+    password_hash = Column(String)
+    role = Column(Enum('admin', 'user', name='user_roles'), default='user')

@@ -1,6 +1,261 @@
+/* Toolbar */
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .spacer {
   flex: 1 1 auto;
 }
+
+/* Título de la app clickeable */
+.app-title {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-title:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.app-title:active {
+  transform: scale(0.98);
+}
+
+.app-title-static {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Menú de usuario */
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu-button {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown del menú */
+.user-dropdown {
+  margin-top: 10px;
+}
+
+.menu-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.menu-divider {
+  margin: 8px 0;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* Opción de logout con color rojo */
+.logout-item {
+  color: #f44336;
+}
+
+.logout-item:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+/* Contenido principal */
 .content {
   padding: 20px;
+  min-height: calc(100vh - 64px);
+}
+
+/* ========================================
+   TEMAS - Light y Dark
+   ======================================== */
+
+/* Tema Claro (por defecto) */
+body.light-theme {
+  background-color: #fafafa;
+  color: #333;
+}
+
+body.light-theme .content {
+  background-color: #fafafa;
+}
+
+body.light-theme mat-card {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.light-theme .menu-divider {
+  border-top-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Tema Oscuro - Negro y Gris */
+body.dark-theme {
+  background-color: #000000;
+  color: #e0e0e0;
+}
+
+body.dark-theme .content {
+  background-color: #000000;
+}
+
+body.dark-theme mat-card {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-theme mat-toolbar {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+body.dark-theme .page-title,
+body.dark-theme .page-subtitle,
+body.dark-theme h3,
+body.dark-theme h2 {
+  color: #ffffff;
+}
+
+body.dark-theme .format-instructions {
+  background-color: #1a1a1a;
+  border-left: 4px solid #666666;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-theme .format-instructions h3 {
+  color: #ffffff;
+}
+
+body.dark-theme .format-instructions li {
+  color: #cccccc;
+}
+
+body.dark-theme .format-instructions strong {
+  color: #ffffff;
+}
+
+body.dark-theme .file-label {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #3a3a3a;
+}
+
+body.dark-theme .file-label:hover {
+  background-color: #3a3a3a;
+}
+
+body.dark-theme .file-name {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #3a3a3a;
+}
+
+body.dark-theme .file-name.no-file {
+  background-color: #1a1a1a;
+  color: #888888;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-theme .progress-container {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-theme .progress-message {
+  color: #e0e0e0;
+}
+
+body.dark-theme table {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-theme th {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-bottom: 2px solid #3a3a3a;
+}
+
+body.dark-theme td {
+  color: #cccccc;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+body.dark-theme tr:hover {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-theme .mat-mdc-row:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark-theme .menu-divider {
+  border-top-color: #3a3a3a;
+}
+
+body.dark-theme .user-menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme button[mat-raised-button][color="primary"] {
+  background-color: #3a3a3a !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme button[mat-raised-button][color="primary"]:hover {
+  background-color: #4a4a4a !important;
+}
+
+body.dark-theme button[mat-button] {
+  color: #e0e0e0;
+}
+
+body.dark-theme button[mat-button]:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark-theme .mat-mdc-form-field {
+  color: #e0e0e0;
+}
+
+body.dark-theme .mat-mdc-text-field-wrapper {
+  background-color: #1a1a1a;
+}
+
+body.dark-theme input {
+  color: #ffffff !important;
+}
+
+body.dark-theme .upload-button:disabled {
+  background-color: #2a2a2a !important;
+  color: #666666 !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .content {
+    padding: 10px;
+  }
+  
+  .user-menu-button {
+    font-size: 14px;
+  }
 }

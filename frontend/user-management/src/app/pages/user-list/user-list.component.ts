@@ -3,7 +3,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../../services/api.service';
-
 import { UserCreateComponent } from '../user-create/user-create.component';
 import { UserEditComponent } from '../user-edit/user-edit.component';
 
@@ -37,6 +36,17 @@ export class UserListComponent implements OnInit {
         console.error('Error cargando usuarios', err);
       }
     });
+  }
+
+  // 🔍 MÉTODO DEL BUSCADOR
+  applyFilter(event: Event): void {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    // Resetear a la primera página cuando se filtre
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
   deleteUser(userId: number): void {

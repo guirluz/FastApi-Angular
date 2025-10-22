@@ -1,123 +1,66 @@
 .page-container {
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
 }
 
 .page-title {
-  margin: 24px 0 16px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #6b8e9f;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 500;
 }
 
-.page-subtitle {
-  margin: 24px 0 8px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #5a7d8c;
+/* 🔍 ESTILOS DEL BUSCADOR */
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search-field {
+  width: 100%;
+  max-width: 400px;
 }
 
 .actions {
+  margin-bottom: 20px;
   display: flex;
-  justify-content: flex-start;
-  margin-bottom: 16px;
+  justify-content: flex-end;
 }
 
-  .table-container {
-  width: 100%;
-  overflow-x: auto;
-  }
+.table-container {
+  padding: 20px;
+  margin-bottom: 30px;
+}
 
 table {
   width: 100%;
 }
 
-.mat-table {
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.mat-header-cell {
-  background-color: #f0f3f5;
-  color: #333333;
-  font-weight: bold;
-}
-
-.mat-cell {
-  color: #333333;
-}
-
-.mat-row:nth-child(even) {
-  background-color: #f9fafb;
-}
-
-.mat-row:hover {
-  background-color: #e6f2f7;
-}
-
 .mat-column-id {
-  width: 10%;
-}
-
-.mat-column-username {
-  width: 25%;
-}
-
-.mat-column-email {
-  width: 35%;
+  max-width: 80px;
 }
 
 .mat-column-actions {
-  width: 30%;
-}
-
-button.mat-raised-button {
-  background-color: #6b8e9f;
-  color: white;
-}
-
-button.mat-raised-button:hover {
-  background-color: #5a7d8c;
-}
-
-mat-paginator {
-  margin-top: 16px;
+  text-align: right;
+  padding-right: 20px;
 }
 
 .import-container {
-  max-width: 600px;
-  margin: 24px auto;
+  margin-top: 30px;
 }
 
-/* Estilos específicos para la barra de progreso en el componente de importación */
-::ng-deep .import-container .mat-progress-bar {
-  height: 20px !important;
-  border-radius: 10px;
-}
-
-::ng-deep .import-container .mat-progress-bar-fill::after {
-  background-color: #6b8e9f !important;
-}
-
-::ng-deep .import-container .mat-progress-bar-buffer {
-  background-color: #e0e0e0 !important;
-  }
-
-/* Ocultar el círculo de carga específicamente en el contenedor de importación */
-::ng-deep .import-container .mat-progress-spinner,
-::ng-deep .import-container .mat-spinner {
-  display: none !important;
-  }
-
+/* Responsive */
 @media (max-width: 768px) {
-  .page-container {
-    padding: 0 8px;
-}
-
-  .import-container {
+  .search-field {
     max-width: 100%;
+  }
+  
+  .actions {
+    justify-content: center;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
 }
-}
-

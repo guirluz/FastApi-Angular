@@ -1,168 +1,221 @@
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-/* Estilos globales */
-html, body { height: 100%; }
-body { 
-  margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #f0f3f5;
-  color: #333333;
-}
-
-/* Estilos para componentes de Material */
-.mat-toolbar {
-  background-color: #6b8e9f !important;
-  color: white !important;
-}
-
-.mat-raised-button.mat-primary {
-  background-color: #6b8e9f !important;
-  color: white !important;
-}
-
-.mat-raised-button.mat-primary:hover {
-  background-color: #5a7d8c !important;
-}
-
-/* Estilos para campos de formulario */
-.mat-form-field-appearance-outline .mat-form-field-outline {
-  color: #6b8e9f !important;
-}
-
-.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-  color: #5a7d8c !important;
-}
-
-.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
-  color: #f44336 !important;
-}
-
-.mat-input-element {
-  caret-color: #6b8e9f !important;
-}
-
-.mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
-  caret-color: #f44336 !important;
-}
-
-.mat-form-field-label {
-  color: rgba(0,0,0,.6) !important;
-}
-
-.mat-form-field.mat-focused .mat-form-field-label {
-  color: #6b8e9f !important;
-}
-
-.mat-form-field.mat-form-field-invalid .mat-form-field-label {
-  color: #f44336 !important;
-}
-
-/* Estilos para los diálogos */
-.custom-dialog-container .mat-dialog-container {
-  padding: 0;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
-}
-
-.mat-dialog-content {
+html, body { 
+  height: 100%; 
   margin: 0;
-  padding: 0;
-  max-height: none !important;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.custom-dialog-container .mat-form-field {
-  width: 100%;
+/* ========================================
+   TEMA CLARO (por defecto)
+   ======================================== */
+body, body.light-theme {
+  background-color: #fafafa;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.custom-dialog-container .mat-dialog-actions {
-  margin-bottom: 0;
-  padding: 12px 24px;
+body.light-theme .content,
+body .content {
+  background-color: #fafafa;
 }
 
-/* Estilos para la barra de progreso */
-.mat-progress-bar {
-  height: 20px !important;
-  border-radius: 10px;
-}
-.mat-progress-bar-fill::after {
-  background-color: #6b8e9f !important;
+body.light-theme mat-card,
+body mat-card {
+  background-color: #ffffff;
+  color: #333;
 }
 
-.mat-progress-bar-buffer {
-  background-color: #e0e0e0 !important;
+body.light-theme .menu-divider,
+body .menu-divider {
+  border-top-color: rgba(0, 0, 0, 0.12);
 }
 
-/* Ocultar el círculo de carga */
-.mat-progress-spinner, .mat-spinner {
-  display: none !important;
+/* ========================================
+   TEMA OSCURO
+   ======================================== */
+body.dark-theme {
+  background-color: #3f3f3f !important;
+  color: #e0e0e0 !important;
 }
 
-/* Opción 1: Barra gruesa con bordes redondeados */
-.progress-bar-1 {
-  height: 24px !important;
-  border-radius: 12px;
-}
-.progress-bar-1 .mat-progress-bar-fill::after {
-  background-color: #4CAF50;
+body.dark-theme .content {
+  background-color: #3f3f3f !important;
 }
 
-/* Opción 2: Barra con gradiente */
-.progress-bar-2 {
-  height: 20px !important;
-}
-.progress-bar-2 .mat-progress-bar-fill::after {
-  background: linear-gradient(to right, #FFC107, #FF5722);
+body.dark-theme mat-card {
+  background-color: #444444 !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #2a2a2a !important;
 }
 
-/* Opción 3: Barra con efecto de brillo */
-.progress-bar-3 {
-  height: 18px !important;
-  border-radius: 9px;
-  overflow: hidden;
-}
-.progress-bar-3 .mat-progress-bar-fill::after {
-  background-color: #2196F3;
-  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+body.dark-theme mat-toolbar {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #2a2a2a !important;
+  color: #ffffff !important;
 }
 
-/* Opción 4: Barra con patrón de rayas */
-.progress-bar-4 {
-  height: 22px !important;
-}
-.progress-bar-4 .mat-progress-bar-fill::after {
-  background-image: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.15) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.15) 75%,
-    transparent 75%,
-    transparent
-  );
-  background-size: 40px 40px;
-  animation: stripes 1s linear infinite;
-  background-color: #9C27B0;
+body.dark-theme .page-title,
+body.dark-theme .page-subtitle,
+body.dark-theme h1, body.dark-theme h2, 
+body.dark-theme h3, body.dark-theme h4 {
+  color: #ffffff !important;
 }
 
-@keyframes stripes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 40px 0;
-  }
+body.dark-theme .format-instructions {
+  background-color: #704444 !important;
+  border-left: 4px solid #666666 !important;
+  border: 1px solid #2a2a2a !important;
 }
 
-/* Opción 5: Barra con borde */
-.progress-bar-5 {
-  height: 26px !important;
-  border-radius: 13px;
-  border: 2px solid #3F51B5;
-  padding: 2px;
-}
-.progress-bar-5 .mat-progress-bar-fill::after {
-  background-color: #3F51B5;
+body.dark-theme .format-instructions h3 {
+  color: #ffffff !important;
 }
 
+body.dark-theme .format-instructions li {
+  color: #cccccc !important;
+}
+
+body.dark-theme .format-instructions strong {
+  color: #ffffff !important;
+}
+
+body.dark-theme .file-label {
+  background-color: #0e058d !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+body.dark-theme .file-label:hover {
+  background-color: #3a3a3a !important;
+}
+
+body.dark-theme .file-name {
+  background-color: #6a92ff !important;
+  color: #000000 !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+body.dark-theme .file-name.no-file {
+  background-color: #6a92ff !important;
+  color: #000000 !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+body.dark-theme .progress-container {
+  background-color: #777171 !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+body.dark-theme .progress-message {
+  color: #e0e0e0 !important;
+}
+
+body.dark-theme table {
+  background-color: #1a1a1a !important;
+  border: 1px solid #fffdfd !important;
+}
+
+body.dark-theme th {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid #3a3a3a !important;
+}
+
+body.dark-theme td {
+  color: #ffffff !important;
+  border-bottom: 1px solid #ffffff !important;
+}
+
+body.dark-theme tr:hover {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-theme .mat-mdc-row:hover {
+  background-color: #2a2a2a !important;
+}
+
+body.dark-theme .menu-divider {
+  border-top-color: #3a3a3a !important;
+}
+
+body.dark-theme .user-menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-theme button[mat-raised-button][color="primary"] {
+  background-color: #3a3a3a !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme button[mat-raised-button][color="primary"]:hover {
+  background-color: #4a4a4a !important;
+}
+
+body.dark-theme button[mat-button] {
+  color: #e0e0e0 !important;
+}
+
+body.dark-theme button[mat-button]:hover {
+  background-color: #139fe0 !important;
+}
+
+body.dark-theme .mat-mdc-form-field {
+  color: #e0e0e0 !important;
+}
+
+body.dark-theme .mat-mdc-text-field-wrapper {
+  background-color: #a8a8a8 !important;
+}
+
+body.dark-theme input {
+  color: #ffffff !important;
+}
+
+body.dark-theme .mat-mdc-input-element {
+  color: #ffffff !important;
+}
+
+body.dark-theme .upload-button:disabled {
+  background-color: #2a2a2a !important;
+  color: #666666 !important;
+}
+
+body.dark-theme .info-row {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%) !important;
+  border-left-color: #666666 !important;
+}
+
+body.dark-theme .info-label {
+  color: #ffffff !important;
+}
+
+body.dark-theme .info-value {
+  color: #cccccc !important;
+}
+
+body.dark-theme .profile-actions {
+  background-color: #1a1a1a !important;
+  border-top-color: #2a2a2a !important;
+}
+
+body.dark-theme .profile-header {
+  background: linear-gradient(135deg, #434343 0%, #3f3f3f 100%) !important;
+}
+
+/* Estilos de snackbar personalizados */
+.snackbar-success {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.snackbar-error {
+  background-color: #f44336 !important;
+  color: white !important;
+}
+
+.snackbar-warning {
+  background-color: #ff9800 !important;
+  color: white !important;
+}

@@ -1,6 +1,104 @@
-<mat-card *ngIf="user">
-  <h2>Perfil de Usuario</h2>
-  <p><strong>ID:</strong> {{ user.id }}</p>
-  <p><strong>Usuario:</strong> {{ user.username }}</p>
-  <p><strong>Email:</strong> {{ user.email }}</p>
-</mat-card>
+<div class="profile-container">
+  <mat-card class="profile-card">
+    <mat-card-header class="profile-header">
+      <div class="profile-avatar">
+        <div class="avatar-circle">
+          {{ getUserInitials() }}
+        </div>
+      </div>
+      <mat-card-title class="profile-title">
+        {{ isEditMode ? 'Editar Perfil' : 'Perfil de Usuario' }}
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="profile-content">
+      <!-- Modo Vista -->
+      <div *ngIf="!isEditMode" class="view-mode">
+        <div class="info-row">
+          <div class="info-label">
+            <span class="icon">🆔</span>
+            <strong>ID:</strong>
+          </div>
+          <div class="info-value">{{ user?.id }}</div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">
+            <span class="icon">👤</span>
+            <strong>Usuario:</strong>
+          </div>
+          <div class="info-value">{{ user?.username }}</div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">
+            <span class="icon">📧</span>
+            <strong>Email:</strong>
+          </div>
+          <div class="info-value">{{ user?.email }}</div>
+        </div>
+      </div>
+
+      <!-- Modo Edición -->
+      <form *ngIf="isEditMode" class="edit-mode" (ngSubmit)="saveProfile()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>👤 Usuario</mat-label>
+          <input 
+            matInput 
+            [(ngModel)]="editUser.username" 
+            name="username"
+            placeholder="Ingresa tu usuario"
+            required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>📧 Email</mat-label>
+          <input 
+            matInput 
+            type="email"
+            [(ngModel)]="editUser.email" 
+            name="email"
+            placeholder="Ingresa tu email"
+            required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>🔒 Nueva Contraseña (opcional)</mat-label>
+          <input 
+            matInput 
+            type="password"
+            [(ngModel)]="editUser.password" 
+            name="password"
+            placeholder="Dejar en blanco para no cambiar">
+        </mat-form-field>
+
+        <div class="button-group">
+          <button 
+            mat-raised-button 
+            color="primary" 
+            type="submit"
+            [disabled]="isSaving">
+            <span *ngIf="!isSaving">💾 Guardar Cambios</span>
+            <span *ngIf="isSaving">⏳ Guardando...</span>
+          </button>
+          
+          <button 
+            mat-raised-button 
+            type="button"
+            (click)="cancelEdit()">
+            ❌ Cancelar
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions *ngIf="!isEditMode" class="profile-actions">
+      <button 
+        mat-raised-button 
+        color="primary"
+        (click)="enableEditMode()">
+        ✏️ Editar Perfil
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

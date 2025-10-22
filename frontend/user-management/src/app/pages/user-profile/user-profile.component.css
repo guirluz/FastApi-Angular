@@ -1,0 +1,242 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.profile-card {
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+/* Header con avatar */
+.profile-header {
+  background: linear-gradient(135deg, #6b8e9f 0%, #654683 100%);
+  padding: 40px 20px 20px;
+  text-align: center;
+  color: white;
+}
+
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.avatar-circle:hover {
+  transform: scale(1.1);
+}
+
+.profile-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: white !important;
+}
+
+/* Contenido */
+.profile-content {
+  padding: 30px;
+}
+
+/* Modo Vista */
+.view-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #667eea;
+}
+
+.info-row:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.info-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+  font-weight: 600;
+  color: #333;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.info-value {
+  flex: 1;
+  color: #555;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+/* Modo Edición */
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Acciones */
+.profile-actions {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.profile-actions button {
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.profile-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Tema Oscuro */
+body.dark-theme .profile-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-theme .profile-header {
+  background: linear-gradient(135deg, #434343 0%, #000000 100%);
+}
+
+body.dark-theme .info-row {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-left-color: #666666;
+}
+
+body.dark-theme .info-label {
+  color: #ffffff;
+}
+
+body.dark-theme .info-value {
+  color: #cccccc;
+}
+
+body.dark-theme .profile-actions {
+  background-color: #1a1a1a;
+  border-top-color: #2a2a2a;
+}
+
+body.dark-theme .mat-mdc-form-field {
+  background-color: #1a1a1a;
+}
+
+body.dark-theme input {
+  color: #ffffff !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .profile-card {
+    margin: 10px 0;
+  }
+
+  .profile-header {
+    padding: 30px 15px 15px;
+  }
+
+  .avatar-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+
+  .profile-content {
+    padding: 20px 15px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .info-label {
+    min-width: auto;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+}

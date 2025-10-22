@@ -1,16 +1,59 @@
-
-
 <mat-toolbar color="primary">
-  <span>Gestión de Usuarios</span>
+  <span class="app-title" (click)="goToHome()" *ngIf="isLoggedIn()">
+    🏠 Gestión de Usuarios
+  </span>
+  <span class="app-title-static" *ngIf="!isLoggedIn()">
+    Gestión de Usuarios
+  </span>
   <span class="spacer"></span>
 
-  <!-- Solo se muestran si el usuario está logueado -->
-  <!-- <a mat-button routerLink="/import" *ngIf="isLoggedIn()">Importar</a>
-  <a mat-button routerLink="/users" *ngIf="isLoggedIn()">Usuarios</a>
-  <a mat-button routerLink="/profile" *ngIf="isLoggedIn()">Perfil</a> -->
+  <!-- Menú desplegable con botón simple -->
+  <div class="user-menu" *ngIf="isLoggedIn()">
+    <button 
+      mat-button 
+      [matMenuTriggerFor]="userMenu"
+      class="user-menu-button">
+      👤 Mi Cuenta
+    </button>
 
-  <!-- Botón de logout -->
-  <button mat-button (click)="logout()" *ngIf="isLoggedIn()">Salir</button>
+    <mat-menu #userMenu="matMenu" class="user-dropdown">
+      <!-- Editar perfil -->
+      <button mat-menu-item (click)="editProfile()">
+        <span class="menu-icon">✏️</span>
+        <span>Editar Perfil</span>
+      </button>
+
+      <!-- Cambiar tema -->
+      <button mat-menu-item [matMenuTriggerFor]="themeMenu">
+        <span class="menu-icon">🎨</span>
+        <span>Cambiar Tema</span>
+      </button>
+
+      <hr class="menu-divider">
+
+      <!-- Salir -->
+      <button mat-menu-item (click)="logout()" class="logout-item">
+        <span class="menu-icon">🚪</span>
+        <span>Salir</span>
+      </button>
+    </mat-menu>
+
+    <!-- Submenú de temas -->
+    <mat-menu #themeMenu="matMenu">
+      <button mat-menu-item (click)="changeTheme('light')">
+        <span class="menu-icon">☀️</span>
+        <span>Tema Claro</span>
+      </button>
+      <button mat-menu-item (click)="changeTheme('dark')">
+        <span class="menu-icon">🌙</span>
+        <span>Tema Oscuro</span>
+      </button>
+      <button mat-menu-item (click)="changeTheme('auto')">
+        <span class="menu-icon">🔄</span>
+        <span>Automático</span>
+      </button>
+    </mat-menu>
+  </div>
 </mat-toolbar>
 
 <div class="content">

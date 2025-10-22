@@ -1,29 +1,79 @@
-<mat-card>
-  <h3>📂 Importar Usuarios desde Excel</h3>
+<mat-card class="import-card">
+  <mat-card-header>
+    <mat-card-title>
+      📂 Importar Usuarios desde Excel
+    </mat-card-title>
+  </mat-card-header>
 
-  <!-- Selector de archivo -->
-  <input type="file" (change)="onFileSelected($event)" />
-
-  <!-- Botón de subida -->
-  <button mat-raised-button color="primary"
-          (click)="uploadFile()"
-          [disabled]="!selectedFile || isUploading">
-    {{ isUploading ? 'Procesando...' : 'Subir archivo' }}
-  </button>
-
-  <!-- Barra de progreso -->
-  <div class="progress-container" *ngIf="taskId">
-    <p class="progress-message" *ngIf="progress < 100">Progreso: {{ progress }}%</p>
-    <p class="progress-message" *ngIf="progress === 100">✅ Importación completada</p>
-
-    <mat-progress-bar
-      mode="determinate"
-      [value]="progress">
-    </mat-progress-bar>
-
-    <!-- Spinner mientras sube (ahora oculto por CSS) -->
-    <div class="spinner-container" *ngIf="isUploading && progress < 100">
-      <mat-spinner diameter="30"></mat-spinner>
+  <mat-card-content>
+    <!-- Instrucciones de formato -->
+    <div class="format-instructions">
+      <h3>📋 Formato del archivo Excel:</h3>
+      <ul>
+        <li>El archivo debe tener las siguientes columnas: <strong>password</strong>, <strong>username</strong>, <strong>email</strong></li>
+        <li>Máximo <strong>100 registros</strong> por carga</li>
+        <li>Formatos aceptados: <strong>.xlsx</strong>, <strong>.xls</strong></li>
+        <li>No debe haber filas vacías o datos incompletos</li>
+      </ul>
     </div>
-  </div>
+
+    <hr class="divider">
+
+    <!-- Selector de archivo -->
+    <div class="file-upload-section">
+      <div class="file-input-container">
+        <input 
+          type="file" 
+          #fileInput
+          (change)="onFileSelected($event)" 
+          accept=".xlsx,.xls"
+          id="fileInput"
+          class="file-input"
+        />
+        <label for="fileInput" class="file-label" mat-raised-button>
+          📎 Seleccionar archivo
+        </label>
+        <span class="file-name" *ngIf="selectedFile">
+          {{ selectedFile.name }}
+        </span>
+        <span class="file-name no-file" *ngIf="!selectedFile">
+          Ningún archivo seleccionado
+        </span>
+      </div>
+
+      <!-- Botón de subida -->
+      <button 
+        mat-raised-button 
+        color="primary"
+        (click)="uploadFile()"
+        [disabled]="!selectedFile || isUploading"
+        class="upload-button">
+        ☁️ {{ isUploading ? 'Procesando...' : 'Subir archivo' }}
+      </button>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div class="progress-container" *ngIf="taskId">
+      <div class="progress-info">
+        <p class="progress-message" *ngIf="progress < 100">
+          ⏳ Progreso: {{ progress }}%
+        </p>
+        <p class="progress-message success" *ngIf="progress === 100">
+          ✅ Importación completada
+        </p>
+      </div>
+
+      <mat-progress-bar
+        mode="determinate"
+        [value]="progress"
+        class="progress-bar">
+      </mat-progress-bar>
+
+      <!-- Spinner mientras sube -->
+      <div class="spinner-container" *ngIf="isUploading && progress < 100">
+        <mat-spinner diameter="30"></mat-spinner>
+        <span class="spinner-text">Procesando archivo...</span>
+      </div>
+    </div>
+  </mat-card-content>
 </mat-card>

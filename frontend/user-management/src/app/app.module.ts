@@ -28,8 +28,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
-
-
+import { MatMenuModule } from '@angular/material/menu';  // ← AGREGAR ESTE
 
 // Interceptor
 import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -62,7 +61,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     MatInputModule,
     MatPaginatorModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule  // ← AGREGAR ESTE
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
@@ -70,5 +70,3 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-

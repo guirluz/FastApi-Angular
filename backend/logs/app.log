@@ -2229,3 +2229,468 @@ redis.exceptions.ConnectionError: Connection closed by server.
 2025-10-21 21:08:10.208 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
 2025-10-21 21:08:10.212 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
 2025-10-21 21:08:10.214 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 17:49:23.520 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 17:49:33.236 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 17:49:33.597 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 17:49:33.604 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 17:49:33.604 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 17:49:33.606 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 17:59:21.705 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-22 17:59:21.706 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-22 17:59:21.706 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-22 17:59:21.707 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-22 17:59:21.708 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-22 17:59:21.708 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-22 17:59:22.334 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 17:59:22.677 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 17:59:22.682 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 17:59:22.683 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 17:59:22.685 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 17:59:31.307 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-22 17:59:31.308 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-22 17:59:31.308 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-22 17:59:31.308 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-22 17:59:31.309 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-22 17:59:31.309 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-22 17:59:31.895 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 17:59:32.194 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 17:59:32.200 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 17:59:32.200 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 17:59:32.203 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 18:04:03.262 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 18:04:13.104 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 18:04:13.485 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 18:04:13.493 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 18:04:13.493 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 18:04:13.495 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 18:32:55.665 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 18:33:05.347 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 18:33:05.695 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 18:33:05.701 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 18:33:05.702 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 18:33:05.704 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 18:48:31.750 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 18:48:41.717 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 18:48:42.097 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 18:48:42.103 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 18:48:42.103 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 18:48:42.106 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 18:48:58.058 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 18:49:10.521 | ERROR    | app.main:login:313 - Error en login: Invalid salt
+2025-10-22 18:49:11.405 | ERROR    | app.main:login:313 - Error en login: Invalid salt
+2025-10-22 18:49:31.202 | SUCCESS  | app.main:register:267 - Usuario registrado: admin@gmail.com
+2025-10-22 18:49:39.294 | INFO     | app.main:login:301 - Usuario admin@gmail.com inició sesión
+2025-10-22 21:27:29.751 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:27:29.942 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:28:07.167 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:28:07.308 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:28:22.820 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:28:22.966 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:28:28.744 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:28:28.868 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:28:44.945 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:28:45.035 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:33:05.072 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=6e8efc6f-cd97-462e-8731-2d8d2907e249
+2025-10-22 21:33:05.079 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 21:33:05.210 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 21:33:05.541 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'password', 'username', 'email'}
+2025-10-22 21:33:05.545 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '6e8efc6f-cd97-462e-8731-2d8d2907e249', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'password', 'username', 'email'}"}
+2025-10-22 21:33:05.545 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 21:33:05.551 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 21:33:12.867 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=5bb6aa4b-be86-42d9-b841-1d44e1bac871
+2025-10-22 21:33:12.870 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 21:33:12.875 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'password', 'username', 'email'}
+2025-10-22 21:33:12.876 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '5bb6aa4b-be86-42d9-b841-1d44e1bac871', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'password', 'username', 'email'}"}
+2025-10-22 21:33:12.877 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 1 clientes WebSocket
+2025-10-22 21:33:12.878 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 21:33:24.043 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 21:33:24.061 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:33:24.138 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:33:28.622 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=c161629e-6c66-4ea6-90a0-6899a7996994
+2025-10-22 21:33:28.625 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 21:33:28.628 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 21:33:28.632 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'password', 'username', 'email'}
+2025-10-22 21:33:28.634 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c161629e-6c66-4ea6-90a0-6899a7996994', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'password', 'username', 'email'}"}
+2025-10-22 21:33:28.634 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 21:33:28.640 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 21:33:50.567 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=b5e76735-3978-404c-b870-5f156131792d
+2025-10-22 21:33:50.569 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 21:33:50.575 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'password', 'username', 'email'}
+2025-10-22 21:33:50.576 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b5e76735-3978-404c-b870-5f156131792d', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'password', 'username', 'email'}"}
+2025-10-22 21:33:50.576 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 1 clientes WebSocket
+2025-10-22 21:33:50.578 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 21:33:53.042 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 21:33:53.043 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:33:53.140 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:33:58.583 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=b9bd9cad-620e-4e6c-9380-493a679956a6
+2025-10-22 21:33:58.585 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 21:33:58.589 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'password', 'username', 'email'}
+2025-10-22 21:33:58.590 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'b9bd9cad-620e-4e6c-9380-493a679956a6', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'password', 'username', 'email'}"}
+2025-10-22 21:33:58.591 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 1 clientes WebSocket
+2025-10-22 21:33:58.596 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 21:34:04.426 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 21:34:04.427 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:34:04.578 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:34:05.084 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:34:05.265 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:34:05.384 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:34:05.603 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:34:09.910 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=a77dd412-7cd9-4580-89cc-edc1a68cc528
+2025-10-22 21:34:09.912 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 21:34:09.915 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 21:34:09.916 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'password', 'username', 'email'}
+2025-10-22 21:34:09.917 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'a77dd412-7cd9-4580-89cc-edc1a68cc528', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'password', 'username', 'email'}"}
+2025-10-22 21:34:09.917 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 21:34:09.921 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 21:35:11.851 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:35:11.989 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:35:16.325 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=19c64aaf-3f26-4eca-8815-ce04b45edfae
+2025-10-22 21:35:16.331 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 21:35:16.331 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 21:35:16.548 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 1/2 (50%) task_id=19c64aaf-3f26-4eca-8815-ce04b45edfae
+2025-10-22 21:35:16.549 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '19c64aaf-3f26-4eca-8815-ce04b45edfae', 'current': 1, 'total': 2, 'percent': 50, 'status': 'processing'}
+2025-10-22 21:35:16.549 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 21:35:17.025 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 2/2 (100%) task_id=19c64aaf-3f26-4eca-8815-ce04b45edfae
+2025-10-22 21:35:17.026 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '19c64aaf-3f26-4eca-8815-ce04b45edfae', 'current': 2, 'total': 2, 'percent': 100, 'status': 'processing'}
+2025-10-22 21:35:17.026 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 21:35:17.260 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 2 usuarios insertados, 0 omitidos
+2025-10-22 21:35:17.261 | INFO     | app.tasks:process_excel_task:179 - Importación completada, task_id=19c64aaf-3f26-4eca-8815-ce04b45edfae
+2025-10-22 21:35:17.261 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '19c64aaf-3f26-4eca-8815-ce04b45edfae', 'current': 2, 'total': 2, 'percent': 100, 'status': 'completed'}
+2025-10-22 21:35:17.261 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 21:35:17.266 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 21:37:22.565 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:37:22.705 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:38:39.334 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:38:39.480 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:40:29.465 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:40:29.620 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:46:29.586 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:46:29.739 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:46:59.634 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:47:08.033 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:47:11.516 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:47:11.617 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:52:21.530 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:52:22.310 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:52:24.232 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:52:24.362 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:52:47.396 | WARNING  | app.main:get_current_user:355 - Error al decodificar token: Signature has expired.
+2025-10-22 21:52:47.399 | ERROR    | app.database.connection:get_db:44 - Error durante el uso de la sesión de base de datos: 401: Token inválido o expirado
+2025-10-22 21:53:07.229 | WARNING  | app.main:login:295 - Contraseña incorrecta para admin@gmail.com
+2025-10-22 21:53:24.785 | INFO     | app.main:login:301 - Usuario brayan@gmail.com inició sesión
+2025-10-22 21:55:16.296 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:55:16.416 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:55:19.253 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 21:55:19.253 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 21:55:34.266 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 21:55:34.267 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 21:58:12.276 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 21:58:12.465 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 21:58:12.482 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 21:58:12.483 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:05:38.759 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:05:39.093 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:05:39.124 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:05:39.124 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:06:16.890 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:06:17.011 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:06:17.035 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:06:17.036 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:07:19.009 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:07:19.139 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:07:19.159 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:07:19.159 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:09:49.079 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:09:49.246 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:09:49.279 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:09:49.280 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:10:06.915 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:10:07.051 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:10:07.065 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:10:07.065 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:10:11.939 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:10:11.940 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:10:30.934 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:10:31.058 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:10:31.080 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:10:31.080 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:13:20.638 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=7254abd0-f2cf-43a1-ac76-0eb25e058716
+2025-10-22 22:13:20.645 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 22:13:20.671 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 22:13:20.955 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 1/2 (50%) task_id=7254abd0-f2cf-43a1-ac76-0eb25e058716
+2025-10-22 22:13:20.956 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '7254abd0-f2cf-43a1-ac76-0eb25e058716', 'current': 1, 'total': 2, 'percent': 50, 'status': 'processing'}
+2025-10-22 22:13:20.956 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:13:20.985 | WARNING  | app.tasks:process_excel_task:150 - Fila 1: email duplicado eduar@gmail.com, se omite
+2025-10-22 22:13:21.186 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 2/2 (100%) task_id=7254abd0-f2cf-43a1-ac76-0eb25e058716
+2025-10-22 22:13:21.187 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '7254abd0-f2cf-43a1-ac76-0eb25e058716', 'current': 2, 'total': 2, 'percent': 100, 'status': 'processing'}
+2025-10-22 22:13:21.187 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:13:21.188 | WARNING  | app.tasks:process_excel_task:150 - Fila 2: email duplicado sofia@gmail.com, se omite
+2025-10-22 22:13:21.191 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 0 usuarios insertados, 2 omitidos
+2025-10-22 22:13:21.191 | INFO     | app.tasks:process_excel_task:179 - Importación completada, task_id=7254abd0-f2cf-43a1-ac76-0eb25e058716
+2025-10-22 22:13:21.191 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '7254abd0-f2cf-43a1-ac76-0eb25e058716', 'current': 2, 'total': 2, 'percent': 100, 'status': 'completed'}
+2025-10-22 22:13:21.192 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:13:21.195 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 22:13:57.965 | INFO     | app.main:login:301 - Usuario brayan@gmail.com inició sesión
+2025-10-22 22:14:54.502 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:14:54.823 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:18:03.745 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:18:04.027 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:18:46.165 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:18:46.166 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:20:05.610 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:20:05.875 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:20:25.614 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:20:25.755 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:20:27.521 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:20:27.661 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:20:29.485 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:20:29.590 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:20:39.550 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:20:39.649 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:20:45.494 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:20:45.633 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:20:55.523 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:20:55.641 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:21:17.691 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:21:17.793 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:21:21.582 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:21:21.684 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:21:29.581 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:21:29.679 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:21:35.549 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:21:35.684 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:21:57.642 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:21:57.736 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:22:01.616 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:22:01.702 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:22:13.597 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:22:13.691 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:22:17.574 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:22:17.680 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:22:23.591 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:22:23.708 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:22:31.665 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:22:31.786 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:22:43.596 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:22:43.726 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:22:51.710 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:22:51.849 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:22:59.641 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:22:59.742 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:23:03.603 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:23:03.730 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:23:11.638 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:23:11.731 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:23:35.782 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:23:35.882 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:23:45.683 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:23:45.799 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:23:51.673 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:23:51.785 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:24:03.852 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:24:03.970 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:24:11.699 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:24:11.806 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:24:41.770 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:24:41.878 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:24:47.734 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:24:47.861 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:25:03.841 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:25:03.943 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:25:21.784 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:25:21.886 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:25:37.864 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:25:38.088 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:01.947 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:26:02.070 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:05.828 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:26:05.960 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:09.816 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:26:09.954 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:20.056 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=a5832f95-2545-4b26-b949-98c6e0141f81
+2025-10-22 22:26:20.062 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 22:26:20.064 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 22:26:20.279 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 1/2 (50%) task_id=a5832f95-2545-4b26-b949-98c6e0141f81
+2025-10-22 22:26:20.280 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'a5832f95-2545-4b26-b949-98c6e0141f81', 'current': 1, 'total': 2, 'percent': 50, 'status': 'processing'}
+2025-10-22 22:26:20.280 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:26:20.287 | WARNING  | app.tasks:process_excel_task:150 - Fila 1: email duplicado eduar@gmail.com, se omite
+2025-10-22 22:26:20.489 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 2/2 (100%) task_id=a5832f95-2545-4b26-b949-98c6e0141f81
+2025-10-22 22:26:20.489 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'a5832f95-2545-4b26-b949-98c6e0141f81', 'current': 2, 'total': 2, 'percent': 100, 'status': 'processing'}
+2025-10-22 22:26:20.489 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:26:20.490 | WARNING  | app.tasks:process_excel_task:150 - Fila 2: email duplicado sofia@gmail.com, se omite
+2025-10-22 22:26:20.492 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 0 usuarios insertados, 2 omitidos
+2025-10-22 22:26:20.492 | INFO     | app.tasks:process_excel_task:179 - Importación completada, task_id=a5832f95-2545-4b26-b949-98c6e0141f81
+2025-10-22 22:26:20.492 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'a5832f95-2545-4b26-b949-98c6e0141f81', 'current': 2, 'total': 2, 'percent': 100, 'status': 'completed'}
+2025-10-22 22:26:20.493 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:26:20.495 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 22:26:29.920 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:26:30.040 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:33.866 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:26:33.973 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:39.845 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:26:39.973 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:45.904 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:26:46.057 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:51.836 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:26:51.953 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:26:59.884 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:00.056 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:27:03.920 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:04.034 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:27:11.882 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:11.984 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:27:19.884 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:20.009 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:27:23.883 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:23.994 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:27:29.888 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:30.002 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:27:41.880 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:42.003 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:27:45.894 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:46.028 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:27:53.936 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:27:54.056 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:28:08.082 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:28:08.192 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:28:15.970 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:28:16.093 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:28:26.096 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:28:26.221 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:28:31.952 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:28:32.057 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:28:44.014 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:28:44.126 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:28:56.129 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:28:56.287 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:28:59.964 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:00.071 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:29:05.957 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:06.086 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:29:12.001 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:12.137 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:29:13.996 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:14.111 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:29:16.048 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:16.167 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:29:22.008 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:22.134 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:29:25.959 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:26.073 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:29:44.026 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:44.126 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:29:54.060 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:29:54.165 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:30:00.016 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:30:00.128 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:31:50.123 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:31:50.124 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:32:32.459 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:32:32.555 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:32:32.575 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:32:32.576 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:32:42.222 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:32:42.322 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:32:42.334 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:32:42.334 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:33:30.407 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:33:30.504 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:33:30.518 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:33:30.518 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:33:48.376 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:33:48.496 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:33:48.516 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:33:48.517 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:34:18.419 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:34:18.533 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:34:18.558 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:34:18.558 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:34:24.290 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:34:24.407 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:34:24.430 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:34:24.431 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:34:32.339 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:34:32.451 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:34:32.465 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:34:32.466 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:34:38.302 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:34:38.417 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:34:38.438 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:34:38.439 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:35:25.514 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: brayan@gmail.com
+2025-10-22 22:35:25.514 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por brayan@gmail.com
+2025-10-22 22:36:10.991 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=a0b35ae4-dfc2-4125-a501-c7be03335a3c
+2025-10-22 22:36:10.994 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-22 22:36:10.997 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-22 22:36:11.204 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 1/2 (50%) task_id=a0b35ae4-dfc2-4125-a501-c7be03335a3c
+2025-10-22 22:36:11.204 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'a0b35ae4-dfc2-4125-a501-c7be03335a3c', 'current': 1, 'total': 2, 'percent': 50, 'status': 'processing'}
+2025-10-22 22:36:11.205 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:36:11.207 | WARNING  | app.tasks:process_excel_task:150 - Fila 1: email duplicado eduar@gmail.com, se omite
+2025-10-22 22:36:11.409 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 2/2 (100%) task_id=a0b35ae4-dfc2-4125-a501-c7be03335a3c
+2025-10-22 22:36:11.409 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'a0b35ae4-dfc2-4125-a501-c7be03335a3c', 'current': 2, 'total': 2, 'percent': 100, 'status': 'processing'}
+2025-10-22 22:36:11.410 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:36:11.411 | WARNING  | app.tasks:process_excel_task:150 - Fila 2: email duplicado sofia@gmail.com, se omite
+2025-10-22 22:36:11.412 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 0 usuarios insertados, 2 omitidos
+2025-10-22 22:36:11.412 | INFO     | app.tasks:process_excel_task:179 - Importación completada, task_id=a0b35ae4-dfc2-4125-a501-c7be03335a3c
+2025-10-22 22:36:11.412 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'a0b35ae4-dfc2-4125-a501-c7be03335a3c', 'current': 2, 'total': 2, 'percent': 100, 'status': 'completed'}
+2025-10-22 22:36:11.413 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-22 22:36:11.415 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-22 22:37:11.868 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:37:11.967 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-22 22:37:11.968 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-22 22:37:11.969 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-22 22:37:11.970 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-22 22:37:11.971 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-22 22:37:11.971 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-22 22:37:13.097 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 22:37:13.822 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 22:37:13.831 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 22:37:13.831 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 22:37:13.836 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 22:37:14.327 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:37:14.938 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:37:15.038 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-22 22:37:15.039 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-22 22:37:15.039 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-22 22:37:15.040 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-22 22:37:15.041 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-22 22:37:15.041 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-22 22:37:15.793 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 22:37:16.183 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 22:37:16.190 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 22:37:16.190 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 22:37:16.192 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 22:37:17.394 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-22 22:37:17.394 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-22 22:37:17.395 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-22 22:37:17.395 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-22 22:37:17.396 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-22 22:37:17.396 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-22 22:37:17.993 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 22:37:18.329 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 22:37:18.336 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 22:37:18.336 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 22:37:18.339 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:37:18.341 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 22:38:47.476 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:38:47.576 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-22 22:38:47.576 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-22 22:38:47.577 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-22 22:38:47.577 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-22 22:38:47.578 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-22 22:38:47.578 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-22 22:38:48.254 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 22:38:52.289 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-22 22:38:52.615 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-22 22:38:52.622 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-22 22:38:52.622 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-22 22:38:52.625 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-22 22:38:52.626 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-22 22:38:53.527 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-22 22:38:53.627 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-22 22:38:53.627 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-22 22:38:53.628 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-22 22:38:53.628 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-22 22:38:53.628 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-22 22:38:53.629 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-22 22:38:54.234 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
