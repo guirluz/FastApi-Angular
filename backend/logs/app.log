@@ -2694,3 +2694,305 @@ redis.exceptions.ConnectionError: Connection closed by server.
 2025-10-22 22:38:53.628 | INFO     | app.main:redis_listener:184 - Redis cerrado
 2025-10-22 22:38:53.629 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
 2025-10-22 22:38:54.234 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 13:50:11.910 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 13:50:22.364 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:13:29.157 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:13:29.943 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 14:13:29.950 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 14:13:29.950 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 14:13:29.953 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 14:14:09.509 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-23 14:14:15.655 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:14:20.328 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:14:20.647 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 14:14:20.652 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 14:14:20.653 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 14:14:20.654 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 14:14:48.858 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 14:15:01.462 | ERROR    | app.main:register:279 - Error en registro: (pymysql.err.OperationalError) (1054, "Unknown column 'role' in 'field list'")
+[SQL: INSERT INTO users (username, email, password_hash, `role`) VALUES (%(username)s, %(email)s, %(password_hash)s, %(role)s)]
+[parameters: {'username': 'brayan', 'email': 'brayan@gmail.com', 'password_hash': '$2b$12$MbNhG9c78V88Pf8rNhZjrug8..w8wH/lpZOaEoCCPc78P5hQVy1Ae', 'role': 'user'}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 14:15:36.384 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-23 14:15:36.571 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 14:15:36.793 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-23 14:15:36.919 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 14:15:37.078 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-23 14:15:37.230 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 14:15:43.821 | ERROR    | app.main:register:279 - Error en registro: (pymysql.err.OperationalError) (1054, "Unknown column 'role' in 'field list'")
+[SQL: INSERT INTO users (username, email, password_hash, `role`) VALUES (%(username)s, %(email)s, %(password_hash)s, %(role)s)]
+[parameters: {'username': 'brayan', 'email': 'brayan@gmail.com', 'password_hash': '$2b$12$6NPZQdYM6kmIP10Ka/K7NOXlV9amzMLn/rMDGkPTmJ7CGnj8LpTRS', 'role': 'user'}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 14:23:06.612 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-23 14:23:06.712 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-23 14:23:06.712 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-23 14:23:06.713 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 14:23:06.713 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-23 14:23:06.713 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-23 14:23:06.714 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-23 14:23:07.432 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:23:07.835 | SUCCESS  | app.main:<module>:59 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 14:23:07.841 | INFO     | app.main:startup_event:167 - Tarea de Redis listener iniciada en background
+2025-10-23 14:23:07.841 | INFO     | app.main:redis_listener:122 - Iniciando listener de Redis...
+2025-10-23 14:23:07.843 | SUCCESS  | app.main:redis_listener:127 - Suscrito a canal Redis: progress_channel
+2025-10-23 14:23:09.321 | INFO     | app.main:connect:76 - Cliente WebSocket conectado. Total: 1
+2025-10-23 14:23:16.259 | INFO     | app.main:disconnect:83 - Cliente WebSocket desconectado. Total: 0
+2025-10-23 14:23:16.359 | INFO     | app.main:shutdown_event:172 - Cancelando tareas en background...
+2025-10-23 14:23:16.360 | WARNING  | app.main:redis_listener:142 - Listener Redis cancelado (shutdown)
+2025-10-23 14:23:16.360 | INFO     | app.main:redis_listener:149 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 14:23:16.361 | INFO     | app.main:redis_listener:154 - Pubsub cerrado
+2025-10-23 14:23:16.361 | INFO     | app.main:redis_listener:160 - Redis cerrado
+2025-10-23 14:23:16.361 | INFO     | app.main:shutdown_event:176 - Todas las tareas canceladas correctamente
+2025-10-23 14:23:17.017 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:24:02.069 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-23 14:24:07.071 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 2/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-23 14:24:11.843 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:24:12.076 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:27:27.550 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:27:27.910 | SUCCESS  | app.main:<module>:59 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 14:27:27.916 | INFO     | app.main:startup_event:167 - Tarea de Redis listener iniciada en background
+2025-10-23 14:27:27.917 | INFO     | app.main:redis_listener:122 - Iniciando listener de Redis...
+2025-10-23 14:27:27.919 | SUCCESS  | app.main:redis_listener:127 - Suscrito a canal Redis: progress_channel
+2025-10-23 14:27:29.821 | INFO     | app.main:shutdown_event:172 - Cancelando tareas en background...
+2025-10-23 14:27:29.822 | WARNING  | app.main:redis_listener:142 - Listener Redis cancelado (shutdown)
+2025-10-23 14:27:29.822 | INFO     | app.main:redis_listener:149 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 14:27:29.823 | INFO     | app.main:redis_listener:154 - Pubsub cerrado
+2025-10-23 14:27:29.823 | INFO     | app.main:redis_listener:160 - Redis cerrado
+2025-10-23 14:27:29.823 | INFO     | app.main:shutdown_event:176 - Todas las tareas canceladas correctamente
+2025-10-23 14:27:30.488 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 14:27:30.829 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 14:27:30.835 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 14:27:30.835 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 14:27:30.837 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 15:05:49.862 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-23 15:05:49.864 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-23 15:05:49.864 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 15:05:49.865 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-23 15:05:49.865 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-23 15:05:49.865 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-23 15:05:50.767 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:05:51.264 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 15:05:51.269 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 15:05:51.269 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 15:05:51.271 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 15:06:19.726 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-23 15:06:19.727 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-23 15:06:19.727 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 15:06:19.727 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-23 15:06:19.728 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-23 15:06:19.728 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-23 15:06:20.452 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:06:20.829 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 15:06:20.835 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 15:06:20.835 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 15:06:20.837 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 15:12:13.457 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:12:23.243 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:12:24.576 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 15:12:24.581 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 15:12:24.582 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 15:12:24.584 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 15:12:37.173 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 15:12:46.153 | ERROR    | app.main:register:279 - Error en registro: (pymysql.err.OperationalError) (1054, "Unknown column 'role' in 'field list'")
+[SQL: INSERT INTO users (username, email, password_hash, `role`) VALUES (%(username)s, %(email)s, %(password_hash)s, %(role)s)]
+[parameters: {'username': 'brayan', 'email': 'brayan@gmail.com', 'password_hash': '$2b$12$gDeV3luK7PP4RlM1dShlu.yRYHqwCYaC4iKN9bRqxGV8mll41DveC', 'role': 'user'}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 15:17:37.215 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-23 15:17:37.315 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-23 15:17:37.315 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-23 15:17:37.315 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 15:17:37.316 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-23 15:17:37.316 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-23 15:17:37.316 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-23 15:17:37.976 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:17:38.277 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 15:17:38.282 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 15:17:38.282 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 15:17:38.284 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 15:17:38.684 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-23 15:17:38.685 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-23 15:17:38.685 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 15:17:38.685 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-23 15:17:38.686 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-23 15:17:38.686 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-23 15:17:39.303 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:17:39.669 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 15:17:39.675 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 15:17:39.675 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 15:17:39.678 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 15:17:39.680 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 15:41:41.623 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-23 15:41:41.723 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-23 15:41:41.723 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-23 15:41:41.723 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 15:41:41.724 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-23 15:41:41.724 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-23 15:41:41.725 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-23 15:41:42.586 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:41:58.226 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:47:17.538 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:48:00.633 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:48:19.831 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:48:50.199 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:49:13.276 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:49:33.758 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:50:02.513 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 15:50:12.333 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 17:59:04.419 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 17:59:37.344 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:18:31.673 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:20:35.097 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:20:44.845 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:23:23.708 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:23:28.068 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:23:29.941 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:23:31.472 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:23:32.839 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:23:35.360 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:23:41.297 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:24:07.667 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 18:24:17.629 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:45:28.153 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:46:05.644 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:46:15.476 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:47:49.785 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:47:59.680 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:48:00.027 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 19:48:00.033 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 19:48:00.033 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 19:48:00.036 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 19:48:44.410 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 19:49:02.223 | ERROR    | app.main:register:279 - Error en registro: (pymysql.err.OperationalError) (1054, "Unknown column 'role' in 'field list'")
+[SQL: INSERT INTO users (username, email, password_hash, `role`) VALUES (%(username)s, %(email)s, %(password_hash)s, %(role)s)]
+[parameters: {'username': 'brayan', 'email': 'brayan@gmail.com', 'password_hash': '$2b$12$XLFMwDP/1vk6UbNr9s8tT.2Efx0Z1rAYoJevpH.4KF3r6ARJ40ZBG', 'role': 'user'}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 19:49:23.517 | ERROR    | app.main:login:313 - Error en login: (pymysql.err.OperationalError) (1054, "Unknown column 'users.role' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.`role` AS users_role, users.created_at AS users_created_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'brayan@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 19:49:24.156 | ERROR    | app.main:login:313 - Error en login: (pymysql.err.OperationalError) (1054, "Unknown column 'users.role' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.`role` AS users_role, users.created_at AS users_created_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'brayan@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 19:49:24.348 | ERROR    | app.main:login:313 - Error en login: (pymysql.err.OperationalError) (1054, "Unknown column 'users.role' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.`role` AS users_role, users.created_at AS users_created_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'brayan@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 19:49:24.509 | ERROR    | app.main:login:313 - Error en login: (pymysql.err.OperationalError) (1054, "Unknown column 'users.role' in 'field list'")
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.password_hash AS users_password_hash, users.`role` AS users_role, users.created_at AS users_created_at 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'brayan@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 19:51:31.848 | ERROR    | app.main:redis_listener:169 - Listener Redis falló: Connection closed by server.
+2025-10-23 19:51:31.853 | ERROR    | app.main:redis_listener:171 - Traceback (most recent call last):
+  File "/app/app/main.py", line 151, in redis_listener
+    async for message in pubsub.listen():
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 1031, in listen
+    response = await self.handle_message(await self.parse_response(block=True))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 918, in parse_response
+    response = await self._execute(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 898, in _execute
+    return await conn.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 62, in call_with_retry
+    await fail(error)
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 887, in _disconnect_raise_connect
+    raise error
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/connection.py", line 542, in read_response
+    response = await self._parser.read_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 82, in read_response
+    response = await self._read_response(disable_decoding=disable_decoding)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 90, in _read_response
+    raw = await self._readline()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/base.py", line 221, in _readline
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+2025-10-23 19:51:31.853 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 19:52:12.049 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-23 19:52:17.051 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 2/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-10-23 19:52:21.895 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:52:22.056 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:52:22.266 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 19:52:22.273 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 19:52:22.273 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 19:52:22.276 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 19:52:44.008 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 19:53:02.473 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-23 19:53:11.705 | ERROR    | app.main:register:279 - Error en registro: (pymysql.err.OperationalError) (1054, "Unknown column 'role' in 'field list'")
+[SQL: INSERT INTO users (username, email, password_hash, `role`) VALUES (%(username)s, %(email)s, %(password_hash)s, %(role)s)]
+[parameters: {'username': 'admin', 'email': 'admin@gmail.com', 'password_hash': '$2b$12$x7deh0dYP/hZR89Sk25Wb..r5ggF1vDPOD0BjGjyIukN6O1d45h1m', 'role': 'user'}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-23 19:53:17.479 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-23 19:55:07.646 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0
+2025-10-23 19:55:07.746 | INFO     | app.main:shutdown_event:199 - Cancelando tareas en background...
+2025-10-23 19:55:07.747 | WARNING  | app.main:redis_listener:166 - Listener Redis cancelado (shutdown)
+2025-10-23 19:55:07.747 | INFO     | app.main:redis_listener:173 - 🧹 Limpiando conexiones de Redis...
+2025-10-23 19:55:07.747 | INFO     | app.main:redis_listener:178 - Pubsub cerrado
+2025-10-23 19:55:07.747 | INFO     | app.main:redis_listener:184 - Redis cerrado
+2025-10-23 19:55:07.748 | INFO     | app.main:shutdown_event:205 - Todas las tareas canceladas correctamente
+2025-10-23 19:55:08.437 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:55:08.789 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 19:55:08.796 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 19:55:08.797 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 19:55:08.799 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 19:55:10.007 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 19:55:39.958 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:55:50.188 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-23 19:55:50.649 | SUCCESS  | app.main:<module>:58 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-23 19:55:50.658 | INFO     | app.main:startup_event:193 - Tarea de Redis listener iniciada en background
+2025-10-23 19:55:50.658 | INFO     | app.main:redis_listener:144 - Iniciando listener de Redis...
+2025-10-23 19:55:50.661 | SUCCESS  | app.main:redis_listener:149 - Suscrito a canal Redis: progress_channel
+2025-10-23 19:55:53.017 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 1
+2025-10-23 19:55:54.958 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-23 19:56:06.032 | SUCCESS  | app.main:register:267 - Usuario registrado: admin@gmail.com
+2025-10-23 19:56:21.663 | INFO     | app.main:login:301 - Usuario admin@gmail.com inició sesión
+2025-10-23 19:56:54.545 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-23 19:58:12.915 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: admin@gmail.com
+2025-10-23 19:58:12.915 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por admin@gmail.com
+2025-10-23 20:06:42.820 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: admin@gmail.com
+2025-10-23 20:06:42.829 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por admin@gmail.com
+2025-10-23 20:48:03.347 | WARNING  | app.main:get_current_user:355 - Error al decodificar token: Signature has expired.
+2025-10-23 20:48:03.348 | ERROR    | app.database.connection:get_db:44 - Error durante el uso de la sesión de base de datos: 401: Token inválido o expirado
+2025-10-23 20:48:30.264 | INFO     | app.main:login:301 - Usuario admin@gmail.com inició sesión
+2025-10-23 20:48:44.917 | INFO     | app.main:upload_excel:503 - Tarea de importación enviada a Celery, id=c97f0147-ae3e-4cdf-971c-f26ba9a34883
+2025-10-23 20:48:44.925 | INFO     | app.main:connect:79 - Cliente WebSocket conectado. Total: 2
+2025-10-23 20:48:44.960 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/ejemplo.xlsx
+2025-10-23 20:48:45.397 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 1/2 (50%) task_id=c97f0147-ae3e-4cdf-971c-f26ba9a34883
+2025-10-23 20:48:45.398 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c97f0147-ae3e-4cdf-971c-f26ba9a34883', 'current': 1, 'total': 2, 'percent': 50, 'status': 'processing'}
+2025-10-23 20:48:45.398 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-23 20:48:45.826 | INFO     | app.tasks:process_excel_task:138 - Progreso publicado: 2/2 (100%) task_id=c97f0147-ae3e-4cdf-971c-f26ba9a34883
+2025-10-23 20:48:45.826 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c97f0147-ae3e-4cdf-971c-f26ba9a34883', 'current': 2, 'total': 2, 'percent': 100, 'status': 'processing'}
+2025-10-23 20:48:45.827 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-23 20:48:46.041 | SUCCESS  | app.tasks:process_excel_task:168 - Importación completada: 2 usuarios insertados, 0 omitidos
+2025-10-23 20:48:46.041 | INFO     | app.tasks:process_excel_task:179 - Importación completada, task_id=c97f0147-ae3e-4cdf-971c-f26ba9a34883
+2025-10-23 20:48:46.041 | INFO     | app.main:redis_listener:155 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'c97f0147-ae3e-4cdf-971c-f26ba9a34883', 'current': 2, 'total': 2, 'percent': 100, 'status': 'completed'}
+2025-10-23 20:48:46.042 | INFO     | app.main:redis_listener:159 - Mensaje reenviado a 2 clientes WebSocket
+2025-10-23 20:48:46.045 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 1
+2025-10-23 20:49:28.996 | INFO     | app.main:get_current_user:363 - Usuario autenticado correctamente: admin@gmail.com
+2025-10-23 20:49:28.996 | INFO     | app.main:read_users_me:370 - Acceso al endpoint /users/me por admin@gmail.com
+2025-10-23 21:10:09.176 | INFO     | app.main:disconnect:86 - Cliente WebSocket desconectado. Total: 0

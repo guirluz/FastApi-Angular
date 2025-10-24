@@ -74,6 +74,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: celery_worker
+    user: 1000:1000
     command: celery -A app.tasks worker --loglevel=info
     depends_on:
       fastapi_backend:

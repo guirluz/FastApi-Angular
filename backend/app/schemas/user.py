@@ -1,31 +1,30 @@
-from typing import Optional
+# backend/app/schemas/user.py
 from pydantic import BaseModel, EmailStr
+from typing import Optional
 
 class UserCreate(BaseModel):
-    """
-    Esquema para la creación de un nuevo usuario.
-    Se utiliza en el endpoint de registro (/auth/register).
-    """
-    username: str   # Nombre de usuario
-    email: EmailStr # Correo electrónico válido
-    password: str   # Contraseña en texto plano (se encripta antes de guardar)
-
+    """Schema para crear un nuevo usuario"""
+    username: str
+    email: EmailStr
+    password: str
 
 class UserLogin(BaseModel):
-    """
-    Esquema para el inicio de sesión de un usuario.
-    Se utiliza en el endpoint de login (/auth/login).
-    """
-    email: EmailStr # Correo electrónico válido
-    password: str   # Contraseña en texto plano (se valida contra el hash en DB)
-
+    """Schema para login de usuario"""
+    email: EmailStr
+    password: str
 
 class UserUpdate(BaseModel):
-    """
-    Esquema para la actualización parcial de un usuario.
-    Permite modificar username, email y/o password de forma opcional.
-    """
+    """Schema para actualizar usuario (campos opcionales)"""
     username: Optional[str] = None
     email: Optional[EmailStr] = None
     password: Optional[str] = None
 
+class UserResponse(BaseModel):
+    """Schema para respuesta de usuario (sin password)"""
+    id: int
+    username: str
+    email: str
+    role: str
+    
+    class Config:
+        from_attributes = True
