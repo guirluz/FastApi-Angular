@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,10 +29,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
-
 // Interceptor
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+
+// Directive
+import { RoleDirective } from './directives/role.directive';
 
 @NgModule({
   declarations: [
@@ -43,13 +44,14 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     RegisterComponent,
     UserCreateComponent,
     UserEditComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    RoleDirective
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     // Material
     MatToolbarModule,
@@ -70,5 +72,4 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
 

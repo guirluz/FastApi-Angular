@@ -1,21 +1,32 @@
 <mat-card>
   <h2>Registro</h2>
 
-  <form (ngSubmit)="register()">
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
     <mat-form-field appearance="outline">
       <mat-label>Usuario</mat-label>
-      <input matInput [(ngModel)]="username" name="username" required />
+      <input matInput formControlName="username" name="username" required />
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
-      <input matInput [(ngModel)]="email" name="email" type="email" required />
+      <input matInput formControlName="email" name="email" type="email" required />
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Contraseña</mat-label>
-      <input matInput [(ngModel)]="password" name="password" type="password" required />
+      <input matInput formControlName="password" name="password" type="password" required />
     </mat-form-field>
+
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Role</mat-label>
+        <mat-select formControlName="role">
+          <mat-option value="">Select a role</mat-option>
+          <mat-option value="admin">Administrator</mat-option>
+          <mat-option value="client">Client</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
     <button mat-raised-button type="submit" class="custom-button">
       Registrarse
