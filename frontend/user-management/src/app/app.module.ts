@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,8 @@ import { RegisterComponent } from './pages/auth/register/register.component';
 import { UserCreateComponent } from './pages/user-create/user-create.component';
 import { UserEditComponent } from './pages/user-edit/user-edit.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { ProductManagementComponent } from './pages/product-management/product-management.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -28,6 +30,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select'; // 👈 AGREGADO
+import { MatOptionModule } from '@angular/material/core'; // 👈 AGREGADO
 
 // Interceptor
 import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -45,12 +49,15 @@ import { RoleDirective } from './directives/role.directive';
     UserCreateComponent,
     UserEditComponent,
     UserProfileComponent,
+    ProductManagementComponent,
+    StatisticsComponent,
     RoleDirective
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     // Material
@@ -64,7 +71,9 @@ import { RoleDirective } from './directives/role.directive';
     MatInputModule,
     MatPaginatorModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,  // 👈 AGREGADO
+    MatOptionModule   // 👈 AGREGADO
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

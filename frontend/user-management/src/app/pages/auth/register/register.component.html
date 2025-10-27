@@ -5,30 +5,55 @@
     <mat-form-field appearance="outline">
       <mat-label>Usuario</mat-label>
       <input matInput formControlName="username" name="username" required />
+      <mat-error *ngIf="registerForm.get('username')?.hasError('required')">
+        El usuario es requerido
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
       <input matInput formControlName="email" name="email" type="email" required />
+      <mat-error *ngIf="registerForm.get('email')?.hasError('required')">
+        El email es requerido
+      </mat-error>
+      <mat-error *ngIf="registerForm.get('email')?.hasError('email')">
+        Ingresa un email válido
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Contraseña</mat-label>
       <input matInput formControlName="password" name="password" type="password" required />
+      <mat-error *ngIf="registerForm.get('password')?.hasError('required')">
+        La contraseña es requerida
+      </mat-error>
+      <mat-error *ngIf="registerForm.get('password')?.hasError('minlength')">
+        Mínimo 6 caracteres
+      </mat-error>
     </mat-form-field>
 
     <div class="form-group">
       <mat-form-field appearance="outline">
-        <mat-label>Role</mat-label>
-        <mat-select formControlName="role">
-          <mat-option value="">Select a role</mat-option>
-          <mat-option value="admin">Administrator</mat-option>
-          <mat-option value="client">Client</mat-option>
+        <mat-label>Rol</mat-label>
+        <mat-select formControlName="role_id" [disabled]="isLoadingRoles">
+          <mat-option value="">Selecciona un rol</mat-option>
+          <!-- 👇 MODIFICADO: Itera sobre roles desde la BD -->
+          <mat-option *ngFor="let role of roles" [value]="role.id">
+            {{ role.nombre }}
+          </mat-option>
         </mat-select>
+        <mat-hint *ngIf="isLoadingRoles">Cargando roles...</mat-hint>
+        <mat-error *ngIf="registerForm.get('role_id')?.hasError('required')">
+          Debes seleccionar un rol
+        </mat-error>
       </mat-form-field>
     </div>
 
-    <button mat-raised-button type="submit" class="custom-button">
+    <button 
+      mat-raised-button 
+      type="submit" 
+      class="custom-button"
+      [disabled]="registerForm.invalid || isLoadingRoles">
       Registrarse
     </button>
   </form>
@@ -38,6 +63,6 @@
     <a routerLink="/login">Inicia sesión aquí</a>
   </p>
 
-  <p class="message" [ngClass]="{'error': isError}">{{ message }}</p>
+  <p class="message" [ngClass]="{'error': isError}" *ngIf="message">{{ message }}</p>
 </mat-card>
 

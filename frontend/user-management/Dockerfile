@@ -8,6 +8,8 @@ COPY package*.json ./
 # Instala Angular CLI y dependencias
 RUN npm install -g @angular/cli@16.2.10 && npm install
 
+RUN npm install
+
 # Copia todo el código fuente
 COPY . .
 
@@ -15,4 +17,4 @@ COPY . .
 EXPOSE 4200
 
 # Comando para ejecutar Angular en modo desarrollo
-CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4200", "--poll", "2000"]
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4200", "--disable-host-check", "--poll", "2000"]

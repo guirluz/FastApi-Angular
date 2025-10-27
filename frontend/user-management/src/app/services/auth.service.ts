@@ -4,22 +4,38 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
+// Interface para tipar la respuesta del login
+interface LoginResponse {
+  token: string;
+  role: string;
+  username?: string;
+  refresh_token?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8000/api'; // Adjust this URL to your backend API
+  // 👇 ÚNICO CAMBIO: de '/api' a '/auth'
+  private apiUrl = 'http://localhost:8000/auth';
+  
   constructor(private router: Router, private http: HttpClient) {}
 
-  register(user: { username: string, email: string, password: string, role: string }): Observable<any> {
+  register(user: { username: string, email: string, password: string, role_id: number }): Observable<any> {
     return this.http.post(`${this.apiUrl}/register`, user);
   }
 
-  login(credentials: { username: string, password: string }): Observable<any> {
-    return this.http.post(`${this.apiUrl}/login`, credentials).pipe(
-      tap(response => {
+  login(credentials: { username: string, password: string }): Observable<LoginResponse> {
+    return this.http.post<LoginResponse>(`${this.apiUrl}/login`, credentials).pipe(
+      tap((response: LoginResponse) => {
         localStorage.setItem('access_token', response.token);
         localStorage.setItem('role', response.role);
+        if (response.username) {
+          localStorage.setItem('username', response.username);
+        }
+        if (response.refresh_token) {
+          localStorage.setItem('refresh_token', response.refresh_token);
+        }
       })
     );
   }
@@ -27,6 +43,8 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('access_token');
     localStorage.removeItem('role');
+    localStorage.removeItem('username');
+    localStorage.removeItem('refresh_token');
     this.router.navigate(['/login']);
   }
 
@@ -37,5 +55,29 @@ export class AuthService {
   getRole(): string | null {
     return localStorage.getItem('role');
   }
+
+  // Alias para mantener compatibilidad
+  getRoles(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/roles`);
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem('access_token');
+  }
+
+  getUsername(): string | null {
+    return localStorage.getItem('username');
+  }
+
+  getRefreshToken(): string | null {
+    return localStorage.getItem('refresh_token');
+  }
+
+  getUserRole(): string | null {
+    return this.getRole();
+  }
+
 }
+
+
 

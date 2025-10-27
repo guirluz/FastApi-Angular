@@ -5,7 +5,7 @@ import { AuthService } from '../services/auth.service';
   selector: '[appRole]'
 })
 export class RoleDirective implements OnInit {
-  @Input() appRole: string[];
+  @Input() appRole: string[] = []; // 👈 CAMBIO: Inicializado con array vacío
 
   constructor(
     private templateRef: TemplateRef<any>,

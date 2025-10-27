@@ -1,0 +1,21 @@
+<h2>Product Management</h2>
+
+<div *ngIf="isAdmin">
+  <h3>Create New Product</h3>
+  <form (ngSubmit)="createProduct()">
+    <input [(ngModel)]="newProduct.nombre" name="nombre" placeholder="Product Name" required>
+    <input [(ngModel)]="newProduct.descripcion" name="descripcion" placeholder="Description">
+    <input [(ngModel)]="newProduct.costo_por_hora" name="costo_por_hora" type="number" placeholder="Cost per Hour" required>
+    <button type="submit">Create Product</button>
+  </form>
+</div>
+
+<h3>Product List</h3>
+<ul>
+  <li *ngFor="let product of products">
+    {{ product.nombre }} - {{ product.costo_por_hora | currency }} per hour
+    <button *ngIf="!isAdmin" (click)="rentProduct(product, 1)">Rent for 1 hour</button>
+    <button *ngIf="isAdmin" (click)="updateProduct(product)">Update</button>
+    <button *ngIf="isAdmin" (click)="deleteProduct(product.id)">Delete</button>
+  </li>
+</ul>
