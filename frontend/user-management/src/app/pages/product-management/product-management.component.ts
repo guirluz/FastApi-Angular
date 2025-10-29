@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 import { ProductService } from '../../services/product.service';
 import { AuthService } from '../../services/auth.service';
 
@@ -8,14 +10,17 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./product-management.component.css']
 })
 export class ProductManagementComponent implements OnInit {
-  products: any[] = [];
+  displayedColumns: string[] = ['id', 'nombre', 'descripcion', 'costo_por_hora', 'fecha_registro', 'actions'];
+  dataSource = new MatTableDataSource<any>([]);
   newProduct: any = {};
   isAdmin: boolean = false;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(
     private productService: ProductService,
     private authService: AuthService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.loadProducts();
@@ -23,56 +28,54 @@ export class ProductManagementComponent implements OnInit {
   }
 
   loadProducts(): void {
-    this.productService.getProducts().subscribe(
-      (data) => {
-        this.products = data;
+    this.productService.getProducts().subscribe({
+      next: (res) => {
+        this.dataSource.data = res || [];
+        this.dataSource.paginator = this.paginator;
       },
-      (error) => {
-        console.error('Error loading products', error);
+      error: (err) => {
+        console.error('Error cargando productos', err);
       }
-    );
+    });
   }
 
   createProduct(): void {
-    if (this.isAdmin) {
-      this.productService.createProduct(this.newProduct).subscribe(
-        (response) => {
-          this.products.push(response);
+    if (this.isAdmin && this.newProduct.nombre && this.newProduct.costo_por_hora) {
+      this.productService.createProduct(this.newProduct).subscribe({
+        next: (res) => {
+          this.loadProducts();
           this.newProduct = {};
         },
-        (error) => {
-          console.error('Error creating product', error);
+        error: (err) => {
+          console.error('Error creando producto', err);
         }
-      );
+      });
     }
   }
 
   updateProduct(product: any): void {
     if (this.isAdmin) {
-      this.productService.updateProduct(product.id, product).subscribe(
-        (response) => {
-          const index = this.products.findIndex(p => p.id === product.id);
-          if (index !== -1) {
-            this.products[index] = response;
-          }
+      this.productService.updateProduct(product.id, product).subscribe({
+        next: () => {
+          this.loadProducts();
         },
-        (error) => {
-          console.error('Error updating product', error);
+        error: (err) => {
+          console.error('Error actualizando producto', err);
         }
-      );
+      });
     }
   }
 
   deleteProduct(productId: number): void {
-    if (this.isAdmin) {
-      this.productService.deleteProduct(productId).subscribe(
-        () => {
-          this.products = this.products.filter(p => p.id !== productId);
+    if (this.isAdmin && confirm('¿Seguro que deseas eliminar este producto?')) {
+      this.productService.deleteProduct(productId).subscribe({
+        next: () => {
+          this.loadProducts();
         },
-        (error) => {
-          console.error('Error deleting product', error);
+        error: (err) => {
+          console.error('Error eliminando producto', err);
         }
-      );
+      });
     }
   }
 
@@ -81,14 +84,13 @@ export class ProductManagementComponent implements OnInit {
       product_id: product.id,
       horas_rentadas: hours
     };
-    this.productService.rentProduct(rental).subscribe(
-      (response) => {
-        console.log('Rental successful', response);
-        // Aquí podrías mostrar un mensaje de éxito o actualizar la UI
+    this.productService.rentProduct(rental).subscribe({
+      next: (res) => {
+        console.log('Renta exitosa', res);
       },
-      (error) => {
-        console.error('Error renting product', error);
+      error: (err) => {
+        console.error('Error rentando producto', err);
       }
-    );
+    });
   }
 }

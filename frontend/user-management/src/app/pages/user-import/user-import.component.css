@@ -3,38 +3,101 @@
   height: 20px !important;
   border-radius: 10px;
 }
-
 ::ng-deep .mat-progress-bar-fill::after {
   background-color: #2196F3;
   box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
 }
-
 ::ng-deep .mat-progress-bar-buffer {
   background-color: #E0E0E0;
 }
 
-/* Ocultar el spinner */
+/* Spinner: visible solo cuando Angular lo muestra */
 .spinner-container {
-  display: none !important;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-/* Estilo para el contenedor de la barra de progreso */
+/* Contenedor de la barra de progreso */
 .progress-container {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-/* Estilo para el mensaje de progreso */
+/* Mensaje de progreso */
 .progress-message {
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-/* Estilos para el input de archivo y el botón */
+/* Input y botón */
 input[type="file"] {
   margin-bottom: 10px;
 }
-
 button[mat-raised-button] {
   margin-bottom: 15px;
 }
+
+/* Validación */
+.validation-message {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.validation-message.valid { color: #2e7d32; }
+.validation-message.invalid { color: #c62828; }
+
+/* Tabs de hojas */
+.sheet-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+.sheet-tab {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  background: #f7f7f7;
+  font-size: 13px;
+  transition: all 0.2s ease-in-out;
+}
+.sheet-tab:hover {
+  background: #eeeeee;
+}
+.sheet-tab.active {
+  background: #e3f2fd;
+  border-color: #2196F3;
+  color: #0d47a1;
+  font-weight: 600;
+}
+.sheet-tab.excluded {
+  background: #ffebee;
+  border-color: #c62828;
+  color: #b71c1c;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+/* Acciones por hoja */
+.sheet-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0 12px 0;
+}
+.sheet-meta {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Tabla preview */
+.preview-container {
+  margin-bottom: 12px;
+}
+table {
+  width: 100%;
+}
+

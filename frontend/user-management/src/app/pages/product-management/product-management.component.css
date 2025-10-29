@@ -1,0 +1,94 @@
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page-title {
+  margin: 24px 0 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6b8e9f;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.create-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-table {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-header-cell {
+  background-color: #f0f3f5;
+  color: #333333;
+  font-weight: bold;
+}
+
+.mat-cell {
+  color: #333333;
+}
+
+.mat-row:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.mat-row:hover {
+  background-color: #e6f2f7;
+}
+
+.mat-column-id {
+  width: 5%;
+}
+
+.mat-column-nombre {
+  width: 20%;
+}
+
+.mat-column-descripcion {
+  width: 30%;
+}
+
+.mat-column-costo_por_hora {
+  width: 15%;
+}
+
+.mat-column-fecha_registro {
+  width: 15%;
+}
+
+.mat-column-actions {
+  width: 15%;
+}
+
+button.mat-raised-button {
+  background-color: #6b8e9f;
+  color: white;
+}
+
+button.mat-raised-button:hover {
+  background-color: #5a7d8c;
+}
+
+mat-paginator {
+  margin-top: 16px;
+}

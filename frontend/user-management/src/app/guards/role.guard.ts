@@ -14,7 +14,6 @@ export class RoleGuard implements CanActivate {
     state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     
-    // 👇 CORREGIDO: Buscar 'roles' (plural) en lugar de 'requiredRole'
     const requiredRoles = route.data['roles'] as string[];
     const userRole = this.authService.getRole();
 
@@ -29,13 +28,37 @@ export class RoleGuard implements CanActivate {
       return this.router.createUrlTree(['/login']);
     }
 
-    // Verificar si el rol del usuario está en los roles requeridos
-    if (requiredRoles && requiredRoles.includes(userRole)) {
+    // 👇 MEJORADO: Normalizar roles para comparación (insensible a mayúsculas/minúsculas y typos)
+    const normalizedUserRole = userRole.toLowerCase().trim();
+    
+    const hasAccess = requiredRoles.some(requiredRole => {
+      const normalizedRequired = requiredRole.toLowerCase().trim();
+      
+      // Comparación directa
+      if (normalizedUserRole === normalizedRequired) {
+        return true;
+      }
+      
+      // Mapeo flexible de roles
+      if (normalizedRequired === 'admin') {
+        return normalizedUserRole.includes('administrador') || 
+               normalizedUserRole.includes('administrados') ||  // 👈 Maneja el typo
+               normalizedUserRole === 'admin';
+      }
+      
+      if (normalizedRequired === 'client') {
+        return normalizedUserRole.includes('cliente') || 
+               normalizedUserRole === 'client';
+      }
+      
+      return false;
+    });
+
+    if (hasAccess) {
       console.log('✅ RoleGuard - Acceso permitido');
       return true;
     }
 
-    // 👇 CORREGIDO: Redirigir a /products en lugar de /forbidden
     console.log('❌ RoleGuard - Acceso denegado, redirigiendo a /products');
     console.log(`   Usuario con rol "${userRole}" intentó acceder a ruta que requiere: ${requiredRoles.join(', ')}`);
     

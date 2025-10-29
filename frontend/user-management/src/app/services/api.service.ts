@@ -9,14 +9,17 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
+  // 👇 Flujo original: subir Excel y encolar tarea Celery
   uploadExcel(formData: FormData) {
     return this.http.post(`${this.baseUrl}/upload-excel`, formData);
   }
 
+  // 👇 Consultar estado de tarea Celery
   getTaskStatus(taskId: string) {
     return this.http.get(`${this.baseUrl}/task-status/${taskId}`);
   }
 
+  // 👇 CRUD de usuarios
   getUsers(): Observable<any> {
     return this.http.get(`${this.baseUrl}/users`);
   }
@@ -46,4 +49,21 @@ export class ApiService {
   createUser(user: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/users`, user);
   }
+
+  // 👇 Roles
+  getRoles(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/auth/roles`);
+  }
+
+  // 👇 Validación previa de Excel (estructura de columnas, hojas válidas)
+  validateExcel(file: FormData): Observable<any> {
+    return this.http.post(`${this.baseUrl}/validate-excel`, file);
+  }
+
+  // 👇 Importación confirmada de datos validados
+  importValidatedData(payload: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/import-validated-data`, payload);
+  }
+  
 }
+

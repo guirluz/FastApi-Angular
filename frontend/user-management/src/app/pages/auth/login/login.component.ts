@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email = ''; // 👈 Usar email como en el backend
+  email = '';
   password = '';
   errorMessage = '';
   isLoading = false;
@@ -24,22 +24,26 @@ export class LoginComponent {
 
     console.log('Intentando login con email:', this.email);
 
-    // 👇 Enviar email en lugar de username
-    this.authService.login({ email: this.email, password: this.password } as any).subscribe({
+    this.authService.login({ email: this.email, password: this.password }).subscribe({
       next: (response) => {
         console.log('✅ Login exitoso:', response);
         this.isLoading = false;
         
-        // AuthService ya guardó el token, role y username en localStorage
+        // Obtener el rol guardado
         const role = this.authService.getRole();
         console.log('Rol del usuario:', role);
         
-        // Redirigir según el rol
-        if (role === 'admin') {
+        // 👇 CORREGIDO: Normalizar el rol y redirigir correctamente
+        const normalizedRole = role?.toLowerCase() || '';
+        
+        if (normalizedRole.includes('administrador') || normalizedRole.includes('admin')) {
           console.log('Redirigiendo a /users (admin)');
           this.router.navigate(['/users']);
-        } else {
+        } else if (normalizedRole.includes('cliente') || normalizedRole.includes('client')) {
           console.log('Redirigiendo a /products (client)');
+          this.router.navigate(['/products']);
+        } else {
+          console.warn('Rol no reconocido:', role, '- Redirigiendo a /products por defecto');
           this.router.navigate(['/products']);
         }
       },
@@ -47,7 +51,6 @@ export class LoginComponent {
         console.error('❌ Error en login:', error);
         this.isLoading = false;
         
-        // Extraer mensaje de error específico
         if (error.error?.detail) {
           this.errorMessage = error.error.detail;
         } else if (error.error?.message) {

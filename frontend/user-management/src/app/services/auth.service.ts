@@ -5,10 +5,18 @@ import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 interface LoginResponse {
-  token: string;
-  role: string;
+  status?: number;
+  message?: string;
+  token?: string;
+  role?: string;
   username?: string;
   refresh_token?: string;
+  data?: {
+    token: string;
+    role: string;
+    username?: string;
+    refresh_token?: string;
+  };
 }
 
 @Injectable({
@@ -20,21 +28,43 @@ export class AuthService {
   
   constructor(private router: Router, private http: HttpClient) {}
 
-  // 👇 CORREGIDO: Cambiar role: string a role_id: number
-  register(user: { username: string, email: string, password: string, role_id: number }): Observable<any> {
+  // Registro de usuario con role_id
+  register(user: { username: string; email: string; password: string; role_id: number }): Observable<any> {
     return this.http.post(`${this.apiUrl}/register`, user);
   }
 
-  login(credentials: { username: string, password: string }): Observable<LoginResponse> {
+  // Login corregido para soportar role en raíz o dentro de data
+  login(credentials: { email: string; password: string }): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.apiUrl}/login`, credentials).pipe(
       tap((response: LoginResponse) => {
-        localStorage.setItem('access_token', response.token);
-        localStorage.setItem('role', response.role);
-        if (response.username) {
-          localStorage.setItem('username', response.username);
-        }
-        if (response.refresh_token) {
-          localStorage.setItem('refresh_token', response.refresh_token);
+        console.log('🔍 Respuesta completa del login:', response);
+
+        // Detectar si la respuesta trae "data" o está en la raíz
+        const data = response.data ? response.data : response;
+
+        if ((response.status === 200 || !response.status) && data) {
+          console.log('💾 Guardando en localStorage:', {
+            token: data.token,
+            role: data.role,
+            username: data.username
+          });
+
+          if (data.token) {
+            localStorage.setItem('access_token', data.token);
+          }
+          if (data.role) {
+            localStorage.setItem('role', data.role);
+          }
+          if (data.username) {
+            localStorage.setItem('username', data.username);
+          }
+          if (data.refresh_token) {
+            localStorage.setItem('refresh_token', data.refresh_token);
+          }
+
+          console.log('✅ Datos guardados. Verificando role:', localStorage.getItem('role'));
+        } else {
+          console.error('❌ Respuesta inesperada del login:', response);
         }
       })
     );
@@ -76,6 +106,3 @@ export class AuthService {
     return this.getRole();
   }
 }
-
-
-

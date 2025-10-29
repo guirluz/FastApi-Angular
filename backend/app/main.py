@@ -20,6 +20,8 @@ import os
 import asyncio
 import json
 import redis.asyncio as aioredis
+from pydantic import BaseModel
+from typing import List, Dict, Any
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 background_tasks = set()
@@ -482,6 +484,7 @@ def create_role(role: RoleCreate, db: Session = Depends(get_db)):
 # =========================
 # Endpoints de Productos
 # =========================
+
 @app.post("/products")
 @role_required(["admin"])
 def create_product(product: ProductCreate, db: Session = Depends(get_db)):
@@ -630,32 +633,59 @@ def read_users_me(current_user: User = Depends(get_current_user_local)):
         log.error(f"Error en /users/me: {e}")
         return build_response(500, "Error interno en /users/me")
 
+####################################################################
+
 @app.post("/users")
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
     """Crea un nuevo usuario en la base de datos (parte del CRUD)."""
     try:
-        existing_user = db.query(User).filter(User.email == user.email).first()
+        log.info(f"📥 Intentando crear usuario: username={user.username}, email={user.email}, role_id={user.role_id}")
+        
+        # Verificar si el usuario ya existe
+        existing_user = db.query(User).filter(
+            (User.email == user.email) | (User.username == user.username)
+        ).first()
+        
         if existing_user:
-            return build_response(400, "El correo ya está registrado")
+            log.warning(f"Usuario duplicado: {user.email}")
+            return build_response(400, "El correo o username ya está registrado")
 
+        # 👇 AGREGADO: Verificar que el role_id existe
+        role = db.query(Role).filter(Role.id == user.role_id).first()
+        if not role:
+            log.warning(f"Role_id inválido: {user.role_id}")
+            return build_response(400, "El rol seleccionado no existe")
+
+        # Hashear contraseña
         hashed_pw = bcrypt.hashpw(user.password.encode("utf-8"), bcrypt.gensalt())
+        
+        # 👇 CORREGIDO: Crear usuario con role_id
         new_user = User(
             username=user.username,
             email=user.email,
-            password_hash=hashed_pw.decode("utf-8")
+            password_hash=hashed_pw.decode("utf-8"),
+            role_id=user.role_id  # 👈 AGREGADO
         )
+        
         db.add(new_user)
         db.commit()
         db.refresh(new_user)
 
+        log.success(f"✅ Usuario creado: {new_user.email} con rol {role.nombre}")
+
         return build_response(200, "Usuario creado correctamente", {
             "id": new_user.id,
             "username": new_user.username,
-            "email": new_user.email
+            "email": new_user.email,
+            "role": role.nombre
         })
     except Exception as e:
-        log.error(f"Error en /users (POST): {e}")
+        log.error(f"❌ Error en /users (POST): {e}")
+        import traceback
+        log.error(traceback.format_exc())
         return build_response(500, "Error interno al crear usuario")
+    
+    ############################################################
 
 @app.get("/users")
 def list_users(db: Session = Depends(get_db)):
@@ -729,6 +759,215 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
     except Exception as e:
         log.error(f"Error en /users/{user_id} (DELETE): {e}")
         return build_response(500, "Error interno al eliminar usuario")
+
+##########################################################################
+
+
+@app.post("/validate-excel")
+def validate_excel(file: UploadFile):
+    """
+    Valida un archivo Excel y retorna las hojas con estructura válida.
+    Solo retorna hojas que tengan las columnas requeridas.
+    """
+    try:
+        import pandas as pd
+        from io import BytesIO
+        
+        log.info(f"📋 Validando archivo Excel: {file.filename}")
+        
+        # Verificar extensión
+        if not file.filename.endswith((".xls", ".xlsx")):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Formato no soportado. Solo XLS/XLSX."
+            )
+        
+        # Leer el archivo en memoria
+        contents = file.file.read()
+        excel_file = BytesIO(contents)
+        
+        # Obtener todas las hojas
+        xl = pd.ExcelFile(excel_file)
+        sheet_names = xl.sheet_names
+        
+        log.info(f"📄 Hojas encontradas: {sheet_names}")
+        
+        # Columnas requeridas para usuarios
+        required_columns = {"username", "email", "password"}
+        
+        valid_sheets = []
+        
+        for sheet_name in sheet_names:
+            try:
+                # Leer hoja
+                df = pd.read_excel(excel_file, sheet_name=sheet_name)
+                
+                # Normalizar nombres de columnas
+                df.columns = [str(c).strip().lower() for c in df.columns]
+                
+                # Verificar columnas requeridas
+                has_required = required_columns.issubset(set(df.columns))
+                
+                if has_required:
+                    # Limpiar y preparar datos
+                    df = df[list(required_columns)]  # Solo columnas requeridas
+                    df = df.dropna(how='all')  # Eliminar filas vacías
+                    
+                    # Convertir a lista de diccionarios
+                    records = df.head(100).to_dict('records')  # Límite de 100 registros de preview
+                    
+                    valid_sheets.append({
+                        "sheet_name": sheet_name,
+                        "total_rows": len(df),
+                        "columns": list(df.columns),
+                        "preview": records[:10],  # Solo primeros 10 para preview
+                        "data": records  # Todos los datos (máx 100)
+                    })
+                    
+                    log.success(f"✅ Hoja '{sheet_name}' válida: {len(df)} registros")
+                else:
+                    log.warning(f"⚠️ Hoja '{sheet_name}' no tiene columnas requeridas")
+                    log.warning(f"   Columnas encontradas: {list(df.columns)}")
+                    log.warning(f"   Columnas requeridas: {required_columns}")
+                    
+            except Exception as e:
+                log.error(f"❌ Error procesando hoja '{sheet_name}': {e}")
+                continue
+        
+        if not valid_sheets:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Ninguna hoja tiene las columnas requeridas: {', '.join(required_columns)}"
+            )
+        
+        return {
+            "status": "success",
+            "message": f"{len(valid_sheets)} hoja(s) válida(s) encontrada(s)",
+            "data": {
+                "filename": file.filename,
+                "total_sheets": len(sheet_names),
+                "valid_sheets": len(valid_sheets),
+                "sheets": valid_sheets
+            }
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        log.error(f"❌ Error validando Excel: {e}")
+        import traceback
+        log.error(traceback.format_exc())
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error al validar archivo: {str(e)}"
+        )
+    
+    ############################################################
+
+class ImportDataRequest(BaseModel):
+    """Schema para importar datos ya validados"""
+    sheet_name: str
+    data: List[Dict[str, Any]]
+
+@app.post("/import-validated-data")
+async def import_validated_data(request: ImportDataRequest, db: Session = Depends(get_db)):
+    """
+    Importa datos ya validados y editados desde el frontend.
+    No usa Celery, es importación directa y rápida.
+    """
+    try:
+        log.info(f"📥 Importando {len(request.data)} registros de hoja '{request.sheet_name}'")
+        
+        inserted = 0
+        skipped = []
+        
+        for i, row in enumerate(request.data):
+            try:
+                username = str(row.get("username", "")).strip()
+                email = str(row.get("email", "")).strip()
+                password = str(row.get("password", "")).strip()
+                
+                # Validar datos
+                if not username or not email or not password:
+                    skipped.append({
+                        "row": i + 1,
+                        "reason": "Campos incompletos",
+                        "data": row
+                    })
+                    continue
+                
+                # Verificar duplicados
+                existing = db.query(User).filter(User.email == email).first()
+                if existing:
+                    log.warning(f"Email duplicado: {email}")
+                    skipped.append({
+                        "row": i + 1,
+                        "reason": "Email ya existe",
+                        "data": row
+                    })
+                    continue
+                
+                # Hashear contraseña
+                hashed_pw = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
+                
+                # Crear usuario (sin rol por defecto, o asignar rol "Cliente")
+                new_user = User(
+                    username=username,
+                    email=email,
+                    password_hash=hashed_pw.decode("utf-8"),
+                    role_id=None  # O asignar un rol por defecto
+                )
+                
+                db.add(new_user)
+                inserted += 1
+                
+                # Commit cada 50 registros
+                if inserted % 50 == 0:
+                    db.commit()
+                    log.info(f"💾 {inserted} usuarios guardados...")
+                    
+            except Exception as e:
+                log.error(f"Error en registro {i+1}: {e}")
+                skipped.append({
+                    "row": i + 1,
+                    "reason": str(e),
+                    "data": row
+                })
+                continue
+        
+        # Commit final
+        db.commit()
+        
+        log.success(f"✅ Importación completada: {inserted} insertados, {len(skipped)} omitidos")
+        
+        # Notificar vía WebSocket
+        await ws_manager.broadcast({
+            "type": "import_completed",
+            "message": f"Importación completada: {inserted} usuarios",
+            "inserted": inserted,
+            "skipped": len(skipped),
+            "timestamp": datetime.utcnow().isoformat()
+        })
+        
+        return {
+            "status": "success",
+            "message": "Importación completada",
+            "data": {
+                "inserted": inserted,
+                "skipped": skipped,
+                "total": len(request.data)
+            }
+        }
+        
+    except Exception as e:
+        db.rollback()
+        log.error(f"❌ Error en importación: {e}")
+        import traceback
+        log.error(traceback.format_exc())
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error en importación: {str(e)}"
+        )
 
 # =========================
 # Importación Excel vía Celery
