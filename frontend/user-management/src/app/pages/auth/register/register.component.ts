@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   message = '';
   isError = false;
-  roles: Role[] = [];  // 👈 AGREGADO: Lista de roles desde BD
+  roles: Role[] = [];
   isLoadingRoles = true;
 
   constructor(
@@ -30,26 +30,40 @@ export class RegisterComponent implements OnInit {
       username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      role_id: ['', Validators.required]  // 👈 CAMBIO: Ahora es role_id
+      role_id: ['', Validators.required]
     });
   }
 
   ngOnInit(): void {
-    // 👇 AGREGADO: Cargar roles al iniciar
     this.loadRoles();
   }
 
   loadRoles(): void {
+    console.log('🔄 Iniciando carga de roles...');
+    
     this.authService.getRoles().subscribe({
       next: (response) => {
+        console.log('📦 Respuesta completa:', response);
+        console.log('📦 response.status:', response.status);
+        console.log('📦 response.data:', response.data);
+        
+        // Verificar que la respuesta tenga status 200 y data
         if (response.status === 200 && response.data) {
           this.roles = response.data;
-          console.log('✅ Roles cargados:', this.roles);
+          console.log('✅ Roles asignados:', this.roles);
+          console.log('✅ Cantidad de roles:', this.roles.length);
+        } else {
+          console.warn('⚠️ Respuesta inesperada:', response);
+          this.message = 'Error al procesar roles';
+          this.isError = true;
         }
+        
         this.isLoadingRoles = false;
+        console.log('✅ isLoadingRoles:', this.isLoadingRoles);
       },
       error: (error) => {
         console.error('❌ Error al cargar roles:', error);
+        console.error('❌ Error completo:', JSON.stringify(error, null, 2));
         this.message = 'Error al cargar roles disponibles';
         this.isError = true;
         this.isLoadingRoles = false;
@@ -63,7 +77,7 @@ export class RegisterComponent implements OnInit {
         username: this.registerForm.value.username,
         email: this.registerForm.value.email,
         password: this.registerForm.value.password,
-        role_id: parseInt(this.registerForm.value.role_id)  // 👈 Asegurar que sea int
+        role_id: parseInt(this.registerForm.value.role_id)
       };
 
       console.log('📤 Datos enviados al backend:', userData);
@@ -77,8 +91,8 @@ export class RegisterComponent implements OnInit {
         },
         error: (error) => {
           console.error('❌ Registration failed', error);
-          // 👇 MEJORADO: Mostrar mensaje del servidor
-          this.message = error.error?.message || 'Error al registrar usuario';
+          // Extraer mensaje de error del backend
+          this.message = error.error?.message || error.error?.detail || 'Error al registrar usuario';
           this.isError = true;
         }
       });
@@ -88,4 +102,5 @@ export class RegisterComponent implements OnInit {
     }
   }
 }
+
 

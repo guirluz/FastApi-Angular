@@ -11,15 +11,34 @@ export class RoleGuard implements CanActivate {
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    const requiredRole = route.data['requiredRole'] as string;
+    state: RouterStateSnapshot
+  ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    
+    // 👇 CORREGIDO: Buscar 'roles' (plural) en lugar de 'requiredRole'
+    const requiredRoles = route.data['roles'] as string[];
     const userRole = this.authService.getRole();
 
-    if (userRole === requiredRole) {
+    console.log('🛡️ RoleGuard - Verificando acceso');
+    console.log('   Roles requeridos:', requiredRoles);
+    console.log('   Rol del usuario:', userRole);
+    console.log('   URL solicitada:', state.url);
+
+    // Si no hay rol de usuario, redirigir a login
+    if (!userRole) {
+      console.log('❌ RoleGuard - No hay rol, redirigiendo a /login');
+      return this.router.createUrlTree(['/login']);
+    }
+
+    // Verificar si el rol del usuario está en los roles requeridos
+    if (requiredRoles && requiredRoles.includes(userRole)) {
+      console.log('✅ RoleGuard - Acceso permitido');
       return true;
     }
 
-    // Redirect to a forbidden page or home page
-    return this.router.createUrlTree(['/forbidden']);
+    // 👇 CORREGIDO: Redirigir a /products en lugar de /forbidden
+    console.log('❌ RoleGuard - Acceso denegado, redirigiendo a /products');
+    console.log(`   Usuario con rol "${userRole}" intentó acceder a ruta que requiere: ${requiredRoles.join(', ')}`);
+    
+    return this.router.createUrlTree(['/products']);
   }
 }

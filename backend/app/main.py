@@ -224,15 +224,17 @@ def test_db(db: Session = Depends(get_db)):
         return build_response(500, "Error en la conexión a la base de datos")
 
 # =========================
-# Endpoints de autenticación
+# Endpoint de Registro - CORREGIDO para usar role_id
 # =========================
+
 @app.post("/auth/register")
 async def register(user: UserCreate, db: Session = Depends(get_db)):
     """
     Registra un nuevo usuario en la base de datos.
+    Emite una notificación WebSocket al frontend cuando el registro es exitoso.
     """
     try:
-        # 👇 AGREGADO: Log para debug
+        # Log para debug
         log.info(f"📥 Datos recibidos: username={user.username}, email={user.email}, role_id={user.role_id}")
         
         # Verificar si el usuario ya existe
@@ -242,23 +244,32 @@ async def register(user: UserCreate, db: Session = Depends(get_db)):
         
         if existing_user:
             log.warning(f"Intento de registro con email/username duplicado: {user.email}")
-            return build_response(400, "El email o username ya está registrado")
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="El email o username ya está registrado"
+            )
 
-        # 👇 AGREGADO: Verificar que el role_id existe
+        # 👇 CORREGIDO: Verificar que el role_id existe (buscar por ID, no por nombre)
         role = db.query(Role).filter(Role.id == user.role_id).first()
+        
         if not role:
             log.warning(f"Intento de registro con role_id inválido: {user.role_id}")
-            return build_response(400, "El rol seleccionado no existe")
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="El rol seleccionado no existe"
+            )
 
+        # Hashear contraseña
         hashed_pw = bcrypt.hashpw(user.password.encode("utf-8"), bcrypt.gensalt())
         
-        # 👇 CORREGIDO: Incluir role_id
+        # Crear usuario con role_id
         new_user = User(
             username=user.username,
             email=user.email,
             password_hash=hashed_pw.decode("utf-8"),
-            role_id=user.role_id  # 👈 AGREGADO
+            role_id=user.role_id  # 👈 Usar role_id directamente del schema
         )
+        
         db.add(new_user)
         db.commit()
         db.refresh(new_user)
@@ -274,17 +285,30 @@ async def register(user: UserCreate, db: Session = Depends(get_db)):
             "timestamp": datetime.utcnow().isoformat()
         })
 
-        return build_response(200, "Usuario registrado correctamente", {
-            "id": new_user.id,
-            "username": new_user.username,
-            "email": new_user.email,
-            "role": role.nombre
-        })
+        return {
+            "status": 200,
+            "message": "Usuario registrado correctamente",
+            "data": {
+                "id": new_user.id,
+                "username": new_user.username,
+                "email": new_user.email,
+                "role": role.nombre
+            }
+        }
+    except HTTPException:
+        raise
     except Exception as e:
         log.error(f"❌ Error en registro: {e}")
         import traceback
         log.error(traceback.format_exc())
-        return build_response(500, "Error interno al registrar usuario")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error interno al registrar usuario"
+        )
+
+# =========================
+# Endpoint de Login - CORREGIDO para retornar role desde DB
+# =========================
 
 @app.post("/auth/login")
 async def login(user: UserLogin, db: Session = Depends(get_db)):
@@ -293,42 +317,64 @@ async def login(user: UserLogin, db: Session = Depends(get_db)):
     Emite una notificación WebSocket al frontend cuando el login es exitoso.
     """
     try:
-        # 👇 CORREGIDO: Buscar por username (según UserLogin schema usa username, no email)
-        db_user = db.query(User).filter(User.username == user.username).first()
+        # 👇 CORREGIDO: UserLogin usa email, no username
+        db_user = db.query(User).filter(User.email == user.email).first()
         
         if not db_user:
-            log.warning(f"Usuario no encontrado: {user.username}")
-            return build_response(404, "Usuario no encontrado")
+            log.warning(f"Usuario no encontrado: {user.email}")
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Usuario no encontrado"
+            )
 
         if not bcrypt.checkpw(user.password.encode("utf-8"), db_user.password_hash.encode("utf-8")):
-            log.warning(f"Contraseña incorrecta para {user.username}")
-            return build_response(401, "Contraseña incorrecta")
+            log.warning(f"Contraseña incorrecta para {user.email}")
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Contraseña incorrecta"
+            )
+
+        # Obtener el nombre del rol desde la relación
+        role_nombre = "Cliente"  # Valor por defecto
+        if db_user.role:
+            role_nombre = db_user.role.nombre
+        else:
+            log.warning(f"Usuario {db_user.username} no tiene rol asignado")
 
         access_token = create_token({"sub": db_user.email}, timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
         refresh_token = create_token({"sub": db_user.email}, timedelta(minutes=REFRESH_TOKEN_EXPIRE_MINUTES))
 
-        log.info(f"Usuario {db_user.email} inició sesión")
+        log.info(f"Usuario {db_user.email} inició sesión con rol {role_nombre}")
 
         # Notificación en tiempo real
         await ws_manager.broadcast({
             "type": "login",
             "message": "Inicio de sesión correcto",
             "user": db_user.email,
+            "role": role_nombre,
             "timestamp": datetime.utcnow().isoformat()
         })
 
-        # 👇 CORREGIDO: Respuesta compatible con Angular (token, role, username)
-        return build_response(200, "Login exitoso", {
-            "token": access_token,  # Angular espera "token"
-            "role": "admin",  # TODO: Ajustar según tu lógica de roles
-            "username": db_user.username,
-            "refresh_token": refresh_token
-        })
+        return {
+            "status": 200,
+            "message": "Login exitoso",
+            "data": {
+                "token": access_token,
+                "role": role_nombre,
+                "username": db_user.username,
+                "refresh_token": refresh_token
+            }
+        }
+    except HTTPException:
+        raise
     except Exception as e:
-        log.error(f"Error en login: {e}")
+        log.error(f"❌ Error en login: {e}")
         import traceback
         log.error(traceback.format_exc())
-        return build_response(500, "Error interno en login")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error interno en login"
+        )
 
 @app.post("/auth/refresh")
 def refresh_token(refresh_token: str):
@@ -350,28 +396,88 @@ def refresh_token(refresh_token: str):
 # =========================
 # Endpoints de Roles
 # =========================
-@app.post("/roles")
+
+@app.get("/auth/roles")
+def list_roles(db: Session = Depends(get_db)):
+    """Lista todos los roles disponibles (público para registro)."""
+    try:
+        roles = db.query(Role).all()
+        
+        # Si no hay roles en la base de datos, crearlos automáticamente
+        if not roles:
+            log.warning("⚠️ No hay roles en la base de datos, creándolos...")
+            
+            # Crear roles por defecto
+            default_roles = [
+                Role(nombre="Administrador", descripcion="Acceso total al sistema"),
+                Role(nombre="Cliente", descripcion="Acceso limitado a visualización de productos")
+            ]
+            
+            for role in default_roles:
+                db.add(role)
+            
+            db.commit()
+            
+            # Recargar roles desde la BD
+            roles = db.query(Role).all()
+            log.success(f"✅ {len(roles)} roles creados automáticamente")
+        
+        # 👇 CORREGIDO: Usar código numérico 200
+        return {
+            "status": 200,
+            "message": "Roles obtenidos correctamente",
+            "data": [
+                {"id": r.id, "nombre": r.nombre, "descripcion": r.descripcion}
+                for r in roles
+            ]
+        }
+    except Exception as e:
+        log.error(f"❌ Error al listar roles: {e}")
+        import traceback
+        log.error(traceback.format_exc())
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error al obtener roles"
+        )
+
+@app.post("/auth/roles")
 @role_required(["admin"])
 def create_role(role: RoleCreate, db: Session = Depends(get_db)):
     """Crea un nuevo rol (solo administradores)."""
-    db_role = Role(**role.dict())
-    db.add(db_role)
-    db.commit()
-    db.refresh(db_role)
-    return db_role
-
-@app.get("/roles")
-def list_roles(db: Session = Depends(get_db)):
-    """Lista todos los roles (accesible públicamente para registro)."""
     try:
-        roles = db.query(Role).all()
-        return build_response(200, "Roles obtenidos correctamente", [
-            {"id": r.id, "nombre": r.nombre, "descripcion": r.descripcion}
-            for r in roles
-        ])
+        # Verificar si el rol ya existe
+        existing_role = db.query(Role).filter(Role.nombre == role.nombre).first()
+        if existing_role:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="El rol ya existe"
+            )
+        
+        db_role = Role(**role.dict())
+        db.add(db_role)
+        db.commit()
+        db.refresh(db_role)
+        
+        # 👇 CORREGIDO: Usar código numérico 200
+        return {
+            "status": 200,
+            "message": "Rol creado correctamente",
+            "data": {
+                "id": db_role.id,
+                "nombre": db_role.nombre,
+                "descripcion": db_role.descripcion
+            }
+        }
+    except HTTPException:
+        raise
     except Exception as e:
-        log.error(f"Error al listar roles: {e}")
-        return build_response(500, "Error al obtener roles")
+        log.error(f"❌ Error al crear rol: {e}")
+        import traceback
+        log.error(traceback.format_exc())
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error al crear rol"
+        )
 
 # =========================
 # Endpoints de Productos
