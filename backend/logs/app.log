@@ -2761,3 +2761,17 @@ WHERE users.email = %(email_1)s OR users.username = %(username_1)s
 2025-10-29 00:21:53.144 | INFO     | app.main:connect:83 - Cliente WebSocket conectado. Total: 1
 2025-10-29 00:21:54.156 | INFO     | app.main:disconnect:90 - Cliente WebSocket desconectado. Total: 0
 2025-10-29 00:21:54.637 | INFO     | app.main:connect:83 - Cliente WebSocket conectado. Total: 1
+2025-10-29 01:51:44.079 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-29 01:51:54.007 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-29 01:51:54.566 | SUCCESS  | app.main:<module>:66 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-29 01:51:54.580 | INFO     | app.main:startup_event:175 - Tarea de Redis listener iniciada en background
+2025-10-29 01:51:54.580 | INFO     | app.main:redis_listener:129 - Iniciando listener de Redis...
+2025-10-29 01:51:54.584 | SUCCESS  | app.main:redis_listener:134 - Suscrito a canal Redis: progress_channel
+2025-10-29 02:50:31.899 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-29 02:50:41.597 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-29 02:50:42.072 | SUCCESS  | app.main:<module>:66 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-29 02:50:42.085 | INFO     | app.main:startup_event:175 - Tarea de Redis listener iniciada en background
+2025-10-29 02:50:42.085 | INFO     | app.main:redis_listener:129 - Iniciando listener de Redis...
+2025-10-29 02:50:42.088 | SUCCESS  | app.main:redis_listener:134 - Suscrito a canal Redis: progress_channel
+2025-10-29 02:50:49.841 | INFO     | app.main:connect:83 - Cliente WebSocket conectado. Total: 1
+2025-10-29 02:51:16.292 | INFO     | app.main:login:347 - Usuario prueba1@example.com inició sesión con rol Administrados

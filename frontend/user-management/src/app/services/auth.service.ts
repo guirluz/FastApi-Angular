@@ -2,21 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap, map } from 'rxjs/operators';
-
-// Interfaces para la respuesta del backend
-interface LoginData {
-  token: string;
-  role: string;
-  username: string;
-  refresh_token?: string;
-}
-
-interface ApiResponse {
-  status: number;
-  message: string;
-  data: LoginData;
-}
+import { tap } from 'rxjs/operators';
 
 interface LoginResponse {
   token: string;
@@ -34,44 +20,22 @@ export class AuthService {
   
   constructor(private router: Router, private http: HttpClient) {}
 
-  register(user: { username: string, email: string, password: string, role: string }): Observable<any> {
+  // 👇 CORREGIDO: Cambiar role: string a role_id: number
+  register(user: { username: string, email: string, password: string, role_id: number }): Observable<any> {
     return this.http.post(`${this.apiUrl}/register`, user);
   }
 
-  // 👇 CORREGIDO: Acepta email en lugar de username
-  login(credentials: { email: string, password: string }): Observable<LoginResponse> {
-    console.log('🔐 AuthService.login - Enviando credenciales:', { email: credentials.email });
-    
-    return this.http.post<ApiResponse>(`${this.apiUrl}/login`, credentials).pipe(
-      tap((response: ApiResponse) => {
-        console.log('✅ AuthService.login - Respuesta recibida:', response);
-        
-        // Extraer data de la respuesta
-        const loginData = response.data;
-        
-        // Guardar en localStorage
-        localStorage.setItem('access_token', loginData.token);
-        localStorage.setItem('role', loginData.role);
-        localStorage.setItem('username', loginData.username);
-        
-        if (loginData.refresh_token) {
-          localStorage.setItem('refresh_token', loginData.refresh_token);
+  login(credentials: { username: string, password: string }): Observable<LoginResponse> {
+    return this.http.post<LoginResponse>(`${this.apiUrl}/login`, credentials).pipe(
+      tap((response: LoginResponse) => {
+        localStorage.setItem('access_token', response.token);
+        localStorage.setItem('role', response.role);
+        if (response.username) {
+          localStorage.setItem('username', response.username);
         }
-        
-        console.log('💾 Datos guardados en localStorage:', {
-          token: loginData.token.substring(0, 20) + '...',
-          role: loginData.role,
-          username: loginData.username
-        });
-      }),
-      // Transformar la respuesta para mantener compatibilidad
-      map((response: ApiResponse) => {
-        return {
-          token: response.data.token,
-          role: response.data.role,
-          username: response.data.username,
-          refresh_token: response.data.refresh_token
-        } as LoginResponse;
+        if (response.refresh_token) {
+          localStorage.setItem('refresh_token', response.refresh_token);
+        }
       })
     );
   }
@@ -93,7 +57,7 @@ export class AuthService {
   }
 
   getRoles(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/roles`);
+    return this.http.get(`${this.baseUrl}/auth/roles`);
   }
 
   getToken(): string | null {
