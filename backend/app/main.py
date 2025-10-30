@@ -443,8 +443,11 @@ def list_roles(db: Session = Depends(get_db)):
         )
 
 @app.post("/auth/roles")
-@role_required(["admin"])
-def create_role(role: RoleCreate, db: Session = Depends(get_db)):
+def create_role(
+    role: RoleCreate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(role_required(["admin"]))
+):
     """Crea un nuevo rol (solo administradores)."""
     try:
         # Verificar si el rol ya existe
@@ -460,7 +463,6 @@ def create_role(role: RoleCreate, db: Session = Depends(get_db)):
         db.commit()
         db.refresh(db_role)
         
-        # 👇 CORREGIDO: Usar código numérico 200
         return {
             "status": 200,
             "message": "Rol creado correctamente",
@@ -481,19 +483,24 @@ def create_role(role: RoleCreate, db: Session = Depends(get_db)):
             detail="Error al crear rol"
         )
 
+
 # =========================
 # Endpoints de Productos
 # =========================
 
 @app.post("/products")
-@role_required(["admin"])
-def create_product(product: ProductCreate, db: Session = Depends(get_db)):
+def create_product(
+    product: ProductCreate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(role_required(["admin"]))
+):
     """Crea un nuevo producto (solo administradores)."""
     db_product = Product(**product.dict())
     db.add(db_product)
     db.commit()
     db.refresh(db_product)
     return db_product
+
 
 @app.get("/products")
 def list_products(db: Session = Depends(get_db)):
@@ -509,8 +516,12 @@ def get_product(product_id: int, db: Session = Depends(get_db)):
     return product
 
 @app.put("/products/{product_id}")
-@role_required(["admin"])
-def update_product(product_id: int, product: ProductCreate, db: Session = Depends(get_db)):
+def update_product(
+    product_id: int,
+    product: ProductCreate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(role_required(["admin"]))
+):
     """Actualiza un producto (solo administradores)."""
     db_product = db.query(Product).filter(Product.id == product_id).first()
     if not db_product:
@@ -521,9 +532,13 @@ def update_product(product_id: int, product: ProductCreate, db: Session = Depend
     db.refresh(db_product)
     return db_product
 
+
 @app.delete("/products/{product_id}")
-@role_required(["admin"])
-def delete_product(product_id: int, db: Session = Depends(get_db)):
+def delete_product(
+    product_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(role_required(["admin"]))
+):
     """Elimina un producto (solo administradores)."""
     db_product = db.query(Product).filter(Product.id == product_id).first()
     if not db_product:
@@ -532,15 +547,15 @@ def delete_product(product_id: int, db: Session = Depends(get_db)):
     db.commit()
     return db_product
 
+
 # =========================
 # Endpoints de Rentas
 # =========================
 @app.post("/rentals")
-@role_required(["client"])
 def rent_product(
     rental: RentalCreate,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(role_required(["client"]))
 ):
     """Renta un producto (solo clientes)."""
     product = db.query(Product).filter(Product.id == rental.product_id).first()
@@ -558,8 +573,10 @@ def rent_product(
 # Endpoints de Estadísticas
 # =========================
 @app.get("/statistics")
-@role_required(["admin"])
-def get_statistics(db: Session = Depends(get_db)):
+def get_statistics(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(role_required(["admin"]))
+):
     """Obtiene estadísticas de productos más rentados e ingresos (solo administradores)."""
     # Productos más rentados
     most_rented = db.query(Product, func.count(Rental.id).label('total_rentals')) \
@@ -580,6 +597,7 @@ def get_statistics(db: Session = Depends(get_db)):
         "most_rented": [{"product": p.nombre, "rentals": r} for p, r in most_rented],
         "income_by_product": [{"product": p.nombre, "income": i} for p, i in income_by_product]
     }
+
 
 # =========================
 # CRUD de Usuarios (protegidos)

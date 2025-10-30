@@ -1,8 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../../services/product.service';
 import { AuthService } from '../../services/auth.service';
+import { ProductCreateComponent } from '../product-create/product-create.component';
+import { ProductEditComponent } from '../product-edit/product-edit.component';
 
 @Component({
   selector: 'app-product-management',
@@ -19,12 +22,19 @@ export class ProductManagementComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private authService: AuthService
+    private authService: AuthService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
     this.loadProducts();
-    this.isAdmin = this.authService.getUserRole() === 'admin';
+
+    // 🔑 Ajuste: normalizar el rol para aceptar "admin" o "Administrador"
+    const role = this.authService.getUserRole();
+    if (role) {
+      const normalizedRole = role.toString().toLowerCase();
+      this.isAdmin = normalizedRole === 'admin' || normalizedRole === 'administrador';
+    }
   }
 
   loadProducts(): void {
@@ -39,31 +49,35 @@ export class ProductManagementComponent implements OnInit {
     });
   }
 
-  createProduct(): void {
-    if (this.isAdmin && this.newProduct.nombre && this.newProduct.costo_por_hora) {
-      this.productService.createProduct(this.newProduct).subscribe({
-        next: (res) => {
-          this.loadProducts();
-          this.newProduct = {};
-        },
-        error: (err) => {
-          console.error('Error creando producto', err);
-        }
-      });
-    }
+  // 👉 Ahora la creación se hace desde el modal
+  openCreateProductModal(): void {
+    const dialogRef = this.dialog.open(ProductCreateComponent, {
+      width: '400px',
+      panelClass: 'custom-dialog-container',
+      disableClose: true
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'success') {
+        this.loadProducts();
+      }
+    });
   }
 
-  updateProduct(product: any): void {
-    if (this.isAdmin) {
-      this.productService.updateProduct(product.id, product).subscribe({
-        next: () => {
-          this.loadProducts();
-        },
-        error: (err) => {
-          console.error('Error actualizando producto', err);
-        }
-      });
-    }
+  // 👉 Ahora la edición se hace desde el modal
+  openEditProductModal(product: any): void {
+    const dialogRef = this.dialog.open(ProductEditComponent, {
+      width: '400px',
+      panelClass: 'custom-dialog-container',
+      disableClose: true,
+      data: product
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'success') {
+        this.loadProducts();
+      }
+    });
   }
 
   deleteProduct(productId: number): void {
@@ -94,3 +108,4 @@ export class ProductManagementComponent implements OnInit {
     });
   }
 }
+

@@ -41,7 +41,8 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductManagementComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ['admin'] }   // 👈 Ajuste: ahora también requiere rol admin
   },
   {
     path: 'statistics',
@@ -57,3 +58,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

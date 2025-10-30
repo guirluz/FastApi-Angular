@@ -1,0 +1,40 @@
+:host {
+  display: block;
+}
+
+.product-edit-container {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.button-row button {
+  flex: 1;
+  margin: 0 8px;
+}
+
+button.mat-raised-button.mat-primary {
+  background-color: #6b8e9f;
+  color: white;
+}
+
+button.mat-raised-button.mat-primary:hover {
+  background-color: #5a7d8c;
+}
+
+h2 {
+  color: #6b8e9f;
+  margin-bottom: 24px;
+  text-align: center;
+}

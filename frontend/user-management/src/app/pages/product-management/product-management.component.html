@@ -1,14 +1,11 @@
 <div class="page-container">
   <h2 class="page-title">Gestión de Productos</h2>
 
-  <!-- Formulario de creación (solo admin) -->
+  <!-- Botón de creación (solo admin) -->
   <div class="actions" *ngIf="isAdmin">
-    <form (ngSubmit)="createProduct()" class="create-form">
-      <input [(ngModel)]="newProduct.nombre" name="nombre" placeholder="Nombre" required>
-      <input [(ngModel)]="newProduct.descripcion" name="descripcion" placeholder="Descripción">
-      <input [(ngModel)]="newProduct.costo_por_hora" name="costo_por_hora" type="number" placeholder="Costo por hora" required>
-      <button mat-raised-button color="primary" type="submit">+ Nuevo Producto</button>
-    </form>
+    <button mat-raised-button color="primary" (click)="openCreateProductModal()">
+      + Nuevo Producto
+    </button>
   </div>
 
   <!-- Tabla de productos -->
@@ -49,8 +46,11 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let product">
-          <button mat-button color="accent" *ngIf="isAdmin" (click)="updateProduct(product)">Editar</button>
+          <!-- Admin: Editar y Eliminar -->
+          <button mat-button color="accent" *ngIf="isAdmin" (click)="openEditProductModal(product)">Editar</button>
           <button mat-button color="warn" *ngIf="isAdmin" (click)="deleteProduct(product.id)">Eliminar</button>
+
+          <!-- Usuario normal: Rentar -->
           <button mat-button color="primary" *ngIf="!isAdmin" (click)="rentProduct(product, 1)">Rentar 1h</button>
         </td>
       </ng-container>
@@ -64,3 +64,4 @@
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
   </mat-card>
 </div>
+

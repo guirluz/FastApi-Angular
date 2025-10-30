@@ -1,0 +1,24 @@
+<div class="product-edit-container">
+  <h2>Editar Producto</h2>
+  <form (ngSubmit)="updateProduct()">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="product.nombre" name="nombre" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Descripción</mat-label>
+      <input matInput [(ngModel)]="product.descripcion" name="descripcion">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Costo por hora</mat-label>
+      <input matInput type="number" [(ngModel)]="product.costo_por_hora" name="costo_por_hora" required>
+    </mat-form-field>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit">Actualizar</button>
+      <button mat-raised-button type="button" (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</div>

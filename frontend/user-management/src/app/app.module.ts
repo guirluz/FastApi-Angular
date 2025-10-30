@@ -17,6 +17,8 @@ import { UserEditComponent } from './pages/user-edit/user-edit.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { ProductManagementComponent } from './pages/product-management/product-management.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { ProductCreateComponent } from './pages/product-create/product-create.component';
+import { ProductEditComponent } from './pages/product-edit/product-edit.component';
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -51,7 +53,9 @@ import { RoleDirective } from './directives/role.directive';
     UserProfileComponent,
     ProductManagementComponent,
     StatisticsComponent,
-    RoleDirective
+    RoleDirective,
+    ProductCreateComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
