@@ -10,13 +10,14 @@ import { NotificationService } from './services/notification.service';
 export class AppComponent implements OnInit {
 
   constructor(
-    private auth: AuthService,
+    public auth: AuthService,
     private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {
     // Conectar WebSocket de notificaciones al iniciar la app
     this.notificationService.connect();
+    console.log('Rol actual en localStorage:', this.auth.getRole());
   }
 
   logout(): void {

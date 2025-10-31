@@ -21,24 +21,28 @@ export class NotificationService {
     };
 
     this.ws.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      console.log('Notificación recibida:', data);
+      try {
+        const data = JSON.parse(event.data);
+        console.log('Notificación recibida:', data);
 
-      // Solo muestra notificaciones de login/register, NO de progress
-      if (data.type === 'login' || data.type === 'register') {
-        this.zone.run(() => {
-          this.snackBar.open(
-            `🔔 ${data.type === 'login' ? 'Login' : 'Registro'}: ${data.message}`,
-            'Cerrar',
-            { 
-              duration: 4000,
-              horizontalPosition: 'right',
-              verticalPosition: 'top'
-            }
-          );
-        });
+        if (data.type === 'login' || data.type === 'register') {
+          this.zone.run(() => {
+            this.snackBar.open(
+              `🔔 ${data.type === 'login' ? 'Login' : 'Registro'}: ${data.message}`,
+              'Cerrar',
+              { 
+                duration: 4000,
+                horizontalPosition: 'right',
+                verticalPosition: 'top'
+              }
+            );
+          });
+        }
+      } catch (e) {
+        console.warn('Mensaje no JSON recibido:', event.data);
       }
     };
+
 
     this.ws.onerror = (error) => {
       console.error('Error en WebSocket:', error);

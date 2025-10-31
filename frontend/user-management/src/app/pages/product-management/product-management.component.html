@@ -49,9 +49,6 @@
           <!-- Admin: Editar y Eliminar -->
           <button mat-button color="accent" *ngIf="isAdmin" (click)="openEditProductModal(product)">Editar</button>
           <button mat-button color="warn" *ngIf="isAdmin" (click)="deleteProduct(product.id)">Eliminar</button>
-
-          <!-- Usuario normal: Rentar -->
-          <button mat-button color="primary" *ngIf="!isAdmin" (click)="rentProduct(product, 1)">Rentar 1h</button>
         </td>
       </ng-container>
 

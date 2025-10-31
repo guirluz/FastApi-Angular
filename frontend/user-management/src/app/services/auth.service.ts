@@ -105,4 +105,24 @@ export class AuthService {
   getUserRole(): string | null {
     return this.getRole();
   }
+
+  hasRole(role: string): boolean {
+    const userRole = this.getRole();
+    if (!userRole) return false;
+
+    const normalized = userRole.toLowerCase().trim();
+
+    // Diccionario de equivalencias
+    const roleMap: { [key: string]: string } = {
+      'administrador': 'admin',
+      'admin': 'admin',
+      'cliente': 'client',
+      'client': 'client'
+    };
+
+    const mapped = roleMap[normalized];
+    return mapped === role.toLowerCase();
+  }
+
+  
 }

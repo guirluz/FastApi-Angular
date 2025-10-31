@@ -8,6 +8,7 @@ import { UserEditComponent } from './pages/user-edit/user-edit.component';
 import { UserImportComponent } from './pages/user-import/user-import.component';
 import { ProductManagementComponent } from './pages/product-management/product-management.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { RentalsComponent } from './pages/rentals/rentals.component'; // 👈 nuevo import
 import { AuthGuard } from './guards/auth.guard';
 import { RoleGuard } from './guards/role.guard';
 
@@ -42,13 +43,19 @@ const routes: Routes = [
     path: 'products',
     component: ProductManagementComponent,
     canActivate: [AuthGuard, RoleGuard],
-    data: { roles: ['admin'] }   // 👈 Ajuste: ahora también requiere rol admin
+    data: { roles: ['admin'] }
   },
   {
     path: 'statistics',
     component: StatisticsComponent,
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ['admin'] }
+  },
+  {
+    path: 'rentals',
+    component: RentalsComponent,
+    canActivate: [AuthGuard, RoleGuard],
+    data: { roles: ['client'] }   // 👈 solo clientes
   },
   { path: '', redirectTo: '/products', pathMatch: 'full' },
 ];
@@ -58,4 +65,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 

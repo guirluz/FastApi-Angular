@@ -31,11 +31,12 @@ export class ProductService {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
 
-  rentProduct(rental: any): Observable<any> {
-    return this.http.post(`${environment.apiUrl}/rentals`, rental);
-  }
-
   getStatistics(): Observable<any> {
     return this.http.get(`${environment.apiUrl}/statistics`);
+  }
+
+  // 👉 Nuevo método para la vista de rentas (usa /products/available)
+  getAvailableProducts(page: number = 1, pageSize: number = 8): Observable<any> {
+    return this.http.get(`${environment.apiUrl}/products/available?page=${page}&page_size=${pageSize}`);
   }
 }

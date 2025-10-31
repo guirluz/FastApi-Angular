@@ -33,18 +33,18 @@ export class LoginComponent {
         const role = this.authService.getRole();
         console.log('Rol del usuario:', role);
         
-        // 👇 CORREGIDO: Normalizar el rol y redirigir correctamente
-        const normalizedRole = role?.toLowerCase() || '';
+        // Normalizar el rol y redirigir correctamente
+        const normalizedRole = role?.toLowerCase().trim() || '';
         
         if (normalizedRole.includes('administrador') || normalizedRole.includes('admin')) {
           console.log('Redirigiendo a /users (admin)');
           this.router.navigate(['/users']);
         } else if (normalizedRole.includes('cliente') || normalizedRole.includes('client')) {
-          console.log('Redirigiendo a /products (client)');
-          this.router.navigate(['/products']);
+          console.log('Redirigiendo a /rentals (client)');
+          this.router.navigate(['/rentals']);
         } else {
-          console.warn('Rol no reconocido:', role, '- Redirigiendo a /products por defecto');
-          this.router.navigate(['/products']);
+          console.warn('Rol no reconocido:', role, '- Redirigiendo a /users por defecto');
+          this.router.navigate(['/users']);
         }
       },
       error: (error) => {
@@ -62,3 +62,4 @@ export class LoginComponent {
     });
   }
 }
+

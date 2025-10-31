@@ -378,6 +378,8 @@ async def login(user: UserLogin, db: Session = Depends(get_db)):
             detail="Error interno en login"
         )
 
+#====================================================================================#       
+
 @app.post("/auth/refresh")
 def refresh_token(refresh_token: str):
     """Genera un nuevo access token a partir de un refresh token válido."""
@@ -442,6 +444,8 @@ def list_roles(db: Session = Depends(get_db)):
             detail="Error al obtener roles"
         )
 
+#====================================================================================#
+
 @app.post("/auth/roles")
 def create_role(
     role: RoleCreate,
@@ -501,11 +505,84 @@ def create_product(
     db.refresh(db_product)
     return db_product
 
+#====================================================================================#
 
 @app.get("/products")
 def list_products(db: Session = Depends(get_db)):
     """Lista todos los productos (accesible para todos los usuarios)."""
     return db.query(Product).all()
+
+#====================================================================================#
+
+@app.get("/products/available")
+def list_available_products(
+    page: int = 1,
+    page_size: int = 8,
+    db: Session = Depends(get_db)
+):
+    """
+    Lista de productos disponibles para clientes, con paginación.
+    Excluye la columna 'fecha_registro'.
+    """
+    try:
+        # Validaciones de parámetros
+        if page < 1 or page_size < 1 or page_size > 8:
+            log.warning(f"❌ Parámetros inválidos en paginación: page={page}, page_size={page_size}")
+            return build_response(
+                status_code=400,
+                message="Parámetros de paginación inválidos",
+                data=None
+            )
+
+        # Total de productos
+        total = db.query(Product).count()
+
+        # Paginación
+        products = (
+            db.query(Product)
+            .offset((page - 1) * page_size)
+            .limit(page_size)
+            .all()
+        )
+
+        # Construir respuesta con solo los campos necesarios
+        items = [
+            {
+                "id": p.id,
+                "nombre": p.nombre,
+                "descripcion": p.descripcion,
+                "costo_por_hora": p.costo_por_hora
+            }
+            for p in products
+        ]
+
+        log.info(f"✅ Productos obtenidos correctamente (page={page}, page_size={page_size}, total={total})")
+
+        return build_response(
+            status_code=200,
+            message="Productos obtenidos correctamente",
+            data={
+                "items": items,
+                "total": total,
+                "page": page,
+                "page_size": page_size
+            }
+        )
+
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        log.error(f"❌ Error al obtener productos: {e}")
+        import traceback
+        log.error(traceback.format_exc())
+        return build_response(
+            status_code=500,
+            message="Error interno al obtener productos",
+            data=None
+        )
+
+#====================================================================================#
+
 
 @app.get("/products/{product_id}")
 def get_product(product_id: int, db: Session = Depends(get_db)):
@@ -514,6 +591,8 @@ def get_product(product_id: int, db: Session = Depends(get_db)):
     if not product:
         raise HTTPException(status_code=404, detail="Producto no encontrado")
     return product
+
+#====================================================================================#
 
 @app.put("/products/{product_id}")
 def update_product(
@@ -532,6 +611,7 @@ def update_product(
     db.refresh(db_product)
     return db_product
 
+#====================================================================================#
 
 @app.delete("/products/{product_id}")
 def delete_product(
@@ -551,6 +631,9 @@ def delete_product(
 # =========================
 # Endpoints de Rentas
 # =========================
+
+from datetime import timedelta, datetime, timezone
+
 @app.post("/rentals")
 def rent_product(
     rental: RentalCreate,
@@ -558,16 +641,148 @@ def rent_product(
     current_user: User = Depends(role_required(["client"]))
 ):
     """Renta un producto (solo clientes)."""
-    product = db.query(Product).filter(Product.id == rental.product_id).first()
-    if not product:
-        raise HTTPException(status_code=404, detail="Producto no encontrado")
-    
-    costo_total = product.costo_por_hora * rental.horas_rentadas
-    db_rental = Rental(**rental.dict(), user_id=current_user.id, costo_total=costo_total)
-    db.add(db_rental)
-    db.commit()
-    db.refresh(db_rental)
-    return db_rental
+    try:
+        # Validar rango de horas
+        if rental.horas_rentadas < 1 or rental.horas_rentadas > 168:
+            log.warning(f"❌ Horas inválidas: {rental.horas_rentadas} (usuario={current_user.email})")
+            return build_response(
+                status_code=400,
+                message="Las horas de renta deben estar entre 1 y 168",
+                data=None
+            )
+
+        # Verificar producto
+        product = db.query(Product).filter(Product.id == rental.product_id).first()
+        if not product:
+            log.warning(f"❌ Producto no encontrado (id={rental.product_id}, usuario={current_user.email})")
+            return build_response(
+                status_code=404,
+                message="Producto no encontrado",
+                data=None
+            )
+
+        # Calcular costo total
+        costo_total = product.costo_por_hora * rental.horas_rentadas
+
+        # Calcular fechas en UTC
+        fecha_renta = datetime.now(timezone.utc)
+        fecha_devolucion = fecha_renta + timedelta(hours=rental.horas_rentadas)
+
+        # Crear registro de renta
+        db_rental = Rental(
+            user_id=current_user.id,
+            product_id=rental.product_id,
+            horas_rentadas=rental.horas_rentadas,
+            costo_total=costo_total,
+            fecha_renta=fecha_renta
+        )
+        db.add(db_rental)
+        db.commit()
+        db.refresh(db_rental)
+
+        log.info(f"✅ Renta creada: usuario={current_user.email}, producto={product.nombre}, horas={rental.horas_rentadas}, costo={costo_total}")
+
+        return build_response(
+            status_code=201,
+            message="Renta creada correctamente",
+            data={
+                "id": db_rental.id,
+                "user_id": db_rental.user_id,
+                "product_id": db_rental.product_id,
+                "horas_rentadas": db_rental.horas_rentadas,
+                "costo_total": db_rental.costo_total,
+                "fecha_renta": db_rental.fecha_renta.isoformat(),
+                "fecha_devolucion": fecha_devolucion.isoformat()
+            }
+        )
+
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        log.error(f"❌ Error al crear renta: {e}")
+        import traceback
+        log.error(traceback.format_exc())
+        return build_response(
+            status_code=500,
+            message="Error interno al crear renta",
+            data=None
+        )
+
+
+
+#====================================================================================#
+
+@app.get("/rentals/me")
+def get_my_rentals(
+    page: int = 1,
+    page_size: int = 8,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(role_required(["client", "cliente"]))
+):
+    """
+    Obtiene el historial de rentas del cliente autenticado.
+    """
+    try:
+        # Validaciones de parámetros
+        if page < 1 or page_size < 1 or page_size > 8:
+            log.warning(f"❌ Parámetros inválidos en paginación: page={page}, page_size={page_size}, usuario={current_user.email}")
+            return build_response(
+                status_code=400,
+                message="Parámetros de paginación inválidos",
+                data=None
+            )
+
+        # Total de rentas del usuario
+        total = db.query(Rental).filter(Rental.user_id == current_user.id).count()
+
+        # Paginación
+        rentals = (
+            db.query(Rental)
+            .filter(Rental.user_id == current_user.id)
+            .order_by(Rental.fecha_renta.desc())
+            .offset((page - 1) * page_size)
+            .limit(page_size)
+            .all()
+        )
+
+        # Construir respuesta
+        items = []
+        for r in rentals:
+            fecha_devolucion = r.fecha_renta + timedelta(hours=r.horas_rentadas)
+            items.append({
+                "id": r.id,
+                "producto": r.product.nombre if r.product else None,
+                "horas_rentadas": r.horas_rentadas,
+                "costo_total": r.costo_total,
+                "fecha_renta": r.fecha_renta.isoformat(),
+                "fecha_devolucion": fecha_devolucion.isoformat()
+            })
+
+        log.info(f"✅ Historial de rentas obtenido: usuario={current_user.email}, total={total}, page={page}")
+
+        return build_response(
+            status_code=200,
+            message="Historial de rentas obtenido correctamente",
+            data={
+                "items": items,
+                "total": total,
+                "page": page,
+                "page_size": page_size
+            }
+        )
+
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        log.error(f"❌ Error al obtener historial de rentas: {e}")
+        import traceback
+        log.error(traceback.format_exc())
+        return build_response(
+            status_code=500,
+            message="Error interno al obtener historial de rentas",
+            data=None
+        )
+
 
 # =========================
 # Endpoints de Estadísticas
@@ -651,7 +866,7 @@ def read_users_me(current_user: User = Depends(get_current_user_local)):
         log.error(f"Error en /users/me: {e}")
         return build_response(500, "Error interno en /users/me")
 
-####################################################################
+#====================================================================================#
 
 @app.post("/users")
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
@@ -703,7 +918,7 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
         log.error(traceback.format_exc())
         return build_response(500, "Error interno al crear usuario")
     
-    ############################################################
+#====================================================================================#
 
 @app.get("/users")
 def list_users(db: Session = Depends(get_db)):
@@ -778,8 +993,7 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
         log.error(f"Error en /users/{user_id} (DELETE): {e}")
         return build_response(500, "Error interno al eliminar usuario")
 
-##########################################################################
-
+#====================================================================================#
 
 @app.post("/validate-excel")
 def validate_excel(file: UploadFile):
@@ -880,7 +1094,7 @@ def validate_excel(file: UploadFile):
             detail=f"Error al validar archivo: {str(e)}"
         )
     
-    ############################################################
+#====================================================================================#
 
 class ImportDataRequest(BaseModel):
     """Schema para importar datos ya validados"""

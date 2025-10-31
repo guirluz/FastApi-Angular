@@ -1,0 +1,131 @@
+/* Contenedor principal */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Títulos */
+.page-title {
+  margin: 24px 0 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6b8e9f;
+}
+
+.page-subtitle {
+  margin: 24px 0 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #5a7d8c;
+}
+
+/* Acciones */
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+/* Tablas */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-table {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-header-cell {
+  background-color: #f0f3f5;
+  color: #333333;
+  font-weight: bold;
+}
+
+.mat-cell {
+  color: #333333;
+}
+
+.mat-row:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.mat-row:hover {
+  background-color: #e6f2f7;
+}
+
+/* Columnas específicas */
+.mat-column-nombre {
+  width: 20%;
+}
+
+.mat-column-descripcion {
+  width: 30%;
+}
+
+.mat-column-costo_por_hora {
+  width: 15%;
+}
+
+.mat-column-accion {
+  width: 15%;
+}
+
+.mat-column-producto {
+  width: 20%;
+}
+
+.mat-column-horas_rentadas {
+  width: 10%;
+}
+
+.mat-column-costo_total {
+  width: 15%;
+}
+
+.mat-column-fecha_renta,
+.mat-column-fecha_devolucion {
+  width: 20%;
+}
+
+/* Botones */
+button.mat-raised-button {
+  background-color: #6b8e9f;
+  color: white;
+}
+
+button.mat-raised-button:hover {
+  background-color: #5a7d8c;
+}
+
+/* Paginador */
+mat-paginator {
+  margin-top: 16px;
+}
+
+/* Modal de renta */
+.rental-modal {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.rental-modal h3 {
+  margin-bottom: 12px;
+  color: #6b8e9f;
+}
+
+.rental-modal p {
+  margin: 4px 0;
+  color: #333333;
+}

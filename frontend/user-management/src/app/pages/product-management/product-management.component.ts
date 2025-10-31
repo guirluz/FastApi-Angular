@@ -93,19 +93,5 @@ export class ProductManagementComponent implements OnInit {
     }
   }
 
-  rentProduct(product: any, hours: number): void {
-    const rental = {
-      product_id: product.id,
-      horas_rentadas: hours
-    };
-    this.productService.rentProduct(rental).subscribe({
-      next: (res) => {
-        console.log('Renta exitosa', res);
-      },
-      error: (err) => {
-        console.error('Error rentando producto', err);
-      }
-    });
-  }
 }
 

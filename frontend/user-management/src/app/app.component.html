@@ -2,12 +2,17 @@
   <span>Gestión</span>
   <span class="spacer"></span>
 
-  <a mat-button routerLink="/users" *ngIf="isLoggedIn()">Usuarios</a>
-  <a mat-button routerLink="/products" *ngIf="isLoggedIn()">Productos</a>
+  <!-- Opciones solo para admin -->
+  <a mat-button routerLink="/users" *ngIf="isLoggedIn() && auth.hasRole('admin')">Usuarios</a>
+  <a mat-button routerLink="/products" *ngIf="isLoggedIn() && auth.hasRole('admin')">Productos</a>
+  <a mat-button routerLink="/statistics" *ngIf="isLoggedIn() && auth.hasRole('admin')">Estadísticas</a>
 
+  <!-- Opción solo para cliente -->
+  <a mat-button routerLink="/rentals" *ngIf="isLoggedIn() && auth.hasRole('client')">Rentas</a>
+
+  <!-- Logout -->
   <button mat-button (click)="logout()" *ngIf="isLoggedIn()">Salir</button>
 </mat-toolbar>
-
 
 <div class="content">
   <router-outlet></router-outlet>

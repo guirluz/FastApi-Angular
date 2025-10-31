@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -19,6 +20,8 @@ import { ProductManagementComponent } from './pages/product-management/product-m
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ProductCreateComponent } from './pages/product-create/product-create.component';
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
+import { RentalsComponent } from './pages/rentals/rentals.component';
+
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -34,6 +37,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select'; // 👈 AGREGADO
 import { MatOptionModule } from '@angular/material/core'; // 👈 AGREGADO
+
 
 // Interceptor
 import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -55,10 +59,12 @@ import { RoleDirective } from './directives/role.directive';
     StatisticsComponent,
     RoleDirective,
     ProductCreateComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    RentalsComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
