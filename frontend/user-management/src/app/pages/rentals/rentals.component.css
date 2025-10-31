@@ -1,5 +1,5 @@
 /* Contenedor principal */
-.page-container {
+.rentals-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
@@ -27,105 +27,79 @@
   margin-bottom: 16px;
 }
 
-/* Tablas */
+/* Envoltorio de tabla como en productos/users */
 .table-container {
   width: 100%;
   overflow-x: auto;
+  max-width: 1200px;       /* 👈 límite del contenedor */
+  margin: 0 auto 24px;    /* 👈 centrado y separación inferior */
+  padding: 12px;          /* ligero padding dentro del card */
+  border-radius: 6px;
 }
 
-table {
-  width: 100%;
-}
-
-.mat-table {
-  width: 100%;
+/* Regla global ‘table { width: 100% }’ existe; acotamos dentro del card */
+.table-container table.mat-table {
+  width: 100%;            /* dentro del contenedor acotado */
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
 }
 
+/* Cabecera y celdas */
 .mat-header-cell {
   background-color: #f0f3f5;
   color: #333333;
   font-weight: bold;
 }
-
 .mat-cell {
   color: #333333;
 }
 
-.mat-row:nth-child(even) {
-  background-color: #f9fafb;
-}
-
-.mat-row:hover {
-  background-color: #e6f2f7;
-}
+.mat-row:nth-child(even) { background-color: #f9fafb; }
+.mat-row:hover { background-color: #e6f2f7; }
 
 /* Columnas específicas */
-.mat-column-nombre {
-  width: 20%;
-}
-
-.mat-column-descripcion {
-  width: 30%;
-}
-
-.mat-column-costo_por_hora {
-  width: 15%;
-}
-
-.mat-column-accion {
-  width: 15%;
-}
-
-.mat-column-producto {
-  width: 20%;
-}
-
-.mat-column-horas_rentadas {
-  width: 10%;
-}
-
-.mat-column-costo_total {
-  width: 15%;
-}
-
+.mat-column-nombre { width: 20%; }
+.mat-column-descripcion { width: 30%; }
+.mat-column-costo_por_hora { width: 15%; }
+.mat-column-accion { width: 15%; }
+.mat-column-producto { width: 20%; }
+.mat-column-horas_rentadas { width: 10%; }
+.mat-column-costo_total { width: 15%; }
 .mat-column-fecha_renta,
-.mat-column-fecha_devolucion {
-  width: 20%;
-}
+.mat-column-fecha_devolucion { width: 20%; }
 
 /* Botones */
 button.mat-raised-button {
   background-color: #6b8e9f;
   color: white;
 }
-
 button.mat-raised-button:hover {
   background-color: #5a7d8c;
 }
 
 /* Paginador */
-mat-paginator {
-  margin-top: 16px;
-}
+mat-paginator { margin-top: 16px; }
 
-/* Modal de renta */
+/* Modal de renta (ya reducido) */
 .rental-modal {
-  margin-top: 24px;
-  padding: 16px;
+  max-width: 450px;
+  margin: 24px auto;
+  padding: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
   background-color: #ffffff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
 .rental-modal h3 {
   margin-bottom: 12px;
   color: #6b8e9f;
 }
-
 .rental-modal p {
   margin: 4px 0;
   color: #333333;
 }
+
+
+

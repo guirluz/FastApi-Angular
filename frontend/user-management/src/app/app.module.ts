@@ -21,6 +21,7 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ProductCreateComponent } from './pages/product-create/product-create.component';
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
 import { RentalsComponent } from './pages/rentals/rentals.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 // Angular Material
@@ -67,6 +68,7 @@ import { RoleDirective } from './directives/role.directive';
     CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgChartsModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

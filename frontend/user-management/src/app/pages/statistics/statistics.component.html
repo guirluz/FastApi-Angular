@@ -1,15 +1,21 @@
-<h2>Statistics</h2>
+<div class="page-container">
+  <h2 class="page-title">Estadísticas</h2>
 
-<h3>Most Rented Products</h3>
-<ul>
-  <li *ngFor="let product of mostRented">
-    {{ product.product }} - Rented {{ product.rentals }} times
-  </li>
-</ul>
+  <mat-card class="chart-container">
+    <h3>Productos más rentados</h3>
+    <canvas baseChart
+      [data]="barChartData"
+      [options]="barChartOptions"
+      [type]="'bar'">
+    </canvas>
+  </mat-card>
 
-<h3>Income by Product</h3>
-<ul>
-  <li *ngFor="let product of incomeByProduct">
-    {{ product.product }} - Income: {{ product.income | currency }}
-  </li>
-</ul>
+  <mat-card class="chart-container">
+    <h3>Ingresos por producto</h3>
+    <canvas baseChart
+      [data]="pieChartData"
+      [options]="pieChartOptions"
+      [type]="'pie'">
+    </canvas>
+  </mat-card>
+</div>

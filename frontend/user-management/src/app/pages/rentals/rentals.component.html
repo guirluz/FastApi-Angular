@@ -1,55 +1,46 @@
 <div class="rentals-container">
 
-  <!-- ========================= -->
-  <!-- Tabla de productos -->
-  <!-- ========================= -->
-  <h2>Productos disponibles</h2>
-  <table mat-table [dataSource]="products" class="mat-elevation-z8">
+  <h2 class="page-title">Productos disponibles</h2>
+  <mat-card class="table-container">
+    <table mat-table [dataSource]="products" class="mat-elevation-z8">
+      <!-- columnas existentes -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let product"> {{ product.nombre }} </td>
+      </ng-container>
 
-    <!-- Nombre -->
-    <ng-container matColumnDef="nombre">
-      <th mat-header-cell *matHeaderCellDef> Nombre </th>
-      <td mat-cell *matCellDef="let product"> {{ product.nombre }} </td>
-    </ng-container>
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef> Descripción </th>
+        <td mat-cell *matCellDef="let product"> {{ product.descripcion }} </td>
+      </ng-container>
 
-    <!-- Descripción -->
-    <ng-container matColumnDef="descripcion">
-      <th mat-header-cell *matHeaderCellDef> Descripción </th>
-      <td mat-cell *matCellDef="let product"> {{ product.descripcion }} </td>
-    </ng-container>
+      <ng-container matColumnDef="costo_por_hora">
+        <th mat-header-cell *matHeaderCellDef> Costo por hora </th>
+        <td mat-cell *matCellDef="let product"> {{ product.costo_por_hora | currency:'COP' }} </td>
+      </ng-container>
 
-    <!-- Costo por hora -->
-    <ng-container matColumnDef="costo_por_hora">
-      <th mat-header-cell *matHeaderCellDef> Costo por hora </th>
-      <td mat-cell *matCellDef="let product"> {{ product.costo_por_hora | currency:'COP' }} </td>
-    </ng-container>
+      <ng-container matColumnDef="accion">
+        <th mat-header-cell *matHeaderCellDef> Acción </th>
+        <td mat-cell *matCellDef="let product">
+          <button mat-raised-button color="primary" (click)="selectProduct(product)">
+            Rentar
+          </button>
+        </td>
+      </ng-container>
 
-    <!-- Acción -->
-    <ng-container matColumnDef="accion">
-      <th mat-header-cell *matHeaderCellDef> Acción </th>
-      <td mat-cell *matCellDef="let product">
-        <button mat-raised-button color="primary" (click)="selectProduct(product)">
-          Rentar
-        </button>
-      </td>
-    </ng-container>
+      <tr mat-header-row *matHeaderRowDef="['nombre','descripcion','costo_por_hora','accion']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['nombre','descripcion','costo_por_hora','accion'];"></tr>
+    </table>
 
-    <tr mat-header-row *matHeaderRowDef="['nombre','descripcion','costo_por_hora','accion']"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['nombre','descripcion','costo_por_hora','accion'];"></tr>
-  </table>
+    <mat-paginator
+      [length]="totalProducts"
+      [pageSize]="pageSize"
+      [pageIndex]="page-1"
+      (page)="onProductPageChange($event)">
+    </mat-paginator>
+  </mat-card>
 
-  <!-- Paginación productos -->
-  <mat-paginator
-    [length]="totalProducts"
-    [pageSize]="pageSize"
-    [pageIndex]="page-1"
-    (page)="onProductPageChange($event)">
-  </mat-paginator>
-
-
-  <!-- ========================= -->
-  <!-- Modal de renta -->
-  <!-- ========================= -->
+  <!-- Modal de renta (sin cambios estructurales) -->
   <div *ngIf="selectedProduct" class="rental-modal">
     <h3>Rentar: {{ selectedProduct.nombre }}</h3>
     <p>{{ selectedProduct.descripcion }}</p>
@@ -67,53 +58,46 @@
     <button mat-button (click)="selectedProduct = null">Cancelar</button>
   </div>
 
+  <h2 class="page-title">Historial de rentas</h2>
+  <mat-card class="table-container">
+    <table mat-table [dataSource]="rentals" class="mat-elevation-z8">
+      <!-- columnas existentes -->
+      <ng-container matColumnDef="producto">
+        <th mat-header-cell *matHeaderCellDef> Producto </th>
+        <td mat-cell *matCellDef="let rental"> {{ rental.producto }} </td>
+      </ng-container>
 
-  <!-- ========================= -->
-  <!-- Historial de rentas -->
-  <!-- ========================= -->
-  <h2>Historial de rentas</h2>
-  <table mat-table [dataSource]="rentals" class="mat-elevation-z8">
+      <ng-container matColumnDef="horas_rentadas">
+        <th mat-header-cell *matHeaderCellDef> Horas </th>
+        <td mat-cell *matCellDef="let rental"> {{ rental.horas_rentadas }} </td>
+      </ng-container>
 
-    <!-- Producto -->
-    <ng-container matColumnDef="producto">
-      <th mat-header-cell *matHeaderCellDef> Producto </th>
-      <td mat-cell *matCellDef="let rental"> {{ rental.producto }} </td>
-    </ng-container>
+      <ng-container matColumnDef="costo_total">
+        <th mat-header-cell *matHeaderCellDef> Costo total </th>
+        <td mat-cell *matCellDef="let rental"> {{ rental.costo_total | currency:'COP' }} </td>
+      </ng-container>
 
-    <!-- Horas -->
-    <ng-container matColumnDef="horas_rentadas">
-      <th mat-header-cell *matHeaderCellDef> Horas </th>
-      <td mat-cell *matCellDef="let rental"> {{ rental.horas_rentadas }} </td>
-    </ng-container>
+      <ng-container matColumnDef="fecha_renta">
+        <th mat-header-cell *matHeaderCellDef> Fecha renta </th>
+        <td mat-cell *matCellDef="let rental"> {{ rental.fecha_renta | date:'short' }} </td>
+      </ng-container>
 
-    <!-- Costo total -->
-    <ng-container matColumnDef="costo_total">
-      <th mat-header-cell *matHeaderCellDef> Costo total </th>
-      <td mat-cell *matCellDef="let rental"> {{ rental.costo_total | currency:'COP' }} </td>
-    </ng-container>
+      <ng-container matColumnDef="fecha_devolucion">
+        <th mat-header-cell *matHeaderCellDef> Fecha devolución </th>
+        <td mat-cell *matCellDef="let rental"> {{ rental.fecha_devolucion | date:'short' }} </td>
+      </ng-container>
 
-    <!-- Fecha renta -->
-    <ng-container matColumnDef="fecha_renta">
-      <th mat-header-cell *matHeaderCellDef> Fecha renta </th>
-      <td mat-cell *matCellDef="let rental"> {{ rental.fecha_renta | date:'short' }} </td>
-    </ng-container>
+      <tr mat-header-row *matHeaderRowDef="['producto','horas_rentadas','costo_total','fecha_renta','fecha_devolucion']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['producto','horas_rentadas','costo_total','fecha_renta','fecha_devolucion'];"></tr>
+    </table>
 
-    <!-- Fecha devolución -->
-    <ng-container matColumnDef="fecha_devolucion">
-      <th mat-header-cell *matHeaderCellDef> Fecha devolución </th>
-      <td mat-cell *matCellDef="let rental"> {{ rental.fecha_devolucion | date:'short' }} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="['producto','horas_rentadas','costo_total','fecha_renta','fecha_devolucion']"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['producto','horas_rentadas','costo_total','fecha_renta','fecha_devolucion'];"></tr>
-  </table>
-
-  <!-- Paginación historial -->
-  <mat-paginator
-    [length]="totalRentals"
-    [pageSize]="rentalPageSize"
-    [pageIndex]="rentalPage-1"
-    (page)="onRentalPageChange($event)">
-  </mat-paginator>
+    <mat-paginator
+      [length]="totalRentals"
+      [pageSize]="rentalPageSize"
+      [pageIndex]="rentalPage-1"
+      (page)="onRentalPageChange($event)">
+    </mat-paginator>
+  </mat-card>
 
 </div>
+

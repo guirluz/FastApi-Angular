@@ -110,6 +110,7 @@ export class RentalsComponent implements OnInit {
       next: (res) => {
         this.snackBar.open('Renta creada correctamente', 'Cerrar', { duration: 3000 });
         this.loadRentals(); // refrescar historial
+        this.selectedProduct = null; // cerrar modal automáticamente
       },
       error: () => {
         this.snackBar.open('Error al crear la renta', 'Cerrar', { duration: 3000 });
