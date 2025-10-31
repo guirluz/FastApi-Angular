@@ -68,19 +68,23 @@ class Product(ProductBase):
     class Config:
         orm_mode = True
 
+# =========================
+# Esquemas de Rentas
+# =========================
+
 class RentalBase(BaseModel):
-    """Esquema base para rentas."""
-    user_id: int
+    """Esquema base para rentas (datos comunes)."""
     product_id: int
     horas_rentadas: int
 
 class RentalCreate(RentalBase):
-    """Esquema para crear una nueva renta."""
+    """Esquema para crear una nueva renta (el user_id se toma del token)."""
     pass
 
 class Rental(RentalBase):
     """Esquema para representar una renta existente."""
     id: int
+    user_id: int
     costo_total: float
     fecha_renta: datetime
 

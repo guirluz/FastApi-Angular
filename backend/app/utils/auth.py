@@ -37,7 +37,9 @@ def role_required(allowed_roles: list):
     """
     Dependencia para verificar si el usuario tiene el rol requerido.
     Normaliza el nombre del rol para que sea insensible a mayúsculas/minúsculas
-    y mapea valores como 'Administrador' → 'admin', 'Cliente' → 'user'.
+    y mapea valores como:
+      - 'Administrador' → 'admin'
+      - 'Cliente' → 'client'
     """
     def dependency(current_user: User = Depends(get_current_user)):
         # Normalizar el rol del usuario
@@ -46,8 +48,8 @@ def role_required(allowed_roles: list):
         # Mapeo flexible de roles
         if user_role in ["administrador", "admin"]:
             normalized_role = "admin"
-        elif user_role in ["cliente", "user", "usuario"]:
-            normalized_role = "user"
+        elif user_role in ["cliente", "client", "usuario"]:
+            normalized_role = "client"
         else:
             normalized_role = user_role  # fallback
 
@@ -67,4 +69,5 @@ def role_required(allowed_roles: list):
         return current_user  # 👈 se devuelve el usuario autenticado si pasa la validación
 
     return dependency
+
 
