@@ -12,11 +12,21 @@
   color: #6b8e9f;
 }
 
+/* Contenedor en fila */
+.charts-row {
+  display: flex;
+  gap: 16px;              /* espacio entre tarjetas */
+  justify-content: space-between;
+  flex-wrap: wrap;        /* permite que se acomoden en pantallas pequeñas */
+}
+
 .chart-container {
-  margin-bottom: 24px;
+  flex: 1 1 48%;          /* cada gráfico ocupa ~50% */
   padding: 16px;
+  box-sizing: border-box;
 }
 
 canvas {
   max-width: 100%;
+  height: 300px !important; /* altura fija para que no se vean gigantes */
 }

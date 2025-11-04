@@ -20,4 +20,17 @@ export class RentalService {
   getMyRentals(page: number = 1, pageSize: number = 8): Observable<any> {
     return this.http.get(`${this.apiUrl}/me?page=${page}&page_size=${pageSize}`);
   }
+
+  getRentalsPDF(): Observable<Blob> {
+    return this.http.get(`${environment.apiUrl}/rentals/export/pdf`, {
+      responseType: 'blob'
+    });
+  }
+
+  getRentalsExcel(): Observable<Blob> {
+    return this.http.get(`${environment.apiUrl}/rentals/export/excel`, {
+      responseType: 'blob'
+    });
+  }
+
 }

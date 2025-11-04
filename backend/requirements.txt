@@ -29,3 +29,6 @@ openpyxl==3.1.5
 
 # Subida de archivos
 python-multipart==0.0.9
+
+# Descarga de pdf
+fpdf2==2.7.9

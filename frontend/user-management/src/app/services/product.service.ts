@@ -39,4 +39,18 @@ export class ProductService {
   getAvailableProducts(page: number = 1, pageSize: number = 8): Observable<any> {
     return this.http.get(`${environment.apiUrl}/products/available?page=${page}&page_size=${pageSize}`);
   }
+
+  getProductsPDF(): Observable<Blob> {
+    return this.http.get(`${environment.apiUrl}/products/export/pdf`, {
+      responseType: 'blob'
+    });
+  }
+
+  getProductsExcel(): Observable<Blob> {
+    return this.http.get(`${environment.apiUrl}/products/export/excel`, {
+      responseType: 'blob'
+    });
+  }
+
+
 }
