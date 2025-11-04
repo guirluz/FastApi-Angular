@@ -3650,3 +3650,168 @@ WHERE users.email = %(email_1)s OR users.username = %(username_1)s
 2025-10-31 18:53:38.458 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=0, page=1
 2025-10-31 18:53:49.082 | INFO     | app.main:rent_product:683 - ✅ Renta creada: usuario=eduar@example.com, producto=Walkman, horas=5, costo=250
 2025-10-31 18:53:49.107 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=1, page=1
+2025-10-31 19:12:53.866 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 19:12:54.149 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 19:12:54.233 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 19:12:54.240 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=1, page=1
+2025-10-31 19:18:31.192 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 19:18:31.444 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 19:18:31.524 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 19:18:31.530 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=1, page=1
+2025-10-31 19:31:04.130 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-31 19:31:13.840 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-31 19:31:14.322 | SUCCESS  | app.main:<module>:68 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-31 19:31:14.338 | INFO     | app.main:startup_event:177 - Tarea de Redis listener iniciada en background
+2025-10-31 19:31:14.339 | INFO     | app.main:redis_listener:131 - Iniciando listener de Redis...
+2025-10-31 19:31:14.342 | SUCCESS  | app.main:redis_listener:136 - Suscrito a canal Redis: progress_channel
+2025-10-31 19:59:43.370 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-31 19:59:53.146 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-31 19:59:53.639 | SUCCESS  | app.main:<module>:68 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-31 19:59:53.655 | INFO     | app.main:startup_event:177 - Tarea de Redis listener iniciada en background
+2025-10-31 19:59:53.655 | INFO     | app.main:redis_listener:131 - Iniciando listener de Redis...
+2025-10-31 19:59:53.658 | SUCCESS  | app.main:redis_listener:136 - Suscrito a canal Redis: progress_channel
+2025-10-31 20:00:21.498 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 20:00:32.421 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-10-31 20:00:32.503 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 20:00:32.529 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=1, page=1
+2025-10-31 20:00:43.253 | INFO     | app.main:rent_product:683 - ✅ Renta creada: usuario=eduar@example.com, producto=peoarp, horas=3, costo=2250
+2025-10-31 20:00:43.275 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 20:11:58.326 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 20:11:58.561 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 20:11:58.627 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 20:11:58.635 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 20:13:12.433 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 20:15:45.062 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 20:15:55.992 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-10-31 20:15:56.070 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 20:15:56.082 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 20:28:51.322 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-31 20:29:01.576 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-31 20:29:02.369 | SUCCESS  | app.main:<module>:68 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-31 20:29:02.388 | INFO     | app.main:startup_event:177 - Tarea de Redis listener iniciada en background
+2025-10-31 20:29:02.388 | INFO     | app.main:redis_listener:131 - Iniciando listener de Redis...
+2025-10-31 20:29:02.393 | SUCCESS  | app.main:redis_listener:136 - Suscrito a canal Redis: progress_channel
+2025-10-31 20:30:29.491 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 20:30:39.570 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-10-31 20:30:39.658 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 20:30:39.685 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 20:30:55.750 | INFO     | app.main:login:349 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-10-31 20:54:03.046 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 20:54:03.372 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 20:54:13.838 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 20:54:13.988 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 20:54:27.246 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 20:56:25.849 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 20:56:37.130 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-10-31 20:56:37.194 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 20:56:37.202 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 21:02:02.029 | INFO     | app.main:login:349 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-10-31 21:05:29.317 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:05:29.524 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:05:34.331 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:05:34.566 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:08:43.438 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-10-31 21:08:43.475 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 21:08:43.487 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 21:08:58.867 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:09:16.015 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:09:22.831 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-10-31 21:09:22.891 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 21:09:22.900 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 21:09:45.883 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:09:46.178 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:09:49.106 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:09:49.354 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:09:51.001 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:09:51.140 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:09:59.093 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:09:59.280 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:10:35.673 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:10:35.791 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:10:37.111 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:10:37.300 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:44:27.922 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:44:28.209 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:44:36.987 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:44:37.173 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:44:41.325 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:44:41.444 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:45:07.746 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:45:30.294 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:45:39.043 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-10-31 21:45:39.112 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 21:45:39.122 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 21:47:29.210 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:47:29.484 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:47:29.536 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 21:47:29.544 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 21:47:35.574 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 21:47:35.706 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 21:47:35.743 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 21:47:35.753 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 21:48:24.585 | INFO     | app.main:login:349 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-10-31 23:10:18.895 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-31 23:10:28.990 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-10-31 23:10:30.311 | SUCCESS  | app.main:<module>:68 - Tablas creadas/verificadas correctamente en la base de datos
+2025-10-31 23:10:30.347 | INFO     | app.main:startup_event:177 - Tarea de Redis listener iniciada en background
+2025-10-31 23:10:30.347 | INFO     | app.main:redis_listener:131 - Iniciando listener de Redis...
+2025-10-31 23:10:30.350 | SUCCESS  | app.main:redis_listener:136 - Suscrito a canal Redis: progress_channel
+2025-10-31 23:11:43.054 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 23:13:17.649 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-10-31 23:13:26.275 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-10-31 23:13:29.684 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-10-31 23:13:49.432 | INFO     | app.main:rent_product:683 - ✅ Renta creada: usuario=eduar@example.com, producto=Lapiz, horas=9, costo=2250
+2025-10-31 23:13:49.457 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=3, page=1
+2025-10-31 23:14:04.786 | INFO     | app.main:login:349 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-10-31 23:29:44.123 | INFO     | app.main:disconnect:92 - Cliente WebSocket desconectado. Total: 0
+2025-10-31 23:40:42.795 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-10-31 23:40:54.788 | INFO     | app.main:login:349 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-11-01 13:33:17.860 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-01 13:33:27.742 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-01 13:33:28.194 | SUCCESS  | app.main:<module>:68 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-01 13:33:28.210 | INFO     | app.main:startup_event:177 - Tarea de Redis listener iniciada en background
+2025-11-01 13:33:28.210 | INFO     | app.main:redis_listener:131 - Iniciando listener de Redis...
+2025-11-01 13:33:28.214 | SUCCESS  | app.main:redis_listener:136 - Suscrito a canal Redis: progress_channel
+2025-11-01 13:37:03.917 | INFO     | app.main:connect:85 - Cliente WebSocket conectado. Total: 1
+2025-11-01 13:44:29.154 | INFO     | app.main:login:349 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-11-01 13:44:51.010 | INFO     | app.main:create_user:875 - 📥 Intentando crear usuario: username=jhjkh, email=ljkh@example.com, role_id=2
+2025-11-01 13:44:51.292 | SUCCESS  | app.main:create_user:907 - ✅ Usuario creado: ljkh@example.com con rol Cliente
+2025-11-01 13:45:11.725 | INFO     | app.main:validate_excel:1008 - 📋 Validando archivo Excel: archivo_convertido.xlsx
+2025-11-01 13:45:12.020 | INFO     | app.main:validate_excel:1025 - 📄 Hojas encontradas: ['Sheet1', 'Hoja1', 'Hoja2']
+2025-11-01 13:45:12.052 | SUCCESS  | app.main:validate_excel:1059 - ✅ Hoja 'Sheet1' válida: 10 registros
+2025-11-01 13:45:12.061 | WARNING  | app.main:validate_excel:1061 - ⚠️ Hoja 'Hoja1' no tiene columnas requeridas
+2025-11-01 13:45:12.062 | WARNING  | app.main:validate_excel:1062 -    Columnas encontradas: ['producto', 'cantidad (l)', 'precio unitario', 'total']
+2025-11-01 13:45:12.062 | WARNING  | app.main:validate_excel:1063 -    Columnas requeridas: {'email', 'username', 'password'}
+2025-11-01 13:45:12.071 | SUCCESS  | app.main:validate_excel:1059 - ✅ Hoja 'Hoja2' válida: 10 registros
+2025-11-01 13:46:03.885 | INFO     | app.main:import_validated_data:1111 - 📥 Importando 10 registros de hoja 'Sheet1'
+2025-11-01 13:46:06.522 | SUCCESS  | app.main:import_validated_data:1173 - ✅ Importación completada: 10 insertados, 0 omitidos
+2025-11-01 13:46:06.529 | INFO     | app.main:import_validated_data:1111 - 📥 Importando 10 registros de hoja 'Hoja2'
+2025-11-01 13:46:09.196 | SUCCESS  | app.main:import_validated_data:1173 - ✅ Importación completada: 10 insertados, 0 omitidos
+2025-11-01 13:47:10.466 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-11-01 13:47:10.497 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=8)
+2025-11-01 13:47:10.532 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=3, page=1
+2025-11-01 13:48:04.681 | INFO     | app.main:rent_product:683 - ✅ Renta creada: usuario=eduar@example.com, producto=Xbox, horas=5, costo=7500
+2025-11-01 13:48:04.700 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=4, page=1
+2025-11-01 13:54:14.322 | INFO     | app.main:login:349 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-11-01 13:55:11.212 | INFO     | app.main:create_user:875 - 📥 Intentando crear usuario: username=eduar, email=eduar@example.com, role_id=2
+2025-11-01 13:55:11.492 | SUCCESS  | app.main:create_user:907 - ✅ Usuario creado: eduar@example.com con rol Cliente
+2025-11-01 13:55:17.865 | INFO     | app.main:validate_excel:1008 - 📋 Validando archivo Excel: archivo_convertido.xlsx
+2025-11-01 13:55:17.873 | INFO     | app.main:validate_excel:1025 - 📄 Hojas encontradas: ['Sheet1', 'Hoja1', 'Hoja2']
+2025-11-01 13:55:17.885 | SUCCESS  | app.main:validate_excel:1059 - ✅ Hoja 'Sheet1' válida: 10 registros
+2025-11-01 13:55:17.893 | WARNING  | app.main:validate_excel:1061 - ⚠️ Hoja 'Hoja1' no tiene columnas requeridas
+2025-11-01 13:55:17.893 | WARNING  | app.main:validate_excel:1062 -    Columnas encontradas: ['producto', 'cantidad (l)', 'precio unitario', 'total']
+2025-11-01 13:55:17.894 | WARNING  | app.main:validate_excel:1063 -    Columnas requeridas: {'email', 'username', 'password'}
+2025-11-01 13:55:17.902 | SUCCESS  | app.main:validate_excel:1059 - ✅ Hoja 'Hoja2' válida: 10 registros
+2025-11-01 13:56:09.777 | INFO     | app.main:import_validated_data:1111 - 📥 Importando 10 registros de hoja 'Sheet1'
+2025-11-01 13:56:12.418 | SUCCESS  | app.main:import_validated_data:1173 - ✅ Importación completada: 10 insertados, 0 omitidos
+2025-11-01 13:56:12.426 | INFO     | app.main:import_validated_data:1111 - 📥 Importando 10 registros de hoja 'Hoja2'
+2025-11-01 13:56:15.095 | SUCCESS  | app.main:import_validated_data:1173 - ✅ Importación completada: 10 insertados, 0 omitidos
+2025-11-01 13:57:28.096 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-11-01 13:57:28.130 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=7)
+2025-11-01 13:57:28.147 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=0, page=1
+2025-11-01 13:58:07.635 | INFO     | app.main:rent_product:683 - ✅ Renta creada: usuario=eduar@example.com, producto=Walkman, horas=6, costo=300
+2025-11-01 13:58:07.651 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=1, page=1
+2025-11-01 13:58:41.466 | INFO     | app.main:login:349 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-11-01 13:58:41.489 | INFO     | app.main:list_available_products:559 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=7)
+2025-11-01 13:58:41.502 | INFO     | app.main:get_my_rentals:761 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=1, page=1
+2025-11-01 13:58:56.428 | INFO     | app.main:login:349 - Usuario prueba@example.com inició sesión con rol Administrador
