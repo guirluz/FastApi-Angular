@@ -22,6 +22,7 @@ import json
 import redis.asyncio as aioredis
 from pydantic import BaseModel
 from typing import List, Dict, Any
+from fastapi.responses import FileResponse
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 background_tasks = set()
@@ -33,6 +34,7 @@ from app.logger import log
 from app.utils.responses import build_response
 from app.config import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES, REFRESH_TOKEN_EXPIRE_MINUTES
 from app.utils.auth import get_current_user, role_required
+from app.utils.export import generate_users_pdf, generate_users_excel, generate_products_pdf, generate_products_excel, generate_rentals_pdf, generate_rentals_excel
 
 # Celery (tareas pesadas)
 from app.tasks import generar_reporte_usuarios, celery_app, process_excel_task
@@ -627,6 +629,78 @@ def delete_product(
     db.commit()
     return db_product
 
+# ======================
+# Endpoint para reporte en pdf/excel para modulo products
+# =====================
+
+@app.get("/products/export/pdf")
+def export_products_pdf(db: Session = Depends(get_db)):
+    """
+    Exporta productos a PDF (público).
+    """
+    try:
+        products = db.query(Product).all()
+        if not products:
+            return build_response(404, "No hay productos para exportar")
+
+        data = [
+            {
+                "id": p.id,
+                "nombre": p.nombre,
+                "descripcion": p.descripcion,
+                "costo_por_hora": p.costo_por_hora,
+                "fecha_registro": p.fecha_registro.isoformat() if p.fecha_registro else ""
+            }
+            for p in products
+        ]
+
+        filepath = generate_products_pdf(data)
+        filename = os.path.basename(filepath)
+
+        return FileResponse(
+            path=filepath,
+            media_type="application/pdf",
+            filename=filename
+        )
+    except Exception as e:
+        log.error(f"Error en /products/export/pdf: {e}")
+        return build_response(500, "Error interno al exportar productos a PDF")
+
+# ========================================================================
+
+@app.get("/products/export/excel")
+def export_products_excel(db: Session = Depends(get_db)):
+    """
+    Exporta productos a Excel (público).
+    """
+    try:
+        products = db.query(Product).all()
+        if not products:
+            return build_response(404, "No hay productos para exportar")
+
+        data = [
+            {
+                "id": p.id,
+                "nombre": p.nombre,
+                "descripcion": p.descripcion,
+                "costo_por_hora": p.costo_por_hora,
+                "fecha_registro": p.fecha_registro.isoformat() if p.fecha_registro else ""
+            }
+            for p in products
+        ]
+
+        filepath = generate_products_excel(data)
+        filename = os.path.basename(filepath)
+
+        return FileResponse(
+            path=filepath,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            filename=filename
+        )
+    except Exception as e:
+        log.error(f"Error en /products/export/excel: {e}")
+        return build_response(500, "Error interno al exportar productos a Excel")
+
 
 # =========================
 # Endpoints de Rentas
@@ -782,6 +856,81 @@ def get_my_rentals(
             message="Error interno al obtener historial de rentas",
             data=None
         )
+    
+# ===========================
+# Endpoints para reporte pdf/excel del modulo rentals
+# ==========================
+
+@app.get("/rentals/export/pdf")
+def export_rentals_pdf(db: Session = Depends(get_db)):
+    """
+    Exporta rentas a PDF (público).
+    """
+    try:
+        rentals = db.query(Rental).all()
+        if not rentals:
+            return build_response(404, "No hay rentas para exportar")
+
+        data = [
+            {
+                "id": r.id,
+                "usuario": r.user.username if r.user else "",
+                "producto": r.product.nombre if r.product else "",
+                "horas_rentadas": r.horas_rentadas,
+                "costo_total": r.costo_total,
+                "fecha_renta": r.fecha_renta.isoformat() if r.fecha_renta else ""
+            }
+            for r in rentals
+        ]
+
+        filepath = generate_rentals_pdf(data)
+        filename = os.path.basename(filepath)
+
+        return FileResponse(
+            path=filepath,
+            media_type="application/pdf",
+            filename=filename
+        )
+    except Exception as e:
+        log.error(f"Error en /rentals/export/pdf: {e}")
+        return build_response(500, "Error interno al exportar rentas a PDF")
+
+# =================================================================
+
+@app.get("/rentals/export/excel")
+def export_rentals_excel(db: Session = Depends(get_db)):
+    """
+    Exporta rentas a Excel (público).
+    """
+    try:
+        rentals = db.query(Rental).all()
+        if not rentals:
+            return build_response(404, "No hay rentas para exportar")
+
+        data = [
+            {
+                "id": r.id,
+                "usuario": r.user.username if r.user else "",
+                "producto": r.product.nombre if r.product else "",
+                "horas_rentadas": r.horas_rentadas,
+                "costo_total": r.costo_total,
+                "fecha_renta": r.fecha_renta.isoformat() if r.fecha_renta else ""
+            }
+            for r in rentals
+        ]
+
+        filepath = generate_rentals_excel(data)
+        filename = os.path.basename(filepath)
+
+        return FileResponse(
+            path=filepath,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            filename=filename
+        )
+    except Exception as e:
+        log.error(f"Error en /rentals/export/excel: {e}")
+        return build_response(500, "Error interno al exportar rentas a Excel")
+
 
 
 # =========================
@@ -1200,6 +1349,68 @@ async def import_validated_data(request: ImportDataRequest, db: Session = Depend
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error en importación: {str(e)}"
         )
+
+# =========================
+# Endpoint para reportes pdf/excel del modulo users
+# =========================
+
+@app.get("/users/export/pdf")
+def export_users_pdf(db: Session = Depends(get_db)):
+    """
+    Exporta usuarios a PDF (público).
+    Devuelve el archivo PDF generado.
+    """
+    try:
+        users = db.query(User).all()
+        if not users:
+            return build_response(404, "No hay usuarios para exportar")
+
+        # Convertir a dict simple (id, username, email)
+        data = [{"id": u.id, "username": u.username, "email": u.email} for u in users]
+
+        filepath = generate_users_pdf(data)
+        filename = os.path.basename(filepath)
+
+        return FileResponse(
+            path=filepath,
+            media_type="application/pdf",
+            filename=filename
+        )
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        log.error(f"Error en /users/export/pdf: {e}")
+        return build_response(500, "Error interno al exportar usuarios a PDF")
+
+# ===========================================================
+
+@app.get("/users/export/excel")
+def export_users_excel(db: Session = Depends(get_db)):
+    """
+    Exporta usuarios a Excel (público).
+    Devuelve el archivo XLSX generado.
+    """
+    try:
+        users = db.query(User).all()
+        if not users:
+            return build_response(404, "No hay usuarios para exportar")
+
+        data = [{"id": u.id, "username": u.username, "email": u.email} for u in users]
+
+        filepath = generate_users_excel(data)
+        filename = os.path.basename(filepath)
+
+        return FileResponse(
+            path=filepath,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            filename=filename
+        )
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        log.error(f"Error en /users/export/excel: {e}")
+        return build_response(500, "Error interno al exportar usuarios a Excel")
+
 
 # =========================
 # Importación Excel vía Celery

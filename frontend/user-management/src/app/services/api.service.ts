@@ -64,6 +64,20 @@ export class ApiService {
   importValidatedData(payload: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/import-validated-data`, payload);
   }
+
+  getUsersPDF(): Observable<Blob> {
+    const url = `${this.baseUrl}/users/export/pdf`;
+    return this.http.get(url, {
+      responseType: 'blob'
+    });
+  }
+
+  getUsersExcel(): Observable<Blob> {
+    const url = `${this.baseUrl}/users/export/excel`;
+    return this.http.get(url, {
+      responseType: 'blob'
+    });
+  }
   
 }
 

@@ -84,4 +84,39 @@ export class UserListComponent implements OnInit {
   onImportCompleted(): void {
     this.loadUsers();
   }
+
+  downloadPDF(): void {
+    this.api.getUsersPDF().subscribe({
+      next: (blob: Blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `users_report_${new Date().toISOString().slice(0,19)}.pdf`;
+        a.click();
+        window.URL.revokeObjectURL(url);
+      },
+      error: (err) => {
+        console.error('Error al descargar PDF', err);
+        alert('No se pudo descargar el PDF.');
+      }
+    });
+  }
+
+  downloadExcel(): void {
+    this.api.getUsersExcel().subscribe({
+      next: (blob: Blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `users_report_${new Date().toISOString().slice(0,19)}.xlsx`;
+        a.click();
+        window.URL.revokeObjectURL(url);
+      },
+      error: (err) => {
+        console.error('Error al descargar Excel', err);
+        alert('No se pudo descargar el Excel.');
+      }
+    });
+  }
+
 }

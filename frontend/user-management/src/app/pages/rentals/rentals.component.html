@@ -60,6 +60,10 @@
 
   <h2 class="page-title">Historial de rentas</h2>
   <mat-card class="table-container">
+    <div class="actions">
+      <button mat-raised-button color="accent" (click)="downloadRentalsPDF()">Exportar PDF</button>
+      <button mat-raised-button color="primary" (click)="downloadRentalsExcel()">Exportar Excel</button>
+    </div>
     <table mat-table [dataSource]="rentals" class="mat-elevation-z8">
       <!-- columnas existentes -->
       <ng-container matColumnDef="producto">
