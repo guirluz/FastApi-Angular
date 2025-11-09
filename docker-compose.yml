@@ -7,12 +7,12 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
-    expose:               # solo visible dentro de la red interna
+    expose:               
       - "3306"
     volumes:
       - db_data:/var/lib/mysql
       - ./docker/mysql:/docker-entrypoint-initdb.d
-    healthcheck:          # healthcheck para MySQL
+    healthcheck:          
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_PASSWORD}"]
       interval: 30s
       timeout: 10s
@@ -29,7 +29,7 @@ services:
     restart: always
     env_file:
       - ./backend/.env
-    ports:                # este sí lo expones porque lo usas desde Postman/Angular
+    ports:                
       - "8000:8000"
     depends_on:
       usuarios_db:
@@ -59,9 +59,9 @@ services:
     image: redis:7.2
     container_name: redis_usuarios
     restart: always
-    expose:               # solo visible dentro de la red interna
+    expose:               
       - "6379"
-    healthcheck:          # healthcheck para Redis
+    healthcheck:          
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
       timeout: 5s
@@ -88,33 +88,33 @@ services:
     networks:
       - internal_net
   
-  angular_frontend:
-    build:
-      context: ./frontend/user-management
-      dockerfile: Dockerfile
-    container_name: angular_frontend
-    restart: always
-    ports:
-      - "4200:4200"   # 👈 CAMBIADO: ahora mapea 4200:4200
-    depends_on:
-      fastapi_backend:
-        condition: service_started
-    volumes:
-      - ./frontend/user-management:/app   # 👈 AGREGADO: para hot-reload
-      - /app/node_modules                  # 👈 AGREGADO: evita sobrescribir node_modules
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:4200"]  # 👈 CAMBIADO
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    networks:
-      - default
+  # angular_frontend:
+  #   build:
+  #     context: ./frontend/user-management
+  #     dockerfile: Dockerfile
+  #   container_name: angular_frontend
+  #   restart: always
+  #   ports:
+  #     - "4200:4200"   
+  #   depends_on:
+  #     fastapi_backend:
+  #       condition: service_started
+  #   volumes:
+  #     - ./frontend/user-management:/app   
+  #     - /app/node_modules                  
+  #   healthcheck:
+  #     test: ["CMD", "curl", "-f", "http://localhost:4200"]  
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+  #   networks:
+  #     - default
 
 volumes:
   db_data:
 
 networks:
   internal_net:
-    internal: true        # red privada, solo entre contenedores
+    internal: true        
 
 

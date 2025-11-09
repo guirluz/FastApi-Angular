@@ -3987,3 +3987,60 @@ WHERE users.email = %(email_1)s OR users.username = %(username_1)s
 =======
 
 >>>>>>> logs
+2025-11-04 13:39:29.776 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-04 13:39:39.583 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-04 13:39:40.520 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-04 13:39:40.537 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-04 13:39:40.537 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-04 13:39:40.540 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-04 13:43:51.216 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-04 13:44:02.676 | INFO     | app.main:login:351 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-11-04 13:44:02.757 | INFO     | app.main:list_available_products:561 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=7)
+2025-11-04 13:44:02.777 | INFO     | app.main:get_my_rentals:835 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=1, page=1
+2025-11-04 13:44:46.225 | INFO     | app.main:login:351 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-11-04 15:45:52.837 | INFO     | app.main:login:351 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-11-04 15:45:53.724 | INFO     | app.main:login:351 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-11-04 15:46:24.721 | INFO     | app.main:create_user:1024 - 📥 Intentando crear usuario: username=prueba1, email=prueba1@example.com, role_id=2
+2025-11-04 15:46:25.242 | SUCCESS  | app.main:create_user:1056 - ✅ Usuario creado: prueba1@example.com con rol Cliente
+2025-11-04 15:46:34.231 | INFO     | app.main:validate_excel:1157 - 📋 Validando archivo Excel: archivo_convertido.xlsx
+2025-11-04 15:46:35.418 | INFO     | app.main:validate_excel:1174 - 📄 Hojas encontradas: ['Sheet1', 'Hoja1', 'Hoja2']
+2025-11-04 15:46:38.431 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Sheet1' válida: 10 registros
+2025-11-04 15:46:38.452 | WARNING  | app.main:validate_excel:1210 - ⚠️ Hoja 'Hoja1' no tiene columnas requeridas
+2025-11-04 15:46:38.453 | WARNING  | app.main:validate_excel:1211 -    Columnas encontradas: ['producto', 'cantidad (l)', 'precio unitario', 'total']
+2025-11-04 15:46:38.453 | WARNING  | app.main:validate_excel:1212 -    Columnas requeridas: {'username', 'password', 'email'}
+2025-11-04 15:46:38.481 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja2' válida: 10 registros
+2025-11-04 15:47:10.498 | INFO     | app.main:import_validated_data:1260 - 📥 Importando 10 registros de hoja 'Hoja2'
+2025-11-04 15:47:13.396 | SUCCESS  | app.main:import_validated_data:1322 - ✅ Importación completada: 10 insertados, 0 omitidos
+2025-11-04 15:47:57.052 | INFO     | app.main:login:351 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-11-04 15:47:57.093 | INFO     | app.main:list_available_products:561 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=7)
+2025-11-04 15:47:57.096 | INFO     | app.main:get_my_rentals:835 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=1, page=1
+2025-11-04 15:48:25.690 | INFO     | app.main:rent_product:757 - ✅ Renta creada: usuario=eduar@example.com, producto=Carro, horas=6, costo=6000
+2025-11-04 15:48:25.707 | INFO     | app.main:get_my_rentals:835 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-11-04 15:49:16.060 | INFO     | app.main:login:351 - Usuario prueba@example.com inició sesión con rol Administrador
+2025-11-04 21:01:30.813 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-04 21:01:41.866 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-04 21:01:44.135 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-04 21:01:44.192 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-04 21:01:44.193 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-04 21:01:44.254 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-04 21:09:21.676 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-04 21:09:28.978 | INFO     | app.main:login:351 - Usuario eduar@example.com inició sesión con rol Cliente
+2025-11-04 21:09:29.048 | INFO     | app.main:list_available_products:561 - ✅ Productos obtenidos correctamente (page=1, page_size=8, total=7)
+2025-11-04 21:09:29.066 | INFO     | app.main:get_my_rentals:835 - ✅ Historial de rentas obtenido: usuario=eduar@example.com, total=2, page=1
+2025-11-05 13:03:59.685 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-05 13:04:09.696 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-05 13:04:10.659 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-05 13:04:10.677 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-05 13:04:10.678 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-05 13:04:10.682 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-07 15:04:43.506 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-07 15:04:53.388 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-07 15:04:55.496 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-07 15:04:55.516 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-07 15:04:55.517 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-07 15:04:55.522 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-07 17:25:02.903 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-07 17:25:04.646 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-07 17:25:04.664 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-07 17:25:04.664 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-07 17:25:04.668 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
