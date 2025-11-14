@@ -4044,3 +4044,1085 @@ WHERE users.email = %(email_1)s OR users.username = %(username_1)s
 2025-11-07 17:25:04.664 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
 2025-11-07 17:25:04.664 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
 2025-11-07 17:25:04.668 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-09 13:36:03.828 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno 111] Connection refused)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-11-09 13:36:08.853 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-09 13:36:13.155 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-09 13:36:14.019 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-09 13:36:14.036 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-09 13:36:14.037 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-09 13:36:14.041 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-09 22:01:50.526 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-09 22:02:00.137 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-09 22:02:01.067 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-09 22:02:01.087 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-09 22:02:01.087 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-09 22:02:01.090 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-10 13:02:09.046 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-10 13:02:18.971 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-10 13:02:21.079 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-10 13:02:21.101 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-10 13:02:21.101 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-10 13:02:21.106 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-10 13:05:44.909 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-10 13:05:54.520 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-10 13:05:55.373 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-10 13:05:55.394 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-10 13:05:55.394 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-10 13:05:55.398 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-10 13:21:05.997 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-10 13:21:05.998 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-10 13:21:05.998 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-10 13:21:05.999 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-10 13:21:05.999 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-10 13:21:06.000 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-10 13:21:07.031 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-10 13:21:07.848 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-10 13:21:07.865 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-10 13:21:07.866 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-10 13:21:07.869 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-10 14:02:49.929 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-10 14:02:59.605 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-10 14:03:00.554 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-10 14:03:00.574 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-10 14:03:00.575 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-10 14:03:00.578 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-11 10:32:21.700 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-11 10:32:31.543 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-11 10:32:32.679 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-11 10:32:32.699 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-11 10:32:32.699 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-11 10:32:32.704 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-11 10:40:59.228 | ERROR    | app.main:redis_listener:156 - Listener Redis falló: Connection closed by server.
+2025-11-11 10:40:59.244 | ERROR    | app.main:redis_listener:158 - Traceback (most recent call last):
+  File "/app/app/main.py", line 140, in redis_listener
+    async for message in pubsub.listen():
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 1031, in listen
+    response = await self.handle_message(await self.parse_response(block=True))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 918, in parse_response
+    response = await self._execute(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 898, in _execute
+    return await conn.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 62, in call_with_retry
+    await fail(error)
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 887, in _disconnect_raise_connect
+    raise error
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/connection.py", line 542, in read_response
+    response = await self._parser.read_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 82, in read_response
+    response = await self._read_response(disable_decoding=disable_decoding)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 90, in _read_response
+    raw = await self._readline()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/base.py", line 221, in _readline
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+2025-11-11 10:40:59.245 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-11 10:40:59.249 | WARNING  | app.main:redis_listener:167 - Error cerrando pubsub: Error 111 connecting to redis_usuarios:6379. Connection refused.
+2025-11-11 10:40:59.252 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-11 10:41:02.343 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-11-11 10:41:07.364 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-11 10:41:21.141 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-11 10:41:21.908 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-11 10:41:21.938 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-11 10:41:21.939 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-11 10:41:21.944 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-11 11:10:46.832 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-11 11:10:46.834 | ERROR    | app.main:list_available_products:577 - Error al obtener productos: Object of type Decimal is not JSON serializable
+2025-11-11 11:10:46.841 | ERROR    | app.main:list_available_products:579 - Traceback (most recent call last):
+  File "/app/app/main.py", line 563, in list_available_products
+    return build_response(
+           ^^^^^^^^^^^^^^^
+  File "/app/app/utils/responses.py", line 12, in build_response
+    return JSONResponse(status_code=status_code, content=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/starlette/responses.py", line 178, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "/usr/local/lib/python3.11/site-packages/starlette/responses.py", line 41, in __init__
+    self.body = self.render(content)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/starlette/responses.py", line 181, in render
+    return json.dumps(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decimal is not JSON serializable
+
+2025-11-11 11:34:33.136 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-11 11:34:33.140 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-11 11:34:33.140 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-11 11:34:33.145 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-11 11:34:33.148 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-11 11:34:33.148 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-11 11:34:41.154 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-11 11:34:42.480 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-11 11:34:42.498 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-11 11:34:42.498 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-11 11:34:42.505 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-11 11:34:47.919 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-11 11:34:47.919 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-11 11:34:47.920 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-11 11:34:47.921 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-11 11:34:47.922 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-11 11:34:47.922 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-11 11:34:48.853 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-11 11:34:49.597 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-11 11:34:49.618 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-11 11:34:49.619 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-11 11:34:49.625 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-11 11:38:42.152 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-11 11:38:51.753 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-11 11:38:52.658 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-11 11:38:52.677 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-11 11:38:52.678 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-11 11:38:52.681 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-11 11:42:40.356 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-11 12:14:51.567 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-11 12:19:00.086 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-11 12:32:04.998 | INFO     | app.main:upload_excel:1433 - Tarea de importación enviada a Celery, id=77737f69-f436-4a5c-a9d7-810f93cc4bba
+2025-11-11 12:32:05.123 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba.xlsx
+2025-11-11 12:32:05.614 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'email', 'password', 'username'}
+2025-11-11 12:32:05.618 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '77737f69-f436-4a5c-a9d7-810f93cc4bba', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'email', 'password', 'username'}"}
+2025-11-11 12:32:05.620 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-11 12:32:18.677 | INFO     | app.main:upload_excel:1433 - Tarea de importación enviada a Celery, id=e3c2d44c-d2fa-498f-9115-16443c4d7f4f
+2025-11-11 12:32:18.683 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba.xlsx
+2025-11-11 12:32:18.696 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'email', 'password', 'username'}
+2025-11-11 12:32:18.698 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'e3c2d44c-d2fa-498f-9115-16443c4d7f4f', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'email', 'password', 'username'}"}
+2025-11-11 12:32:18.699 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-11 12:32:41.360 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 2
+2025-11-11 12:42:42.541 | INFO     | app.main:upload_excel:1433 - Tarea de importación enviada a Celery, id=3b9cbf66-d561-4f3a-a1bd-b77e19f3f874
+2025-11-11 12:42:42.549 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba12.xlsx
+2025-11-11 12:42:42.562 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'email', 'password', 'username'}
+2025-11-11 12:42:42.563 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '3b9cbf66-d561-4f3a-a1bd-b77e19f3f874', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'email', 'password', 'username'}"}
+2025-11-11 12:42:42.565 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-11 12:42:48.988 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-11 12:42:52.201 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 3
+2025-11-11 12:47:44.694 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-11 12:47:48.203 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 4
+2025-11-11 12:47:55.007 | INFO     | app.main:upload_excel:1433 - Tarea de importación enviada a Celery, id=ec168aac-dd02-424d-ba6d-55713362cc67
+2025-11-11 12:47:55.028 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba12.xlsx
+2025-11-11 12:47:55.058 | ERROR    | app.tasks:process_excel_task:184 - Error procesando Excel: El archivo Excel debe contener las columnas: {'email', 'password', 'username'}
+2025-11-11 12:47:55.060 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'ec168aac-dd02-424d-ba6d-55713362cc67', 'current': 0, 'total': 0, 'percent': 0, 'status': 'failed', 'error': "El archivo Excel debe contener las columnas: {'email', 'password', 'username'}"}
+2025-11-11 12:47:55.061 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 4 clientes WebSocket
+2025-11-11 13:24:50.988 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 3
+2025-11-11 13:24:51.008 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 2
+2025-11-11 13:24:51.009 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 1
+2025-11-11 13:24:51.010 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-11 13:34:06.462 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-11 13:34:12.616 | INFO     | app.main:validate_excel:1157 - 📋 Validando archivo Excel: prueba12.xlsx
+2025-11-11 13:34:12.741 | INFO     | app.main:validate_excel:1174 - 📄 Hojas encontradas: ['Hoja1', 'Hoja2', 'Hoja3']
+2025-11-11 13:34:12.894 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja1' válida: 4 registros
+2025-11-11 13:34:12.907 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja2' válida: 3 registros
+2025-11-11 13:34:12.917 | WARNING  | app.main:validate_excel:1210 - ⚠️ Hoja 'Hoja3' no tiene columnas requeridas
+2025-11-11 13:34:12.918 | WARNING  | app.main:validate_excel:1211 -    Columnas encontradas: ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-11 13:34:12.918 | WARNING  | app.main:validate_excel:1212 -    Columnas requeridas: {'username', 'password', 'email'}
+2025-11-11 13:34:26.320 | INFO     | app.main:import_validated_data:1260 - 📥 Importando 4 registros de hoja 'Hoja1'
+2025-11-11 13:34:27.414 | SUCCESS  | app.main:import_validated_data:1322 - ✅ Importación completada: 4 insertados, 0 omitidos
+2025-11-11 13:34:27.422 | INFO     | app.main:import_validated_data:1260 - 📥 Importando 3 registros de hoja 'Hoja2'
+2025-11-11 13:34:27.426 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: ana@example.com
+2025-11-11 13:34:27.428 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: carlos@example.com
+2025-11-11 13:34:27.685 | SUCCESS  | app.main:import_validated_data:1322 - ✅ Importación completada: 1 insertados, 2 omitidos
+2025-11-12 10:11:37.180 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 10:11:48.090 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 10:11:49.503 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 10:11:49.528 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 10:11:49.529 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 10:11:49.533 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 10:17:20.416 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 10:18:25.060 | INFO     | app.main:validate_excel:1157 - 📋 Validando archivo Excel: prueba12.xlsx
+2025-11-12 10:18:25.081 | INFO     | app.main:validate_excel:1174 - 📄 Hojas encontradas: ['Hoja1', 'Hoja2', 'Hoja3']
+2025-11-12 10:18:25.122 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja1' válida: 4 registros
+2025-11-12 10:18:25.139 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja2' válida: 3 registros
+2025-11-12 10:18:25.152 | WARNING  | app.main:validate_excel:1210 - ⚠️ Hoja 'Hoja3' no tiene columnas requeridas
+2025-11-12 10:18:25.153 | WARNING  | app.main:validate_excel:1211 -    Columnas encontradas: ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-12 10:18:25.153 | WARNING  | app.main:validate_excel:1212 -    Columnas requeridas: {'password', 'username', 'email'}
+2025-11-12 10:18:30.687 | INFO     | app.main:import_validated_data:1260 - 📥 Importando 4 registros de hoja 'Hoja1'
+2025-11-12 10:18:30.696 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: luis@example.com
+2025-11-12 10:18:30.698 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: jose@example.com
+2025-11-12 10:18:30.701 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: maria@example.com
+2025-11-12 10:18:30.703 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: mario@example.com
+2025-11-12 10:18:30.705 | SUCCESS  | app.main:import_validated_data:1322 - ✅ Importación completada: 0 insertados, 4 omitidos
+2025-11-12 10:18:30.756 | INFO     | app.main:import_validated_data:1260 - 📥 Importando 3 registros de hoja 'Hoja2'
+2025-11-12 10:18:30.759 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: ana@example.com
+2025-11-12 10:18:30.762 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: carlos@example.com
+2025-11-12 10:18:30.764 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: guest@example.com
+2025-11-12 10:18:30.765 | SUCCESS  | app.main:import_validated_data:1322 - ✅ Importación completada: 0 insertados, 3 omitidos
+2025-11-12 10:22:19.289 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 10:22:24.724 | INFO     | app.main:validate_excel:1157 - 📋 Validando archivo Excel: prueba12.xlsx
+2025-11-12 10:22:24.740 | INFO     | app.main:validate_excel:1174 - 📄 Hojas encontradas: ['Hoja1', 'Hoja2', 'Hoja3']
+2025-11-12 10:22:24.761 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja1' válida: 4 registros
+2025-11-12 10:22:24.773 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja2' válida: 3 registros
+2025-11-12 10:22:24.786 | WARNING  | app.main:validate_excel:1210 - ⚠️ Hoja 'Hoja3' no tiene columnas requeridas
+2025-11-12 10:22:24.786 | WARNING  | app.main:validate_excel:1211 -    Columnas encontradas: ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-12 10:22:24.786 | WARNING  | app.main:validate_excel:1212 -    Columnas requeridas: {'password', 'username', 'email'}
+2025-11-12 10:22:44.107 | INFO     | app.main:import_validated_data:1260 - 📥 Importando 3 registros de hoja 'Hoja2'
+2025-11-12 10:22:44.110 | WARNING  | app.main:import_validated_data:1283 - Email duplicado: ana@example.com
+2025-11-12 10:22:44.628 | SUCCESS  | app.main:import_validated_data:1322 - ✅ Importación completada: 2 insertados, 1 omitidos
+2025-11-12 10:32:33.948 | INFO     | app.main:validate_excel:1157 - 📋 Validando archivo Excel: dates1.xlsx
+2025-11-12 10:32:33.972 | INFO     | app.main:validate_excel:1174 - 📄 Hojas encontradas: ['Hoja1']
+2025-11-12 10:32:33.992 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja1' válida: 30 registros
+2025-11-12 10:38:27.541 | INFO     | app.main:validate_excel:1157 - 📋 Validando archivo Excel: dates1.xlsx
+2025-11-12 10:38:27.555 | INFO     | app.main:validate_excel:1174 - 📄 Hojas encontradas: ['Hoja1']
+2025-11-12 10:38:27.569 | SUCCESS  | app.main:validate_excel:1208 - ✅ Hoja 'Hoja1' válida: 30 registros
+2025-11-12 10:38:33.189 | INFO     | app.main:import_validated_data:1260 - 📥 Importando 30 registros de hoja 'Hoja1'
+2025-11-12 10:38:40.719 | SUCCESS  | app.main:import_validated_data:1322 - ✅ Importación completada: 30 insertados, 0 omitidos
+2025-11-12 11:24:07.418 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:24:07.435 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:24:07.436 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:24:07.452 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:24:07.457 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:24:07.458 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:24:09.084 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:24:10.581 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:24:10.601 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:24:10.601 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:24:10.607 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:24:19.434 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:24:19.434 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:24:19.435 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:24:19.435 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:24:19.436 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:24:19.436 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:24:20.460 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:24:21.239 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:24:21.259 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:24:21.259 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:24:21.264 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:30:18.603 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:30:18.606 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:30:18.606 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:30:18.606 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:30:18.607 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:30:18.607 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:30:19.984 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:21.199 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:21.216 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:21.216 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:22.092 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:22.833 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:22.854 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:22.854 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:22.858 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:30:23.760 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:30:23.761 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:30:23.761 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:30:23.762 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:30:23.762 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:30:23.762 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:30:24.713 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:25.642 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:25.669 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:25.670 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:25.674 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:30:30.992 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:30:30.993 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:30:30.993 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:30:30.994 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:30:30.994 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:30:30.995 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:30:31.925 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:32.764 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:32.786 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:32.786 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:32.790 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:30:37.303 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:30:37.304 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:30:37.304 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:30:37.305 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:30:37.305 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:30:37.305 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:30:38.217 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:38.967 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:38.990 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:38.990 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:38.995 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:30:41.800 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:30:41.801 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:30:41.801 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:30:41.802 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:30:41.802 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:30:41.803 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:30:42.776 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:43.520 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:43.539 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:43.539 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:43.542 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:30:45.448 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:30:45.449 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:30:45.449 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:30:45.449 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:30:45.450 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:30:45.450 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:30:46.433 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:47.165 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:47.190 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:47.190 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:47.195 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:30:53.514 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:30:53.515 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:30:53.516 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:30:53.517 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:30:53.517 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:30:53.518 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:30:54.444 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:55.305 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:55.333 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:55.333 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:56.245 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:30:56.986 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:30:57.009 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:30:57.009 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:30:57.013 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:31:05.841 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:31:05.842 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:31:05.842 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:31:05.843 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:31:05.844 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:31:05.844 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:31:06.850 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:31:07.613 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:31:07.637 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:31:07.637 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:31:07.641 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:31:21.179 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:31:21.179 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:31:21.180 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:31:21.180 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:31:21.180 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:31:21.181 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:31:22.161 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:31:23.002 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:31:23.025 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:31:23.026 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:31:23.031 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:31:26.340 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:31:26.341 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:31:26.341 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:31:26.341 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:31:26.342 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:31:26.342 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:31:27.250 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:31:27.970 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:31:27.996 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:31:27.996 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:31:28.948 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:31:29.744 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:31:29.781 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:31:29.782 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:31:29.787 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:31:33.799 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:31:33.800 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:31:33.801 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:31:33.803 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:31:33.804 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:31:33.805 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:31:35.000 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:31:35.770 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:31:35.788 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:31:35.788 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:31:35.791 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:33:12.826 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 11:33:12.826 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 11:33:12.827 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 11:33:12.827 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 11:33:12.828 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 11:33:12.828 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 11:33:13.911 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:33:14.729 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:33:14.753 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:33:14.753 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:33:15.828 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:33:16.614 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:33:16.638 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:33:16.638 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:33:16.642 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 11:55:39.324 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:55:49.037 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 11:55:49.922 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 11:55:49.947 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 11:55:49.947 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 11:55:49.951 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:00:09.529 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 12:00:14.876 | ERROR    | app.main:upload_excel_preview:1470 - Error en /upload-excel-preview: name 'process_excel_preview_task' is not defined
+2025-11-12 12:09:24.112 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 12:09:24.113 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 12:09:24.113 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 12:09:24.115 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 12:09:24.116 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 12:09:24.117 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 12:09:31.874 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:09:32.709 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:09:32.728 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:09:32.728 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:09:32.733 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:10:23.903 | ERROR    | app.main:redis_listener:156 - Listener Redis falló: Connection closed by server.
+2025-11-12 12:10:23.909 | ERROR    | app.main:redis_listener:158 - Traceback (most recent call last):
+  File "/app/app/main.py", line 140, in redis_listener
+    async for message in pubsub.listen():
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 1031, in listen
+    response = await self.handle_message(await self.parse_response(block=True))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 918, in parse_response
+    response = await self._execute(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 898, in _execute
+    return await conn.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 62, in call_with_retry
+    await fail(error)
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/client.py", line 887, in _disconnect_raise_connect
+    raise error
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/retry.py", line 59, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/asyncio/connection.py", line 542, in read_response
+    response = await self._parser.read_response(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 82, in read_response
+    response = await self._read_response(disable_decoding=disable_decoding)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/resp2.py", line 90, in _read_response
+    raw = await self._readline()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/redis/_parsers/base.py", line 221, in _readline
+    raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+redis.exceptions.ConnectionError: Connection closed by server.
+
+2025-11-12 12:10:23.910 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 12:10:23.913 | WARNING  | app.main:redis_listener:167 - Error cerrando pubsub: Error 111 connecting to redis_usuarios:6379. Connection refused.
+2025-11-12 12:10:23.914 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 12:10:26.897 | WARNING  | app.database.connection:<module>:21 - ⏳ Intento 1/10: MySQL no está listo ((pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on 'usuarios_db' ([Errno -3] Temporary failure in name resolution)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8))
+2025-11-12 12:10:31.917 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:10:45.813 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:10:46.563 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:10:46.585 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:10:46.585 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:10:46.589 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:13:19.540 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:13:29.334 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:13:30.238 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:13:30.255 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:13:30.256 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:13:30.260 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:16:54.567 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=3fae81d6-6193-4674-8ee0-caf073e0689b
+2025-11-12 12:16:54.578 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-12 12:16:54.602 | INFO     | app.tasks:process_excel_preview_task:212 - 🔎 Validando Excel para preview: /app/uploads/dates1.xlsx
+2025-11-12 12:16:54.959 | SUCCESS  | app.tasks:process_excel_preview_task:239 - ✅ Hoja válida: Hoja1 (30 filas)
+2025-11-12 12:16:54.963 | INFO     | app.tasks:process_excel_preview_task:267 - 📤 Preview publicado (task_id=3fae81d6-6193-4674-8ee0-caf073e0689b) con 1 hojas válidas
+2025-11-12 12:16:54.963 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': '3fae81d6-6193-4674-8ee0-caf073e0689b', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 30, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'user001', 'email': 'user001@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user002', 'email': 'user002@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user003', 'email': 'user003@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user004', 'email': 'user004@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user005', 'email': 'user005@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user006', 'email': 'user006@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user007', 'email': 'user007@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user008', 'email': 'user008@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user009', 'email': 'user009@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user010', 'email': 'user010@example.com', 'password': 'tY7aK9mQ'}], 'data': [{'username': 'user001', 'email': 'user001@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user002', 'email': 'user002@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user003', 'email': 'user003@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user004', 'email': 'user004@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user005', 'email': 'user005@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user006', 'email': 'user006@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user007', 'email': 'user007@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user008', 'email': 'user008@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user009', 'email': 'user009@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user010', 'email': 'user010@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user011', 'email': 'user011@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user012', 'email': 'user012@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user013', 'email': 'user013@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user014', 'email': 'user014@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user015', 'email': 'user015@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user016', 'email': 'user016@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user017', 'email': 'user017@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user018', 'email': 'user018@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user019', 'email': 'user019@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user020', 'email': 'user020@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user021', 'email': 'user021@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user022', 'email': 'user022@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user023', 'email': 'user023@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user024', 'email': 'user024@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user025', 'email': 'user025@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user026', 'email': 'user026@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user027', 'email': 'user027@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user028', 'email': 'user028@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user029', 'email': 'user029@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user030', 'email': 'user030@example.com', 'password': 'Dn5pT4lS'}]}], 'total_sheets': 1, 'valid_sheets': 1}
+2025-11-12 12:16:54.965 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-12 12:18:30.909 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-12 12:18:51.654 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 12:18:58.034 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=1fd30731-cce3-40b1-9467-dce3adec718a
+2025-11-12 12:18:58.043 | INFO     | app.tasks:process_excel_preview_task:212 - 🔎 Validando Excel para preview: /app/uploads/dates1.xlsx
+2025-11-12 12:18:58.047 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-12 12:18:58.076 | SUCCESS  | app.tasks:process_excel_preview_task:239 - ✅ Hoja válida: Hoja1 (30 filas)
+2025-11-12 12:18:58.077 | INFO     | app.tasks:process_excel_preview_task:267 - 📤 Preview publicado (task_id=1fd30731-cce3-40b1-9467-dce3adec718a) con 1 hojas válidas
+2025-11-12 12:18:58.077 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': '1fd30731-cce3-40b1-9467-dce3adec718a', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 30, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'user001', 'email': 'user001@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user002', 'email': 'user002@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user003', 'email': 'user003@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user004', 'email': 'user004@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user005', 'email': 'user005@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user006', 'email': 'user006@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user007', 'email': 'user007@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user008', 'email': 'user008@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user009', 'email': 'user009@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user010', 'email': 'user010@example.com', 'password': 'tY7aK9mQ'}], 'data': [{'username': 'user001', 'email': 'user001@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user002', 'email': 'user002@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user003', 'email': 'user003@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user004', 'email': 'user004@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user005', 'email': 'user005@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user006', 'email': 'user006@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user007', 'email': 'user007@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user008', 'email': 'user008@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user009', 'email': 'user009@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user010', 'email': 'user010@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user011', 'email': 'user011@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user012', 'email': 'user012@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user013', 'email': 'user013@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user014', 'email': 'user014@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user015', 'email': 'user015@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user016', 'email': 'user016@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user017', 'email': 'user017@example.com', 'password': 'Gt1uM8qC'}, {'username': 'user018', 'email': 'user018@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user019', 'email': 'user019@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user020', 'email': 'user020@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user021', 'email': 'user021@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user022', 'email': 'user022@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user023', 'email': 'user023@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user024', 'email': 'user024@example.com', 'password': 'Bp3sZ1rN'}, {'username': 'user025', 'email': 'user025@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user026', 'email': 'user026@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user027', 'email': 'user027@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user028', 'email': 'user028@example.com', 'password': 'tY7aK9mQ'}, {'username': 'user029', 'email': 'user029@example.com', 'password': 'Dn5pT4lS'}, {'username': 'user030', 'email': 'user030@example.com', 'password': 'Dn5pT4lS'}]}], 'total_sheets': 1, 'valid_sheets': 1}
+2025-11-12 12:18:58.078 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-12 12:23:13.935 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=61197182-4a48-438d-9b13-ac392153cc6b
+2025-11-12 12:23:13.946 | INFO     | app.tasks:process_excel_preview_task:212 - 🔎 Validando Excel para preview: /app/uploads/prueba.xlsx
+2025-11-12 12:23:13.950 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 2
+2025-11-12 12:23:13.977 | WARNING  | app.tasks:process_excel_preview_task:241 - ⚠️ Hoja sin columnas requeridas: Hoja1 -> ['nombre', 'cedula', 'direccion']
+2025-11-12 12:23:13.978 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': '61197182-4a48-438d-9b13-ac392153cc6b', 'status': 'failed', 'error': 'Ninguna hoja tiene las columnas requeridas: username, email, password'}
+2025-11-12 12:23:13.979 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:23:39.213 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=99b6973f-7728-425d-b93d-15154709c38c
+2025-11-12 12:23:39.218 | INFO     | app.tasks:process_excel_preview_task:212 - 🔎 Validando Excel para preview: /app/uploads/prueba12.xlsx
+2025-11-12 12:23:39.225 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 3
+2025-11-12 12:23:39.247 | SUCCESS  | app.tasks:process_excel_preview_task:239 - ✅ Hoja válida: Hoja1 (4 filas)
+2025-11-12 12:23:39.259 | SUCCESS  | app.tasks:process_excel_preview_task:239 - ✅ Hoja válida: Hoja2 (3 filas)
+2025-11-12 12:23:39.269 | WARNING  | app.tasks:process_excel_preview_task:241 - ⚠️ Hoja sin columnas requeridas: Hoja3 -> ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-12 12:23:39.271 | INFO     | app.tasks:process_excel_preview_task:267 - 📤 Preview publicado (task_id=99b6973f-7728-425d-b93d-15154709c38c) con 2 hojas válidas
+2025-11-12 12:23:39.271 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': '99b6973f-7728-425d-b93d-15154709c38c', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 4, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'Luis', 'email': 'luis@example.com', 'password': 123456}, {'username': 'Jose', 'email': 'jose@example.com', 'password': 123456}, {'username': 'Mario', 'email': 'maria@example.com', 'password': 654321}, {'username': 'Maria', 'email': 'mario@example.com', 'password': 654321}], 'data': [{'username': 'Luis', 'email': 'luis@example.com', 'password': 123456}, {'username': 'Jose', 'email': 'jose@example.com', 'password': 123456}, {'username': 'Mario', 'email': 'maria@example.com', 'password': 654321}, {'username': 'Maria', 'email': 'mario@example.com', 'password': 654321}]}, {'sheet_name': 'Hoja2', 'total_rows': 3, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'Ana', 'email': 'ana@example.com', 'password': 987654}, {'username': 'Carlos', 'email': 'carlos@example.com', 'password': 456789}, {'username': 'Guest', 'email': 'guest@example.com', 'password': 852741}], 'data': [{'username': 'Ana', 'email': 'ana@example.com', 'password': 987654}, {'username': 'Carlos', 'email': 'carlos@example.com', 'password': 456789}, {'username': 'Guest', 'email': 'guest@example.com', 'password': 852741}]}], 'total_sheets': 3, 'valid_sheets': 2}
+2025-11-12 12:23:39.272 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 3 clientes WebSocket
+2025-11-12 12:37:04.683 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 2
+2025-11-12 12:37:04.687 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 1
+2025-11-12 12:37:04.688 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-12 12:37:04.782 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 12:37:04.783 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 12:37:04.783 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 12:37:04.784 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 12:37:04.785 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 12:37:04.785 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 12:37:06.134 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:37:07.588 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:37:07.610 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:37:07.611 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:37:08.540 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:37:09.324 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:37:09.346 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:37:09.346 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:37:09.351 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:37:31.518 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 12:37:31.519 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 12:37:31.519 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 12:37:31.521 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 12:37:31.521 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 12:37:31.522 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 12:37:32.500 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:37:33.223 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:37:33.245 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:37:33.245 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:37:33.249 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:37:34.051 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 12:37:34.051 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 12:37:34.052 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 12:37:34.053 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 12:37:34.054 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 12:37:34.054 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 12:37:35.079 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:37:36.150 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:37:36.182 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:37:36.182 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:37:36.187 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:37:39.998 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-12 12:37:39.998 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-12 12:37:39.999 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-12 12:37:40.000 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-12 12:37:40.000 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-12 12:37:40.001 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-12 12:37:40.987 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:37:41.879 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:37:41.899 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:37:41.900 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:37:42.841 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:37:43.608 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:37:43.638 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:37:43.638 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:37:43.642 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:48:20.538 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:48:30.166 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 12:48:31.256 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 12:48:31.281 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 12:48:31.281 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 12:48:31.285 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 12:51:37.875 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=e876e033-cbaa-4e12-9d63-36540d9e011f
+2025-11-12 12:51:37.886 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-12 12:51:37.911 | INFO     | app.tasks:process_excel_preview_task:196 - 🔎 Validando Excel para preview: /app/uploads/prueba12.xlsx
+2025-11-12 12:51:38.148 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja1 (4 filas)
+2025-11-12 12:51:38.158 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja2 (3 filas)
+2025-11-12 12:51:38.166 | WARNING  | app.tasks:process_excel_preview_task:225 - ⚠️ Hoja sin columnas requeridas: Hoja3 -> ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-12 12:51:38.169 | INFO     | app.tasks:process_excel_preview_task:251 - 📤 Preview publicado (task_id=e876e033-cbaa-4e12-9d63-36540d9e011f) con 2 hojas válidas
+2025-11-12 12:51:38.169 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': 'e876e033-cbaa-4e12-9d63-36540d9e011f', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 4, 'columns': ['email', 'username', 'password'], 'preview': [{'email': 'luis@example.com', 'username': 'Luis', 'password': 123456}, {'email': 'jose@example.com', 'username': 'Jose', 'password': 123456}, {'email': 'maria@example.com', 'username': 'Mario', 'password': 654321}, {'email': 'mario@example.com', 'username': 'Maria', 'password': 654321}], 'data': [{'email': 'luis@example.com', 'username': 'Luis', 'password': 123456}, {'email': 'jose@example.com', 'username': 'Jose', 'password': 123456}, {'email': 'maria@example.com', 'username': 'Mario', 'password': 654321}, {'email': 'mario@example.com', 'username': 'Maria', 'password': 654321}]}, {'sheet_name': 'Hoja2', 'total_rows': 3, 'columns': ['email', 'username', 'password'], 'preview': [{'email': 'ana@example.com', 'username': 'Ana', 'password': 987654}, {'email': 'carlos@example.com', 'username': 'Carlos', 'password': 456789}, {'email': 'guest@example.com', 'username': 'Guest', 'password': 852741}], 'data': [{'email': 'ana@example.com', 'username': 'Ana', 'password': 987654}, {'email': 'carlos@example.com', 'username': 'Carlos', 'password': 456789}, {'email': 'guest@example.com', 'username': 'Guest', 'password': 852741}]}], 'total_sheets': 3, 'valid_sheets': 2}
+2025-11-12 12:51:38.170 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-12 12:51:42.235 | INFO     | app.main:confirm_import_excel:1491 - 🚀 Importación confirmada, task_id=883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb, hojas=['Hoja1', 'Hoja2']
+2025-11-12 12:51:42.241 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba12.xlsx
+2025-11-12 12:51:42.250 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 2
+2025-11-12 12:51:42.479 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb', 'current': 1, 'total': 7, 'percent': 14, 'status': 'processing'}
+2025-11-12 12:51:42.480 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:51:43.006 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb', 'current': 2, 'total': 7, 'percent': 28, 'status': 'processing'}
+2025-11-12 12:51:43.007 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:51:43.505 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb', 'current': 3, 'total': 7, 'percent': 42, 'status': 'processing'}
+2025-11-12 12:51:43.506 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:51:43.961 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb', 'current': 4, 'total': 7, 'percent': 57, 'status': 'processing'}
+2025-11-12 12:51:43.962 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:51:44.419 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb', 'current': 5, 'total': 7, 'percent': 71, 'status': 'processing'}
+2025-11-12 12:51:44.420 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:51:44.626 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb', 'current': 6, 'total': 7, 'percent': 85, 'status': 'processing'}
+2025-11-12 12:51:44.627 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:51:45.086 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb', 'current': 7, 'total': 7, 'percent': 100, 'status': 'processing'}
+2025-11-12 12:51:45.086 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:51:45.346 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'completed', 'task_id': '883cc2a0-0ca4-4f40-a5c5-2c64c30b64fb', 'inserted': 6, 'skipped': [{'row': 1, 'sheet': 'Hoja2', 'reason': 'Duplicado'}], 'status': 'completed'}
+2025-11-12 12:51:45.346 | SUCCESS  | app.tasks:process_excel_task:166 - Importación completada: 6 usuarios insertados, 1 omitidos
+2025-11-12 12:51:45.347 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 12:52:55.113 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=4b3e1b94-d3f0-4dd9-9a59-e7ca8daf0269
+2025-11-12 12:52:55.119 | INFO     | app.tasks:process_excel_preview_task:196 - 🔎 Validando Excel para preview: /app/uploads/dates1.xlsx
+2025-11-12 12:52:55.127 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 3
+2025-11-12 12:52:55.151 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja1 (30 filas)
+2025-11-12 12:52:55.153 | INFO     | app.tasks:process_excel_preview_task:251 - 📤 Preview publicado (task_id=4b3e1b94-d3f0-4dd9-9a59-e7ca8daf0269) con 1 hojas válidas
+2025-11-12 12:52:55.153 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': '4b3e1b94-d3f0-4dd9-9a59-e7ca8daf0269', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 30, 'columns': ['email', 'username', 'password'], 'preview': [{'email': 'user001@example.com', 'username': 'user001', 'password': 'tY7aK9mQ'}, {'email': 'user002@example.com', 'username': 'user002', 'password': 'Bp3sZ1rN'}, {'email': 'user003@example.com', 'username': 'user003', 'password': 'Bp3sZ1rN'}, {'email': 'user004@example.com', 'username': 'user004', 'password': 'tY7aK9mQ'}, {'email': 'user005@example.com', 'username': 'user005', 'password': 'tY7aK9mQ'}, {'email': 'user006@example.com', 'username': 'user006', 'password': 'Bp3sZ1rN'}, {'email': 'user007@example.com', 'username': 'user007', 'password': 'Gt1uM8qC'}, {'email': 'user008@example.com', 'username': 'user008', 'password': 'tY7aK9mQ'}, {'email': 'user009@example.com', 'username': 'user009', 'password': 'Gt1uM8qC'}, {'email': 'user010@example.com', 'username': 'user010', 'password': 'tY7aK9mQ'}], 'data': [{'email': 'user001@example.com', 'username': 'user001', 'password': 'tY7aK9mQ'}, {'email': 'user002@example.com', 'username': 'user002', 'password': 'Bp3sZ1rN'}, {'email': 'user003@example.com', 'username': 'user003', 'password': 'Bp3sZ1rN'}, {'email': 'user004@example.com', 'username': 'user004', 'password': 'tY7aK9mQ'}, {'email': 'user005@example.com', 'username': 'user005', 'password': 'tY7aK9mQ'}, {'email': 'user006@example.com', 'username': 'user006', 'password': 'Bp3sZ1rN'}, {'email': 'user007@example.com', 'username': 'user007', 'password': 'Gt1uM8qC'}, {'email': 'user008@example.com', 'username': 'user008', 'password': 'tY7aK9mQ'}, {'email': 'user009@example.com', 'username': 'user009', 'password': 'Gt1uM8qC'}, {'email': 'user010@example.com', 'username': 'user010', 'password': 'tY7aK9mQ'}, {'email': 'user011@example.com', 'username': 'user011', 'password': 'Gt1uM8qC'}, {'email': 'user012@example.com', 'username': 'user012', 'password': 'Bp3sZ1rN'}, {'email': 'user013@example.com', 'username': 'user013', 'password': 'Gt1uM8qC'}, {'email': 'user014@example.com', 'username': 'user014', 'password': 'tY7aK9mQ'}, {'email': 'user015@example.com', 'username': 'user015', 'password': 'tY7aK9mQ'}, {'email': 'user016@example.com', 'username': 'user016', 'password': 'Bp3sZ1rN'}, {'email': 'user017@example.com', 'username': 'user017', 'password': 'Gt1uM8qC'}, {'email': 'user018@example.com', 'username': 'user018', 'password': 'tY7aK9mQ'}, {'email': 'user019@example.com', 'username': 'user019', 'password': 'Bp3sZ1rN'}, {'email': 'user020@example.com', 'username': 'user020', 'password': 'Dn5pT4lS'}, {'email': 'user021@example.com', 'username': 'user021', 'password': 'Dn5pT4lS'}, {'email': 'user022@example.com', 'username': 'user022', 'password': 'tY7aK9mQ'}, {'email': 'user023@example.com', 'username': 'user023', 'password': 'tY7aK9mQ'}, {'email': 'user024@example.com', 'username': 'user024', 'password': 'Bp3sZ1rN'}, {'email': 'user025@example.com', 'username': 'user025', 'password': 'Dn5pT4lS'}, {'email': 'user026@example.com', 'username': 'user026', 'password': 'tY7aK9mQ'}, {'email': 'user027@example.com', 'username': 'user027', 'password': 'Dn5pT4lS'}, {'email': 'user028@example.com', 'username': 'user028', 'password': 'tY7aK9mQ'}, {'email': 'user029@example.com', 'username': 'user029', 'password': 'Dn5pT4lS'}, {'email': 'user030@example.com', 'username': 'user030', 'password': 'Dn5pT4lS'}]}], 'total_sheets': 1, 'valid_sheets': 1}
+2025-11-12 12:52:55.154 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 3 clientes WebSocket
+2025-11-12 12:59:15.488 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 2
+2025-11-12 12:59:15.492 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 1
+2025-11-12 12:59:15.493 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-12 13:06:25.958 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 13:08:35.310 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=ea638ccb-839e-4fea-8684-fae51b9384e3
+2025-11-12 13:08:35.322 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-12 13:08:35.325 | INFO     | app.tasks:process_excel_preview_task:196 - 🔎 Validando Excel para preview: /app/uploads/prueba12.xlsx
+2025-11-12 13:08:35.362 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja1 (4 filas)
+2025-11-12 13:08:35.371 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja2 (3 filas)
+2025-11-12 13:08:35.379 | WARNING  | app.tasks:process_excel_preview_task:225 - ⚠️ Hoja sin columnas requeridas: Hoja3 -> ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-12 13:08:35.380 | INFO     | app.tasks:process_excel_preview_task:251 - 📤 Preview publicado (task_id=ea638ccb-839e-4fea-8684-fae51b9384e3) con 2 hojas válidas
+2025-11-12 13:08:35.381 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': 'ea638ccb-839e-4fea-8684-fae51b9384e3', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 4, 'columns': ['email', 'username', 'password'], 'preview': [{'email': 'luis@example.com', 'username': 'Luis', 'password': 123456}, {'email': 'jose@example.com', 'username': 'Jose', 'password': 123456}, {'email': 'maria@example.com', 'username': 'Mario', 'password': 654321}, {'email': 'mario@example.com', 'username': 'Maria', 'password': 654321}], 'data': [{'email': 'luis@example.com', 'username': 'Luis', 'password': 123456}, {'email': 'jose@example.com', 'username': 'Jose', 'password': 123456}, {'email': 'maria@example.com', 'username': 'Mario', 'password': 654321}, {'email': 'mario@example.com', 'username': 'Maria', 'password': 654321}]}, {'sheet_name': 'Hoja2', 'total_rows': 3, 'columns': ['email', 'username', 'password'], 'preview': [{'email': 'ana@example.com', 'username': 'Ana', 'password': 987654}, {'email': 'carlos@example.com', 'username': 'Carlos', 'password': 456789}, {'email': 'guest@example.com', 'username': 'Guest', 'password': 852741}], 'data': [{'email': 'ana@example.com', 'username': 'Ana', 'password': 987654}, {'email': 'carlos@example.com', 'username': 'Carlos', 'password': 456789}, {'email': 'guest@example.com', 'username': 'Guest', 'password': 852741}]}], 'total_sheets': 3, 'valid_sheets': 2}
+2025-11-12 13:08:35.382 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-12 13:08:45.086 | INFO     | app.main:confirm_import_excel:1491 - 🚀 Importación confirmada, task_id=50562eea-409e-4dc5-a70a-6d35d96740e4, hojas=['Hoja1']
+2025-11-12 13:08:45.090 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba12.xlsx
+2025-11-12 13:08:45.094 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 2
+2025-11-12 13:08:45.318 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '50562eea-409e-4dc5-a70a-6d35d96740e4', 'current': 1, 'total': 4, 'percent': 25, 'status': 'processing'}
+2025-11-12 13:08:45.319 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 13:08:45.777 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '50562eea-409e-4dc5-a70a-6d35d96740e4', 'current': 2, 'total': 4, 'percent': 50, 'status': 'processing'}
+2025-11-12 13:08:45.777 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 13:08:46.264 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '50562eea-409e-4dc5-a70a-6d35d96740e4', 'current': 3, 'total': 4, 'percent': 75, 'status': 'processing'}
+2025-11-12 13:08:46.265 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 13:08:46.714 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '50562eea-409e-4dc5-a70a-6d35d96740e4', 'current': 4, 'total': 4, 'percent': 100, 'status': 'processing'}
+2025-11-12 13:08:46.715 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 13:08:46.981 | SUCCESS  | app.tasks:process_excel_task:166 - Importación completada: 4 usuarios insertados, 0 omitidos
+2025-11-12 13:08:46.981 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'completed', 'task_id': '50562eea-409e-4dc5-a70a-6d35d96740e4', 'inserted': 4, 'skipped': [], 'status': 'completed'}
+2025-11-12 13:08:46.982 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 13:16:34.208 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 1
+2025-11-12 13:17:22.608 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 13:17:34.833 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-12 13:31:08.486 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 13:31:18.156 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 13:31:19.157 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 13:31:19.175 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 13:31:19.175 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 13:31:19.178 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 13:52:15.849 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 13:52:25.610 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 13:52:26.494 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 13:52:26.514 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 13:52:26.514 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 13:52:26.518 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 14:24:44.421 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 14:24:54.258 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 14:24:55.224 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 14:24:55.251 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 14:24:55.252 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 14:24:55.255 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 15:10:16.259 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 15:10:25.994 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 15:10:26.877 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 15:10:26.895 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 15:10:26.895 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 15:10:26.898 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 15:44:56.921 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 15:45:06.620 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 15:45:07.489 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 15:45:07.509 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 15:45:07.510 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 15:45:07.513 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 15:51:35.148 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=b5329f82-e5d7-4c3a-857a-e8ea45c71955
+2025-11-12 15:51:35.168 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-12 15:51:35.313 | INFO     | app.tasks:process_excel_preview_task:196 - 🔎 Validando Excel para preview: /app/uploads/prueba12.xlsx
+2025-11-12 15:51:36.103 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja1 (4 filas)
+2025-11-12 15:51:36.113 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja2 (3 filas)
+2025-11-12 15:51:36.123 | WARNING  | app.tasks:process_excel_preview_task:225 - ⚠️ Hoja sin columnas requeridas: Hoja3 -> ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-12 15:51:36.126 | INFO     | app.tasks:process_excel_preview_task:251 - 📤 Preview publicado (task_id=b5329f82-e5d7-4c3a-857a-e8ea45c71955) con 2 hojas válidas
+2025-11-12 15:51:36.126 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': 'b5329f82-e5d7-4c3a-857a-e8ea45c71955', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 4, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'Luis', 'email': 'luis@example.com', 'password': 123456}, {'username': 'Jose', 'email': 'jose@example.com', 'password': 123456}, {'username': 'Mario', 'email': 'maria@example.com', 'password': 654321}, {'username': 'Maria', 'email': 'mario@example.com', 'password': 654321}], 'data': [{'username': 'Luis', 'email': 'luis@example.com', 'password': 123456}, {'username': 'Jose', 'email': 'jose@example.com', 'password': 123456}, {'username': 'Mario', 'email': 'maria@example.com', 'password': 654321}, {'username': 'Maria', 'email': 'mario@example.com', 'password': 654321}]}, {'sheet_name': 'Hoja2', 'total_rows': 3, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'Ana', 'email': 'ana@example.com', 'password': 987654}, {'username': 'Carlos', 'email': 'carlos@example.com', 'password': 456789}, {'username': 'Guest', 'email': 'guest@example.com', 'password': 852741}], 'data': [{'username': 'Ana', 'email': 'ana@example.com', 'password': 987654}, {'username': 'Carlos', 'email': 'carlos@example.com', 'password': 456789}, {'username': 'Guest', 'email': 'guest@example.com', 'password': 852741}]}], 'total_sheets': 3, 'valid_sheets': 2}
+2025-11-12 15:51:36.127 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-12 15:51:39.924 | INFO     | app.main:confirm_import_excel:1491 - 🚀 Importación confirmada, task_id=1c6bb129-28cb-4d10-af69-e694ee22568d, hojas=['Hoja1', 'Hoja2']
+2025-11-12 15:51:39.934 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 2
+2025-11-12 15:51:39.944 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba12.xlsx
+2025-11-12 15:51:40.186 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1c6bb129-28cb-4d10-af69-e694ee22568d', 'current': 1, 'total': 7, 'percent': 14, 'status': 'processing'}
+2025-11-12 15:51:40.187 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 15:51:40.907 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1c6bb129-28cb-4d10-af69-e694ee22568d', 'current': 2, 'total': 7, 'percent': 28, 'status': 'processing'}
+2025-11-12 15:51:40.908 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 15:51:41.397 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1c6bb129-28cb-4d10-af69-e694ee22568d', 'current': 3, 'total': 7, 'percent': 42, 'status': 'processing'}
+2025-11-12 15:51:41.398 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 15:51:41.852 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1c6bb129-28cb-4d10-af69-e694ee22568d', 'current': 4, 'total': 7, 'percent': 57, 'status': 'processing'}
+2025-11-12 15:51:41.852 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 15:51:42.308 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1c6bb129-28cb-4d10-af69-e694ee22568d', 'current': 5, 'total': 7, 'percent': 71, 'status': 'processing'}
+2025-11-12 15:51:42.309 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 15:51:42.518 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1c6bb129-28cb-4d10-af69-e694ee22568d', 'current': 6, 'total': 7, 'percent': 85, 'status': 'processing'}
+2025-11-12 15:51:42.519 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 15:51:42.980 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '1c6bb129-28cb-4d10-af69-e694ee22568d', 'current': 7, 'total': 7, 'percent': 100, 'status': 'processing'}
+2025-11-12 15:51:42.981 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 15:51:43.258 | SUCCESS  | app.tasks:process_excel_task:166 - Importación completada: 6 usuarios insertados, 1 omitidos
+2025-11-12 15:51:43.258 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'completed', 'task_id': '1c6bb129-28cb-4d10-af69-e694ee22568d', 'inserted': 6, 'skipped': [{'row': 1, 'sheet': 'Hoja2', 'reason': 'Duplicado'}], 'status': 'completed'}
+2025-11-12 15:51:43.259 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 15:51:46.427 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 1
+2025-11-12 15:59:57.409 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 16:16:14.203 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-12 16:17:33.953 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 16:17:59.270 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=cad1cab1-93b6-448d-8197-04445d3fad21
+2025-11-12 16:17:59.274 | INFO     | app.tasks:process_excel_preview_task:196 - 🔎 Validando Excel para preview: /app/uploads/prueba12.xlsx
+2025-11-12 16:17:59.278 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-12 16:17:59.293 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja1 (4 filas)
+2025-11-12 16:17:59.304 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja2 (3 filas)
+2025-11-12 16:17:59.312 | WARNING  | app.tasks:process_excel_preview_task:225 - ⚠️ Hoja sin columnas requeridas: Hoja3 -> ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-12 16:17:59.313 | INFO     | app.tasks:process_excel_preview_task:251 - 📤 Preview publicado (task_id=cad1cab1-93b6-448d-8197-04445d3fad21) con 2 hojas válidas
+2025-11-12 16:17:59.313 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': 'cad1cab1-93b6-448d-8197-04445d3fad21', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 4, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'Luis', 'email': 'luis@example.com', 'password': 123456}, {'username': 'Jose', 'email': 'jose@example.com', 'password': 123456}, {'username': 'Mario', 'email': 'maria@example.com', 'password': 654321}, {'username': 'Maria', 'email': 'mario@example.com', 'password': 654321}], 'data': [{'username': 'Luis', 'email': 'luis@example.com', 'password': 123456}, {'username': 'Jose', 'email': 'jose@example.com', 'password': 123456}, {'username': 'Mario', 'email': 'maria@example.com', 'password': 654321}, {'username': 'Maria', 'email': 'mario@example.com', 'password': 654321}]}, {'sheet_name': 'Hoja2', 'total_rows': 3, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'Ana', 'email': 'ana@example.com', 'password': 987654}, {'username': 'Carlos', 'email': 'carlos@example.com', 'password': 456789}, {'username': 'Guest', 'email': 'guest@example.com', 'password': 852741}], 'data': [{'username': 'Ana', 'email': 'ana@example.com', 'password': 987654}, {'username': 'Carlos', 'email': 'carlos@example.com', 'password': 456789}, {'username': 'Guest', 'email': 'guest@example.com', 'password': 852741}]}], 'total_sheets': 3, 'valid_sheets': 2}
+2025-11-12 16:17:59.314 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-12 16:18:23.410 | INFO     | app.main:confirm_import_excel:1491 - 🚀 Importación confirmada, task_id=5a879545-a752-4b08-b567-81b23d5db554, hojas=['Hoja2']
+2025-11-12 16:18:23.413 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba12.xlsx
+2025-11-12 16:18:23.419 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 2
+2025-11-12 16:18:23.640 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '5a879545-a752-4b08-b567-81b23d5db554', 'current': 1, 'total': 3, 'percent': 33, 'status': 'processing'}
+2025-11-12 16:18:23.640 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 16:18:23.845 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '5a879545-a752-4b08-b567-81b23d5db554', 'current': 2, 'total': 3, 'percent': 66, 'status': 'processing'}
+2025-11-12 16:18:23.845 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 16:18:24.292 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '5a879545-a752-4b08-b567-81b23d5db554', 'current': 3, 'total': 3, 'percent': 100, 'status': 'processing'}
+2025-11-12 16:18:24.293 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 16:18:24.551 | SUCCESS  | app.tasks:process_excel_task:166 - Importación completada: 2 usuarios insertados, 1 omitidos
+2025-11-12 16:18:24.551 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'completed', 'task_id': '5a879545-a752-4b08-b567-81b23d5db554', 'inserted': 2, 'skipped': [{'row': 1, 'sheet': 'Hoja2', 'reason': 'Duplicado'}], 'status': 'completed'}
+2025-11-12 16:18:24.552 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 16:18:31.904 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 1
+2025-11-12 16:27:15.681 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 16:31:06.942 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-12 16:32:17.360 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 16:32:33.390 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 16:48:26.114 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 17:19:06.097 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 17:19:08.158 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 17:19:08.192 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 17:19:08.192 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 17:19:08.197 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 17:23:29.112 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 17:23:38.816 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-12 17:23:39.761 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-12 17:23:39.780 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-12 17:23:39.780 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-12 17:23:39.783 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-12 17:30:13.935 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-12 17:30:26.996 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=a8424d2b-dbec-4f16-bab5-c7ab01f6c189
+2025-11-12 17:30:27.007 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-12 17:30:27.026 | INFO     | app.tasks:process_excel_preview_task:196 - 🔎 Validando Excel para preview: /app/uploads/prueba12.xlsx
+2025-11-12 17:30:27.262 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja1 (4 filas)
+2025-11-12 17:30:27.276 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja2 (3 filas)
+2025-11-12 17:30:27.288 | WARNING  | app.tasks:process_excel_preview_task:225 - ⚠️ Hoja sin columnas requeridas: Hoja3 -> ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-12 17:30:27.293 | INFO     | app.tasks:process_excel_preview_task:251 - 📤 Preview publicado (task_id=a8424d2b-dbec-4f16-bab5-c7ab01f6c189) con 2 hojas válidas
+2025-11-12 17:30:27.294 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': 'a8424d2b-dbec-4f16-bab5-c7ab01f6c189', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 4, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'Luis', 'email': 'luis@example.com', 'password': 123456}, {'username': 'Jose', 'email': 'jose@example.com', 'password': 123456}, {'username': 'Mario', 'email': 'maria@example.com', 'password': 654321}, {'username': 'Maria', 'email': 'mario@example.com', 'password': 654321}], 'data': [{'username': 'Luis', 'email': 'luis@example.com', 'password': 123456}, {'username': 'Jose', 'email': 'jose@example.com', 'password': 123456}, {'username': 'Mario', 'email': 'maria@example.com', 'password': 654321}, {'username': 'Maria', 'email': 'mario@example.com', 'password': 654321}]}, {'sheet_name': 'Hoja2', 'total_rows': 3, 'columns': ['username', 'email', 'password'], 'preview': [{'username': 'Ana', 'email': 'ana@example.com', 'password': 987654}, {'username': 'Carlos', 'email': 'carlos@example.com', 'password': 456789}, {'username': 'Guest', 'email': 'guest@example.com', 'password': 852741}], 'data': [{'username': 'Ana', 'email': 'ana@example.com', 'password': 987654}, {'username': 'Carlos', 'email': 'carlos@example.com', 'password': 456789}, {'username': 'Guest', 'email': 'guest@example.com', 'password': 852741}]}], 'total_sheets': 3, 'valid_sheets': 2}
+2025-11-12 17:30:27.296 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-12 17:31:07.886 | INFO     | app.main:confirm_import_excel:1491 - 🚀 Importación confirmada, task_id=ccb07a1d-7573-4886-a32f-3857c272a520, hojas=['Hoja2']
+2025-11-12 17:31:07.891 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba12.xlsx
+2025-11-12 17:31:07.898 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 2
+2025-11-12 17:31:08.134 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'ccb07a1d-7573-4886-a32f-3857c272a520', 'current': 1, 'total': 3, 'percent': 33, 'status': 'processing'}
+2025-11-12 17:31:08.137 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 17:31:08.378 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'ccb07a1d-7573-4886-a32f-3857c272a520', 'current': 2, 'total': 3, 'percent': 66, 'status': 'processing'}
+2025-11-12 17:31:08.379 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 17:31:08.926 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': 'ccb07a1d-7573-4886-a32f-3857c272a520', 'current': 3, 'total': 3, 'percent': 100, 'status': 'processing'}
+2025-11-12 17:31:08.927 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 17:31:09.244 | SUCCESS  | app.tasks:process_excel_task:166 - Importación completada: 2 usuarios insertados, 1 omitidos
+2025-11-12 17:31:09.244 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'completed', 'task_id': 'ccb07a1d-7573-4886-a32f-3857c272a520', 'inserted': 2, 'skipped': [{'row': 1, 'sheet': 'Hoja2', 'reason': 'Duplicado'}], 'status': 'completed'}
+2025-11-12 17:31:09.245 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-12 17:31:17.070 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 1
+2025-11-12 18:25:00.707 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-12 20:03:32.003 | INFO     | app.main:create_user:1024 - 📥 Intentando crear usuario: username=eduar, email=eduar@example.com, role_id=2
+2025-11-12 20:03:32.372 | SUCCESS  | app.main:create_user:1056 - ✅ Usuario creado: eduar@example.com con rol Cliente
+2025-11-13 20:34:16.810 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-13 20:34:26.443 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-13 20:34:27.290 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-13 20:34:27.312 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-13 20:34:27.313 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-13 20:34:27.316 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-13 20:39:05.984 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-13 20:41:21.109 | INFO     | app.main:create_user:1024 - 📥 Intentando crear usuario: username=prueba, email=prueba@example.com, role_id=1
+2025-11-13 20:41:21.468 | SUCCESS  | app.main:create_user:1056 - ✅ Usuario creado: prueba@example.com con rol Administrador
+2025-11-13 20:41:50.815 | INFO     | app.main:upload_excel_preview:1462 - 🟡 Tarea de preview enviada a Celery, id=2a5f9977-7d78-419d-9a13-2eeb261fb62e
+2025-11-13 20:41:50.826 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 1
+2025-11-13 20:41:50.826 | INFO     | app.tasks:process_excel_preview_task:196 - 🔎 Validando Excel para preview: /app/uploads/prueba12.xlsx
+2025-11-13 20:41:51.081 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja1 (4 filas)
+2025-11-13 20:41:51.095 | SUCCESS  | app.tasks:process_excel_preview_task:223 - ✅ Hoja válida: Hoja2 (3 filas)
+2025-11-13 20:41:51.107 | WARNING  | app.tasks:process_excel_preview_task:225 - ⚠️ Hoja sin columnas requeridas: Hoja3 -> ['nombreusuario', 'correoelectronico', 'telefono']
+2025-11-13 20:41:51.111 | INFO     | app.tasks:process_excel_preview_task:251 - 📤 Preview publicado (task_id=2a5f9977-7d78-419d-9a13-2eeb261fb62e) con 2 hojas válidas
+2025-11-13 20:41:51.112 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'preview', 'task_id': '2a5f9977-7d78-419d-9a13-2eeb261fb62e', 'status': 'ready', 'sheets': [{'sheet_name': 'Hoja1', 'total_rows': 4, 'columns': ['password', 'email', 'username'], 'preview': [{'password': 123456, 'email': 'luis@example.com', 'username': 'Luis'}, {'password': 123456, 'email': 'jose@example.com', 'username': 'Jose'}, {'password': 654321, 'email': 'maria@example.com', 'username': 'Mario'}, {'password': 654321, 'email': 'mario@example.com', 'username': 'Maria'}], 'data': [{'password': 123456, 'email': 'luis@example.com', 'username': 'Luis'}, {'password': 123456, 'email': 'jose@example.com', 'username': 'Jose'}, {'password': 654321, 'email': 'maria@example.com', 'username': 'Mario'}, {'password': 654321, 'email': 'mario@example.com', 'username': 'Maria'}]}, {'sheet_name': 'Hoja2', 'total_rows': 3, 'columns': ['password', 'email', 'username'], 'preview': [{'password': 987654, 'email': 'ana@example.com', 'username': 'Ana'}, {'password': 456789, 'email': 'carlos@example.com', 'username': 'Carlos'}, {'password': 852741, 'email': 'guest@example.com', 'username': 'Guest'}], 'data': [{'password': 987654, 'email': 'ana@example.com', 'username': 'Ana'}, {'password': 456789, 'email': 'carlos@example.com', 'username': 'Carlos'}, {'password': 852741, 'email': 'guest@example.com', 'username': 'Guest'}]}], 'total_sheets': 3, 'valid_sheets': 2}
+2025-11-13 20:41:51.113 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 1 clientes WebSocket
+2025-11-13 20:42:19.639 | INFO     | app.main:confirm_import_excel:1491 - 🚀 Importación confirmada, task_id=901daa9b-d9d0-46e2-b90f-6b0c4293b4eb, hojas=['Hoja1']
+2025-11-13 20:42:19.646 | INFO     | app.tasks:process_excel_task:96 - Procesando archivo Excel en ruta: /app/uploads/prueba12.xlsx
+2025-11-13 20:42:19.654 | INFO     | app.main:connect:87 - Cliente WebSocket conectado. Total: 2
+2025-11-13 20:42:19.891 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '901daa9b-d9d0-46e2-b90f-6b0c4293b4eb', 'current': 1, 'total': 4, 'percent': 25, 'status': 'processing'}
+2025-11-13 20:42:19.892 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-13 20:42:20.477 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '901daa9b-d9d0-46e2-b90f-6b0c4293b4eb', 'current': 2, 'total': 4, 'percent': 50, 'status': 'processing'}
+2025-11-13 20:42:20.478 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-13 20:42:21.053 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '901daa9b-d9d0-46e2-b90f-6b0c4293b4eb', 'current': 3, 'total': 4, 'percent': 75, 'status': 'processing'}
+2025-11-13 20:42:21.054 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-13 20:42:21.605 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'progress', 'task_id': '901daa9b-d9d0-46e2-b90f-6b0c4293b4eb', 'current': 4, 'total': 4, 'percent': 100, 'status': 'processing'}
+2025-11-13 20:42:21.606 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-13 20:42:21.975 | SUCCESS  | app.tasks:process_excel_task:166 - Importación completada: 4 usuarios insertados, 0 omitidos
+2025-11-13 20:42:21.975 | INFO     | app.main:redis_listener:144 - Mensaje recibido de Redis: {'type': 'completed', 'task_id': '901daa9b-d9d0-46e2-b90f-6b0c4293b4eb', 'inserted': 4, 'skipped': [], 'status': 'completed'}
+2025-11-13 20:42:21.976 | INFO     | app.main:redis_listener:146 - Mensaje reenviado a 2 clientes WebSocket
+2025-11-13 20:42:26.321 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 1
+2025-11-13 20:44:46.479 | INFO     | app.main:disconnect:94 - Cliente WebSocket desconectado. Total: 0
+2025-11-14 09:29:21.642 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 09:29:31.219 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 09:29:32.235 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 09:29:32.269 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 09:29:32.269 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 09:29:32.275 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 10:03:08.043 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-14 10:26:27.134 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-14 11:01:37.866 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:01:37.873 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:01:37.874 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:01:37.882 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:01:37.885 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:01:37.886 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:01:39.648 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:01:41.139 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:01:41.160 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:01:41.161 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:01:42.240 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:01:43.011 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:01:43.033 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:01:43.034 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:01:43.038 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:01:44.843 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:01:44.843 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:01:44.844 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:01:44.844 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:01:44.845 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:01:44.845 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:01:45.794 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:01:46.518 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:01:46.539 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:01:46.539 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:01:46.543 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:01:49.251 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:01:49.251 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:01:49.251 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:01:49.252 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:01:49.253 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:01:49.253 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:01:50.207 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:01:50.893 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:01:50.912 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:01:50.912 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:01:50.916 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:01:51.417 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:01:51.417 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:01:51.418 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:01:51.418 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:01:51.419 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:01:51.419 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:01:52.364 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:01:53.092 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:01:53.110 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:01:53.110 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:01:53.113 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:01:55.319 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:01:55.319 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:01:55.320 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:01:55.320 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:01:55.321 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:01:55.321 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:01:56.179 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:01:56.925 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:01:56.944 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:01:56.944 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:01:57.806 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:01:58.538 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:01:58.560 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:01:58.561 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:01:58.564 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:02:03.178 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:02:03.178 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:02:03.178 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:02:03.179 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:02:03.180 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:02:03.180 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:02:04.095 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:02:04.761 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:02:04.780 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:02:04.780 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:02:04.784 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:02:25.965 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:02:25.965 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:02:25.965 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:02:25.966 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:02:25.967 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:02:25.967 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:02:26.881 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:02:27.684 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:02:27.709 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:02:27.709 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:02:27.713 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:02:28.413 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:02:28.413 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:02:28.414 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:02:28.415 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:02:28.415 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:02:28.415 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:02:29.317 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:02:30.040 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:02:30.058 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:02:30.059 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:02:30.062 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:02:31.664 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 11:02:31.665 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 11:02:31.665 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 11:02:31.666 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 11:02:31.667 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 11:02:31.667 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 11:02:32.587 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:02:33.282 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:02:33.304 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:02:33.305 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:02:33.308 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 11:07:07.248 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:07:16.921 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 11:07:17.810 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 11:07:17.845 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 11:07:17.846 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 11:07:17.849 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:18:51.013 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:18:51.024 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:18:51.024 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:18:51.036 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:18:51.040 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:18:51.040 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:18:53.016 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:18:54.576 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:18:54.598 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:18:54.598 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:18:54.604 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:20:36.674 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:20:36.675 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:20:36.675 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:20:36.677 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:20:36.678 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:20:36.678 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:20:37.710 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:20:38.929 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:20:38.966 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:20:38.966 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:20:38.978 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:22:31.556 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:22:31.557 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:22:31.557 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:22:31.558 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:22:31.559 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:22:31.560 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:22:32.538 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:22:33.506 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:22:33.535 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:22:33.536 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:22:33.540 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:33:13.777 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:33:23.208 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:33:24.064 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:33:24.082 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:33:24.082 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:33:24.086 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:41:41.828 | INFO     | app.main:list_available_products:561 - Productos obtenidos correctamente (page=1, page_size=8, total=5)
+2025-11-14 12:50:15.762 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:50:15.762 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:50:15.762 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:50:15.763 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:50:15.764 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:50:15.764 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:50:16.777 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:50:17.566 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:50:17.586 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:50:17.587 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:50:18.629 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:50:19.423 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:50:19.442 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:50:19.442 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:50:19.446 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:50:28.771 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:50:28.771 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:50:28.772 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:50:28.772 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:50:28.773 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:50:28.773 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:50:29.730 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:50:30.492 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:50:30.514 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:50:30.514 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:50:31.542 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:50:32.416 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:50:32.440 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:50:32.440 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:50:32.444 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:51:19.282 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:51:19.282 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:51:19.283 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:51:19.284 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:51:19.284 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:51:19.285 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:51:20.221 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:51:20.934 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:51:20.951 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:51:20.952 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:51:20.955 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:51:21.957 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:51:21.957 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:51:21.958 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:51:21.959 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:51:21.960 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:51:21.960 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:51:23.019 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:51:23.906 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:51:23.927 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:51:23.928 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:51:23.931 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:51:28.242 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:51:28.243 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:51:28.243 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:51:28.244 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:51:28.245 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:51:28.245 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:51:29.231 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:51:30.045 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:51:30.072 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:51:30.072 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:51:30.076 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:58:17.695 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:58:17.695 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:58:17.696 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:58:17.697 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:58:17.698 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:58:17.698 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:58:18.624 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:58:19.427 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:58:19.455 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:58:19.456 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:58:20.840 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:58:21.627 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:58:21.653 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:58:21.654 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:58:21.659 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:59:25.651 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:59:25.652 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:59:25.653 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:59:25.654 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:59:25.655 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:59:25.655 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:59:26.600 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:59:27.340 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:59:27.359 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:59:27.359 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:59:28.289 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:59:29.097 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:59:29.122 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:59:29.122 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:59:30.063 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:59:30.821 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:59:30.898 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:59:30.901 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:59:31.817 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:59:32.601 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:59:32.620 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:59:32.620 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:59:33.481 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:59:34.203 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:59:34.223 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:59:34.223 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:59:34.227 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 12:59:36.432 | INFO     | app.main:shutdown_event:184 - Cancelando tareas en background...
+2025-11-14 12:59:36.433 | WARNING  | app.main:redis_listener:153 - Listener Redis cancelado (shutdown)
+2025-11-14 12:59:36.433 | INFO     | app.main:redis_listener:160 - 🧹 Limpiando conexiones de Redis...
+2025-11-14 12:59:36.434 | INFO     | app.main:redis_listener:165 - Pubsub cerrado
+2025-11-14 12:59:36.434 | INFO     | app.main:redis_listener:171 - Redis cerrado
+2025-11-14 12:59:36.435 | INFO     | app.main:shutdown_event:188 - Todas las tareas canceladas correctamente
+2025-11-14 12:59:37.305 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 12:59:38.054 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 12:59:38.085 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 12:59:38.085 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 12:59:38.089 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel
+2025-11-14 13:04:34.820 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 13:04:44.387 | SUCCESS  | app.database.connection:<module>:18 - Conexión a MySQL exitosa
+2025-11-14 13:04:45.276 | SUCCESS  | app.main:<module>:70 - Tablas creadas/verificadas correctamente en la base de datos
+2025-11-14 13:04:45.298 | INFO     | app.main:startup_event:179 - Tarea de Redis listener iniciada en background
+2025-11-14 13:04:45.299 | INFO     | app.main:redis_listener:133 - Iniciando listener de Redis...
+2025-11-14 13:04:45.302 | SUCCESS  | app.main:redis_listener:138 - Suscrito a canal Redis: progress_channel

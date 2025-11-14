@@ -38,7 +38,7 @@
 
   <!-- Preview de datos de la hoja activa -->
   <div *ngIf="isFileValid && previewData && previewData.length > 0" class="preview-container">
-    <h4>👀 Vista previa: {{ sheets[selectedSheetIndex].sheet_name }}</h4>
+    <h4> Vista previa: {{ sheets[selectedSheetIndex].sheet_name }}</h4>
 
     <!-- Tabla dinámica según columnas de la hoja activa -->
     <table mat-table [dataSource]="previewData" class="mat-elevation-z8">

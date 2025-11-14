@@ -82,12 +82,12 @@ def generar_reporte_usuarios():
 # ============================
 
 @celery_app.task(bind=True)
-def process_excel_task(self, file_path: str):
+def process_excel_task(self, file_path: str, sheets_to_import: list = None):
     """
     Procesa un archivo Excel con columnas: username, email, password.
+    Si se especifica sheets_to_import, solo procesa esas hojas.
     Inserta usuarios en la tabla 'users' con contraseña hasheada.
-    Además, actualiza el estado de la tarea y publica progreso en Redis
-    para que FastAPI lo reenvíe vía WebSocket.
+    Publica progreso en Redis para WebSocket.
     """
     SessionLocal = sessionmaker(bind=engine)
     session = SessionLocal()
@@ -95,107 +95,174 @@ def process_excel_task(self, file_path: str):
     try:
         log.info(f"Procesando archivo Excel en ruta: {file_path}")
 
-        # Leer Excel (pandas detecta engine según extensión)
-        df = pd.read_excel(file_path)
+        xl = pd.ExcelFile(file_path)
+        sheet_names = sheets_to_import if sheets_to_import else xl.sheet_names
 
-        # Normalizar nombres de columnas a minúsculas
-        df.columns = [c.lower() for c in df.columns]
-
-        required_columns = {"username", "email", "password"}
-        if not required_columns.issubset(df.columns):
-            raise ValueError(f"El archivo Excel debe contener las columnas: {required_columns}")
-
-        total = len(df)
+        total = 0
         inserted = 0
         skipped = []
 
-        for i, row in df.iterrows():
-            # El sleep es solo para pruebas visuales, puedes quitarlo en producción
-            sleep(0.2)  # DEJALO ACTIVADO para que veas el progreso más lento
+        # Contar filas totales de todas las hojas seleccionadas
+        for sheet_name in sheet_names:
+            df = pd.read_excel(file_path, sheet_name=sheet_name)
+            df.columns = [c.lower() for c in df.columns]
+            required_columns = {"username", "email", "password"}
+            if required_columns.issubset(df.columns):
+                total += len(df)
 
-            current = i + 1
-            percent = int((current / total) * 100)  # CALCULA PORCENTAJE
+        current = 0
+        for sheet_name in sheet_names:
+            df = pd.read_excel(file_path, sheet_name=sheet_name)
+            df.columns = [c.lower() for c in df.columns]
+            required_columns = {"username", "email", "password"}
+            if not required_columns.issubset(df.columns):
+                log.warning(f"Hoja '{sheet_name}' ignorada: columnas inválidas")
+                continue
 
-            # Actualiza estado en Celery (visible vía /task-status)
-            self.update_state(
-                state="PROGRESS", 
-                meta={
-                    "current": current, 
+            for i, row in df.iterrows():
+                sleep(0.2)  # para ver progreso lento
+                current += 1
+                percent = int((current / total) * 100)
+
+                self.update_state(state="PROGRESS", meta={"current": current, "total": total, "percent": percent})
+                redis_client.publish("progress_channel", json.dumps({
+                    "type": "progress",
+                    "task_id": self.request.id,
+                    "current": current,
                     "total": total,
-                    "percent": percent  # AGREGADO
-                }
-            )
+                    "percent": percent,
+                    "status": "processing"
+                }))
 
-            # Publica progreso en Redis (para WebSocket en FastAPI)
-            redis_client.publish("progress_channel", json.dumps({
-                "type": "progress",
-                "task_id": self.request.id,
-                "current": current,
-                "total": total,
-                "percent": percent,      # AGREGADO
-                "status": "processing"   # AGREGADO
-            }))
-            log.info(f"Progreso publicado: {current}/{total} ({percent}%) task_id={self.request.id}")
-            
-            username = str(row["username"]).strip()
-            email = str(row["email"]).strip()
-            password = str(row["password"]).strip()
+                username = str(row["username"]).strip()
+                email = str(row["email"]).strip()
+                password = str(row["password"]).strip()
 
-            if not username or not email or not password:
-                skipped.append({"row": i + 1, "reason": "Campos incompletos"})
-                continue
+                if not username or not email or not password:
+                    skipped.append({"row": i + 1, "sheet": sheet_name, "reason": "Campos incompletos"})
+                    continue
 
-            existing = session.query(User).filter(User.email == email).first()
-            if existing:
-                log.warning(f"Fila {i+1}: email duplicado {email}, se omite")
-                skipped.append({"row": i + 1, "reason": "Duplicado"})
-                continue
+                existing = session.query(User).filter(User.email == email).first()
+                if existing:
+                    skipped.append({"row": i + 1, "sheet": sheet_name, "reason": "Duplicado"})
+                    continue
 
-            hashed_pw = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
+                hashed_pw = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
+                new_user = User(username=username, email=email, password_hash=hashed_pw.decode("utf-8"))
+                session.add(new_user)
+                inserted += 1
 
-            new_user = User(
-                username=username,
-                email=email,
-                password_hash=hashed_pw.decode("utf-8")
-            )
-            session.add(new_user)
-            inserted += 1
-
-            if (i + 1) % 50 == 0:
-                session.commit()
+                if inserted % 50 == 0:
+                    session.commit()
 
         session.commit()
-        log.success(f"Importación completada: {inserted} usuarios insertados, {len(skipped)} omitidos")
-
-        # Publica mensaje final de éxito
         redis_client.publish("progress_channel", json.dumps({
-            "type": "progress",
+            "type": "completed",
             "task_id": self.request.id,
-            "current": total,
-            "total": total,
-            "percent": 100,           # AGREGADO
+            "inserted": inserted,
+            "skipped": skipped,
             "status": "completed"
         }))
-        log.info(f"Importación completada, task_id={self.request.id}")
+        log.success(f"Importación completada: {inserted} usuarios insertados, {len(skipped)} omitidos")
         return {"status": "completed", "rows": inserted, "skipped": skipped}
 
     except Exception as e:
         session.rollback()
-        log.error(f"Error procesando Excel: {e}")
-
-        # Publica error en Redis
         redis_client.publish("progress_channel", json.dumps({
             "type": "progress",
             "task_id": self.request.id,
-            "current": 0,              # AGREGADO
-            "total": total if 'total' in locals() else 0,  # AGREGADO
-            "percent": 0,              # AGREGADO
+            "current": 0,
+            "total": total if 'total' in locals() else 0,
+            "percent": 0,
             "status": "failed",
             "error": str(e)
         }))
         raise e
     finally:
         session.close()
+
+# -----------------------------------------------------------------
+# Nueva tarea para excel, para la barra de carga
+# -----------------------------------------------------------------
+
+@celery_app.task(bind=True)
+def process_excel_preview_task(self, file_path: str):
+    """
+    Lee todas las hojas del Excel y publica un mensaje 'preview' por Redis Pub/Sub
+    con las hojas válidas (columnas requeridas), sus columnas y primeras filas.
+    NO inserta en BD. Solo valida y prepara preview.
+    """
+    try:
+        log.info(f"🔎 Validando Excel para preview: {file_path}")
+        import pandas as pd
+
+        xl = pd.ExcelFile(file_path)
+        sheet_names = xl.sheet_names
+        required_columns = {"username", "email", "password"}
+        valid_sheets = []
+
+        for sheet_name in sheet_names:
+            try:
+                df = pd.read_excel(file_path, sheet_name=sheet_name)
+                df.columns = [str(c).strip().lower() for c in df.columns]
+
+                if required_columns.issubset(set(df.columns)):
+                    df = df[list(required_columns)]
+                    df = df.dropna(how='all')
+
+                    # Máximo 100 registros para preview editable
+                    records = df.head(100).to_dict('records')
+
+                    valid_sheets.append({
+                        "sheet_name": sheet_name,
+                        "total_rows": int(len(df)),
+                        "columns": list(df.columns),
+                        "preview": records[:10],  # primeras 10 para vista rápida
+                        "data": records           # hasta 100 para edición/confirmación
+                    })
+                    log.success(f"✅ Hoja válida: {sheet_name} ({len(df)} filas)")
+                else:
+                    log.warning(f"⚠️ Hoja sin columnas requeridas: {sheet_name} -> {list(df.columns)}")
+            except Exception as e:
+                log.error(f"❌ Error leyendo hoja '{sheet_name}': {e}")
+
+        if not valid_sheets:
+            # Publica fallo para que el frontend muestre error
+            redis_client.publish("progress_channel", json.dumps({
+                "type": "preview",
+                "task_id": self.request.id,
+                "status": "failed",
+                "error": "Ninguna hoja tiene las columnas requeridas: username, email, password"
+            }))
+            # Opcionalmente también marca estado en Celery
+            self.update_state(state="FAILURE", meta={"error": "Sin hojas válidas"})
+            return {"status": "failed", "error": "Sin hojas válidas"}
+
+        # Publica preview inicial
+        payload = {
+            "type": "preview",
+            "task_id": self.request.id,
+            "status": "ready",
+            "sheets": valid_sheets,
+            "total_sheets": len(sheet_names),
+            "valid_sheets": len(valid_sheets)
+        }
+        redis_client.publish("progress_channel", json.dumps(payload))
+        log.info(f"📤 Preview publicado (task_id={self.request.id}) con {len(valid_sheets)} hojas válidas")
+
+        # Deja constancia de éxito
+        self.update_state(state="SUCCESS", meta={"valid_sheets": len(valid_sheets)})
+        return {"status": "success", "valid_sheets": len(valid_sheets)}
+
+    except Exception as e:
+        log.error(f"❌ Error en preview task: {e}")
+        redis_client.publish("progress_channel", json.dumps({
+            "type": "preview",
+            "task_id": self.request.id,
+            "status": "failed",
+            "error": str(e)
+        }))
+        raise
 
 
 # ============================

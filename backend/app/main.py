@@ -37,7 +37,7 @@ from app.utils.auth import get_current_user, role_required
 from app.utils.export import generate_users_pdf, generate_users_excel, generate_products_pdf, generate_products_excel, generate_rentals_pdf, generate_rentals_excel
 
 # Celery (tareas pesadas)
-from app.tasks import generar_reporte_usuarios, celery_app, process_excel_task
+from app.tasks import generar_reporte_usuarios, celery_app, process_excel_task, process_excel_preview_task
 from celery.result import AsyncResult
 
 # =========================
@@ -529,7 +529,7 @@ def list_available_products(
     try:
         # Validaciones de parámetros
         if page < 1 or page_size < 1 or page_size > 8:
-            log.warning(f"❌ Parámetros inválidos en paginación: page={page}, page_size={page_size}")
+            log.warning(f"Parámetros inválidos en paginación: page={page}, page_size={page_size}")
             return build_response(
                 status_code=400,
                 message="Parámetros de paginación inválidos",
@@ -553,12 +553,12 @@ def list_available_products(
                 "id": p.id,
                 "nombre": p.nombre,
                 "descripcion": p.descripcion,
-                "costo_por_hora": p.costo_por_hora
+                "costo_por_hora": float(p.costo_por_hora)
             }
             for p in products
         ]
 
-        log.info(f"✅ Productos obtenidos correctamente (page={page}, page_size={page_size}, total={total})")
+        log.info(f"Productos obtenidos correctamente (page={page}, page_size={page_size}, total={total})")
 
         return build_response(
             status_code=200,
@@ -574,7 +574,7 @@ def list_available_products(
     except HTTPException as e:
         raise e
     except Exception as e:
-        log.error(f"❌ Error al obtener productos: {e}")
+        log.error(f"Error al obtener productos: {e}")
         import traceback
         log.error(traceback.format_exc())
         return build_response(
@@ -583,8 +583,26 @@ def list_available_products(
             data=None
         )
 
-#====================================================================================#
+#-------------------------------
+# statistics
+#-------------------------------
 
+@app.get("/products/stats")
+def get_product_stats(db: Session = Depends(get_db)):
+    """
+    Devuelve estadísticas agrupadas por nombre de producto.
+    Retorna un arreglo plano: [{nombre: str, cantidad: int}, ...]
+    """
+    stats = (
+        db.query(Product.nombre, func.count(Product.id).label("cantidad"))
+        .group_by(Product.nombre)
+        .order_by(desc("cantidad"))
+        .all()
+    )
+
+    return [{"nombre": str(nombre), "cantidad": int(cantidad)} for nombre, cantidad in stats]
+
+#====================================================================================#
 
 @app.get("/products/{product_id}")
 def get_product(product_id: int, db: Session = Depends(get_db)):
@@ -628,6 +646,7 @@ def delete_product(
     db.delete(db_product)
     db.commit()
     return db_product
+    
 
 # ======================
 # Endpoint para reporte en pdf/excel para modulo products
@@ -700,7 +719,6 @@ def export_products_excel(db: Session = Depends(get_db)):
     except Exception as e:
         log.error(f"Error en /products/export/excel: {e}")
         return build_response(500, "Error interno al exportar productos a Excel")
-
 
 # =========================
 # Endpoints de Rentas
@@ -1438,6 +1456,64 @@ def upload_excel(file: UploadFile):
     except Exception as e:
         log.error(f"Error en /upload-excel: {e}")
         return build_response(500, "Error interno al subir Excel")
+
+# -----------------------------------------
+
+PREVIEW_UPLOAD_DIR = "/app/uploads"
+os.makedirs(PREVIEW_UPLOAD_DIR, exist_ok=True)
+
+@app.post("/upload-excel-preview")
+def upload_excel_preview(file: UploadFile):
+    """
+    Sube archivo Excel y encola tarea Celery que valida y publica 'preview' por WebSocket.
+    No inserta datos; solo genera preview de hojas válidas.
+    """
+    try:
+        if not file.filename.endswith((".xls", ".xlsx")):
+            return build_response(400, "Formato no soportado. Solo XLS/XLSX.")
+
+        file_path = os.path.join(PREVIEW_UPLOAD_DIR, file.filename)
+        with open(file_path, "wb") as f:
+            f.write(file.file.read())
+
+        task = process_excel_preview_task.delay(file_path)
+        log.info(f"🟡 Tarea de preview enviada a Celery, id={task.id}")
+
+        # El frontend usará task_id para filtrar mensajes de WebSocket de preview
+        return build_response(202, "Archivo recibido, generando preview en segundo plano", {
+            "task_id": task.id
+        })
+
+    except Exception as e:
+        log.error(f"Error en /upload-excel-preview: {e}")
+        return build_response(500, "Error interno al subir Excel para preview")
+
+# ------------------------------------------------------------------
+@app.post("/confirm-import-excel")
+def confirm_import_excel(payload: dict):
+    """
+    Confirma qué hojas se van a importar y dispara la tarea Celery con progreso.
+    """
+    try:
+        filename = payload.get("filename")
+        sheets = payload.get("sheets_to_import", [])
+
+        if not filename:
+            return build_response(400, "Falta el nombre del archivo")
+
+        file_path = os.path.join("/app/uploads", filename)
+        if not os.path.exists(file_path):
+            return build_response(404, "Archivo no encontrado en servidor")
+
+        task = process_excel_task.delay(file_path, sheets)
+        log.info(f"🚀 Importación confirmada, task_id={task.id}, hojas={sheets}")
+        return build_response(202, "Importación iniciada", {"task_id": task.id})
+
+    except Exception as e:
+        log.error(f"Error en /confirm-import-excel: {e}")
+        return build_response(500, "Error interno al confirmar importación")
+
+#-------------------------------------------------------------------
 
 @app.get("/task-status/{task_id}")
 def get_task_status(task_id: str):
